@@ -1,6 +1,9 @@
 package com.katey2658.easyoj.config;
 
 import com.katey2658.easyoj.config.controller.WebConfig;
+import com.katey2658.easyoj.config.dao.RootDaoConfig;
+import com.katey2658.easyoj.config.service.RootServiceConfig;
+import com.katey2658.easyoj.config.service.SpringMailConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -14,7 +17,7 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{};
+        return new Class[]{RootDaoConfig.class,RootServiceConfig.class, SpringMailConfig.class};
     }
 
     @Override
@@ -26,4 +29,5 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
     protected String[] getServletMappings() {
         return new String[]{"/"};
     }
+
 }
