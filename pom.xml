@@ -25,6 +25,12 @@
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
       <version>${ch.qos.logback.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!--关于数据库访问-->
     <dependency>
@@ -52,7 +58,7 @@
     <!--Web层依赖-->
     <dependency>
       <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
+      <artifactId>javax.servlet-api</artifactId>
       <version>${javax.servlet.version}</version>
     </dependency>
     <dependency>
@@ -130,11 +136,23 @@
       <groupId>org.thymeleaf</groupId>
       <artifactId>thymeleaf</artifactId>
       <version>${org.thymeleaf.com.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.thymeleaf</groupId>
       <artifactId>thymeleaf-spring4</artifactId>
       <version>${org.thymeleaf.com.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>slf4j-api</artifactId>
+          <groupId>org.slf4j</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!--java mail-->
     <dependency>
@@ -146,6 +164,69 @@
       <groupId>org.springframework.integration</groupId>
       <artifactId>spring-integration-mail</artifactId>
       <version>${org.springframework.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-tx</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context-support</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aop</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <!--caching-->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>${redis.clients.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>${org.springframework.data.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-tx</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aop</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context-support</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!--测试相关-->
     <dependency>
@@ -174,16 +255,29 @@
     <org.mybatis.version>3.4.1</org.mybatis.version>
     <com.alibaba.version>1.0.26</com.alibaba.version>
     <org.mybatis-spring.version>6.0.5</org.mybatis-spring.version>
-    <javax.servlet.version>3.2.0</javax.servlet.version>
-    <taglibs.version>1.2</taglibs.version>
+    <javax.servlet.version>3.1.0</javax.servlet.version>
+    <taglibs.version>1.1.2</taglibs.version>
     <jstl.version>1.2</jstl.version>
     <com.fasterxml.jackson.core.version>2.8.7</com.fasterxml.jackson.core.version>
-    <org.springframework.version>4.3.7.RELEASE</org.springframework.version>
+    <org.springframework.version>4.2.9.RELEASE</org.springframework.version>
     <org.mockito.version>2.3.0</org.mockito.version>
     <org.thymeleaf.com.version>3.0.0.BETA02</org.thymeleaf.com.version>
     <com.sun.mail.version>1.5.6</com.sun.mail.version>
+    <redis.clients.version>2.9.0</redis.clients.version>
+    <org.springframework.data.version>1.8.1.RELEASE</org.springframework.data.version>
   </properties>
   <build>
     <finalName>easyoj</finalName>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <compilerVersion>1.8</compilerVersion>
+            <source>1.8</source>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>

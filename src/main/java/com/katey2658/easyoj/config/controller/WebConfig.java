@@ -11,7 +11,9 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.thymeleaf.messageresolver.StandardMessageResolver;
 import org.thymeleaf.spring4.SpringTemplateEngine;
+import org.thymeleaf.spring4.messageresolver.SpringMessageResolver;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
@@ -24,8 +26,8 @@ import org.thymeleaf.templatemode.TemplateMode;
 @ComponentScan(basePackages = {"com.katey2658.easyoj.controller"})
 public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationContextAware{
 
-    private final static String PATTERN_RESOURCE_CSS="/js/**";
-    private final static String PATTERN_RESOURCE_JS="/css/**";
+    private final static String PATTERN_RESOURCE_CSS="/css/**";
+    private final static String PATTERN_RESOURCE_JS="/js/**";
     private final static String PATTERN_RESOURCE_IMAGES="/images/**";
     private final static String LOCATION_RESOURCE_CSS="/js/";
     private final static String LOCATION_RESOURCE_JS="/css/";
@@ -33,7 +35,7 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
 
     private final static String CHARACTER_ENCODING="UTF-8";
 
-    private final static String TEMPLATE_PREFIX="/WEB-INF/templates";
+    private final static String TEMPLATE_PREFIX="/WEB-INF/templates/";
     private final static String TEMPLATE_SUFFIX=".html";
 
     private ApplicationContext applicationContext;
@@ -50,12 +52,12 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
-        registry.addResourceHandler(this.PATTERN_RESOURCE_CSS)
-                .addResourceLocations(this.LOCATION_RESOURCE_CSS);
-        registry.addResourceHandler(this.PATTERN_RESOURCE_JS)
-                .addResourceLocations(this.LOCATION_RESOURCE_JS);
-        registry.addResourceHandler(this.PATTERN_RESOURCE_IMAGES)
-                .addResourceLocations(this.LOCATION_RESOURCE_IMAGES);
+        registry.addResourceHandler(PATTERN_RESOURCE_CSS)
+                .addResourceLocations(LOCATION_RESOURCE_CSS);
+        registry.addResourceHandler(PATTERN_RESOURCE_JS)
+                .addResourceLocations(LOCATION_RESOURCE_JS);
+        registry.addResourceHandler(PATTERN_RESOURCE_IMAGES)
+                .addResourceLocations(LOCATION_RESOURCE_IMAGES);
     }
 
     /**
@@ -89,6 +91,7 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         SpringTemplateEngine templateEngine=new SpringTemplateEngine();
         templateEngine.setTemplateResolver(templateResolver());
         templateEngine.setEnableSpringELCompiler(true);
+        templateEngine.addMessageResolver(new StandardMessageResolver());
         return templateEngine;
     }
 
@@ -100,11 +103,12 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     public SpringResourceTemplateResolver templateResolver(){
         SpringResourceTemplateResolver templateResolver=new SpringResourceTemplateResolver();
         templateResolver.setApplicationContext(this.applicationContext);
-        templateResolver.setPrefix(this.TEMPLATE_PREFIX);
-        templateResolver.setSuffix(this.TEMPLATE_SUFFIX);
+        templateResolver.setPrefix(TEMPLATE_PREFIX);
+        templateResolver.setSuffix(TEMPLATE_SUFFIX);
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding(this.CHARACTER_ENCODING);
+        templateResolver.setCharacterEncoding(CHARACTER_ENCODING);
         templateResolver.setCacheable(true);
         return templateResolver;
     }
+
 }
