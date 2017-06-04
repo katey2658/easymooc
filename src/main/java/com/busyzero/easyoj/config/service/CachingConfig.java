@@ -11,6 +11,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 
 /**
+ * 方法缓存配置
  * Created by 11456 on 2017/5/12.
  */
 @EnableCaching

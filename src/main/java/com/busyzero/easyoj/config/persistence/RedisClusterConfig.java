@@ -12,14 +12,28 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
+ * 缓存集群配置类
  * Created by 11456 on 2017/5/31.
  */
-
 @Configuration
 public class RedisClusterConfig {
+    private  static final String HSOT_REDIS_CLUSTER_NODE1="192.168.30.124";
+    private  static final String HSOT_REDIS_CLUSTER_NODE2="192.168.30.124";
+    private  static final String HSOT_REDIS_CLUSTER_NODE3="192.168.30.124";
+    private  static final String HSOT_REDIS_CLUSTER_NODE4="192.168.30.124";
+    private  static final String HSOT_REDIS_CLUSTER_NODE5="192.168.30.124";
+    private  static final String HSOT_REDIS_CLUSTER_NODE6="192.168.30.124";
+
+    private  static final int PORT_REDIS_CLUSTER_NODE1=7001;
+    private  static final int PORT_REDIS_CLUSTER_NODE2=7002;
+    private  static final int PORT_REDIS_CLUSTER_NODE3=7003;
+    private  static final int PORT_REDIS_CLUSTER_NODE4=7004;
+    private  static final int PORT_REDIS_CLUSTER_NODE5=7005;
+    private  static final int PORT_REDIS_CLUSTER_NODE6=7006;
+
 
     /**
-     * redis配置项
+     * redis 连接池配置项
      * @return
      */
     @Bean
@@ -30,6 +44,10 @@ public class RedisClusterConfig {
         return poolConfig;
     }
 
+    /**
+     * 集群配置
+     * @return
+     */
     @Bean
     public RedisClusterConfiguration clusterConfiguration(){
         RedisClusterConfiguration configuration=new RedisClusterConfiguration();
@@ -38,24 +56,36 @@ public class RedisClusterConfig {
         return configuration;
     }
 
+    /**
+     * 集群结点
+     * @return
+     */
     @Bean
     public Set<RedisNode> clusterNodes(){
         Set<RedisNode> clusterNodes=new HashSet<>();
-        clusterNodes.add(new RedisNode("192.168.30.124",7001));
-        clusterNodes.add(new RedisNode("192.168.30.124",7002));
-        clusterNodes.add(new RedisNode("192.168.30.124",7003));
-        clusterNodes.add(new RedisNode("192.168.30.124",7004));
-        clusterNodes.add(new RedisNode("192.168.30.124",7005));
-        clusterNodes.add(new RedisNode("192.168.30.124",7006));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE1,PORT_REDIS_CLUSTER_NODE1));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE2,PORT_REDIS_CLUSTER_NODE2));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE3,PORT_REDIS_CLUSTER_NODE3));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE4,PORT_REDIS_CLUSTER_NODE4));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE5,PORT_REDIS_CLUSTER_NODE5));
+        clusterNodes.add(new RedisNode(HSOT_REDIS_CLUSTER_NODE6,PORT_REDIS_CLUSTER_NODE6));
         return clusterNodes;
     }
 
+    /**
+     * Redis 连接工厂
+     * @return
+     */
     @Bean
     public JedisConnectionFactory jedisConnectionFactory(){
        JedisConnectionFactory factory=new JedisConnectionFactory(clusterConfiguration(),jedisPoolConfig());
        return factory;
     }
 
+    /**
+     * Redis 操作模板
+     * @return
+     */
     @Bean
     public RedisTemplate redisTemplate(){
         RedisTemplate template=new RedisTemplate();
