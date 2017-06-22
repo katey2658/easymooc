@@ -25,7 +25,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 @ComponentScan(basePackages = {"com.busyzero.easyoj.controller"})
 public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationContextAware{
 
-    private final static String PATTERN_RESOURCE_CSS="/css/**";
+    private static final String PATTERN_RESOURCE_CSS = "/css/**";
     private final static String PATTERN_RESOURCE_JS="/js/**";
     private final static String PATTERN_RESOURCE_IMAGES="/images/**";
     private final static String LOCATION_RESOURCE_CSS="/js/";
