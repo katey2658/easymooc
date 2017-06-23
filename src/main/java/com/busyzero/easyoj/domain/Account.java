@@ -1,11 +1,14 @@
 package com.busyzero.easyoj.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.time.Instant;
 
 /**
  * 用户账户信息表
  * Created by 11456 on 2017/6/22.
  */
+@Alias("account")
 public class Account {
 
     /**账户id*/

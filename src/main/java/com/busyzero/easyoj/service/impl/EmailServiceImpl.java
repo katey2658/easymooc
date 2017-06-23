@@ -8,4 +8,14 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class EmailServiceImpl implements EmailService {
+
+    @Override
+    public int emailAddressSignUp(String username, String emailAddress) {
+        return 0;
+    }
+
+    @Override
+    public int passwordForgot(String username, String emailAddress) {
+        return 0;
+    }
 }

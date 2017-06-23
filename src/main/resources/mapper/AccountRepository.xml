@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.AccountRepository">
+    <insert id="saveAccount">
+        INSERT INTO accout(first_name,last_name,email_address,password)
+        VALUES (#{firstName},#{lastName},#{emailAddress},#{password})
+    </insert>
+
+    <select id="countByEmailAddress">
+        SELECT COUNT (*)
+        FROM account
+        WHERE email_address=#{emailAddress}
+    </select>
+
+    <select id="findByEmailAddressAndPassword" resultType="account">
+        SELECT account_id,first_name,last_name,email_address,password
+        FROM account
+        WHERE email_address=#{emailAddress}
+    </select>
+
+    <update id="updatePasswordByEmailAddress">
+        UPDATE account
+        SET password=#{newPassword}
+        WHERE email_address=#{emailAddress}
+    </update>
+</mapper>

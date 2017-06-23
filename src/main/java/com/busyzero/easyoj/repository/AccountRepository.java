@@ -1,0 +1,43 @@
+package com.busyzero.easyoj.repository;
+
+import com.busyzero.easyoj.domain.Account;
+import org.apache.ibatis.annotations.Param;
+
+/**
+ * 账户表接口
+ * Created by 11456 on 2017/6/23.
+ */
+public interface AccountRepository {
+
+    /**
+     * 向表中插入一条新的记录
+     * @param account 账户信息
+     * @return
+     */
+    int saveAccount(Account account);
+
+    /**
+     * 验证用户名和密码
+     * @param emailAddress 邮箱地址
+     * @param password 密码
+     * @return 是否村存在
+     */
+    Account findByEmailAddressAndPassword(@Param("emailAddress")String emailAddress,
+                                    @Param("password")String password);
+
+    /**
+     * 根据邮箱统计
+     * @param emailAddress
+     * @return
+     */
+    int countByEmailAddress(String emailAddress);
+
+    /**
+     * 根据邮箱地址修改账户密码
+     * @param emailAddress 邮箱地址
+     * @param newPassword 新提交的结果
+     * @return 结果
+     */
+    int updatePasswordByEmailAddress(@Param("emailAddress")String emailAddress,
+                                     @Param("newPassword")String newPassword);
+}
