@@ -58,7 +58,7 @@ public class RedisClusterConfig {
     }
 
     /**
-     * 集群结点
+     * 集群结点集合
      * @return
      */
     @Bean
