@@ -8,7 +8,8 @@ public enum  AccountOperateEnum {
     OP_SIGNUP(1,"账户登录操作"),
     OP_SIGNIN(2,"账户注册"),
     OP_PASSWORD_RESET(3,"修改密码"),
-    OP_SIGNUPP_ACCESSKEY_CHECK(4,"注册时候邮箱验证");
+    OP_SIGNUPP_ACCESSKEY_CHECK(4,"注册时候邮箱验证"),
+    OP_MAILADDRESS_CHECK(5,"检查邮箱地址");
 
     /**状态*/
     private int state;

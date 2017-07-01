@@ -88,6 +88,18 @@ public class AccountController {
     }
 
     /**
+     * 检查邮箱是否被注册了
+     * @param emailAddress 输入的邮箱
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/sign-up/emailAddress",method = GET)
+    public AccountOperateResult checkEmailAddress(String emailAddress){
+        AccountOperateResult result=accountAuthService.emailIsHasRegisted(emailAddress);
+        return result;
+    }
+
+    /**
      * 重置账号密码：
      * 想邮箱地址发送一个链接地址，用户点击这个地址之后，去选择重置密码
      * @param emailAddress 邮箱地址

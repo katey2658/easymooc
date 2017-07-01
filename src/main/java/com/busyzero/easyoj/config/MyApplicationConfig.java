@@ -4,7 +4,6 @@ import com.busyzero.easyoj.config.common.AspectJConfig;
 import com.busyzero.easyoj.config.mvc.WebConfig;
 import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;
-import com.busyzero.easyoj.config.service.CachingConfig;
 import com.busyzero.easyoj.config.service.RootServiceConfig;
 import com.busyzero.easyoj.config.service.SpringMailConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -19,8 +18,11 @@ import javax.servlet.ServletRegistration;
  */
 public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
+    /**字符编码*/
     private  final String CHARACTER_ENCODING="UTF-8";
+    /**文件上传目录*/
     private final String MULTIPART_LOCATION="/temp/upload";
+
     /**
      * 其它组件的注册
      * @return
@@ -32,7 +34,7 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
 //                CachingConfig.class,
                 RootServiceConfig.class,
                 SpringMailConfig.class,
-//                AspectJConfig.class
+                AspectJConfig.class
         };
     }
 

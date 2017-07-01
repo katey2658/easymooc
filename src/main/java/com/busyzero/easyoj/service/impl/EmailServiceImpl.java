@@ -3,6 +3,7 @@ package com.busyzero.easyoj.service.impl;
 import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.enums.AccountOperateEnum;
+import com.busyzero.easyoj.service.AccountAuthService;
 import com.busyzero.easyoj.service.EmailService;
 import com.busyzero.easyoj.utils.EncryptionUtils;
 import org.slf4j.Logger;
@@ -21,6 +22,9 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
+ * 这是邮件服务
+ * 主要是为用户邮箱认证以及其它通知或者什么提供支持
+ * {@link AccountAuthService}
  * Created by 11456 on 2017/6/23.
  */
 @Service
@@ -28,7 +32,15 @@ public class EmailServiceImpl implements EmailService {
     /**日志对象*/
     private Logger logger= LoggerFactory.getLogger(EmailServiceImpl.class);
 
+    /**发送邮箱确认得到邮件模板*/
     private static final String EMAIL_SIMPLE_TEMPLATE_NAME="html/signUpAuthMail";
+
+    /**在注册时候，生成的缓存key在缓存中的前缀*/
+    private static final String SIGN_UP_ACCESSKEY_CACHE_KEY_PREFIX="sign-up.accessKey:";
+    /**注册时候，缓存数据对象的key前缀*/
+    private static final String SIGN_UP_OBJECT_CACHE_KEY_PREFFIX="accountObj:";
+    /**找回密码和修改密码时候的key在缓存中的前缀*/
+    private static final String PASSWORD_RESET_ACCESSKLEY_CACHE_KEY_PREFIX="PasswordResetKey:";
 
     /**缓存操作模板*/
     @Autowired
@@ -53,11 +65,11 @@ public class EmailServiceImpl implements EmailService {
         //因为查看是否有人已经注册是之前已经校验，不在继续做
         //生成一个加密的字符串accessKey,并且缓存进去24个小时
         String accessKey=EncryptionUtils.accountAccessKeyEncryption(account.getEmailAddress());
-        String key="sign-up.accessKey:"+account.getEmailAddress();
+        String key=SIGN_UP_ACCESSKEY_CACHE_KEY_PREFIX+account.getEmailAddress();
         redisTemplate.opsForValue().set(key,accessKey);
         redisTemplate.expire(key,24, TimeUnit.HOURS);
         //将对象缓存到redis 中，并设置有效时间是24小时
-        String accountObjKey="accountObj:"+account.getEmailAddress();
+        String accountObjKey=SIGN_UP_OBJECT_CACHE_KEY_PREFFIX+account.getEmailAddress();
         redisTemplate.opsForValue().set(accountObjKey,account);
         redisTemplate.expire(accountObjKey,24, TimeUnit.HOURS);
         //发送一封邮件，并且这代这个信息
@@ -80,15 +92,14 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public AccountOperateResult passwordReset(String emailAddress,Locale locale) {
         String accessKey=EncryptionUtils.accountAccessKeyEncryption(emailAddress);
-        String passwordResetKey="PasswordResetKey:"+emailAddress;
+        String passwordResetKey=PASSWORD_RESET_ACCESSKLEY_CACHE_KEY_PREFIX+emailAddress;
         redisTemplate.opsForValue().set(passwordResetKey,accessKey);
         redisTemplate.expire(passwordResetKey,24, TimeUnit.HOURS);
         String accessUrl="http://localhost:8888/?accessKey="+accessKey;
-        String[] messages={"您现在正在请求找回密码",accessUrl};
+        String[] messages={"提示:您现在修改您的密码",accessUrl};
         String username="";
         String subject="找回密码邮箱验证";
         AccountOperateResult result=sendMessage(locale,username,subject,messages,emailAddress);
-        //TODO 发送一个邮件
         return null;
     }
 
@@ -148,6 +159,4 @@ public class EmailServiceImpl implements EmailService {
         }
         return new AccountOperateResult(AccountOperateEnum.OP_SIGNUP,true);
     }
-
-
 }

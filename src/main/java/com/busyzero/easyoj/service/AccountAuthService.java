@@ -1,6 +1,5 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 
 /**
@@ -38,5 +37,5 @@ public interface AccountAuthService {
      * @param emailAddress
      * @return
      */
-    boolean emailIsHasRegisted(String emailAddress);
+    AccountOperateResult emailIsHasRegisted(String emailAddress);
 }

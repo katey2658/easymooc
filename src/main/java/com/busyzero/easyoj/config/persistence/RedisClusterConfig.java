@@ -13,16 +13,18 @@ import java.util.Set;
 
 /**
  * 缓存集群配置类
- * Created by 11456 on 2017/5/31.
+ *  TODO 这边还没有想好如何动态去变化结点的配置从而来比买你硬编码 还有配置这边也是没有做好
+ * Created by 11456 on 2017/5/31.、
  */
 @Configuration
 public class RedisClusterConfig {
-    private  static final String HSOT_REDIS_CLUSTER_NODE1="192.168.30.124";
-    private  static final String HSOT_REDIS_CLUSTER_NODE2="192.168.30.124";
-    private  static final String HSOT_REDIS_CLUSTER_NODE3="192.168.30.124";
-    private  static final String HSOT_REDIS_CLUSTER_NODE4="192.168.30.124";
-    private  static final String HSOT_REDIS_CLUSTER_NODE5="192.168.30.124";
-    private  static final String HSOT_REDIS_CLUSTER_NODE6="192.168.30.124";
+
+    private static final String HSOT_REDIS_CLUSTER_NODE1="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE2="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE3="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE4="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE5="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE6="192.168.30.124";
 
     private  static final int PORT_REDIS_CLUSTER_NODE1=7001;
     private  static final int PORT_REDIS_CLUSTER_NODE2=7002;
@@ -30,7 +32,6 @@ public class RedisClusterConfig {
     private  static final int PORT_REDIS_CLUSTER_NODE4=7004;
     private  static final int PORT_REDIS_CLUSTER_NODE5=7005;
     private  static final int PORT_REDIS_CLUSTER_NODE6=7006;
-
 
     /**
      * redis 连接池配置项
@@ -83,7 +84,7 @@ public class RedisClusterConfig {
     }
 
     /**
-     * Redis 操作模板
+     * Redis 操作模板 对外开放操作缓存的统一接口
      * @return
      */
     @Bean

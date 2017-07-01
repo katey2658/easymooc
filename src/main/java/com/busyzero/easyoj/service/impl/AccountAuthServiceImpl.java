@@ -19,6 +19,14 @@ import org.springframework.stereotype.Service;
 public class AccountAuthServiceImpl implements AccountAuthService {
     private Logger logger= LoggerFactory.getLogger(AccountAuthServiceImpl.class);
 
+    /**在注册时候，生成的缓存key在缓存中的前缀*/
+    private static final String SIGN_UP_ACCESSKEY_CACHE_KEY_PREFIX="sign-up.accessKey:";
+    /**注册时候，缓存数据对象的key前缀*/
+    private static final String SIGN_UP_OBJECT_CACHE_KEY_PREFFIX="accountObj:";
+    /**找回密码和修改密码时候的key在缓存中的前缀*/
+    private static final String PASSWORD_RESET_ACCESSKLEY_CACHE_KEY_PREFIX="PasswordResetKey:";
+
+
     /**账户数据表操作对象*/
     @Autowired
     private AccountRepository accountRepository;
@@ -66,7 +74,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
     @Override
     public AccountOperateResult accountSignUpAccessKeyCheck(String emailAddress, String accessKey) {
         //先查看缓存中是否存在key 为emailAddress的内容
-        String accessKeyForKey="sign-up.accessKey:"+emailAddress;
+        String accessKeyForKey=SIGN_UP_ACCESSKEY_CACHE_KEY_PREFIX+emailAddress;
         String accessKeyGet= (String) redisTemplate.opsForValue().get(accessKeyForKey);
         //缓存中为空：说明过期或者本身无效
         if (accessKeyGet==null){
@@ -74,7 +82,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
         }
         if (accessKey.equals(accessKeyGet)){
             //成功匹配就把对象从缓存中取出信息录入数据库
-            String accountObjKey="accountObj:"+emailAddress;
+            String accountObjKey=SIGN_UP_OBJECT_CACHE_KEY_PREFFIX+emailAddress;
             Account account= (Account) redisTemplate.opsForValue().get(accountObjKey);
             accountRepository.saveAccount(account);
             return new AccountOperateResult(AccountOperateEnum.OP_SIGNUP,true);
@@ -94,7 +102,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
      */
     @Override
     public AccountOperateResult updatePasswordByEmail(String emailAddress, String accessKey,String newPassword) {
-        String passwordResetKey="PasswordResetKey:"+emailAddress;
+        String passwordResetKey=PASSWORD_RESET_ACCESSKLEY_CACHE_KEY_PREFIX+emailAddress;
         //从缓存中取出对应的访问符进行比较
         String passwordReset= (String) redisTemplate.opsForValue().get(passwordResetKey);
         if (passwordReset==null||(!accessKey.equals(passwordReset))){
@@ -115,12 +123,13 @@ public class AccountAuthServiceImpl implements AccountAuthService {
      * @return
      */
     @Override
-    public boolean emailIsHasRegisted(String emailAddress) {
+    public AccountOperateResult emailIsHasRegisted(String emailAddress) {
         int count=accountRepository.countByEmailAddress(emailAddress);
         if (count==0){
             //返回没有被注册
-            return false;
+            return new AccountOperateResult(AccountOperateEnum.OP_MAILADDRESS_CHECK,false);
         }
-        return true;
+        //已经被注册
+        return new AccountOperateResult(AccountOperateEnum.OP_MAILADDRESS_CHECK,true);
     }
 }
