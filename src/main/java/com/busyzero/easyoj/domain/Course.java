@@ -238,4 +238,31 @@ public class Course {
     public void setWeekTaskList(List<WeekTask> weekTaskList) {
         this.weekTaskList = weekTaskList;
     }
+
+    @Override
+    public String toString() {
+        return "Course{" +
+                "courseId=" + courseId +
+                ", subject='" + subject + '\'' +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", condition='" + condition + '\'' +
+                ", provierId=" + provierId +
+                ", provider=" + provider +
+                ", teacherId=" + teacherId +
+                ", teacher=" + teacher +
+                ", timeStart=" + timeStart +
+                ", timeEnd=" + timeEnd +
+                ", level='" + level + '\'' +
+                ", timePerWeek='" + timePerWeek + '\'' +
+                ", language='" + language + '\'' +
+                ", passCondition='" + passCondition + '\'' +
+                ", score_average=" + score_average +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", questionReplyList=" + questionReplyList +
+                ", commentList=" + commentList +
+                ", weekTaskList=" + weekTaskList +
+                '}';
+    }
 }

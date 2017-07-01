@@ -7,7 +7,7 @@ package com.busyzero.easyoj.enums;
 public enum  AccountOperateEnum {
     OP_SIGNUP(1,"账户登录操作"),
     OP_SIGNIN(2,"账户注册"),
-    OP_PASSWORD_UDATE(3,"修改密码"),
+    OP_PASSWORD_RESET(3,"修改密码"),
     OP_SIGNUPP_ACCESSKEY_CHECK(4,"注册时候邮箱验证");
 
     /**状态*/
@@ -32,5 +32,14 @@ public enum  AccountOperateEnum {
 
     public String getStateInfo() {
         return stateInfo;
+    }
+
+    @Override
+    public String
+    toString() {
+        return "AccountOperateEnum{" +
+                "state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                '}';
     }
 }

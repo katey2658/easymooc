@@ -61,4 +61,15 @@ public class Wiki {
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
     }
+
+    @Override
+    public String toString() {
+        return "Wiki{" +
+                "wikiId=" + wikiId +
+                ", taskItemId=" + taskItemId +
+                ", content='" + content + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                '}';
+    }
 }

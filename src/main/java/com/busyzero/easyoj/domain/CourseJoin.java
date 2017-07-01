@@ -61,4 +61,15 @@ public class CourseJoin {
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
     }
+
+    @Override
+    public String toString() {
+        return "CourseJoin{" +
+                "courseJoinId=" + courseJoinId +
+                ", courseId=" + courseId +
+                ", accountId=" + accountId +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                '}';
+    }
 }

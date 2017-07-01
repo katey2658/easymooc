@@ -2,6 +2,7 @@ package com.busyzero.easyoj.domain;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
@@ -9,7 +10,7 @@ import java.time.Instant;
  * Created by 11456 on 2017/6/22.
  */
 @Alias("account")
-public class Account {
+public class Account implements Serializable {
 
     /**账户id*/
     private Integer accountId;

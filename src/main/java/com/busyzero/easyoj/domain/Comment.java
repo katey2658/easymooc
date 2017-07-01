@@ -83,4 +83,17 @@ public class Comment {
     public void setTimeModified(Instant timeModified) {
         this.timeModified = timeModified;
     }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "commentId=" + commentId +
+                ", courseId=" + courseId +
+                ", accountId=" + accountId +
+                ", score=" + score +
+                ", commment='" + commment + '\'' +
+                ", timeStart=" + timeStart +
+                ", timeModified=" + timeModified +
+                '}';
+    }
 }

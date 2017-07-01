@@ -160,4 +160,24 @@ public class TaskItem {
     public void setTest(Test test) {
         this.test = test;
     }
+
+    @Override
+    public String toString() {
+        return "TaskItem{" +
+                "taskItemId=" + taskItemId +
+                ", taskId=" + taskId +
+                ", title='" + title + '\'' +
+                ", timeLength=" + timeLength +
+                ", videoId=" + videoId +
+                ", wikiId=" + wikiId +
+                ", testId=" + testId +
+                ", like=" + like +
+                ", trample=" + trample +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", video=" + video +
+                ", wiki=" + wiki +
+                ", test=" + test +
+                '}';
+    }
 }

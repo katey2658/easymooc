@@ -72,4 +72,16 @@ public class QuestionReply {
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
     }
+
+    @Override
+    public String toString() {
+        return "QuestionReply{" +
+                "questionReplyId=" + questionReplyId +
+                ", courseId=" + courseId +
+                ", questionContent='" + questionContent + '\'' +
+                ", reply='" + reply + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                '}';
+    }
 }

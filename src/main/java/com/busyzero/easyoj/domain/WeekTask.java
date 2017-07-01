@@ -98,4 +98,19 @@ public class WeekTask {
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
     }
+
+    @Override
+    public String toString() {
+        return "WeekTask{" +
+                "weekTaskId=" + weekTaskId +
+                ", courseId=" + courseId +
+                ", content='" + content + '\'' +
+                ", timeStart=" + timeStart +
+                ", timeEnd=" + timeEnd +
+                ", introduction='" + introduction + '\'' +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                ", taskList=" + taskList +
+                '}';
+    }
 }

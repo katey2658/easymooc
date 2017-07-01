@@ -25,18 +25,13 @@ public interface AccountAuthService {
     AccountOperateResult accountSignUpAccessKeyCheck(String emailAddress, String accessKey);
 
     /**
-     * 账号注册
-     * @param account 账户信息
-     * @return
-     */
-    AccountOperateResult accountSignUp(Account account);
-    /**
      * 根据邮箱更新密码
      * @param emailAddress 邮箱地址
      * @param accessKey 创建的邮箱认证字符串
+     * @param newPassword 新密码
      * @return
      */
-    AccountOperateResult updatePasswordByEmail(String emailAddress, String accessKey);
+    AccountOperateResult updatePasswordByEmail(String emailAddress, String accessKey,String newPassword);
 
     /**
      * 该邮箱是否是被注册了

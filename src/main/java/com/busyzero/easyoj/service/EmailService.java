@@ -19,9 +19,8 @@ public interface EmailService {
 
     /**
      * 忘记密码时候发送的邮箱验证
-     * @param username
      * @param emailAddress
      * @return
      */
-    AccountOperateResult passwordForgot(String username,String emailAddress,Locale locale);
+    AccountOperateResult passwordReset(String emailAddress,Locale locale);
 }

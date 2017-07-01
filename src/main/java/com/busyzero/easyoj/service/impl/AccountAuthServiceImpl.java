@@ -66,7 +66,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
     @Override
     public AccountOperateResult accountSignUpAccessKeyCheck(String emailAddress, String accessKey) {
         //先查看缓存中是否存在key 为emailAddress的内容
-        String accessKeyForKey="accessKey:"+emailAddress;
+        String accessKeyForKey="sign-up.accessKey:"+emailAddress;
         String accessKeyGet= (String) redisTemplate.opsForValue().get(accessKeyForKey);
         //缓存中为空：说明过期或者本身无效
         if (accessKeyGet==null){
@@ -83,29 +83,30 @@ public class AccountAuthServiceImpl implements AccountAuthService {
     }
 
     /**
-     * 添加一个账户,在添加账户信息之后,先不将信息放到数据库
-     * 而是先放到缓存数据库,并设置有效时间,如果在失效前没有验证,就会被抛弃
-     * @param account 账户信息
-     * @return
-     */
-    @Override
-    public AccountOperateResult accountSignUp(Account account) {
-        //将对象数据先是缓存到数据库中，然后发送一个邮件
-        return null;
-    }
-
-    /**
-     * 更新邮箱:
+     * 更新邮箱密码:
      * 实现原理,先查询缓存中关于这个邮箱的验证字符串
      * 如果符合就进行更新.
      * 如果长时间没有验证,验证字符串就会失效
      * @param emailAddress 邮箱地址
      * @param accessKey 创建的邮箱认证字符串
+     * @param newPassword 新密码
      * @return
      */
     @Override
-    public AccountOperateResult updatePasswordByEmail(String emailAddress, String accessKey) {
-        return null;
+    public AccountOperateResult updatePasswordByEmail(String emailAddress, String accessKey,String newPassword) {
+        String passwordResetKey="PasswordResetKey:"+emailAddress;
+        //从缓存中取出对应的访问符进行比较
+        String passwordReset= (String) redisTemplate.opsForValue().get(passwordResetKey);
+        if (passwordReset==null||(!accessKey.equals(passwordReset))){
+            //没有取到或者不相等
+            return new AccountOperateResult(AccountOperateEnum.OP_PASSWORD_RESET,false,"访问地址已经失效或者数据被篡改");
+        }
+        int count=accountRepository.updatePasswordByEmailAddress(emailAddress,newPassword);
+        if (count==1){
+            //修改成功
+            return new AccountOperateResult(AccountOperateEnum.OP_PASSWORD_RESET,true);
+        }
+        return new AccountOperateResult(AccountOperateEnum.OP_PASSWORD_RESET,false,"账号密码更新失败");
     }
 
     /**
@@ -118,7 +119,6 @@ public class AccountAuthServiceImpl implements AccountAuthService {
         int count=accountRepository.countByEmailAddress(emailAddress);
         if (count==0){
             //返回没有被注册
-
             return false;
         }
         return true;
