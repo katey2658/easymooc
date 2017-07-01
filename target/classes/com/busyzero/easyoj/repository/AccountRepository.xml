@@ -18,6 +18,13 @@
         SELECT account_id,first_name,last_name,email_address,password
         FROM account
         WHERE email_address=#{emailAddress}
+        AND password=#{password}
+    </select>
+
+    <select id="findByEmailAddress" resultType="account">
+        SELECT account_id,first_name,last_name,email_address,password
+        FROM account
+        WHERE email_address=#{emailAddress}
     </select>
 
     <update id="updatePasswordByEmailAddress">

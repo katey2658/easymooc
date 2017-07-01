@@ -18,13 +18,16 @@ public class Account {
     private String firstName;
 
     /**姓氏*/
-    private String lastNmae;
+    private String lastName;
 
     /**邮箱地址*/
     private String emailAddress;
 
     /**密码*/
     private String password;
+
+    /**是否有效*/
+    private Boolean alive;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -48,12 +51,12 @@ public class Account {
         this.firstName = firstName;
     }
 
-    public String getLastNmae() {
-        return lastNmae;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastNmae(String lastNmae) {
-        this.lastNmae = lastNmae;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getEmailAddress() {
@@ -72,6 +75,14 @@ public class Account {
         this.password = password;
     }
 
+    public Boolean getAlive() {
+        return alive;
+    }
+
+    public void setAlive(Boolean alive) {
+        this.alive = alive;
+    }
+
     public Instant getGmtCreate() {
         return gmtCreate;
     }
@@ -86,5 +97,19 @@ public class Account {
 
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "accountId=" + accountId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", password='" + password + '\'' +
+                ", alive=" + alive +
+                ", gmtCreate=" + gmtCreate +
+                ", gmtModified=" + gmtModified +
+                '}';
     }
 }

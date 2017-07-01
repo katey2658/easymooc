@@ -6,6 +6,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
@@ -29,7 +30,7 @@ import java.util.Properties;
  * 邮件服务配置
  */
 @Configuration
-@PropertySource("classpath:javamail.properties")
+@PropertySource("classpath:mail.properties")
 public class SpringMailConfig implements ApplicationContextAware,EnvironmentAware{
 
     public static final String EMAIL_TEMPLATE_ENCODING="UTF-8";
@@ -52,6 +53,7 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
     private static final String RESOLVER_HTML_PATTERNS="html/*";
     private static final String RESOLVER_HTML_PREFIX="/mail/";
     private static final String RESOLVER_HTML_SUFFIX=".html";
+
     private static final String RESOLVER_STRING_MODE="HTML5";
 
     /**
@@ -100,11 +102,12 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return messageSource;
     }
 
+    @Primary
     @Bean
-    public TemplateEngine emailTemplateEzngine(){
+    public TemplateEngine emailTemplateEngine(){
         final SpringTemplateEngine templateEngine=new SpringTemplateEngine();
-        templateEngine.addTemplateResolver(textTemplateResolver());
         templateEngine.addTemplateResolver(htmlTemplateResolver());
+        templateEngine.addTemplateResolver(textTemplateResolver());
         templateEngine.addTemplateResolver(stringTemplateResolver());
         templateEngine.setTemplateEngineMessageSource(emailMessageSource());
         return templateEngine;

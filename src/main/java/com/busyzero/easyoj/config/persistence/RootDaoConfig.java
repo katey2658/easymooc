@@ -1,7 +1,6 @@
 package com.busyzero.easyoj.config.persistence;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import javax.sql.DataSource;
 
@@ -22,7 +20,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @PropertySource("classpath:jdbc.properties")
-@MapperScan(basePackages = {"com.katey2658.mapper"})
+@MapperScan("com.busyzero.easyoj.repository")
 public class RootDaoConfig {
 
     private final static String JDBC_DRIVER="spring.jdbc.driver";
@@ -35,8 +33,7 @@ public class RootDaoConfig {
     private final static String JDBC_MAXWAIT="spring.jdbc.maxwait";
     private final static String JDBC_AUTOCOMMIT="spring.jdbc.autocommit";
 
-    private final static String MAPPER_LOCATIONS_PATTERN="classpath:mapper/*Mapper.xml";
-    private final static String TYPE_ALIASES_PACKAGE="com.katey2658.easyoj.domain";
+    private final static String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.domain";
 
     @Autowired
     private Environment env;
@@ -50,7 +47,7 @@ public class RootDaoConfig {
         DruidDataSource dataSource=new DruidDataSource();
         dataSource.setDriverClassName(env.getProperty(this.JDBC_DRIVER));
         dataSource.setUrl(env.getProperty(this.JDBC_URL));
-        dataSource.setName(env.getProperty(this.JDBC_USERNAME));
+        dataSource.setUsername(env.getProperty(this.JDBC_USERNAME));
         dataSource.setPassword(env.getProperty((this.JDBC_APSSWORD)));
 
         dataSource.setInitialSize(env.getProperty(this.JDBC_INITSIZE,Integer.class));
@@ -67,21 +64,10 @@ public class RootDaoConfig {
      * @throws Exception
      */
     @Bean
-    public SqlSessionFactory sqlSessionFactory() throws Exception {
+    public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setMapperLocations(
-                new PathMatchingResourcePatternResolver()
-                        .getResources(this.MAPPER_LOCATIONS_PATTERN));
         sessionFactory.setTypeAliasesPackage(this.TYPE_ALIASES_PACKAGE);
-        SqlSessionFactory sqlSessionFactory=sessionFactory.getObject();
-        org.apache.ibatis.session.Configuration configuration=sqlSessionFactory.getConfiguration();
-        //开启驼峰转换
-        configuration.setMapUnderscoreToCamelCase(true);
-        //使用jdbc自增序列
-        configuration.setUseGeneratedKeys(true);
-        //使用列明别名
-        configuration.setUseColumnLabel(true);
-        return sqlSessionFactory;
+        return sessionFactory;
     }
 }

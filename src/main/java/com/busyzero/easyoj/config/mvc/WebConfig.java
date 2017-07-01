@@ -109,5 +109,4 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         templateResolver.setCacheable(true);
         return templateResolver;
     }
-
 }

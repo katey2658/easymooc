@@ -29,10 +29,11 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{RootDaoConfig.class,
                 RedisClusterConfig.class,
-                CachingConfig.class,
+//                CachingConfig.class,
                 RootServiceConfig.class,
                 SpringMailConfig.class,
-                AspectJConfig.class};
+//                AspectJConfig.class
+        };
     }
 
     /**

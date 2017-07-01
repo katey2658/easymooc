@@ -22,8 +22,15 @@ public interface AccountRepository {
      * @param password 密码
      * @return 是否村存在
      */
-    Account findByEmailAddressAndPassword(@Param("emailAddress")String emailAddress,
+    Account findByEmailAddressAndPassword(String emailAddress,
                                     @Param("password")String password);
+
+    /**
+     * 根据用户邮箱获取账号信息
+     * @param emailAddress
+     * @return
+     */
+    Account findByEmailAddress(String emailAddress);
 
     /**
      * 根据邮箱统计
