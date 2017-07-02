@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.CatalogRepository">
+
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+
+    <insert id="save" parameterType="catalog">
+        INSERT INTO catalog(catalog_name,catalog_description)
+        VALUES (#{catalogName},#{catalogDescription})
+    </insert>
+
+    <insert id="saveAll" parameterType="catalog">
+        INSERT INTO catalog(catalog_name,catalog_description)
+        VALUES (#{catalogName},#{catalogDescription})
+    </insert>
+
+    <select id="findByCatalogId" resultMap="catalogMap" useCache="true">
+        SELECT
+        a.catalog_id AS a_catalog_id,
+        a.catalog_name AS a_catalog_name,
+        a.catalog_description AS a_catalog_description,
+        a.gmt_create AS a_gmt_create,
+        a.gmt_modified AS a_gmt_modified,
+        b.subject_id AS b_subject_id,
+        b.subejct_name AS b_subejct_name,
+        b.catalog_id AS b_catalog_id,
+        b.gmt_create AS b_gmt_create,
+        b.gmt_modified AS b_gmt_modified,
+        FROM catalog a JOIN subject b ON a.catalog_id=b.catalog_id
+        WHERE a.catalog_id=#{catalogId}
+    </select>
+
+    <select id="listAll" resultMap="catalogMap" useCache="true">
+        SELECT
+        a.catalog_id AS a_catalog_id,
+        a.catalog_name AS a_catalog_name,
+        a.catalog_description AS a_catalog_description,
+        a.gmt_create AS a_gmt_create,
+        a.gmt_modified AS a_gmt_modified,
+        b.subject_id AS b_subject_id,
+        b.subejct_name AS b_subejct_name,
+        b.catalog_id AS b_catalog_id,
+        b.gmt_create AS b_gmt_create,
+        b.gmt_modified AS b_gmt_modified,
+        FROM catalog a JOIN subject b ON a.catalog_id=b.catalog_id
+    </select>
+
+    <update id="updateCatalog" parameterType="catalog">
+        UPDATE catalog
+        SET catalog_name=#{catalogName}
+        SET catalog_description=#{catalogDescription}
+        WHERE catalog_id=#{catalogId}
+    </update>
+
+    <delete id="removeByCatalogId">
+        DELETE FROM catalog
+        WHERE catalog_id=#{catalogId}
+    </delete>
+
+    <resultMap id="catalogMap" type="catalog">
+        <result property="catalogId" column="a_catalog_id"/>
+        <result property="catalogName" column="a_catalog_name"/>
+        <result property="catalogDescription" column="a_catalog_description"/>
+        <result property="gmtCreate" column="a_gmt_create"/>
+        <result property="gmtModified" column="a_gmt_modified"/>
+        <collection property="subjectList">
+            <result property="subjectId" column="b_subject_id"/>
+            <result property="subjectName" column="b_subejct_name"/>
+            <result property="catalogId" column="b_catalog_id"/>
+            <result property="gmtCreate" column="b_gmt_create"/>
+            <result property="gmtModified" column="b_gmt_modified"/>
+        </collection>
+    </resultMap>
+</mapper>

@@ -4,12 +4,34 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.busyzero.easyoj.repository.CourseRepository">
     <insert id="save" parameterType="course">
-        INSERT INTO course(subject,title,description,condition,provider_id,time_start,time_end,level,time_per_week,language,pass_condition)
-        VALUES (#{subject},#{title},#{description},#{condition},#{providerId},#{teacherId},#{timeStart},#{timeEnd},#{level},#{timePerWeek},#{language},#{passCondition})
+        INSERT INTO course(subject_id,course_name,
+        description,pre_condition,course_image,
+        provider_name,provider_logo,provider_id,
+        teacher_photo,teacher_name,teacher_job_title,
+        teacher_signature,teacher_id,time_start,
+        time_end,student_level,time_learn,
+        language_to_teach,pass_condition,
+        price_with_certificate,price_with_no_certificate)
+        VALUES (#{subjectId},#{courseName},
+        #{description},#{preCondition},#{courseImage},
+        #{providerName},#{providerLogo},#{providerId},
+        #{teacherPhoto},#{teacherName},#{teacherJobTitle},
+        #{teacherSignature},#{teacherId},#{timeStart},
+        #{timeEnd},#{studentLevel},#{timeLearn},
+        #{languageToTeach},#{passCondition},
+        #{priceWithCertificate},#{priceWithNoCertificate})
     </insert>
 
+    <!-- TODO 暂时先写到这里-->
     <select id="findByCourseId" resultType="course">
-        SELECT course_id,subject,title,description,condition,provider_id,time_start,time_end,level,time_per_week,language,pass_condition,gmt_create,gmt_modified
+        SELECT course_id,ubject_id,course_name,
+        description,pre_condition,course_image,
+        provider_name,provider_logo,provider_id,
+        teacher_photo,teacher_name,teacher_job_title,
+        teacher_signature,teacher_id,time_start,
+        time_end,student_level,time_learn,
+        language_to_teach,pass_condition,
+        price_with_certificate,price_with_no_certificate
         FROM course
         WHERE course_id=#{courseId}
     </select>

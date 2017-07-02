@@ -264,6 +264,9 @@ KEY idx_provider_id(provider_id),
 KEY idx_teacher_id(teacher_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程信息表";
 
+
+
+
 ------------------------------------我是分界线------------------
 -- data 数据
 -- 目录大专业表数据

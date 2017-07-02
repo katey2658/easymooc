@@ -12,7 +12,7 @@ public class Subject {
     private Short subjectId;
 
     /**学科名字*/
-    private String subejectName;
+    private String subjectName;
 
     /**专业编号*/
     private Short catalogId;
@@ -34,12 +34,12 @@ public class Subject {
         this.subjectId = subjectId;
     }
 
-    public String getSubejectName() {
-        return subejectName;
+    public String getSubjectName() {
+        return subjectName;
     }
 
-    public void setSubejectName(String subejectName) {
-        this.subejectName = subejectName;
+    public void setSubjectName(String subjectName) {
+        this.subjectName = subjectName;
     }
 
     public Short getCatalogId() {
@@ -78,7 +78,7 @@ public class Subject {
     public String toString() {
         return "Subject{" +
                 "subjectId=" + subjectId +
-                ", subejectName='" + subejectName + '\'' +
+                ", subjectName='" + subjectName + '\'' +
                 ", catalogId=" + catalogId +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +

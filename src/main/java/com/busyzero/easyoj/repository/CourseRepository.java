@@ -1,8 +1,10 @@
 package com.busyzero.easyoj.repository;
 
 import com.busyzero.easyoj.domain.Course;
+import com.busyzero.easyoj.domain.Subject;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -32,8 +34,30 @@ public interface CourseRepository {
      * @return
      */
     List<Course> listAllBySubjectId(@Param("subjectId")short subjectId,
-                                  @Param("offset") int offset,
-                                  @Param("limit") int limit);
+                                    @Param("offset") int offset,
+                                    @Param("limit") int limit);
+    /**
+     * 根据课程类别来获取课程数据
+     * @param providerId
+     * @param offset 偏移量
+     * @param limit 限制
+     * @return
+     */
+    List<Course> listAllByProviderId(@Param("providerId")short providerId,
+                                    @Param("offset") int offset,
+                                    @Param("limit") int limit);
+
+    /**
+     * 根据课程类别来获取课程数据
+     * @param teacherId
+     * @param offset 偏移量
+     * @param limit 限制
+     * @return
+     */
+    List<Course> listAllByTeacherId(@Param("teacherId")int teacherId,
+                                    @Param("offset") int offset,
+                                    @Param("limit") int limit);
+
     /**
      * 更新一门课的信息
      * @param newCourse
