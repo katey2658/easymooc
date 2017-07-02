@@ -34,7 +34,7 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
 //                CachingConfig.class,
                 RootServiceConfig.class,
                 SpringMailConfig.class,
-                AspectJConfig.class
+//                AspectJConfig.class
         };
     }
 

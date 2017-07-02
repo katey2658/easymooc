@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.CourseRepository">
+    <insert id="save" parameterType="course">
+        INSERT INTO course(subject,title,description,condition,provider_id,time_start,time_end,level,time_per_week,language,pass_condition)
+        VALUES (#{subject},#{title},#{description},#{condition},#{providerId},#{teacherId},#{timeStart},#{timeEnd},#{level},#{timePerWeek},#{language},#{passCondition})
+    </insert>
+
+    <select id="findByCourseId" resultType="course">
+        SELECT course_id,subject,title,description,condition,provider_id,time_start,time_end,level,time_per_week,language,pass_condition,gmt_create,gmt_modified
+        FROM course
+        WHERE course_id=#{courseId}
+    </select>
+
+    <update id="updateCourse" parameterType="course">
+        UPDATE course
+        SET subject=#{subject},
+        SET title=#{title},
+        SET description=#{description},
+        SET condition=#{condition},
+        SET provider_id=#{providerId},
+        SET teacher_id=#{teacherId},
+        SET time_start=#{timeStart},
+        SET time_end=#{timeEnd},
+        SET level=#{level},
+        SET time_per_week=#{timePerWeek},
+        SET language=#{language},
+        SET pass_condition=#{passCondition},
+        WHERE course_id=#{courseId}
+    </update>
+
+    <delete id="removeByCourseId">
+        DELETE FROM course
+        WHERE course_id=#{couseId}
+    </delete>
+
+</mapper>

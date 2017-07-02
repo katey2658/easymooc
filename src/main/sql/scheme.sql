@@ -37,31 +37,6 @@ time_start datetime NOT NULL comment "开始时间",
 time_end datetime NOT NULL comment "结束时间",
 }engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学科专题表";
 
-
--- 课程列表
--- TODO 有两部风内容被没有写一个是，问题列表，评论打分，每周学习表
-CREATE TABLE if NOT EXISTS course{
-course_id unsigned INT auto_increment comment "课程编号",
-subject VARCHAR (20) NOT NULL comment "所属学科",
-title VARCHAR (50) NOT NULL UNIQUE comment "课程标题",
-description VARCHAR (500)NOT NULL comment "课程概述",
-condition VARCHAR (255) comment "课程前提条件",
-provider_id VARCHAR (50) INT NOT NULL "制作方",
-teacher_id unsigned INT NOT NULL "教学方id",
-time_start datetime NOT NULL comment "开始时间",
-time_end datetime NOT NULL comment "结束时间",
-level  VARCHAR (10) comment "适用级别",
-time_per_week VARCHAR (10) comment "平均每周学习时间",
-language VARCHAR (50) NOT NULL comment "授课语言",
-pass_condition VARCHAR (50) NOT NULL comment "通过条件",
-score_average unsigned FLOAT  DEFAULT comment "学生打分",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(course_id),
-KEY idx_subject(subject)
-}engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "课程信息表";
-
 -- 课程提供方信息
 CREATE TABLE if NOT EXISTS provider(
 provider_id unsigned INT auto_increment comment "课程编号",
@@ -232,6 +207,102 @@ task_item_id INT NOT NULL  COMMENT "课程编号" ,
 KEY index_useid_course_id(task_item_id,account_id)
 )engine=innodb  DEFAULT charset=utf8  COMMENT "观看记录表";
 
+
+------------------------------------我是分界线---------------------
+--目录表 :一级目录
+CREATE TABLE IF NOT EXISTS catalog(
+catalog_id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "目录列表项编号",
+catalog_name VARCHAR (20) NOT NULL COMMENT "目录项名",
+catalog_description VARCHAR (200) NOT NULL COMMENT "描述",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间"
+)ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT="一级目录表";
+
+--学科表：二级目录
+CREATE TABLE IF NOT EXISTS subject(
+subject_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "学科编号",
+subejct_name VARCHAR (50) NOT NULL COMMENT "学科名字",
+catalog_id TINYINT UNSIGNED COMMENT "目录列表项编号",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY (catalog_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT="二级学科表";
+
+-- 课程列表
+-- TODO 有两部风内容被没有写一个是，问题列表，评论打分，每周学习表
+CREATE TABLE IF NOT EXISTS course(
+course_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "课程编号",
+subject_id SMALLINT UNSIGNED NOT NULL COMMENT "所属学科编号",
+course_name VARCHAR (50) NOT NULL UNIQUE COMMENT "课程名",
+description VARCHAR (500)NOT NULL COMMENT "课程概述",
+pre_condition VARCHAR (255) COMMENT "课程前提条件",
+course_image VARCHAR (255) NOT NULL COMMENT "课程描述图片",
+provider_name VARCHAR (50) NOT NULL COMMENT "课程提供方名称",
+provider_logo VARCHAR (255) NOT NULL COMMENT "课程提供方logoUrl",
+provider_id INT UNSIGNED NOT NULL COMMENT "课程提供方信息编号",
+teacher_photo VARCHAR (255) NOT NULL COMMENT "授课老师头像",
+teacher_name VARCHAR (50) NOT NULL COMMENT "授课老师姓名",
+teacher_job_title VARCHAR (20) NOT NULL COMMENT "授课教师职称",
+teacher_signature VARCHAR (100) COMMENT "授课教师签名",
+teacher_id INT UNSIGNED NOT NULL COMMENT "授课老师信息编号",
+time_start DATETIME NOT NULL COMMENT "开始时间",
+time_end DATETIME NOT NULL COMMENT "结束时间",
+student_level  VARCHAR (10) COMMENT "适用学生级别",
+time_learn VARCHAR (10) COMMENT "平均每周学习时间",
+language_to_teach VARCHAR (50) NOT NULL COMMENT "授课语言",
+pass_condition VARCHAR (50) NOT NULL COMMENT "通过条件",
+price_with_certificate DECIMAL (10,2) DEFAULT 0.00 COMMENT "有证书的价格",
+price_with_no_certificate DECIMAL (10,2) DEFAULT 0.00 COMMENT "没有证书的价格",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_subject_id(subject_id),
+KEY idx_course_name(course_name),
+KEY idx_provider_id(provider_id),
+KEY idx_teacher_id(teacher_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程信息表";
+
+------------------------------------我是分界线------------------
+-- data 数据
+-- 目录大专业表数据
+INSERT INTO catalog(catalog_name,catalog_description)
+VALUES ('艺术与人文','艺术与人文专项课程（包括美术、历史和哲学）探讨创造性工作的历史，让您学会批判性审阅原始材料，找出不同观点间的联系，对论据和论点做出判断。该领域中的课程将让您成为一名更好的读者、思考者、艺术家和作家。')
+,('商务','商务专项课程提高您在现代工作中所需的重要技能，具体内容包括创业、商业战略、营销、金融和管理。无论您是一位小企业主，还是在大型跨国公司工作，商务课程都将提升您分析、理解和解决商业问题的能力。')
+,('计算机科学','计算机科学专项课程教授软件工程和设计、算法思维、人机交互、变成语言和计算机历史。本类课程涉及领域比较宽泛，它们将帮助您提高抽象思维能力，系统性地解决问题，提出合理的解决方案。');
+INSERT INTO catalog(catalog_name,catalog_description)
+VALUES ('数据科学','数据科学专项课程内容包括解读数据、分析数据和提出可操作性意见相关的基础知识。初学者和高水平学习者都能找到合适课程，例如定量和定性数据分析、数据处理的工具和方法、机器学习算法。')
+,('生命科学','生命科学专项课程探讨生物体和生态系统的性质，具体内容包括生物学、营养学、动物学和保健。本类课程将让您加强对动物和植物的理解，提高分析复杂系统中个体交互和应对改变方式的能力。')
+,('数学与逻辑','在专项课程中，您将学习使用数学和逻辑知识解决定量和抽象问题。您需要完成逻辑试题，学习计算技能，抽象描述真实世界的各种现象，以及加强推理能力。');
+INSERT INTO catalog(catalog_name,catalog_description)
+VALUES ('个人发展','个人发展专项课程介绍个人成长的战略和框架、目标设定以及自我改进。您将学习个人金融管理，发表印象深刻的演讲，进行道德决策，以及创造性思维。')
+,('物理科学与工程','物理科学和工程专项课程向学生讲解周围世界的性质，内容从物理和化学核心概念，直到工程中实际应用主题。如果您希望从事电子、土木或机械工程工作，或者进行相关研究和应用，本类课程将为您打下基础。')
+,('社会科学','社会科学专项课程探讨人们如何制定法律，做出决策，进行群体行动，以及组织结构化社区。通过教育学、经济学和心理学课程，学生将加强对个人和集体关系的理解，学生将掌握分析行为和趋势的能力。');
+INSERT INTO catalog(catalog_name,catalog_description)
+VALUES ('语言学习','在语言课程和专项课程中，您要学习使用全球主要语言，包括英语、汉语、西班牙语等有效地进行听说读写。无论您是学习一门外语，还是提高母语的沟通能力，本领域的课程都将帮助您了解语法和句法，并让您在商务会谈和随意性会话中放任自如。');
+
+-- 对学科表插入一些数据
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('历史',10),('音乐与艺术',10),('哲学',10);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('领导与管理',11),('金融',11),('营销',11),('创业',11),('商务核心',11),('商业战略',11);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('软件开发',12),('移动与网络开发',12),('算法',12),('计算机安全和网络',12),('设计和产品',12);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('数据分析',13),('机器学习',13),('概率论与数理统计',13);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('动物与兽医科学',14),('生物信息学',14),('生物',14),('医疗保健',14),('营养',14),('临床医学',14);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('数学与逻辑',15);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('个人发展',16);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('电子工程',17),('机械工程',17),('化学',17),('环境科学与持续发展',17),('物理与天文学',17),('研究方法',17);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('经济学',18),('教育',18),('政府与社会',18),('法律',18),('心理学',18);
+INSERT INTO subject(subejct_name,catalog_id)
+VALUES ('学习英语',19),('其它语言',19);
 
 -- 先插入一些记录数据
 INSERT INTO account(first_name,last_name,email_address,password) VALUES ('katey2658','jian','katey2658@gmail.com','wangdong1995');
