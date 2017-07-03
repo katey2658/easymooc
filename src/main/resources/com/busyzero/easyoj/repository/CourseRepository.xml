@@ -3,6 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.busyzero.easyoj.repository.CourseRepository">
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
     <insert id="save" parameterType="course">
         INSERT INTO course(subject_id,course_name,
         description,pre_condition,course_image,
@@ -22,9 +27,9 @@
         #{priceWithCertificate},#{priceWithNoCertificate})
     </insert>
 
-    <!-- TODO 暂时先写到这里-->
-    <select id="findByCourseId" resultType="course">
-        SELECT course_id,ubject_id,course_name,
+    <!-- TODO 暂时先写到这里:这里还有疑问回答，几条评论，一周weekTaksk需要关联 -->
+    <select id="findByCourseId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,course_name,
         description,pre_condition,course_image,
         provider_name,provider_logo,provider_id,
         teacher_photo,teacher_name,teacher_job_title,
@@ -36,20 +41,50 @@
         WHERE course_id=#{courseId}
     </select>
 
+    <select id="listAllBySubjectId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,course_name,course_name,provider_name
+        FROM course
+        WHERE subject_id=#{subjectId}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByProviderId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,provider_id,course_name,course_name,provider_name
+        FROM course
+        WHERE provider_id=#{provider_id}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByTeacherId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,teacher_id,course_name,course_name,provider_name
+        FROM course
+        WHERE teacher_id=#{teacherId}
+        LIMIT #{offset},#{limit}
+    </select>
+
     <update id="updateCourse" parameterType="course">
         UPDATE course
-        SET subject=#{subject},
-        SET title=#{title},
+        SET subject_id=#{subjectId},
+        SET course_name=#{courseName},
         SET description=#{description},
-        SET condition=#{condition},
+        SET pre_condition=#{preCondition},
+        SET course_image=#{courseImage},
+        SET provider_name=#{providerName},
+        SET provider_logo=#{providerLogo},
         SET provider_id=#{providerId},
+        SET teacher_photo=#{teacherPhoto},
+        SET teacher_name=#{teacherName},
+        SET teacher_job_title=#{teacherJobTitle},
+        SET teacher_signature=#{teacherSignature},
         SET teacher_id=#{teacherId},
         SET time_start=#{timeStart},
         SET time_end=#{timeEnd},
-        SET level=#{level},
-        SET time_per_week=#{timePerWeek},
-        SET language=#{language},
+        SET student_level=#{studentLevel},
+        SET time_learn=#{timeLearn},
+        SET language_to_teach=#{languageToTeach},
         SET pass_condition=#{passCondition},
+        SET price_with_certificate=#{priceWithCertificate},
+        SET price_with_no_certificate=#{priceWithNoCertificate}
         WHERE course_id=#{courseId}
     </update>
 
@@ -57,5 +92,4 @@
         DELETE FROM course
         WHERE course_id=#{couseId}
     </delete>
-
 </mapper>

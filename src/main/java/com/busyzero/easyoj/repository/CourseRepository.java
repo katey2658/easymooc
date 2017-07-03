@@ -1,10 +1,8 @@
 package com.busyzero.easyoj.repository;
 
 import com.busyzero.easyoj.domain.Course;
-import com.busyzero.easyoj.domain.Subject;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.Collection;
 import java.util.List;
 
 /**
