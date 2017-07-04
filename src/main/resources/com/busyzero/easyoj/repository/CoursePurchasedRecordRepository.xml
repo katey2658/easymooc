@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.CommentRepository">
+    <insert id="save" parameterType="coursePurchasedRecord">
+        INSERT INTO course_purchased_record(account_id,course_id,price_course,price_paid_actual,discount_percent)
+        VALUES (#{accountId},#{courseId},#{priceCourse},#{pricePaid},#{pricePaidActual},#{discountPercent})
+    </insert>
+
+    <select id="findByCoursePurchasedRecordId" resultType="coursePurchasedRecord">
+        SELECT course_purchased_record_id,account_id,course_id,valid,
+        paid,price_course,price_paid_actual,
+        discount_percent,method_paid,bill_code,
+        gmt_create,gmt_modified
+        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+    </select>
+
+    <select id="listAllByAccountId" resultType="coursePurchasedRecord">
+        SELECT course_purchased_record_id,account_id,course_id,valid,
+        paid,price_course,price_paid_actual,
+        discount_percent,method_paid,bill_code,
+        gmt_create,gmt_modified
+        WHERE account_id=#{accountId}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByAccountIdAndPaid" resultType="coursePurchasedRecord">
+        SELECT course_purchased_record_id,account_id,course_id,valid,
+        paid,price_course,price_paid_actual,
+        discount_percent,method_paid,bill_code,
+        gmt_create,gmt_modified
+        WHERE account_id=#{accountId} AND paid=#{paid} AND valid=1
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByAccountIdAndValid" resultType="coursePurchasedRecord">
+        SELECT course_purchased_record_id,account_id,course_id,valid,
+        paid,price_course,price_paid_actual,
+        discount_percent,method_paid,bill_code,
+        gmt_create,gmt_modified
+        WHERE account_id=#{accountId} AND valid=0
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByCourseIdAndPaid" resultType="coursePurchasedRecord">
+        SELECT course_purchased_record_id,account_id,course_id,valid,
+        paid,price_course,price_paid_actual,
+        discount_percent,method_paid,bill_code,
+        gmt_create,gmt_modified
+        WHERE course_id=#{courseId}
+        AND  paid=#{paid}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <update id="updateValidByCoursePurchasedRecordId">
+        UPDATE course_purchased_record
+        SET valid=0
+        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+    </update>
+
+    <update id="updatePaidByBillCode">
+        UPDATE course_purchased_record
+        SET bill_code=#{billCode},
+        SET method_paid=#{methodPaid},
+        SET paid=1
+        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+    </update>
+</mapper>

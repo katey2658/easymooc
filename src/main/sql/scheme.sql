@@ -238,16 +238,33 @@ CREATE TABLE IF NOT EXISTS task_item(
 task_item_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "任务部分编号",
 task_id INT UNSIGNED COMMENT "单元编号",
 title VARCHAR (50) NOT NULL COMMENT "标题",
-time_length TINYINT UNSIGNED NOT NULL "时间长度",
+time_length TINYINT UNSIGNED NOT NULL COMMENT"时间长度",
 video_info_id INT UNSIGNED COMMENT "视频统计信息编号",
 video_url VARCHAR (255) COMMENT "视频地址资源",
 wiki_id INT UNSIGNED COMMENT "wiki内容编号",
-gmt_create DATETIEM NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_task_id(task_id)
-)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="具体内容表";
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="具体内容表";
 
+-- 用户购买选课记录表
+CREATE TABLE IF NOT EXISTS course_purchased_record(
+course_purchased_record_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "用户购买记录编号",
+account_id INT UNSIGNED NOT NULL COMMENT "用户编号",
+course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
+valid TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "默认是有效",
+paid TINYINT UNSIGNED NOT NULL DEFAULT 0  COMMENT "是否已经付款",
+price_course DECIMAL (10,2) NOT NULL  COMMENT "课程价格",
+price_paid_actual DECIMAL(10,2) NOT NULL COMMENT "实际付款",
+discount_percent TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "折扣优惠百分比",
+method_paid TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "选择支付方式 1.网银 2.支付宝 3.微信",
+bill_code VARCHAR (255) NOT NULL DEFAULT "" COMMENT "用户支付后生成的账单号",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY (account_id,course_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="用户购买记录表";
 
 ------------------------------------我是分界线------------------
 -- data 数据  先插入一些记录数据
@@ -292,7 +309,6 @@ INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('经济学',18),('教育',18),('政府与社会',18),('法律',18),('心理学',18);
 INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('学习英语',19),('其它语言',19);
-
 -- TODO 课程表信息数据
 
 -- TODO 课程表常见问题和回答数据
