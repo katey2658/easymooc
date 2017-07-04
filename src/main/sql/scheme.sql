@@ -1,25 +1,6 @@
 --创建数据库
-CREATE database if NOT EXISTS easyoj;
+CREATE DATABASE IF NOT EXISTS easyoj;
 USE easyoj;
-
--- 创建学生用户账户表
--- 这里的考量是id 不会达到那么大的数据量
--- 注：这里采用邮箱和密码来做覆盖索引，提高查找性能
-CREATE TABLE if NOT EXISTS account(
-account_id  INT unsigned auto_increment comment "账户编号",
-first_name VARCHAR (50) NOT NULL comment "名字",
-last_name VARCHAR (50) NOT  NULL comment "姓",
-email_address VARCHAR (30) NOT NULL UNIQUE comment "邮箱地址",
-password VARCHAR (50) NOT NULL comment "账户密码",
-alive TINYINT NOT NULL DEFAULT 1 comment "账户是否有效",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(account_id),
-KEY idx_emailpassword(email_address,password)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学生账户表";
-
-
 -- TODO profile:用户详细信息表 是否对外展示  希望工作类型  技能  工作经验 教育背景 项目 访问问题  工作要求
 
 -- 专题列表
@@ -56,79 +37,6 @@ gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
 PRIMARY KEY pk_id(teacher_id),
 )engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "授课教师信息表";
-
---课程问题列表回答表，这和其它讨论区的问题不同
-CREATE TABLE if NOT EXISTS question_reply(
-question_reply_id unsinged bigint auto_increment comment "问题编号",
-course_id unsiged INT NOT  NULL comment "课程编号",
-question_content VARCHAR (100) NOT  NULL comment "问题",
-reply VARCHAR (100) NOT NULL  comment "回答",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(question_reply_id),
-KEY idx_course_id(course_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "课程回答信息表";
-
--- 评论信息表
-CREATE TABLE if NOT EXISTS comment(
-comment_id unsigned bitint auto_increment comment "评论编号",
-course_id usigned INT  NOT NULL comment "课程编号",
-account_id unsiged INT NOT NULL comment "用户编号",
-score unsigned tinyint NOT NULL DEFAULT 5.0 comment "打分",
-comment VARCHAR (100) NOT NULL DEFAULT "" comment "评论",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(comment_id),
-KEY idx_course_id(course_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "课程评论信息表";
-
-
--- 授课大纲，包含阅读，视频，每周测试
-CREATE TABLE if NOT EXISTS week_task(
-week_task_id unsiged INT comment "每周任务编号",
-course_id unsigned INT comment "课程编号",
-content VARCHAR (50) NOT NULL comment "本周内容",
-time_start datetime NOT NULL comment "开始时间",
-time_end datetime NOT NULL comment "结束时间",
-introduction VARCHAR (500) NOT NULL comment "介绍",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(week_task_id),
-KEY idx_course_id(course_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "每周信息表";
-
--- 每周任务列表,拥有真实部分
-CREATE TABLE if NOT EXISTS task(
-task_id unsigned INT auto_increment comment "任务编号",
-week_task_id unsiged INT NOT NULL "每周任务",
-title VARCHAR (10) NOT NULL comment "小节标题",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(task_id),
-KEY idx_week_task_id(week_task_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "每周任务小节表";
-
--- 教学内容表
-CREATE TABLE if NOT EXISTS task_item(
-task_item_id unsigned INT auto_increment comment "任务部分编号",
-task_id unsigned INT  comment "任务编号",
-title VARCHAR (50) NOT NULL comment "标题",
-time_length unsigned tinyint NOT NULL "时间长度",
-video_id unsigned INT comment "视频内容编号",
-wiki_id unsigned INT comment "wiki内容编号",
-test_id unsigned INT comment "测试编号",
-like unsigned INT NOT NULL DEFAULT 0 comment "点赞",
-trample unsigned INT NOT NULL DEFAULT 0 comment "踩",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(task_item_id),
-KEY idx_task_id(task_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "具体内容表";
 
 -- 视频表,字幕就不做了，之后在做吧
 CREATE TABLE if NOT EXISTS video(
@@ -199,16 +107,27 @@ KEY idx_account_id(account_id)
 -- TODO 论坛,交流是一个模块,之后在做吧
 -- /learn/machine-learning/discussions/weeks/1
 
--- 观看记录表
-CREATE TABLE if NOT EXISTS task_item_log(
-id BIGINT PRIMARY KEY  auto_increment COMMENT "编号",
-account_id INT NOT NULL COMMENT "用户编号",
-task_item_id INT NOT NULL  COMMENT "课程编号" ,
-KEY index_useid_course_id(task_item_id,account_id)
-)engine=innodb  DEFAULT charset=utf8  COMMENT "观看记录表";
-
+-- TODO 课程小节任务完成日志记录表
 
 ------------------------------------我是分界线---------------------
+-- 创建学生用户账户表
+-- 这里的考量是id 不会达到那么大的数据量
+-- 注：这里采用邮箱和密码来做覆盖索引，提高查找性能
+-- 注：用户详细信息还是要关联账户详细信息表的
+CREATE TABLE IF NOT EXISTS account(
+account_id  INT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "账户编号",
+first_name VARCHAR (50) NOT NULL COMMENT "名字",
+last_name VARCHAR (50) NOT  NULL COMMENT "姓",
+email_address VARCHAR (30) NOT NULL UNIQUE COMMENT "邮箱地址",
+account_photo VARCHAR (255) NOT NULL DEFAULT "" COMMENT "用户头像",
+password VARCHAR (50) NOT NULL COMMENT "账户密码",
+alive TINYINT NOT NULL DEFAULT 1 COMMENT "账户是否有效",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_emailpassword(email_address,password)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="学生账户表";
+
 --目录表 :一级目录
 CREATE TABLE IF NOT EXISTS catalog(
 catalog_id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "目录列表项编号",
@@ -231,7 +150,6 @@ KEY (catalog_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT="二级学科表";
 
 -- 课程列表
--- TODO 有两部风内容被没有写一个是，问题列表，评论打分，每周学习表
 CREATE TABLE IF NOT EXISTS course(
 course_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "课程编号",
 subject_id SMALLINT UNSIGNED NOT NULL COMMENT "所属学科编号",
@@ -264,11 +182,79 @@ KEY idx_provider_id(provider_id),
 KEY idx_teacher_id(teacher_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程信息表";
 
+--课程问题列表回答表
+CREATE TABLE IF NOT EXISTS question_reply(
+question_reply_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "问题编号",
+course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
+question_content VARCHAR (100) NOT  NULL COMMENT "问题概述",
+reply VARCHAR (255) NOT NULL  COMMENT "回答",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_course_id(course_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="课程回答信息表";
 
+-- 评论信息表
+CREATE TABLE IF NOT EXISTS comment(
+comment_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "评论编号",
+course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
+account_id INT UNSIGNED NOT NULL COMMENT "用户编号",
+score TINYINT UNSIGNED NOT NULL DEFAULT 5.0 COMMENT "打分",
+comment_content VARCHAR (255) NOT NULL DEFAULT "" COMMENT "评论",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_course_id(course_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程评论信息表";
+
+-- 授课大纲，包含阅读，视频，每周测试
+CREATE TABLE IF NOT EXISTS week_task(
+week_task_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "每周任务编号",
+course_id INT UNSIGNED COMMENT "课程编号",
+content_title VARCHAR (50) NOT NULL DEFAULT "" COMMENT "本周内容标题",
+introduction VARCHAR (500) NOT NULL COMMENT "周内容介绍",
+time_start DATETIME NOT NULL COMMENT "开始时间",
+time_end DATETIME NOT NULL COMMENT "结束时间",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_course_id(course_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="每周信息表";
+
+-- 每周学习单元表
+CREATE TABLE IF NOT EXISTS task(
+task_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "单元编号",
+week_task_id INT UNSIGNED NOT NULL COMMENT "课程周编号",
+order_in_week TINYINT UNSIGNED COMMENT "课程章节顺序编号",
+title VARCHAR (20) NOT NULL COMMENT "小节标题",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_week_task_id(week_task_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="每周任务表";
+
+-- 教学内容表，将单元检测已经剥离出去
+CREATE TABLE IF NOT EXISTS task_item(
+task_item_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "任务部分编号",
+task_id INT UNSIGNED COMMENT "单元编号",
+title VARCHAR (50) NOT NULL COMMENT "标题",
+time_length TINYINT UNSIGNED NOT NULL "时间长度",
+video_info_id INT UNSIGNED COMMENT "视频统计信息编号",
+video_url VARCHAR (255) COMMENT "视频地址资源",
+wiki_id INT UNSIGNED COMMENT "wiki内容编号",
+gmt_create DATETIEM NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_task_id(task_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="具体内容表";
 
 
 ------------------------------------我是分界线------------------
--- data 数据
+-- data 数据  先插入一些记录数据
+-- 用户账户小表数据
+INSERT INTO account(first_name,last_name,email_address,password) VALUES ('katey2658','jian','katey2658@gmail.com','wangdong1995');
+INSERT INTO account(first_name,last_name,email_address,password) VALUES ('katey8888','dong','katey8888@gmail.com','wangdong1995');
+
 -- 目录大专业表数据
 INSERT INTO catalog(catalog_name,catalog_description)
 VALUES ('艺术与人文','艺术与人文专项课程（包括美术、历史和哲学）探讨创造性工作的历史，让您学会批判性审阅原始材料，找出不同观点间的联系，对论据和论点做出判断。该领域中的课程将让您成为一名更好的读者、思考者、艺术家和作家。')
@@ -307,6 +293,9 @@ VALUES ('经济学',18),('教育',18),('政府与社会',18),('法律',18),('心
 INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('学习英语',19),('其它语言',19);
 
--- 先插入一些记录数据
-INSERT INTO account(first_name,last_name,email_address,password) VALUES ('katey2658','jian','katey2658@gmail.com','wangdong1995');
-INSERT INTO account(first_name,last_name,email_address,password) VALUES ('katey8888','dong','katey8888@gmail.com','wangdong1995');
+-- TODO 课程表信息数据
+
+-- TODO 课程表常见问题和回答数据
+
+-- TODO 评论表信息数据
+

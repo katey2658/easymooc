@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.WeekTaskRepository">
+    <insert id="save" parameterType="weekTask">
+        INSERT INTO week_task(course_id,content_title,introduction,time_start,time_end)
+        VALUES (#{courseId},#{contentTitle},#{introduction},#{time_start},#{time_end})
+    </insert>
+
+    <select id="findByWeekTaskId" resultMap="weekTaskMap">
+        SELECT
+        a.week_task_id AS a_week_task_id,
+        a.course_id AS a_course_id,
+        a.content_title AS a_content_title,
+        a.introduction AS a_introduction,
+        a.time_start AS a_time_start,
+        a.time_end AS a_time_end,
+        a.gmt_create AS a_gmt_create,
+        a.gmt_modified AS a_gmt_modified,
+        b.task_id AS b_task_id,
+        b.week_task_id AS b_week_task_id,
+        b.order_in_week AS b_order_in_week,
+        b.title AS b_title,
+        b.gmt_create AS b_gmt_create,
+        b.gmt_modified AS b_gmt_modified,
+        c.task_item_id AS c_task_item_id,
+        c.task_id AS c_task_id,
+        c.title AS c_title,
+        c.time_length AS c_time_length,
+        c.video_info_id AS c_video_info_id,
+        c.video_url AS c_video_url,
+        c.wiki_id AS c_wiki_id,
+        c.gmt_create AS c_gmt_create,
+        c.gmt_modified AS c_gmt_modified,
+        FROM week_task a JOIN task b ON a.week_task_id=b.week_task_id
+        JOIN task_item c ON c.task_id=b.task_id
+        WHERE a.week_task_id=#{week_task_id}
+    </select>
+
+    <select id="listAllByCourseId" resultMap="weekTaskMap">
+        SELECT
+        a.week_task_id AS a_week_task_id,
+        a.course_id AS a_course_id,
+        a.content_title AS a_content_title,
+        a.introduction AS a_introduction,
+        a.time_start AS a_time_start,
+        a.time_end AS a_time_end,
+        a.gmt_create AS a_gmt_create,
+        a.gmt_modified AS a_gmt_modified,
+        b.task_id AS b_task_id,
+        b.week_task_id AS b_week_task_id,
+        b.order_in_week AS b_order_in_week,
+        b.title AS b_title,
+        b.gmt_create AS b_gmt_create,
+        b.gmt_modified AS b_gmt_modified,
+        c.task_item_id AS c_task_item_id,
+        c.task_id AS c_task_id,
+        c.title AS c_title,
+        c.time_length AS c_time_length,
+        c.video_info_id AS c_video_info_id,
+        c.video_url AS c_video_url,
+        c.wiki_id AS c_wiki_id,
+        c.gmt_create AS c_gmt_create,
+        c.gmt_modified AS c_gmt_modified,
+        FROM week_task a JOIN task b ON a.week_task_id=b.week_task_id
+        JOIN task_item c ON c.task_id=b.task_id
+        WHERE a.course_id=#{courseId}
+    </select>
+
+    <update id="updateWeekTask" parameterType="weekTask">
+        UPDATE week_task
+        SET content_title=#{contentTitle},
+        SET introduction=#{introduction},
+        SET time_start=#{timeStart},
+        SET time_end=#{timeEnd}
+        WHERE week_task_id=#{weekTaskId}
+    </update>
+
+    <delete id="removeByWeekTaskId">
+        DELETE FROM  week_task
+        WHERE week_task_id=#{weekTaskId}
+    </delete>
+
+    <delete id="removeAllByCourseId">
+        DELETE FROM week_task
+        WHERE course_id=#{courseId}
+    </delete>
+
+    <resultMap id="weekTaskMap" type="weekTask">
+        <result property="weekTaskId" column="a_week_task_id"/>
+        <result property="courseId" column="a_course_id"/>
+        <result property="contentTitle" column="a_content_title"/>
+        <result property="introduction" column="a_introduction"/>
+        <result property="timeStart" column="a_time_start"/>
+        <result property="timeEnd" column="a_time_end"/>
+        <result property="gmtCreate" column="a_gmt_create"/>
+        <result property="gmtModified" column="a_gmt_modified"/>
+        <collection property="taskList">
+            <result property="taskId" column="b_task_id"/>
+            <result property="weekTaskId" column="b_week_task_id"/>
+            <result property="orderInWeek" column="b_order_in_week"/>
+            <result property="title" column="b_title"/>
+            <result property="gmtCreate" column="b_gmt_create"/>
+            <result property="gmtModified" column="b_gmt_modified"/>
+            <collection property="taskItemList">
+                <result property="taskItemId" column="c_task_item_id"/>
+                <result property="taskId" column="c_task_id"/>
+                <result property="title" column="c_title"/>
+                <result property="timeLength" column="c_time_length"/>
+                <result property="videoId" column="c_video_info_id"/>
+                <result property="videoUrl" column="c_video_url"/>
+                <result property="wikiId" column="c_wiki_id"/>
+                <result property="gmtCreate" column="c_gmt_create"/>
+                <result property="gmtModified" column="c_gmt_modified"/>
+            </collection>
+        </collection>
+    </resultMap>
+</mapper>

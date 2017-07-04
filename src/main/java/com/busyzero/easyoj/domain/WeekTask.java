@@ -1,5 +1,7 @@
 package com.busyzero.easyoj.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.time.Instant;
 import java.util.List;
 
@@ -7,6 +9,7 @@ import java.util.List;
  * 每周授课大纲信息
  * Created by 11456 on 2017/6/22.
  */
+@Alias("weekTask")
 public class WeekTask {
     /**每周任务编号*/
     private Integer weekTaskId;
@@ -15,7 +18,7 @@ public class WeekTask {
     private Integer courseId;
 
     /**本周内容*/
-    private String content;
+    private String contentTitle;
 
     /**开始时间*/
     private Instant timeStart;
@@ -51,12 +54,20 @@ public class WeekTask {
         this.courseId = courseId;
     }
 
-    public String getContent() {
-        return content;
+    public String getContentTitle() {
+        return contentTitle;
     }
 
-    public void setContent(String content) {
-        this.content = content;
+    public void setContentTitle(String contentTitle) {
+        this.contentTitle = contentTitle;
+    }
+
+    public List<Task> getTaskList() {
+        return taskList;
+    }
+
+    public void setTaskList(List<Task> taskList) {
+        this.taskList = taskList;
     }
 
     public Instant getTimeStart() {
@@ -104,7 +115,7 @@ public class WeekTask {
         return "WeekTask{" +
                 "weekTaskId=" + weekTaskId +
                 ", courseId=" + courseId +
-                ", content='" + content + '\'' +
+                ", contentTitle='" + contentTitle + '\'' +
                 ", timeStart=" + timeStart +
                 ", timeEnd=" + timeEnd +
                 ", introduction='" + introduction + '\'' +

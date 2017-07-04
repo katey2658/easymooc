@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * TODO 需要完成
  *  小节任务表，对外接口
  * Created by 11456 on 2017/7/1.
  */
@@ -45,4 +46,25 @@ public interface TaskRepository {
      * @return
      */
     int updateTask(Task newTask);
+
+    /**
+     * 根据章节编号进行删除
+     * @param taskId
+     * @return
+     */
+    int removeByTaskId(int taskId);
+
+    /**
+     * 根据章节编号编号进行删除
+     * @param taskIds
+     * @return
+     */
+    int removeAllByTaskIds(Collection<Integer> taskIds);
+
+    /**
+     * 根据周编号进行删除
+     * @param weekTaskId
+     * @return
+     */
+    int removeAllByWeekTaskId(int weekTaskId);
 }

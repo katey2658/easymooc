@@ -1,11 +1,14 @@
 package com.busyzero.easyoj.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.time.Instant;
 
 /**
  * 教学内容项
  * Created by 11456 on 2017/6/22.
  */
+@Alias("taskItem")
 public class TaskItem {
     /**任务项分项目编号*/
     private Integer taskItemId;
@@ -20,19 +23,22 @@ public class TaskItem {
     private Short timeLength;
 
     /**视频编号*/
-    private Integer videoId;
+    private Integer videoInfoId;
 
     /**wiki内容编号*/
     private Integer wikiId;
 
-    /**测试编号*/
-    private Integer testId;
+    /**视频地址*/
+    private String videoUrl;
 
-    /**点赞数*/
-    private Integer like;
-
-    /**踩数*/
-    private Integer trample;
+//    /**测试编号*/
+//    private Integer testId;
+//
+//    /**点赞数*/
+//    private Integer like;
+//
+//    /**踩数*/
+//    private Integer trample;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -41,13 +47,10 @@ public class TaskItem {
     private Instant gmtModified;
 
     /**视频内容*/
-    private Video video;
+    private VideoInfo videoInfo;
 
     /**wiki内容*/
     private Wiki wiki;
-
-    /**测试内容*/
-    private  Test test;
 
     public Integer getTaskItemId() {
         return taskItemId;
@@ -81,12 +84,12 @@ public class TaskItem {
         this.timeLength = timeLength;
     }
 
-    public Integer getVideoId() {
-        return videoId;
+    public Integer getVideoInfoId() {
+        return videoInfoId;
     }
 
-    public void setVideoId(Integer videoId) {
-        this.videoId = videoId;
+    public void setVideoInfoId(Integer videoInfoId) {
+        this.videoInfoId = videoInfoId;
     }
 
     public Integer getWikiId() {
@@ -97,28 +100,12 @@ public class TaskItem {
         this.wikiId = wikiId;
     }
 
-    public Integer getTestId() {
-        return testId;
+    public String getVideoUrl() {
+        return videoUrl;
     }
 
-    public void setTestId(Integer testId) {
-        this.testId = testId;
-    }
-
-    public Integer getLike() {
-        return like;
-    }
-
-    public void setLike(Integer like) {
-        this.like = like;
-    }
-
-    public Integer getTrample() {
-        return trample;
-    }
-
-    public void setTrample(Integer trample) {
-        this.trample = trample;
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
     }
 
     public Instant getGmtCreate() {
@@ -137,12 +124,12 @@ public class TaskItem {
         this.gmtModified = gmtModified;
     }
 
-    public Video getVideo() {
-        return video;
+    public VideoInfo getVideoInfo() {
+        return videoInfo;
     }
 
-    public void setVideo(Video video) {
-        this.video = video;
+    public void setVideoInfo(VideoInfo videoInfo) {
+        this.videoInfo = videoInfo;
     }
 
     public Wiki getWiki() {
@@ -153,14 +140,6 @@ public class TaskItem {
         this.wiki = wiki;
     }
 
-    public Test getTest() {
-        return test;
-    }
-
-    public void setTest(Test test) {
-        this.test = test;
-    }
-
     @Override
     public String toString() {
         return "TaskItem{" +
@@ -168,16 +147,13 @@ public class TaskItem {
                 ", taskId=" + taskId +
                 ", title='" + title + '\'' +
                 ", timeLength=" + timeLength +
-                ", videoId=" + videoId +
+                ", videoInfoId=" + videoInfoId +
                 ", wikiId=" + wikiId +
-                ", testId=" + testId +
-                ", like=" + like +
-                ", trample=" + trample +
+                ", videoUrl='" + videoUrl + '\'' +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
-                ", video=" + video +
+                ", videoInfo=" + videoInfo +
                 ", wiki=" + wiki +
-                ", test=" + test +
                 '}';
     }
 }

@@ -33,6 +33,20 @@ public interface CommentRepository {
      * @param commentId
      * @return
      */
-    int removeById(long commentId);
+    int removeByCommentId(long commentId);
+
+    /**
+     * 根据课程信息删除所有评论信息
+     * @param courseId
+     * @return
+     */
+    int removeAllByCourseId(int courseId);
+
+    /**
+     * 根据用户账号编号拉进行删除所有
+     * @param accountId
+     * @return
+     */
+    int removeALlByAccountId(int accountId);
 
 }

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.QuestionReplyRepository">
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+
+    <insert id="save" parameterType="questionReply">
+        INSERT INTO question_reply(course_id,question_content,reply)
+        VALUES (#{courseId},#{questionContent},#{reply})
+    </insert>
+
+    <insert id="saveAll" parameterType="questionReply">
+        INSERT INTO question_reply(course_id,question_content,reply)
+        VALUES (#{courseId},#{questionContent},#{reply})
+    </insert>
+
+    <select id="listAllByCourseId" resultType="questionReply">
+        SELECT question_reply_id,course_id,question_content,reply,gmt_create,gmt_modified
+        FROM question_reply
+        WHERE course_id=#{courseId}
+    </select>
+
+    <update id="updateQuestionReply" parameterType="questionReply">
+        UPDATE question_reply
+        SET question_content=#{questionContent},
+        SET reply=#{reply}
+        WHERE question_reply_id=#{question_reply_id}
+    </update>
+
+    <update id="udpateALlQuestionReplys">
+        <foreach collection="newQuestionReplys" item="item" separator=";">
+            UPDATE question_reply
+            SET question_content=#{item.questionContent},
+            SET reply=#{item.reply}
+            WHERE question_reply_id=#{item.question_reply_id}
+        </foreach>
+    </update>
+
+    <delete id="removeAllByCourseId">
+        DELETE FROM question_reply
+        WHERE course_id=#{courseId}
+    </delete>
+
+    <delete id="removeByQuestionReplyId">
+        DELETE FROM question_reply
+        WHERE question_reply_id=#{questionReplyId}
+    </delete>
+
+    <delete id="removeByQuestionReplyIds">
+        DELETE FROM question_reply
+        WHERE question_reply_id IN
+        <foreach collection="questionReplyIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+</mapper>

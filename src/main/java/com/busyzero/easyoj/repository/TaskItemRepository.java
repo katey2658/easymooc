@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * TODO 需要完成
  * 操作任务对外操作接口
  * TODO 这里规避了各种关于视频还是什么的不同
  * Created by 11456 on 2017/7/1.
@@ -46,7 +47,7 @@ public interface TaskItemRepository{
      * @param TaskItemId
      * @return
      */
-    int removeByTaskId(Integer TaskItemId);
+    int removeByTaskItemId(Integer TaskItemId);
 
     /**
      * 根据taskId批量删除
@@ -57,15 +58,15 @@ public interface TaskItemRepository{
 
     /**
      * 根据Id 集合批量删除
-     * @param ids
+     * @param taskItemIds
      * @return
      */
-    int removeAllByIds(Collection<Integer> ids);
+    int removeAllByTaskItemIds(Collection<Integer> taskItemIds);
 
     /**
      * 进行更新
      * @param newTask
      * @return
      */
-    int updateTask(Task newTask);
+    int updateTaskItem(Task newTask);
 }

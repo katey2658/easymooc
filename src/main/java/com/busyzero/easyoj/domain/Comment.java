@@ -1,11 +1,14 @@
 package com.busyzero.easyoj.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.time.Instant;
 
 /**
  * 课程评论信息列表
  * Created by 11456 on 2017/6/22.
  */
+@Alias("comment")
 public class Comment {
     /**评论编号*/
     private Long commentId;
@@ -20,13 +23,16 @@ public class Comment {
     private Short score;
 
     /**评论*/
-    private String commment;
+    private String commentContent;
 
     /**创建时间*/
     private Instant timeStart;
 
     /**最后修改时间*/
     private Instant timeModified;
+
+    /**评论用户信息*/
+    private Account account;
 
     public Long getCommentId() {
         return commentId;
@@ -60,12 +66,12 @@ public class Comment {
         this.score = score;
     }
 
-    public String getCommment() {
-        return commment;
+    public String getCommentContent() {
+        return commentContent;
     }
 
-    public void setCommment(String commment) {
-        this.commment = commment;
+    public void setCommentContent(String commentContent) {
+        this.commentContent = commentContent;
     }
 
     public Instant getTimeStart() {
@@ -84,6 +90,14 @@ public class Comment {
         this.timeModified = timeModified;
     }
 
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
@@ -91,9 +105,10 @@ public class Comment {
                 ", courseId=" + courseId +
                 ", accountId=" + accountId +
                 ", score=" + score +
-                ", commment='" + commment + '\'' +
+                ", commentContent='" + commentContent + '\'' +
                 ", timeStart=" + timeStart +
                 ", timeModified=" + timeModified +
+                ", account=" + account +
                 '}';
     }
 }

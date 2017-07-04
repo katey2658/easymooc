@@ -24,6 +24,9 @@ public class Account implements Serializable {
     /**邮箱地址*/
     private String emailAddress;
 
+    /**用户账户头像：如果没有设置，会选用默认的*/
+    private String accountPhoto;
+
     /**密码*/
     private String password;
 
@@ -68,6 +71,14 @@ public class Account implements Serializable {
         this.emailAddress = emailAddress;
     }
 
+    public String getAccountPhoto() {
+        return accountPhoto;
+    }
+
+    public void setAccountPhoto(String accountPhoto) {
+        this.accountPhoto = accountPhoto;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -107,6 +118,7 @@ public class Account implements Serializable {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
+                ", accountPhoto='" + accountPhoto + '\'' +
                 ", password='" + password + '\'' +
                 ", alive=" + alive +
                 ", gmtCreate=" + gmtCreate +
