@@ -43,7 +43,7 @@
     <update id="updateSubject" parameterType="subject">
         UPDATE subejct
         SET subejct_name=#{subjectName}
-        SET catalog_id=#{catalogId}
+        catalog_id=#{catalogId}
         WHERE subject_id=#{subjectId}
     </update>
 

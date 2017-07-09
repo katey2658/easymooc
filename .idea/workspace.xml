@@ -10,8 +10,15 @@
   <component name="ChangeListManager">
     <list default="true" id="d469e7a6-b32c-4355-818d-331f2692c2b0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/sql/scheme.sql" afterPath="$PROJECT_DIR$/src/main/sql/scheme.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,22 +43,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CoursePurchasedRecordRepository.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CourseRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="472">
+              <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+              <folding>
+                <marker date="1499610644879" expanded="true" signature="413:1219" ph="INSERT INTO course... " />
+                <marker date="1499610644879" expanded="true" signature="1368:1806" ph="SELECT cours... " />
+                <marker date="1499610644879" expanded="true" signature="1903:2059" ph="SELECT cours... course" />
+                <marker date="1499610644879" expanded="true" signature="2157:2328" ph="SELECT cours... course" />
+                <marker date="1499610644879" expanded="true" signature="2425:2592" ph="SELECT cours... course" />
+                <marker date="1499610644879" expanded="true" signature="2670:3559" ph="UPDATE cours... " />
+                <marker date="1499610644879" expanded="true" signature="3618:3671" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CoursePurchasedRecordRepository.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-55">
-              <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+            <state relative-caret-position="361">
+              <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
               <folding>
-                <marker date="1499148984601" expanded="true" signature="303:516" ph="INSERT INTO course_purchased_record... " />
-                <marker date="1499148984601" expanded="true" signature="623:877" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="973:1230" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="1333:1619" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="1723:1992" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="2094:2316" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="2094:2317" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="2094:2375" ph="SELECT cours... " />
-                <marker date="1499148984601" expanded="true" signature="2454:2572" ph="UPDATE cours... " />
-                <marker date="1499148984601" expanded="true" signature="2635:2826" ph="UPDATE cours... " />
+                <marker date="1499610644909" expanded="true" signature="303:516" ph="INSERT INTO course_purchased_record... " />
+                <marker date="1499610644909" expanded="true" signature="623:877" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="973:1230" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="1333:1619" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="1723:1992" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="2094:2316" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="2094:2317" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="2094:2375" ph="SELECT cours... " />
+                <marker date="1499610644909" expanded="true" signature="2454:2572" ph="UPDATE cours... " />
+                <marker date="1499610644909" expanded="true" signature="2635:2818" ph="UPDATE cours... " />
               </folding>
             </state>
           </provider>
@@ -60,7 +85,7 @@
       <file leaf-file-name="CommentRepository.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
+            <state relative-caret-position="-535">
               <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
               <folding>
                 <marker date="1499067740713" expanded="true" signature="270:403" ph="INSERT INTO comment... " />
@@ -68,6 +93,130 @@
                 <marker date="1499067740713" expanded="true" signature="944:1001" ph="DELETE FROM " />
                 <marker date="1499067740713" expanded="true" signature="1063:1118" ph="DELETE FROM " />
                 <marker date="1499067740713" expanded="true" signature="1185:1242" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CatalogRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-119">
+              <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+              <folding>
+                <marker date="1499610645014" expanded="true" signature="417:524" ph="INSERT INTO catalog... " />
+                <marker date="1499610645014" expanded="true" signature="598:705" ph="INSERT INTO catalog... " />
+                <marker date="1499610645014" expanded="true" signature="802:1329" ph="SELECT a.cat... catalog" />
+                <marker date="1499610645014" expanded="true" signature="1418:1905" ph="SELECT a.cat... catalog" />
+                <marker date="1499610645014" expanded="true" signature="1985:2127" ph="UPDATE catal... " />
+                <marker date="1499610645014" expanded="true" signature="2187:2244" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountRepository.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+              <folding>
+                <marker date="1499069102405" expanded="true" signature="272:435" ph="INSERT INTO accout... " />
+                <marker date="1499069102405" expanded="true" signature="497:578" ph="SELECT COUNT... account" />
+                <marker date="1499069102405" expanded="true" signature="671:811" ph="SELECT accou... account" />
+                <marker date="1499069102405" expanded="true" signature="671:844" ph="SELECT accou... account" />
+                <marker date="1499069102405" expanded="true" signature="926:1066" ph="SELECT accou... account" />
+                <marker date="1499069102405" expanded="true" signature="1137:1231" ph="UPDATE accou... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VideoRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="63">
+              <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+              <folding>
+                <marker date="1499610644952" expanded="true" signature="300:384" ph="INSERT INTO video... " />
+                <marker date="1499610644952" expanded="true" signature="440:491" ph="INSERT INTO video... " />
+                <marker date="1499610644952" expanded="true" signature="701:818" ph="SELECT video... video" />
+                <marker date="1499610644952" expanded="true" signature="871:978" ph="UPDATE video... " />
+                <marker date="1499610644952" expanded="true" signature="1033:1140" ph="UPDATE video... " />
+                <marker date="1499610644952" expanded="true" signature="1193:1244" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6">
+              <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+              <folding>
+                <marker date="1499610645028" expanded="true" signature="284:389" ph="INSERT INTO task... " />
+                <marker date="1499610645028" expanded="true" signature="453:558" ph="INSERT INTO task... " />
+                <marker date="1499610645028" expanded="true" signature="631:1055" ph="SELECT a.tas... task" />
+                <marker date="1499610645028" expanded="true" signature="1135:1568" ph="SELECT a.tas... task" />
+                <marker date="1499610645028" expanded="true" signature="1642:1750" ph="UPDATE task " />
+                <marker date="1499610645028" expanded="true" signature="1807:1855" ph="DELETE FROM " />
+                <marker date="1499610645028" expanded="true" signature="1916:1957" ph="DELETE FROM " />
+                <marker date="1499610645028" expanded="true" signature="2144:2201" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskItemRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-312">
+              <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding>
+                <marker date="1499132962227" expanded="true" signature="291:459" ph="INSERT INTO task_item... " />
+                <marker date="1499132962227" expanded="true" signature="534:702" ph="INSERT INTO task_item... " />
+                <marker date="1499132962227" expanded="true" signature="783:948" ph="SELECT task_... task_item" />
+                <marker date="1499132962227" expanded="true" signature="1028:1184" ph="SELECT task_... task_item" />
+                <marker date="1499132962227" expanded="true" signature="1310:1363" ph="DELETE FROM " />
+                <marker date="1499132962227" expanded="true" signature="1428:1479" ph="DELETE FROM " />
+                <marker date="1499132962227" expanded="true" signature="1667:1731" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SubjectRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1170">
+              <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+              <folding>
+                <marker date="1499610644930" expanded="true" signature="416:505" ph="INSERT INTO subject... " />
+                <marker date="1499610644930" expanded="true" signature="579:795" ph="INSERT INTO subject... " />
+                <marker date="1499610644930" expanded="true" signature="977:1487" ph="SELECT subje... subject" />
+                <marker date="1499610644930" expanded="true" signature="977:1509" ph="SELECT a.sub... subject" />
+                <marker date="1499610644930" expanded="true" signature="1608:1732" ph="UPDATE subej... " />
+                <marker date="1499610644930" expanded="true" signature="1792:1849" ph="DELETE FROM " />
+                <marker date="1499610644930" expanded="true" signature="1912:1969" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionReplyRepository.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-107">
+              <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+              <folding>
+                <marker date="1499610645049" expanded="true" signature="428:545" ph="INSERT INTO question_reply... " />
+                <marker date="1499610645049" expanded="true" signature="625:742" ph="INSERT INTO question_reply... " />
+                <marker date="1499610645049" expanded="true" signature="829:974" ph="SELECT quest... question_reply" />
+                <marker date="1499610645049" expanded="true" signature="1066:1212" ph="UPDATE quest... " />
+                <marker date="1499610645049" expanded="true" signature="1357:1530" ph="UPDATE quest... " />
+                <marker date="1499610645049" expanded="true" signature="1611:1673" ph="DELETE FROM " />
+                <marker date="1499610645049" expanded="true" signature="1739:1816" ph="DELETE FROM " />
               </folding>
             </state>
           </provider>
@@ -86,12 +235,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subList</find>
-      <find>keySet</find>
-      <find>forEach(</find>
-      <find>submit</find>
-      <find>random(</find>
-      <find>format(</find>
       <find>ArrayBlockingQueue</find>
       <find>(</find>
       <find>LinkedBlockingQueue(</find>
@@ -116,10 +259,17 @@
       <find>video_id</find>
       <find>photo</find>
       <find>Video</find>
+      <find>getResourceAsS</find>
+      <find>configuration</find>
+      <find>Configuration</find>
+      <find>addMapper</find>
+      <find>TypeH</find>
+      <find>SET</find>
     </findStrings>
     <replaceStrings>
       <replace>datetime</replace>
       <replace>VideoInfo</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -133,13 +283,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CourseJoin.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Wiki.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Video.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/QuestionReply.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mail/html/signUpAuthMail.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/AccountOperateEnum.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/redis.properties" />
@@ -154,13 +297,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CatalogRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/SubjectRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/QuestionReplyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CommentRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Comment.java" />
@@ -168,14 +307,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/WeekTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" />
@@ -183,7 +318,22 @@
         <option value="$PROJECT_DIR$/src/main/sql/scheme.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/io/Resources.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactory.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSession.java" />
+        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/type/TypeHandlerRegistry.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
       </list>
     </option>
   </component>
@@ -1335,12 +1485,12 @@
       <workItem from="1498097737035" duration="69906000" />
       <workItem from="1498300845358" duration="33725000" />
       <workItem from="1498711682155" duration="95092000" />
-      <workItem from="1498975047172" duration="76343000" />
+      <workItem from="1498975047172" duration="92636000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="813144000" />
+    <option name="totallyTimeSpent" value="829437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1367,7 +1517,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2624811" sideWeight="0.46408045" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27836612" sideWeight="0.53591955" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2624811" sideWeight="0.53591955" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1419,7 +1569,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1428,81 +1578,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/AccountOperateEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/common/AspectJConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/redis.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="95" column="1" lean-forward="true" selection-start-line="95" selection-start-column="1" selection-end-line="95" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Video.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Provider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CourseJoin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="65" column="18" lean-forward="false" selection-start-line="65" selection-start-column="18" selection-end-line="65" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.2.9.RELEASE/spring-beans-4.2.9.RELEASE-sources.jar!/org/springframework/beans/factory/support/DefaultListableBeanFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="9585">
@@ -1567,72 +1642,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Catalog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/SubjectRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1014">
           <caret line="39" column="15" lean-forward="true" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="40" column="13" lean-forward="false" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
-          <folding>
-            <marker date="1499002968928" expanded="true" signature="416:505" ph="INSERT INTO subject... " />
-            <marker date="1499002968928" expanded="true" signature="579:795" ph="INSERT INTO subject... " />
-            <marker date="1499002968928" expanded="true" signature="977:1487" ph="SELECT subje... subject" />
-            <marker date="1499002968928" expanded="true" signature="977:1509" ph="SELECT a.sub... subject" />
-            <marker date="1499002968928" expanded="true" signature="1608:1736" ph="UPDATE subej... " />
-            <marker date="1499002968928" expanded="true" signature="1796:1853" ph="DELETE FROM " />
-            <marker date="1499002968928" expanded="true" signature="1916:1973" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Course.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Subject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
-          <folding>
-            <marker date="1499048014514" expanded="true" signature="413:1219" ph="INSERT INTO course... " />
-            <marker date="1499048014514" expanded="true" signature="1368:1806" ph="SELECT cours... " />
-            <marker date="1499048014514" expanded="true" signature="1903:2059" ph="SELECT cours... course" />
-            <marker date="1499048014514" expanded="true" signature="2157:2328" ph="SELECT cours... course" />
-            <marker date="1499048014514" expanded="true" signature="2425:2592" ph="SELECT cours... course" />
-            <marker date="1499048014514" expanded="true" signature="2670:3635" ph="UPDATE cours... " />
-            <marker date="1499048014514" expanded="true" signature="3694:3747" ph="DELETE FROM " />
           </folding>
         </state>
       </provider>
@@ -1655,101 +1670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1498996313164" expanded="true" signature="417:524" ph="INSERT INTO catalog... " />
-            <marker date="1498996313164" expanded="true" signature="598:705" ph="INSERT INTO catalog... " />
-            <marker date="1498996313164" expanded="true" signature="802:1329" ph="SELECT a.cat... catalog" />
-            <marker date="1498996313164" expanded="true" signature="1418:1905" ph="SELECT a.cat... catalog" />
-            <marker date="1498996313164" expanded="true" signature="1985:2131" ph="UPDATE catal... " />
-            <marker date="1498996313164" expanded="true" signature="2191:2248" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Comment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702">
-          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1732#1733#0" expanded="true" />
-            <element signature="e#1762#1763#0" expanded="true" />
-            <element signature="e#1809#1810#0" expanded="true" />
-            <element signature="e#1847#1848#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CommentRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="754">
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2054">
-          <caret line="114" column="18" lean-forward="false" selection-start-line="114" selection-start-column="18" selection-end-line="114" selection-end-column="18" />
-          <folding>
-            <element signature="e#1365#1366#0" expanded="true" />
-            <element signature="e#1400#1401#0" expanded="true" />
-            <element signature="e#1456#1457#0" expanded="true" />
-            <element signature="e#1504#1505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <marker date="1499069102405" expanded="true" signature="272:435" ph="INSERT INTO accout... " />
-            <marker date="1499069102405" expanded="true" signature="497:578" ph="SELECT COUNT... account" />
-            <marker date="1499069102405" expanded="true" signature="671:811" ph="SELECT accou... account" />
-            <marker date="1499069102405" expanded="true" signature="671:844" ph="SELECT accou... account" />
-            <marker date="1499069102405" expanded="true" signature="926:1066" ph="SELECT accou... account" />
-            <marker date="1499069102405" expanded="true" signature="1137:1231" ph="UPDATE accou... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/QuestionReply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="75" />
-          <folding>
-            <marker date="1499063010389" expanded="true" signature="428:545" ph="INSERT INTO question_reply... " />
-            <marker date="1499063010389" expanded="true" signature="625:742" ph="INSERT INTO question_reply... " />
-            <marker date="1499063010389" expanded="true" signature="829:974" ph="SELECT quest... question_reply" />
-            <marker date="1499063010389" expanded="true" signature="1066:1216" ph="UPDATE quest... " />
-            <marker date="1499063010389" expanded="true" signature="1361:1538" ph="UPDATE quest... " />
-            <marker date="1499063010389" expanded="true" signature="1619:1681" ph="DELETE FROM " />
-            <marker date="1499063010389" expanded="true" signature="1747:1824" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1773,21 +1697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <marker date="1499088451415" expanded="true" signature="291:457" ph="INSERT INTO week_task... " />
-            <marker date="1499088451415" expanded="true" signature="540:1585" ph="SELECT a.wee... week_task" />
-            <marker date="1499088451415" expanded="true" signature="1669:2707" ph="SELECT a.wee... week_task" />
-            <marker date="1499088451415" expanded="true" signature="2789:3000" ph="UPDATE week_... " />
-            <marker date="1499088451415" expanded="true" signature="3061:3124" ph="DELETE FROM " />
-            <marker date="1499088451415" expanded="true" signature="3186:3243" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1798,33 +1707,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <marker date="1499089039474" expanded="true" signature="300:384" ph="INSERT INTO video... " />
-            <marker date="1499089039474" expanded="true" signature="440:491" ph="INSERT INTO video... " />
-            <marker date="1499089039474" expanded="true" signature="701:818" ph="SELECT video... video" />
-            <marker date="1499089039474" expanded="true" signature="871:982" ph="UPDATE video... " />
-            <marker date="1499089039474" expanded="true" signature="1037:1148" ph="UPDATE video... " />
-            <marker date="1499089039474" expanded="true" signature="1201:1252" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="5" lean-forward="false" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="5" column="15" lean-forward="false" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
           <folding />
         </state>
       </provider>
@@ -1839,61 +1725,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-          <folding>
-            <marker date="1499130914448" expanded="true" signature="284:389" ph="INSERT INTO task... " />
-            <marker date="1499130914448" expanded="true" signature="453:558" ph="INSERT INTO task... " />
-            <marker date="1499130914448" expanded="true" signature="631:1055" ph="SELECT a.tas... task" />
-            <marker date="1499130914448" expanded="true" signature="1135:1568" ph="SELECT a.tas... task" />
-            <marker date="1499130914448" expanded="true" signature="1642:1754" ph="UPDATE task " />
-            <marker date="1499130914448" expanded="true" signature="1811:1859" ph="DELETE FROM " />
-            <marker date="1499130914448" expanded="true" signature="1920:1961" ph="DELETE FROM " />
-            <marker date="1499130914448" expanded="true" signature="2148:2205" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="439">
           <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-          <folding>
-            <marker date="1499132962227" expanded="true" signature="291:459" ph="INSERT INTO task_item... " />
-            <marker date="1499132962227" expanded="true" signature="534:702" ph="INSERT INTO task_item... " />
-            <marker date="1499132962227" expanded="true" signature="783:948" ph="SELECT task_... task_item" />
-            <marker date="1499132962227" expanded="true" signature="1028:1184" ph="SELECT task_... task_item" />
-            <marker date="1499132962227" expanded="true" signature="1310:1363" ph="DELETE FROM " />
-            <marker date="1499132962227" expanded="true" signature="1428:1479" ph="DELETE FROM " />
-            <marker date="1499132962227" expanded="true" signature="1667:1731" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mail/html/signUpAuthMail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4059">
-          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1903,20 +1738,6 @@
         <state relative-caret-position="182">
           <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <marker date="1499067740713" expanded="true" signature="270:403" ph="INSERT INTO comment... " />
-            <marker date="1499067740713" expanded="true" signature="484:880" ph="SELECT a.com... comment" />
-            <marker date="1499067740713" expanded="true" signature="944:1001" ph="DELETE FROM " />
-            <marker date="1499067740713" expanded="true" signature="1063:1118" ph="DELETE FROM " />
-            <marker date="1499067740713" expanded="true" signature="1185:1242" ph="DELETE FROM " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1938,31 +1759,362 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="40" />
+        <state relative-caret-position="-364">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Catalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="832">
+          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Course.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3458">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-887">
+          <caret line="16" column="40" lean-forward="false" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setCoursePurchasedRecordId#0;class#CoursePurchasedRecord#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/QuestionReply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Subject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="26" column="20" lean-forward="false" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="673">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1410">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Teacher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mail/html/signUpAuthMail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/io/Resources.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="98" column="42" lean-forward="false" selection-start-line="98" selection-start-column="28" selection-end-line="98" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="44" column="35" lean-forward="false" selection-start-line="44" selection-start-column="35" selection-end-line="44" selection-end-column="35" />
+          <folding>
+            <element signature="e#3110#3111#0" expanded="true" />
+            <element signature="e#3146#3147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="76" column="13" lean-forward="false" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactoryBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="32" column="13" lean-forward="false" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSession.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="105" column="14" lean-forward="false" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/type/TypeHandlerRegistry.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2099">
+          <caret line="113" column="39" lean-forward="false" selection-start-line="113" selection-start-column="39" selection-end-line="113" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1177">
+          <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-653">
+          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="8" />
+          <folding>
+            <marker date="1499610644978" expanded="true" signature="291:457" ph="INSERT INTO week_task... " />
+            <marker date="1499610644978" expanded="true" signature="540:1585" ph="SELECT a.wee... week_task" />
+            <marker date="1499610644978" expanded="true" signature="1669:2707" ph="SELECT a.wee... week_task" />
+            <marker date="1499610644978" expanded="true" signature="2789:2988" ph="UPDATE week_... " />
+            <marker date="1499610644978" expanded="true" signature="3049:3112" ph="DELETE FROM " />
+            <marker date="1499610644978" expanded="true" signature="3174:3231" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding>
+            <marker date="1499610644952" expanded="true" signature="300:384" ph="INSERT INTO video... " />
+            <marker date="1499610644952" expanded="true" signature="440:491" ph="INSERT INTO video... " />
+            <marker date="1499610644952" expanded="true" signature="701:818" ph="SELECT video... video" />
+            <marker date="1499610644952" expanded="true" signature="871:978" ph="UPDATE video... " />
+            <marker date="1499610644952" expanded="true" signature="1033:1140" ph="UPDATE video... " />
+            <marker date="1499610644952" expanded="true" signature="1193:1244" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="61" column="8" lean-forward="false" selection-start-line="61" selection-start-column="8" selection-end-line="61" selection-end-column="8" />
+          <folding>
+            <marker date="1499610645028" expanded="true" signature="284:389" ph="INSERT INTO task... " />
+            <marker date="1499610645028" expanded="true" signature="453:558" ph="INSERT INTO task... " />
+            <marker date="1499610645028" expanded="true" signature="631:1055" ph="SELECT a.tas... task" />
+            <marker date="1499610645028" expanded="true" signature="1135:1568" ph="SELECT a.tas... task" />
+            <marker date="1499610645028" expanded="true" signature="1642:1750" ph="UPDATE task " />
+            <marker date="1499610645028" expanded="true" signature="1807:1855" ph="DELETE FROM " />
+            <marker date="1499610645028" expanded="true" signature="1916:1957" ph="DELETE FROM " />
+            <marker date="1499610645028" expanded="true" signature="2144:2201" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-312">
+          <caret line="18" column="8" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+          <folding>
+            <marker date="1499132962227" expanded="true" signature="291:459" ph="INSERT INTO task_item... " />
+            <marker date="1499132962227" expanded="true" signature="534:702" ph="INSERT INTO task_item... " />
+            <marker date="1499132962227" expanded="true" signature="783:948" ph="SELECT task_... task_item" />
+            <marker date="1499132962227" expanded="true" signature="1028:1184" ph="SELECT task_... task_item" />
+            <marker date="1499132962227" expanded="true" signature="1310:1363" ph="DELETE FROM " />
+            <marker date="1499132962227" expanded="true" signature="1428:1479" ph="DELETE FROM " />
+            <marker date="1499132962227" expanded="true" signature="1667:1731" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
+          <folding>
+            <marker date="1499610644930" expanded="true" signature="416:505" ph="INSERT INTO subject... " />
+            <marker date="1499610644930" expanded="true" signature="579:795" ph="INSERT INTO subject... " />
+            <marker date="1499610644930" expanded="true" signature="977:1487" ph="SELECT subje... subject" />
+            <marker date="1499610644930" expanded="true" signature="977:1509" ph="SELECT a.sub... subject" />
+            <marker date="1499610644930" expanded="true" signature="1608:1732" ph="UPDATE subej... " />
+            <marker date="1499610644930" expanded="true" signature="1792:1849" ph="DELETE FROM " />
+            <marker date="1499610644930" expanded="true" signature="1912:1969" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="38" column="12" lean-forward="false" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="12" />
+          <folding>
+            <marker date="1499610645049" expanded="true" signature="428:545" ph="INSERT INTO question_reply... " />
+            <marker date="1499610645049" expanded="true" signature="625:742" ph="INSERT INTO question_reply... " />
+            <marker date="1499610645049" expanded="true" signature="829:974" ph="SELECT quest... question_reply" />
+            <marker date="1499610645049" expanded="true" signature="1066:1212" ph="UPDATE quest... " />
+            <marker date="1499610645049" expanded="true" signature="1357:1530" ph="UPDATE quest... " />
+            <marker date="1499610645049" expanded="true" signature="1611:1673" ph="DELETE FROM " />
+            <marker date="1499610645049" expanded="true" signature="1739:1816" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="84" column="8" lean-forward="false" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+          <folding>
+            <marker date="1499610644879" expanded="true" signature="413:1219" ph="INSERT INTO course... " />
+            <marker date="1499610644879" expanded="true" signature="1368:1806" ph="SELECT cours... " />
+            <marker date="1499610644879" expanded="true" signature="1903:2059" ph="SELECT cours... course" />
+            <marker date="1499610644879" expanded="true" signature="2157:2328" ph="SELECT cours... course" />
+            <marker date="1499610644879" expanded="true" signature="2425:2592" ph="SELECT cours... course" />
+            <marker date="1499610644879" expanded="true" signature="2670:3559" ph="UPDATE cours... " />
+            <marker date="1499610644879" expanded="true" signature="3618:3671" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-55">
-          <caret line="48" column="39" lean-forward="false" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+        <state relative-caret-position="361">
+          <caret line="64" column="8" lean-forward="false" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
           <folding>
-            <marker date="1499148984601" expanded="true" signature="303:516" ph="INSERT INTO course_purchased_record... " />
-            <marker date="1499148984601" expanded="true" signature="623:877" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="973:1230" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="1333:1619" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="1723:1992" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="2094:2316" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="2094:2317" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="2094:2375" ph="SELECT cours... " />
-            <marker date="1499148984601" expanded="true" signature="2454:2572" ph="UPDATE cours... " />
-            <marker date="1499148984601" expanded="true" signature="2635:2826" ph="UPDATE cours... " />
+            <marker date="1499610644909" expanded="true" signature="303:516" ph="INSERT INTO course_purchased_record... " />
+            <marker date="1499610644909" expanded="true" signature="623:877" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="973:1230" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="1333:1619" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="1723:1992" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="2094:2316" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="2094:2317" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="2094:2375" ph="SELECT cours... " />
+            <marker date="1499610644909" expanded="true" signature="2454:2572" ph="UPDATE cours... " />
+            <marker date="1499610644909" expanded="true" signature="2635:2818" ph="UPDATE cours... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-535">
+          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding>
+            <marker date="1499067740713" expanded="true" signature="270:403" ph="INSERT INTO comment... " />
+            <marker date="1499067740713" expanded="true" signature="484:880" ph="SELECT a.com... comment" />
+            <marker date="1499067740713" expanded="true" signature="944:1001" ph="DELETE FROM " />
+            <marker date="1499067740713" expanded="true" signature="1063:1118" ph="DELETE FROM " />
+            <marker date="1499067740713" expanded="true" signature="1185:1242" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-119">
+          <caret line="56" column="8" lean-forward="true" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <folding>
+            <marker date="1499610645014" expanded="true" signature="417:524" ph="INSERT INTO catalog... " />
+            <marker date="1499610645014" expanded="true" signature="598:705" ph="INSERT INTO catalog... " />
+            <marker date="1499610645014" expanded="true" signature="802:1329" ph="SELECT a.cat... catalog" />
+            <marker date="1499610645014" expanded="true" signature="1418:1905" ph="SELECT a.cat... catalog" />
+            <marker date="1499610645014" expanded="true" signature="1985:2127" ph="UPDATE catal... " />
+            <marker date="1499610645014" expanded="true" signature="2187:2244" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <marker date="1499069102405" expanded="true" signature="272:435" ph="INSERT INTO accout... " />
+            <marker date="1499069102405" expanded="true" signature="497:578" ph="SELECT COUNT... account" />
+            <marker date="1499069102405" expanded="true" signature="671:811" ph="SELECT accou... account" />
+            <marker date="1499069102405" expanded="true" signature="671:844" ph="SELECT accou... account" />
+            <marker date="1499069102405" expanded="true" signature="926:1066" ph="SELECT accou... account" />
+            <marker date="1499069102405" expanded="true" signature="1137:1231" ph="UPDATE accou... " />
           </folding>
         </state>
       </provider>

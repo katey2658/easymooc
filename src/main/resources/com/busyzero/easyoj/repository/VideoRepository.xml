@@ -28,14 +28,14 @@
     <update id="updateVideo">
         UPDATE video
         SET task_item_id=#{taskItemId},
-        SET link=#{link}
+        link=#{link}
         WHERE video_id=#{videoId}
     </update>
 
     <update id="updateVideos">
         UPDATE video
         SET task_item_id=#{taskItemId},
-        SET link=#{link}
+        link=#{link}
         WHERE video_id=#{videoId}
     </update>
 

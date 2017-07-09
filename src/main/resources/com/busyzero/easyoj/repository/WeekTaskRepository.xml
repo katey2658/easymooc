@@ -71,9 +71,9 @@
     <update id="updateWeekTask" parameterType="weekTask">
         UPDATE week_task
         SET content_title=#{contentTitle},
-        SET introduction=#{introduction},
-        SET time_start=#{timeStart},
-        SET time_end=#{timeEnd}
+        introduction=#{introduction},
+        time_start=#{timeStart},
+        time_end=#{timeEnd}
         WHERE week_task_id=#{weekTaskId}
     </update>
 

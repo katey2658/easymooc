@@ -59,7 +59,7 @@
     <update id="updateTask" parameterType="task">
         UPDATE task
         SET order_in_week=#{orderInWeek},
-        SET title=#{title}
+        title=#{title}
         WHERE task_id=#{taskId}
     </update>
 

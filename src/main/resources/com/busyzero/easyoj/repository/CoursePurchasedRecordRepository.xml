@@ -62,8 +62,8 @@
     <update id="updatePaidByBillCode">
         UPDATE course_purchased_record
         SET bill_code=#{billCode},
-        SET method_paid=#{methodPaid},
-        SET paid=1
+        method_paid=#{methodPaid},
+        paid=1
         WHERE course_purchased_record_id=#{coursePurchasedRecordId}
     </update>
 </mapper>

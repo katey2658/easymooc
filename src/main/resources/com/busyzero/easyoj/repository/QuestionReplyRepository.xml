@@ -28,7 +28,7 @@
     <update id="updateQuestionReply" parameterType="questionReply">
         UPDATE question_reply
         SET question_content=#{questionContent},
-        SET reply=#{reply}
+        reply=#{reply}
         WHERE question_reply_id=#{question_reply_id}
     </update>
 
@@ -36,7 +36,7 @@
         <foreach collection="newQuestionReplys" item="item" separator=";">
             UPDATE question_reply
             SET question_content=#{item.questionContent},
-            SET reply=#{item.reply}
+            reply=#{item.reply}
             WHERE question_reply_id=#{item.question_reply_id}
         </foreach>
     </update>

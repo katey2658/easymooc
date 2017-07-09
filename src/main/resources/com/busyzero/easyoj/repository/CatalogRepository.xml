@@ -54,7 +54,7 @@
     <update id="updateCatalog" parameterType="catalog">
         UPDATE catalog
         SET catalog_name=#{catalogName}
-        SET catalog_description=#{catalogDescription}
+        catalog_description=#{catalogDescription}
         WHERE catalog_id=#{catalogId}
     </update>
 
