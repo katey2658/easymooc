@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="easyoj:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="286" />
-    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="261" />
+    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="369" />
     <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="150" />
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/QuestionReplyRepository.java" line="32" />
     <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="117" />
@@ -11,9 +15,111 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d469e7a6-b32c-4355-818d-331f2692c2b0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoInfoRepository.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_mail_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_1_2_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_4_2_7_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_4_2_9_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/CourseJoin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Video.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/VideoRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/VideoRepository.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/CourseJoin.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Test.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Video.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/VideoRepository.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/VideoRepository.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-aop-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-beans-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-context-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-context-support-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-core-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-expression-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-integration-core-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-integration-mail-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-jdbc-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-messaging-4.2.7.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-retry-1.1.2.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-test-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-tx-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-web-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/spring-webmvc-4.2.9.RELEASE.jar" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/persistence/RedisClusterConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/persistence/RedisClusterConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/persistence/RootDaoConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/persistence/RootDaoConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/controller/AccountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/controller/HomePageController.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/controller/HomePageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Account.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Account.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Comment.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Comment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Course.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Course.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Task.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/TaskItem.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/TaskItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/WeekTask.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/domain/WeekTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/CommentRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/CommentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/CourseRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/CourseRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/QuestionReplyRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/QuestionReplyRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskItemRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskItemRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/WeekTaskRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/WeekTaskRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/service/impl/EmailServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/service/impl/EmailServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/persistence/RedisClusterConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/persistence/RedisClusterConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/persistence/RootDaoConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/persistence/RootDaoConfig.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/controller/AccountController.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/controller/AccountController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/controller/HomePageController.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/controller/HomePageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Account.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Account.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Comment.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Comment.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Course.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Course.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Task.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/Task.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/TaskItem.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/TaskItem.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/WeekTask.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/domain/WeekTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/CommentRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/CommentRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/CourseRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/CourseRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/QuestionReplyRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/QuestionReplyRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskItemRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskItemRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/WeekTaskRepository.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/WeekTaskRepository.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/service/impl/EmailServiceImpl.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/service/impl/EmailServiceImpl.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/easyoj_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/easyoj_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easyoj.iml" afterPath="$PROJECT_DIR$/easyoj.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/AccountRepository.xml" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/AccountRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskItemRepository.xml" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/AccountRepository.xml" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/AccountRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskItemRepository.xml" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/mybatis-config.xml" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/mybatis-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signInPage.html" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signInPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signUpPage.html" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signUpPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/web.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,91 +143,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Qualifier.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.2.9.RELEASE/spring-beans-4.2.9.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Qualifier.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="41" column="21" lean-forward="false" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageContext.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/javax/xml/ws/handler/MessageContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="39" column="3" lean-forward="false" selection-start-line="39" selection-start-column="3" selection-end-line="39" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Scope.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-context/4.2.9.RELEASE/spring-context-4.2.9.RELEASE-sources.jar!/org/springframework/context/annotation/Scope.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1664">
-              <caret line="85" column="17" lean-forward="false" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Context.java" pinned="false" current-in-tab="false">
-        <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/javax/naming/Context.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6968">
-              <caret line="291" column="49" lean-forward="false" selection-start-line="291" selection-start-column="49" selection-end-line="291" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EnableAspectJAutoProxy.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-context/4.2.9.RELEASE/spring-context-4.2.9.RELEASE-sources.jar!/org/springframework/context/annotation/EnableAspectJAutoProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractAnnotationConfigDispatcherServletInitializer.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.2.9.RELEASE/spring-webmvc-4.2.9.RELEASE-sources.jar!/org/springframework/web/servlet/support/AbstractAnnotationConfigDispatcherServletInitializer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomizerRegistry.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-core/4.2.9.RELEASE/spring-core-4.2.9.RELEASE.jar!/org/springframework/cglib/core/internal/CustomizerRegistry.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="28" column="31" lean-forward="false" selection-start-line="28" selection-start-column="31" selection-end-line="28" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MyApplicationConfig.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+            <state relative-caret-position="525">
+              <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1603#1604#0" expanded="true" />
+                <element signature="e#1654#1655#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SecurityWebApplicationInitializer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/SecurityWebApplicationInitializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseNotFoundException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/exception/CourseNotFoundException.java">
+      <file leaf-file-name="SecurityConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/SecurityConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+            <state relative-caret-position="442">
+              <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,15 +179,74 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CourseExceptionHandler.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/handler/CourseExceptionHandler.java">
+      <file leaf-file-name="signInPage.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="182">
+              <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-73">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logback.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/easyoj/WEB-INF/classes/logback.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseCommentController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseCommentController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CourseInfoController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="222">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomePageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
+                <element signature="e#465#466#0" expanded="true" />
+                <element signature="e#494#495#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,15 +257,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Interface" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ConcurrentModificationException</find>
       <find>getFile</find>
       <find>get</find>
       <find>File</find>
@@ -186,6 +294,7 @@
       <find>close</find>
       <find>localC</find>
       <find>stativ</find>
+      <find>gmt</find>
     </findStrings>
     <replaceStrings>
       <replace>datetime</replace>
@@ -204,23 +313,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/WeekTask.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/coursePurchasedRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/sql/scheme.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" />
-        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/io/Resources.java" />
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSessionFactory.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis-spring/1.3.0/mybatis-spring-1.3.0-sources.jar!/org/mybatis/spring/SqlSessionFactoryBean.java" />
@@ -228,12 +320,10 @@
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSession.java" />
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/type/TypeHandlerRegistry.java" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
         <option value="$USER_HOME$/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.8.0/jackson-annotations-2.8.0-sources.jar!/com/fasterxml/jackson/annotation/JacksonInject.java" />
         <option value="$USER_HOME$/.m2/repository/org/springframework/spring-beans/4.2.9.RELEASE/spring-beans-4.2.9.RELEASE-sources.jar!/org/springframework/beans/factory/annotation/Autowire.java" />
@@ -252,9 +342,28 @@
         <option value="$USER_HOME$/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/http/HttpSession.java" />
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.java" />
         <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/Executor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/exception/CourseNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/handler/CourseExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signIn.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoInfoRepository.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/logging.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/SecurityWebApplicationInitializer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/SecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html" />
       </list>
     </option>
   </component>
@@ -290,30 +399,8 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="easyoj Maven Webapp" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Dependencies" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="easyoj Maven Webapp" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
-      </PATH>
+      <expand />
+      <select />
     </treeState>
   </component>
   <component name="MavenRunner">
@@ -388,7 +475,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
@@ -397,14 +484,37 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="persistence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
@@ -417,7 +527,56 @@
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -428,7 +587,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Database" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -439,8 +598,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.busyzero.easyoj.domain" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mail\html" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com\busyzero\easyoj\repository" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com.busyzero.easyoj.repository" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mapper" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mail\images" />
@@ -454,12 +617,8 @@
       <recent name="com.busyzero.easyoj.config.common" />
       <recent name="com.busyzero.easyoj.config.persistence" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mail\html" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com\busyzero\easyoj\repository" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com.busyzero.easyoj.repository" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mapper" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.busyzero.easyoj.domain" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -475,7 +634,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat8.5">
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Test" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.katey2658.easyoj.config.controller.*" />
@@ -779,11 +938,12 @@
       <method />
     </configuration>
     <configuration name="tomcat8.5" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.5" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8888/easyoj/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="easyoj:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/" />
+            <option name="CONTEXT_PATH" value="/easyoj" />
           </settings>
         </artifact>
       </deployment>
@@ -850,15 +1010,83 @@
         </option>
       </method>
     </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.tomcat8.5" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Test" />
+    <configuration name="tomcat9" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.0.M19" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="easyoj:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/easyoj" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_easyoj_2" />
+      </server-settings>
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="12268" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="easyoj:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list size="3">
+      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.tomcat8.5" />
+      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.tomcat9" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -915,12 +1143,12 @@
       <workItem from="1500349853033" duration="10906000" />
       <workItem from="1500640416852" duration="313000" />
       <workItem from="1500640764088" duration="47860000" />
-      <workItem from="1501307675219" duration="19172000" />
+      <workItem from="1501307675219" duration="48019000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="990494000" />
+    <option name="totallyTimeSpent" value="1019341000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -933,33 +1161,34 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63846153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.63780665" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18456884" sideWeight="0.45310244" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21104388" sideWeight="0.54689753" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23600605" sideWeight="0.45021644" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23600605" sideWeight="0.5497835" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21104388" sideWeight="0.54112554" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23600605" sideWeight="0.5497835" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902297" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1007,232 +1236,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/lang/StringBuffer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="97" column="21" lean-forward="true" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/lang/AbstractStringBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6426">
-          <caret line="1456" column="19" lean-forward="false" selection-start-line="1456" selection-start-column="11" selection-end-line="1456" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/java.lang.Runtime">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>java.lang.Runtime</OriginalElement>
-          <nodes>
-            <node x="" y="">java.lang.Runtime</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="48.0" y="15.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="23" lean-forward="false" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="352" column="37" lean-forward="false" selection-start-line="352" selection-start-column="30" selection-end-line="352" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="148" column="7" lean-forward="false" selection-start-line="148" selection-start-column="7" selection-end-line="148" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-aop/4.2.9.RELEASE/spring-aop-4.2.9.RELEASE-sources.jar!/org/springframework/aop/MethodBeforeAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.2.9.RELEASE/spring-webmvc-4.2.9.RELEASE-sources.jar!/org/springframework/web/servlet/handler/SimpleUrlHandlerMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="31" column="49" lean-forward="true" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="13" lean-forward="false" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.2.9.RELEASE/spring-webmvc-4.2.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/WebMvcConfigurerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="114" column="44" lean-forward="false" selection-start-line="114" selection-start-column="44" selection-end-line="114" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-webmvc/4.2.9.RELEASE/spring-webmvc-4.2.9.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/InterceptorRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="42" column="7" lean-forward="false" selection-start-line="42" selection-start-column="7" selection-end-line="42" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48724">
-          <caret line="1945" column="26" lean-forward="false" selection-start-line="1945" selection-start-column="26" selection-end-line="1945" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0-sources.jar!/javax/servlet/http/HttpSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1482">
-          <caret line="114" column="17" lean-forward="false" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48204">
-          <caret line="1913" column="0" lean-forward="false" selection-start-line="1913" selection-start-column="0" selection-end-line="1913" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/cache/impl/PerpetualCache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/cache/Cache.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/util/concurrent/atomic/AtomicLong.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/ErrorContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="149" column="1" lean-forward="true" selection-start-line="149" selection-start-column="1" selection-end-line="149" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/defaults/DefaultSqlSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="267" column="32" lean-forward="false" selection-start-line="267" selection-start-column="32" selection-end-line="267" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1033">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/Configuration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/datasource/DataSourceFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="23" column="17" lean-forward="false" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/CachingExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="46" column="3" lean-forward="true" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="1" column="69" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/executor/BaseExecutor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="57" column="27" lean-forward="false" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/util/concurrent/Executor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="127" column="17" lean-forward="false" selection-start-line="127" selection-start-column="17" selection-end-line="127" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/SqlSession.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6214">
-          <caret line="259" column="6" lean-forward="false" selection-start-line="259" selection-start-column="5" selection-end-line="259" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/session/RowBounds.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="22" column="29" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/awt/Conditional.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
@@ -1362,7 +1365,7 @@
     <entry file="jar://$USER_HOME$/.m2/repository/org/springframework/spring-context/4.2.9.RELEASE/spring-context-4.2.9.RELEASE-sources.jar!/org/springframework/context/annotation/EnableAspectJAutoProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="511">
-          <caret line="120" column="0" lean-forward="true" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
+          <caret line="120" column="0" lean-forward="false" selection-start-line="120" selection-start-column="0" selection-end-line="120" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1383,33 +1386,372 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="78" column="22" lean-forward="true" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/exception/CourseNotFoundException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+          <caret line="5" column="27" lean-forward="false" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/handler/CourseExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="487">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#478#479#0" expanded="false" />
+            <element signature="e#523#524#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CatalogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Catalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="742">
+          <caret line="88" column="35" lean-forward="false" selection-start-line="88" selection-start-column="35" selection-end-line="88" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="49" column="22" lean-forward="false" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
+          <folding>
+            <marker date="1499610645014" expanded="true" signature="417:524" ph="INSERT INTO catalog... " />
+            <marker date="1499610645014" expanded="true" signature="598:705" ph="INSERT INTO catalog... " />
+            <marker date="1499610645014" expanded="true" signature="802:1329" ph="SELECT a.cat... catalog" />
+            <marker date="1499610645014" expanded="true" signature="1418:1905" ph="SELECT a.cat... catalog" />
+            <marker date="1499610645014" expanded="true" signature="1985:2127" ph="UPDATE catal... " />
+            <marker date="1499610645014" expanded="true" signature="2187:2244" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="94" column="17" lean-forward="false" selection-start-line="94" selection-start-column="17" selection-end-line="94" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="81" lean-forward="false" selection-start-line="4" selection-start-column="81" selection-end-line="4" selection-end-column="81" />
+          <folding>
+            <marker date="1501394110562" expanded="true" signature="317:530" ph="INSERT INTO course_purchased_record... " />
+            <marker date="1501394110562" expanded="true" signature="637:891" ph="SELECT cours... " />
+            <marker date="1501394110562" expanded="true" signature="987:1244" ph="SELECT cours... " />
+            <marker date="1501394110562" expanded="true" signature="1347:1633" ph="SELECT cours... " />
+            <marker date="1501394110562" expanded="true" signature="1737:2006" ph="SELECT cours... " />
+            <marker date="1501394110562" expanded="true" signature="2108:2389" ph="SELECT cours... " />
+            <marker date="1501394110562" expanded="true" signature="2468:2586" ph="UPDATE cours... " />
+            <marker date="1501394110562" expanded="true" signature="2649:2832" ph="UPDATE cours... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1638">
+          <caret line="138" column="21" lean-forward="true" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskItemRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="27" column="43" lean-forward="false" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+          <folding>
+            <marker date="1501394430973" expanded="true" signature="291:459" ph="INSERT INTO task_item... " />
+            <marker date="1501394430973" expanded="true" signature="534:702" ph="INSERT INTO task_item... " />
+            <marker date="1501394430973" expanded="true" signature="783:948" ph="SELECT task_... task_item" />
+            <marker date="1501394430973" expanded="true" signature="1028:1184" ph="SELECT task_... task_item" />
+            <marker date="1501394430973" expanded="true" signature="1371:1424" ph="DELETE FROM " />
+            <marker date="1501394430973" expanded="true" signature="1728:1792" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="29" column="18" lean-forward="false" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signIn.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="14" lean-forward="false" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://MAVEN/com.katey2658:easyoj:1.0.0SNAPSHOT">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>MAVEN</ID>
+          <OriginalElement>com.katey2658:easyoj:1.0.0SNAPSHOT</OriginalElement>
+          <nodes>
+            <node x="" y="">com.katey2658:easyoj:1.0.0SNAPSHOT</node>
+            <node x="" y="">org.slf4j:slf4j-api:jar:1.7.24</node>
+            <node x="" y="">ch.qos.logback:logback-core:jar:1.1.11</node>
+            <node x="" y="">ch.qos.logback:logback-classic:jar:1.1.11</node>
+            <node x="" y="">mysql:mysql-connector-java:jar:6.0.5</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.26</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.26/com.alibaba:jconsole:jar:1.8.0</node>
+            <node x="" y="">com.alibaba:druid:jar:1.0.26/com.alibaba:tools:jar:1.8.0</node>
+            <node x="" y="">org.mybatis:mybatis:jar:3.4.1</node>
+            <node x="" y="">org.mybatis:mybatis-spring:jar:1.3.0</node>
+            <node x="" y="">org.mybatis:mybatis-typehandlers-jsr310:jar:1.0.2</node>
+            <node x="" y="">javax.servlet:javax.servlet-api:jar:3.1.0</node>
+            <node x="" y="">taglibs:standard:jar:1.1.2</node>
+            <node x="" y="">jstl:jstl:jar:1.2</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.8.7</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.8.7/com.fasterxml.jackson.core:jackson-annotations:jar:2.8.0</node>
+            <node x="" y="">com.fasterxml.jackson.core:jackson-databind:jar:2.8.7/com.fasterxml.jackson.core:jackson-core:jar:2.8.7</node>
+            <node x="" y="">org.springframework:spring-beans:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-context:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-context-support:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-core:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-core:jar:4.3.10.RELEASE/commons-logging:commons-logging:jar:1.2</node>
+            <node x="" y="">org.springframework:spring-expression:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-aop:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-jdbc:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-tx:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-web:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework:spring-webmvc:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework.security:spring-security-core:jar:4.2.0.RELEASE</node>
+            <node x="" y="">org.springframework.security:spring-security-core:jar:4.2.0.RELEASE/aopalliance:aopalliance:jar:1.0</node>
+            <node x="" y="">org.springframework.security:spring-security-config:jar:4.2.0.RELEASE</node>
+            <node x="" y="">org.springframework.security:spring-security-web:jar:4.2.0.RELEASE</node>
+            <node x="" y="">org.thymeleaf:thymeleaf:jar:3.0.0.BETA02</node>
+            <node x="" y="">org.thymeleaf:thymeleaf:jar:3.0.0.BETA02/ognl:ognl:jar:3.1.2</node>
+            <node x="" y="">org.thymeleaf:thymeleaf:jar:3.0.0.BETA02/ognl:ognl:jar:3.1.2/javassist:javassist:jar:3.11.0.GA</node>
+            <node x="" y="">org.thymeleaf:thymeleaf:jar:3.0.0.BETA02/org.attoparser:attoparser:jar:2.0.0.BETA05</node>
+            <node x="" y="">org.thymeleaf:thymeleaf:jar:3.0.0.BETA02/org.unbescape:unbescape:jar:1.1.2.RELEASE</node>
+            <node x="" y="">org.thymeleaf:thymeleaf-spring4:jar:3.0.0.BETA02</node>
+            <node x="" y="">com.sun.mail:javax.mail:jar:1.5.6</node>
+            <node x="" y="">com.sun.mail:javax.mail:jar:1.5.6/javax.activation:activation:jar:1.1</node>
+            <node x="" y="">org.springframework.integration:spring-integration-mail:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework.integration:spring-integration-mail:jar:4.3.10.RELEASE/org.springframework.integration:spring-integration-core:jar:4.3.10.RELEASE</node>
+            <node x="" y="">org.springframework.integration:spring-integration-mail:jar:4.3.10.RELEASE/org.springframework.integration:spring-integration-core:jar:4.3.10.RELEASE/org.springframework:spring-messaging:jar:4.3.9.RELEASE</node>
+            <node x="" y="">org.springframework.integration:spring-integration-mail:jar:4.3.10.RELEASE/org.springframework.integration:spring-integration-core:jar:4.3.10.RELEASE/org.springframework.retry:spring-retry:jar:1.1.3.RELEASE</node>
+            <node x="" y="">redis.clients:jedis:jar:2.9.0</node>
+            <node x="" y="">redis.clients:jedis:jar:2.9.0/org.apache.commons:commons-pool2:jar:2.4.2</node>
+            <node x="" y="">org.springframework.data:spring-data-redis:jar:1.8.1.RELEASE</node>
+            <node x="" y="">org.springframework.data:spring-data-redis:jar:1.8.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.2.1.RELEASE</node>
+            <node x="" y="">org.springframework.data:spring-data-redis:jar:1.8.1.RELEASE/org.springframework.data:spring-data-keyvalue:jar:1.2.1.RELEASE/org.springframework.data:spring-data-commons:jar:1.13.1.RELEASE</node>
+            <node x="" y="">org.springframework.data:spring-data-redis:jar:1.8.1.RELEASE/org.springframework:spring-oxm:jar:4.3.7.RELEASE</node>
+            <node x="" y="">org.springframework.data:spring-data-redis:jar:1.8.1.RELEASE/org.slf4j:jcl-over-slf4j:jar:1.7.24</node>
+            <node x="" y="">org.springframework:spring-test:jar:4.3.10.RELEASE</node>
+            <node x="" y="">junit:junit:jar:4.8.2</node>
+            <node x="" y="">org.mockito:mockito-core:jar:2.3.0</node>
+            <node x="" y="">org.mockito:mockito-core:jar:2.3.0/net.bytebuddy:byte-buddy:jar:1.5.5</node>
+            <node x="" y="">org.mockito:mockito-core:jar:2.3.0/net.bytebuddy:byte-buddy-agent:jar:1.5.5</node>
+            <node x="" y="">org.mockito:mockito-core:jar:2.3.0/org.objenesis:objenesis:jar:2.4</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.469700800674252" x="840.5417190023327" y="1455.284765835277" />
+          <SelectedNodes />
+          <Categories />
+          <VISIBILITY>All</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/VideoInfoRepository.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+          <folding>
+            <marker date="1501398626517" expanded="true" signature="311:402" ph="INSERT INTO video... " />
+            <marker date="1501398626517" expanded="true" signature="789:920" ph="SELECT video... video" />
+            <marker date="1501398626517" expanded="true" signature="994:1122" ph="UPDATE video... " />
+            <marker date="1501398626517" expanded="true" signature="1198:1326" ph="UPDATE video... " />
+            <marker date="1501398626517" expanded="true" signature="1400:1458" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="24" lean-forward="false" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/SubjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1759">
+          <caret line="92" column="44" lean-forward="false" selection-start-line="92" selection-start-column="44" selection-end-line="92" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseCommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="23" column="1" lean-forward="false" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+          <folding>
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/logging.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="1" column="90" lean-forward="false" selection-start-line="1" selection-start-column="90" selection-end-line="1" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/easyoj/WEB-INF/classes/logback.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="11" lean-forward="true" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-73">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#478#479#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+            <element signature="e#1654#1655#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/SecurityWebApplicationInitializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/SecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="35" column="35" lean-forward="true" selection-start-line="35" selection-start-column="35" selection-end-line="35" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>

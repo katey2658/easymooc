@@ -55,7 +55,7 @@ public class AccountController {
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/sgin-up",method = GET)
+    @RequestMapping(value = "/sign-up",method = GET)
     public String signUpPage(){
         return "signUpPage";
     }

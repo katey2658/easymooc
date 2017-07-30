@@ -19,12 +19,12 @@ import java.util.Set;
 @Configuration
 public class RedisClusterConfig {
 
-    private static final String HSOT_REDIS_CLUSTER_NODE1="192.168.30.124";
-    private static final String HSOT_REDIS_CLUSTER_NODE2="192.168.30.124";
-    private static final String HSOT_REDIS_CLUSTER_NODE3="192.168.30.124";
-    private static final String HSOT_REDIS_CLUSTER_NODE4="192.168.30.124";
-    private static final String HSOT_REDIS_CLUSTER_NODE5="192.168.30.124";
-    private static final String HSOT_REDIS_CLUSTER_NODE6="192.168.30.124";
+    private static final String HSOT_REDIS_CLUSTER_NODE1="172.16.16.45";
+    private static final String HSOT_REDIS_CLUSTER_NODE2="172.16.16.45";
+    private static final String HSOT_REDIS_CLUSTER_NODE3="172.16.16.45";
+    private static final String HSOT_REDIS_CLUSTER_NODE4="172.16.16.45";
+    private static final String HSOT_REDIS_CLUSTER_NODE5="172.16.16.45";
+    private static final String HSOT_REDIS_CLUSTER_NODE6="172.16.16.45";
 
     private  static final int PORT_REDIS_CLUSTER_NODE1=7001;
     private  static final int PORT_REDIS_CLUSTER_NODE2=7002;

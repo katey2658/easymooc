@@ -51,7 +51,4 @@ public class CachingConfig {
         redisTemplate.afterPropertiesSet();
         return redisTemplate;
     }
-
-
-
 }

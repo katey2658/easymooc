@@ -73,7 +73,7 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
      * @return
      */
     @Bean
-    public ViewResolver viewResolver(){
+    public ThymeleafViewResolver viewResolver(){
         ThymeleafViewResolver viewResolver=new ThymeleafViewResolver();
         viewResolver.setOrder(1);
         viewResolver.setTemplateEngine(templateEngine());

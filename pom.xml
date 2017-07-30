@@ -9,6 +9,28 @@
   <version>1.0.0SNAPSHOT</version>
   <name>easyoj Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <!--版本管理-->
+  <properties>
+    <junit.version>4.8.2</junit.version>
+    <org.slf4j.version>1.7.24</org.slf4j.version>
+    <ch.qos.logback.version>1.1.11</ch.qos.logback.version>
+    <mysql.version>6.0.5</mysql.version>
+    <org.mybatis.version>3.4.1</org.mybatis.version>
+    <com.alibaba.version>1.0.26</com.alibaba.version>
+    <org.mybatis-spring.version>6.0.5</org.mybatis-spring.version>
+    <javax.servlet.version>3.1.0</javax.servlet.version>
+    <taglibs.version>1.1.2</taglibs.version>
+    <jstl.version>1.2</jstl.version>
+    <com.fasterxml.jackson.core.version>2.8.7</com.fasterxml.jackson.core.version>
+    <org.springframework.version>4.3.10.RELEASE</org.springframework.version>
+    <org.springframework.security.version>4.2.0.RELEASE</org.springframework.security.version>
+    <org.mockito.version>2.3.0</org.mockito.version>
+    <org.thymeleaf.com.version>3.0.0.BETA02</org.thymeleaf.com.version>
+    <com.sun.mail.version>1.5.6</com.sun.mail.version>
+    <redis.clients.version>2.9.0</redis.clients.version>
+    <org.springframework.data.version>1.8.1.RELEASE</org.springframework.data.version>
+  </properties>
   <dependencies>
     <!--关于日志-->
     <dependency>
@@ -55,6 +77,11 @@
       <artifactId>mybatis-spring</artifactId>
       <version>1.3.0</version>
     </dependency>
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-typehandlers-jsr310</artifactId>
+      <version>1.0.2</version>
+    </dependency>
     <!--Web层依赖-->
     <dependency>
       <groupId>javax.servlet</groupId>
@@ -76,7 +103,6 @@
       <artifactId>jackson-databind</artifactId>
       <version>${com.fasterxml.jackson.core.version}</version>
     </dependency>
-
     <!--Spring依赖-->
     <!--Spring核心依赖-->
     <dependency>
@@ -130,6 +156,84 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>${org.springframework.version}</version>
+    </dependency>
+    <!--spring security权限依赖-->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-core</artifactId>
+      <version>${org.springframework.security.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-expression</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aop</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-config</artifactId>
+      <version>${org.springframework.security.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-aop</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-web</artifactId>
+      <version>${org.springframework.security.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>spring-core</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-web</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-expression</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-beans</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>spring-context</artifactId>
+          <groupId>org.springframework</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <!--Thymeleaf-->
     <dependency>
@@ -247,32 +351,11 @@
     </dependency>
   </dependencies>
 
-
-
-  <!--版本管理-->
-  <properties>
-    <junit.version>4.8.2</junit.version>
-    <org.slf4j.version>1.7.24</org.slf4j.version>
-    <ch.qos.logback.version>1.1.11</ch.qos.logback.version>
-    <mysql.version>6.0.5</mysql.version>
-    <org.mybatis.version>3.4.1</org.mybatis.version>
-    <com.alibaba.version>1.0.26</com.alibaba.version>
-    <org.mybatis-spring.version>6.0.5</org.mybatis-spring.version>
-    <javax.servlet.version>3.1.0</javax.servlet.version>
-    <taglibs.version>1.1.2</taglibs.version>
-    <jstl.version>1.2</jstl.version>
-    <com.fasterxml.jackson.core.version>2.8.7</com.fasterxml.jackson.core.version>
-    <org.springframework.version>4.2.9.RELEASE</org.springframework.version>
-    <org.mockito.version>2.3.0</org.mockito.version>
-    <org.thymeleaf.com.version>3.0.0.BETA02</org.thymeleaf.com.version>
-    <com.sun.mail.version>1.5.6</com.sun.mail.version>
-    <redis.clients.version>2.9.0</redis.clients.version>
-    <org.springframework.data.version>1.8.1.RELEASE</org.springframework.data.version>
-  </properties>
   <build>
     <finalName>easyoj</finalName>
     <pluginManagement>
       <plugins>
+        <!--关于编译器的插件-->
         <plugin>
           <artifactId>maven-compiler-plugin</artifactId>
           <configuration>

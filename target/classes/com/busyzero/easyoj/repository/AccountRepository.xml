@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.busyzero.easyoj.repository.AccountRepository">
     <insert id="saveAccount">
-        INSERT INTO accout(first_name,last_name,email_address,password)
-        VALUES (#{firstName},#{lastName},#{emailAddress},#{password})
+        INSERT INTO accout(first_name,last_name,email_address,account_photo,password)
+        VALUES (#{firstName},#{lastName},#{emailAddress},#{accountPhoto},#{password})
     </insert>
 
     <select id="countByEmailAddress">
@@ -15,14 +15,14 @@
     </select>
 
     <select id="findByEmailAddressAndPassword" resultType="account">
-        SELECT account_id,first_name,last_name,email_address,password
+        SELECT account_id,first_name,last_name,email_address,account_photo,password
         FROM account
         WHERE email_address=#{emailAddress}
         AND password=#{password}
     </select>
 
     <select id="findByEmailAddress" resultType="account">
-        SELECT account_id,first_name,last_name,email_address,password
+        SELECT account_id,first_name,last_name,email_address,account_photo,password
         FROM account
         WHERE email_address=#{emailAddress}
     </select>

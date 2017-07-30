@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * Created by 11456 on 2017/6/23.
  */
 @Controller
-@RequestMapping("/")
+@RequestMapping("/home")
 public class HomePageController {
     /**
      * 请求首页
@@ -17,7 +17,7 @@ public class HomePageController {
      */
     @RequestMapping(method = RequestMethod.GET)
     public String requestHomePage(){
-        return "";
+        return "home";
     }
 
 

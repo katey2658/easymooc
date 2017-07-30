@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.CourseRepository">
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+    <insert id="save" parameterType="course">
+        INSERT INTO course(subject_id,course_name,
+        description,pre_condition,course_image,
+        provider_name,provider_logo,provider_id,
+        teacher_photo,teacher_name,teacher_job_title,
+        teacher_signature,teacher_id,time_start,
+        time_end,student_level,time_learn,
+        language_to_teach,pass_condition,
+        price_with_certificate,price_with_no_certificate)
+        VALUES (#{subjectId},#{courseName},
+        #{description},#{preCondition},#{courseImage},
+        #{providerName},#{providerLogo},#{providerId},
+        #{teacherPhoto},#{teacherName},#{teacherJobTitle},
+        #{teacherSignature},#{teacherId},#{timeStart},
+        #{timeEnd},#{studentLevel},#{timeLearn},
+        #{languageToTeach},#{passCondition},
+        #{priceWithCertificate},#{priceWithNoCertificate})
+    </insert>
+
+    <!-- TODO 暂时先写到这里:这里还有疑问回答，几条评论，一周weekTaksk需要关联 -->
+    <select id="findByCourseId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,course_name,
+        description,pre_condition,course_image,
+        provider_name,provider_logo,provider_id,
+        teacher_photo,teacher_name,teacher_job_title,
+        teacher_signature,teacher_id,time_start,
+        time_end,student_level,time_learn,
+        language_to_teach,pass_condition,
+        price_with_certificate,price_with_no_certificate
+        FROM course
+        WHERE course_id=#{courseId}
+    </select>
+
+    <select id="listAllBySubjectId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,course_name,course_name,provider_name
+        FROM course
+        WHERE subject_id=#{subjectId}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByProviderId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,provider_id,course_name,course_name,provider_name
+        FROM course
+        WHERE provider_id=#{provider_id}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <select id="listAllByTeacherId" resultType="course" useCache="true">
+        SELECT course_id,subject_id,teacher_id,course_name,course_name,provider_name
+        FROM course
+        WHERE teacher_id=#{teacherId}
+        LIMIT #{offset},#{limit}
+    </select>
+
+    <update id="updateCourse" parameterType="course">
+        UPDATE course
+        SET subject_id=#{subjectId},
+        course_name=#{courseName},
+        description=#{description},
+        pre_condition=#{preCondition},
+        course_image=#{courseImage},
+        provider_name=#{providerName},
+        SET provider_logo=#{providerLogo},
+        provider_id=#{providerId},
+        teacher_photo=#{teacherPhoto},
+        teacher_name=#{teacherName},
+        teacher_job_title=#{teacherJobTitle},
+        teacher_signature=#{teacherSignature},
+        teacher_id=#{teacherId},
+        time_start=#{timeStart},
+        time_end=#{timeEnd},
+        student_level=#{studentLevel},
+        time_learn=#{timeLearn},
+        language_to_teach=#{languageToTeach},
+        pass_condition=#{passCondition},
+        price_with_certificate=#{priceWithCertificate},
+        price_with_no_certificate=#{priceWithNoCertificate}
+        WHERE course_id=#{courseId}
+    </update>
+
+    <delete id="removeByCourseId">
+        DELETE FROM course
+        WHERE course_id=#{couseId}
+    </delete>
+</mapper>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.CommentRepository">
+    
+    <insert id="save">
+        INSERT INTO comment(course_id,account_id,score,comment_content)
+        VALUES (#{courseId},#{accountId},#{score},#{comment_content})
+    </insert>
+
+    <select id="listAllByCourseId" resultType="comment">
+        SELECT
+        a.comment_id,
+        a.course_id,
+        a.account_id,
+        a.score,
+        a.comment_content,
+        a.gmt_create,
+        a.gmt_modified,
+        b.account_id,
+        b.first_name,
+        b.last_name,
+        b.account_photo
+        FROM comment a JOIN account b
+        ON a.account_id=b.account_id
+        WHERE a.course_id=#{courseId}
+        LIMIT #{offset},#{limit}
+    </select>
+    
+    <delete id="removeByCommentId">
+        DELETE FROM comment
+        WHERE comment_id=#{commentId}
+    </delete>
+
+    <delete id="removeAllByCourseId">
+        DELETE FROM comment
+        WHERE course_id=#{courseId}
+    </delete>
+    
+    <delete id="removeALlByAccountId">
+        DELETE FROM comment
+        WHERE account_id=#{accountId}
+    </delete>
+
+</mapper>

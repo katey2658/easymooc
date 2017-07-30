@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.busyzero.easyoj.repository.TaskRepository">
+
+    <insert id="save" parameterType="task">
+        INSERT INTO task(week_task_id,order_in_week,title)
+        VALUES (#{weekTaskId},#{orderInWeek},#{title})
+    </insert>
+
+    <insert id="" parameterType="task">
+        INSERT INTO task(week_task_id,order_in_week,title)
+        VALUES (#{weekTaskId},#{orderInWeek},#{title})
+    </insert>
+
+    <select id="findByTaskId" resultType="task">
+        SELECT
+        a.task_id,
+        a.week_task_id,
+        a.order_task_id,
+        a.title,
+        a.gmt_create,
+        a.gmt_modified,
+        b.task_item_id,
+        b.task_id,
+        b.title,
+        b.time_length,
+        b.video_info_id,
+        b.video_url,
+        b.wiki_id,
+        b.gmt_create,
+        b.gmt_modified
+        FROM task a JOIN task_item b ON a.task_id=b.task_id
+        WHERE a.task_id=#{taskId}
+    </select>
+
+    <select id="listAllByWeekTaskId" resultType="task">
+        SELECT
+        a.task_id,
+        a.week_task_id,
+        a.order_task_id,
+        a.title,
+        a.gmt_create,
+        a.gmt_modified,
+        b.task_item_id,
+        b.task_id,
+        b.title,
+        b.time_length,
+        b.video_info_id,
+        b.video_url,
+        b.wiki_id,
+        b.gmt_create,
+        b.gmt_modified
+        FROM task a JOIN task_item b ON a.task_id=b.task_id
+        WHERE a.week_task_id=#{weekTaskId}
+    </select>
+
+    <update id="updateTask" parameterType="task">
+        UPDATE task
+        SET order_in_week=#{orderInWeek},
+        title=#{title}
+        WHERE task_id=#{taskId}
+    </update>
+
+    <delete id="removeByTaskId">
+        DELETE FROM task
+        WHERE task_id=#{taskId}
+    </delete>
+
+    <delete id="removeAllByTaskIds">
+        DELETE FROM task
+        WHERE task_id IN
+        <foreach collection="taskIds" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
+
+    <delete id="removeAllByWeekTaskId">
+        DELETE FROM task
+        WHERE week_task_id=#{weekTaskId}
+    </delete>
+</mapper>

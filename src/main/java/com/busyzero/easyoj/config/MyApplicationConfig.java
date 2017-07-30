@@ -1,12 +1,14 @@
 package com.busyzero.easyoj.config;
 
 import com.busyzero.easyoj.config.common.AspectJConfig;
+import com.busyzero.easyoj.config.mvc.SecurityConfig;
 import com.busyzero.easyoj.config.mvc.WebConfig;
 import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;
 import com.busyzero.easyoj.config.service.RootServiceConfig;
 import com.busyzero.easyoj.config.service.SpringMailConfig;
 import org.springframework.web.filter.CharacterEncodingFilter;
+import org.springframework.web.filter.DelegatingFilterProxy;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.Filter;
@@ -30,10 +32,11 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{RootDaoConfig.class,
-                RedisClusterConfig.class,
+               RedisClusterConfig.class,
 //                CachingConfig.class,
                 RootServiceConfig.class,
                 SpringMailConfig.class,
+                SecurityConfig.class
 //                AspectJConfig.class
         };
     }
@@ -67,6 +70,9 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
         CharacterEncodingFilter encodingFilter=new CharacterEncodingFilter();
         encodingFilter.setEncoding(CHARACTER_ENCODING);
         encodingFilter.setForceEncoding(true);
+        //添加权限过滤器
+        //TODO katey2658 2017/7/30 不确定这里是否有效，之前说是要配置在web.xml中
+//        DelegatingFilterProxy springSecurityFilterChain=new DelegatingFilterProxy();
         return new Filter[]{encodingFilter};
     }
 

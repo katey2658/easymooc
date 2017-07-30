@@ -25,9 +25,10 @@
         WHERE task_id=#{taskId}
     </select>
 
-    <update id="updateTaskItem" parameterType="">
+    <!--TODO  katey2658 17/7/30   暂时不更新，不写吧-->
+    <!--<update id="updateTaskItem" parameterType="">-->
 
-    </update>
+    <!--</update>-->
 
     <delete id="removeAllByTaskId">
         DELETE FROM task_item
