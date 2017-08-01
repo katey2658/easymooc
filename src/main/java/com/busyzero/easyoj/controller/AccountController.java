@@ -54,7 +54,6 @@ public class AccountController {
      * 获取注册页面
      * @return
      */
-    @ResponseBody
     @RequestMapping(value = "/sign-up",method = GET)
     public String signUpPage(){
         return "account/signUpPage";

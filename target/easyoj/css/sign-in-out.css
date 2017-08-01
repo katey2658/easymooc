@@ -9,6 +9,18 @@ body{
     height: 100%;
     position: relative;
 }
+a:link { text-decoration: none;}
+a:active { text-decoration:blink;}
+a:hover { text-decoration:underline;}
+a:visited { text-decoration: none;}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+
 .sign-in-bg{
     width: 100%;
     height: 100%;
@@ -55,7 +67,7 @@ body{
     height: 30px;
     margin-top: 5px;
 }
-.btn-sigin-in{
+.btn-sign-in{
     background-color: #02b3e4;
     border: none;
     outline: none;
@@ -65,11 +77,19 @@ body{
     font-size: 18px;
     color: #ffffff;
 }
-.note-forget-password{
+.note-align-center{
     text-align: center;
     font-size: 14px;
+}
+.link-sign-up{
+    text-align: center;
+    font-size: 16px;
     color: #ffffff;
 }
+.link-forget-password{
+    color: #ffffff;
+}
+
 .line-or{
     width: 100%;
     text-align: center;
@@ -113,4 +133,26 @@ body{
     width: 100%;
     text-align: center;
     font-size: 13px;
+}
+.text-input-username{
+    width:100%;
+    margin: 25px 0;
+    height: 40px;
+}
+.text-input-half{
+    outline: none;
+    border: none;
+    background-color: #ffffff;
+    width: 45%;
+    height: 40px;
+    border-radius: 5px;
+}
+.text-input-half input{
+    outline: none;
+    border: none;
+    width: 70%;
+    margin:0 5%;
+    height: 30px;
+    margin-top: 5px;
+    display: inline-block;
 }

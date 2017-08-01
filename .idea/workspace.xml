@@ -15,40 +15,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d469e7a6-b32c-4355-818d-331f2692c2b0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javassist_javassist_3_11_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ognl_ognl_3_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_attoparser_attoparser_2_0_0_BETA05.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_3_0_0_BETA02.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_thymeleaf_thymeleaf_spring4_3_0_0_BETA02.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_unbescape_unbescape_1_1_2_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/attoparser-2.0.0.BETA05.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/javassist-3.11.0.GA.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/ognl-3.1.2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/thymeleaf-3.0.0.BETA02.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/thymeleaf-spring4-3.0.0.BETA02.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/lib/unbescape-1.1.2.RELEASE.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/service/SpringMailConfig.class" afterPath="$PROJECT_DIR$/target/classes/com/busyzero/easyoj/config/service/SpringMailConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/MyApplicationConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/mvc/WebConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/service/SpringMailConfig.class" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/classes/com/busyzero/easyoj/config/service/SpringMailConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/easyoj_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/easyoj_war_exploded.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signInPage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signUpPage.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/easyoj.iml" afterPath="$PROJECT_DIR$/easyoj.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/MyApplicationConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/home.html" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signInPage.html" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signInPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signUpPage.html" afterPath="$PROJECT_DIR$/target/easyoj/WEB-INF/templates/signUpPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/passordRestPage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/passordRestPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,28 +49,38 @@
       <file leaf-file-name="signInPage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="19" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="7" />
+            <state relative-caret-position="404">
+              <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signUpPage.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="signUpPage.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+            <state relative-caret-position="468">
+              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AccountController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="124" column="45" lean-forward="false" selection-start-line="124" selection-start-column="45" selection-end-line="124" selection-end-column="45" />
+            <state relative-caret-position="109">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="passordRestPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/passordRestPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -105,8 +89,8 @@
       <file leaf-file-name="sign-in-out.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1761">
-              <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+            <state relative-caret-position="222">
+              <caret line="139" column="17" lean-forward="false" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -153,17 +137,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="HTML File" />
         <option value="Class" />
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>add(</find>
-      <find>abstract</find>
       <find>gc()</find>
       <find>exec</find>
       <find>current</find>
@@ -191,7 +173,9 @@
       <find>equals(</find>
       <find>put</find>
       <find>sort(</find>
+      <find>btn-sigin-in</find>
       <find>OR</find>
+      <find>text-input</find>
     </findStrings>
     <replaceStrings>
       <replace>datetime</replace>
@@ -213,8 +197,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/.m2/repository/org/mybatis/mybatis/3.4.1/mybatis-3.4.1-sources.jar!/org/apache/ibatis/type/TypeHandlerRegistry.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/WeekTaskRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/TaskRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
@@ -261,9 +243,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signInPage.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/signUpPage.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/passordRestPage.html" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java" />
       </list>
     </option>
   </component>
@@ -383,6 +367,46 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
               <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="mvc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="persistence" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
@@ -1058,12 +1082,12 @@
       <workItem from="1500349853033" duration="10906000" />
       <workItem from="1500640416852" duration="313000" />
       <workItem from="1500640764088" duration="47860000" />
-      <workItem from="1501307675219" duration="91554000" />
+      <workItem from="1501307675219" duration="99592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1062876000" />
+    <option name="totallyTimeSpent" value="1070914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1151,14 +1175,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="447">
@@ -1429,7 +1445,7 @@
         <state relative-caret-position="51">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1588,14 +1604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="44" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/dep-env/java/jdk1.8.0_121/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -1628,26 +1636,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/passordRestPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1761">
-          <caret line="107" column="1" lean-forward="true" selection-start-line="107" selection-start-column="1" selection-end-line="107" selection-end-column="1" />
+        <state relative-caret-position="130">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signInPage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="40" column="21" lean-forward="false" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
+        <state relative-caret-position="404">
+          <caret line="48" column="13" lean-forward="false" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="124" column="45" lean-forward="false" selection-start-line="124" selection-start-column="45" selection-end-line="124" selection-end-column="45" />
+        <state relative-caret-position="109">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/sign-in-out.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="139" column="17" lean-forward="false" selection-start-line="139" selection-start-column="17" selection-end-line="139" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/templates/account/signUpPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -3,14 +3,14 @@
 <head>
     <meta charset="utf-8" content="text/html" http-equiv="content-type">
     <!--<meta name="context-path" th:content="@{/}"/>-->
-    <title>注册</title>
+    <title>登录</title>
     <link rel="stylesheet" th:href="@{/css/sign-in-out.css}" />
-    <link rel="stylesheet" type="text/css" media="all"  href="../../css/sign-in-out.css" th:href="@{/css/sign-in-out.css}"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/sign-in-out.css" th:href="@{/css/sign-in-out.css}"/>
 </head>
 <body>
 <!--灰色背景-->
 <div th:class="sign-in-bg">
-    <img  src="../../images/account/sign-in-bg.jpg" th:src="@{/images/account/sign-in-bg.jpg}" alt="">
+    <img src="../../../images/account/sign-in-bg.jpg" th:src="@{/images/account/sign-in-bg.jpg}" alt="">
 </div>
 <!--主要的登录板块-->
 <div th:class="app-bg-opacity"></div>
@@ -18,15 +18,15 @@
     <h4 class="app-title">E a s y O J</h4>
     <div class="block-media">
         <div class="sign-in-media">
-            <img src="../../images/account/sign-in-google.png" th:src="@{/images/account/sign-in-google.png}" alt=""/>
+            <img src="../../../images/account/sign-in-google.png" th:src="@{/images/account/sign-in-google.png}" alt=""/>
             <span  th:text="'Sign in with google'"> Sign in with google</span>
         </div>
         <p class="note-media" th:text="'katey2658@gmail.com is not associated with an account'">katey2658@gmail.com is not associated with an account</p>
     </div>
     <p class="line-or">
-    <div class="line"><hr></div>
-    <span th:text="'OR'">OR</span>
-    <div class="line"><hr></div>
+        <div class="line"><hr></div>
+        <span th:text="'OR'">OR</span>
+        <div class="line"><hr></div>
     </p>
     <div class="text-input">
         <input type="text" name="email" value="" placeholder="Email" />
@@ -36,16 +36,14 @@
         <input type="password" name="password" value="" placeholder="Password">
         <span></span>
     </div>
-    <div class="text-input">
-        <input type="password" name="password" value="" placeholder="Password">
-        <span></span>
-    </div>
-    <div class="text-input">
-        <input type="password" name="password" value="" placeholder="Password">
-        <span></span>
-    </div>
-    <button class="btn-sigin-in" th:text="'Let\'s GO'">登录</button>
-    <p class="note-forget-password" th:text="'forget your password?'">忘记密码?</p>
+    <button class="btn-sign-in" th:text="'Let\'s GO'">登录</button>
+    <p class="note-align-center">
+        <a href="#" class="link-forget-password" th:text="'forget your password?'">忘记密码?</a>
+    </p>
+    <p class="note-align-center">
+        <span th:text="'Don\'t have an account yet?'">还没有账号?</span>
+        <a href="sign-up" class="link-sign-up" th:text="'Sign Up'">注册</a>
+    </p>
 </div>
 
 <script type="text/javascript" src="/js/sign-in-out.js" th:src="@{/js/sign-in-out.js}"></script>

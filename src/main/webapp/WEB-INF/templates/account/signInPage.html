@@ -36,8 +36,14 @@
         <input type="password" name="password" value="" placeholder="Password">
         <span></span>
     </div>
-    <button class="btn-sigin-in" th:text="'Let\'s GO'">登录</button>
-    <p class="note-forget-password" th:text="'forget your password?'">忘记密码?</p>
+    <button class="btn-sign-in" th:text="'Let\'s GO'">登录</button>
+    <p class="note-align-center">
+        <a href="#" class="link-forget-password" th:text="'forget your password?'">忘记密码?</a>
+    </p>
+    <p class="note-align-center">
+        <span th:text="'Don\'t have an account yet?'">还没有账号?</span>
+        <a href="sign-up" class="link-sign-up" th:text="'Sign Up'">注册</a>
+    </p>
 </div>
 
 <script type="text/javascript" src="/js/sign-in-out.js" th:src="@{/js/sign-in-out.js}"></script>
