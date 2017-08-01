@@ -36,12 +36,12 @@
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.2.0.RELEASE" />
-          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.0.BETA02" />
-          <element id="library" level="project" name="Maven: ognl:ognl:3.1.2" />
-          <element id="library" level="project" name="Maven: javassist:javassist:3.11.0.GA" />
-          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.0.BETA05" />
-          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.2.RELEASE" />
-          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.0.BETA02" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf:3.0.7.RELEASE" />
+          <element id="library" level="project" name="Maven: ognl:ognl:3.1.12" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: org.attoparser:attoparser:2.0.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.5.RELEASE" />
+          <element id="library" level="project" name="Maven: org.thymeleaf:thymeleaf-spring4:3.0.7.RELEASE" />
           <element id="library" level="project" name="Maven: com.sun.mail:javax.mail:1.5.6" />
           <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
           <element id="library" level="project" name="Maven: org.springframework.integration:spring-integration-mail:4.3.10.RELEASE" />

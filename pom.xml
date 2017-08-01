@@ -26,7 +26,7 @@
     <org.springframework.version>4.3.10.RELEASE</org.springframework.version>
     <org.springframework.security.version>4.2.0.RELEASE</org.springframework.security.version>
     <org.mockito.version>2.3.0</org.mockito.version>
-    <org.thymeleaf.com.version>3.0.0.BETA02</org.thymeleaf.com.version>
+    <org.thymeleaf.com.version>3.0.7.RELEASE</org.thymeleaf.com.version>
     <com.sun.mail.version>1.5.6</com.sun.mail.version>
     <redis.clients.version>2.9.0</redis.clients.version>
     <org.springframework.data.version>1.8.1.RELEASE</org.springframework.data.version>

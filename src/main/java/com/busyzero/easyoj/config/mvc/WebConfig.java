@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.ViewResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
@@ -28,8 +27,8 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     private static final String PATTERN_RESOURCE_CSS = "/css/**";
     private final static String PATTERN_RESOURCE_JS="/js/**";
     private final static String PATTERN_RESOURCE_IMAGES="/images/**";
-    private final static String LOCATION_RESOURCE_CSS="/js/";
-    private final static String LOCATION_RESOURCE_JS="/css/";
+    private final static String LOCATION_RESOURCE_CSS="/css/";
+    private final static String LOCATION_RESOURCE_JS="/js/";
     private final static String LOCATION_RESOURCE_IMAGES="/images/";
 
     private final static String CHARACTER_ENCODING="UTF-8";
@@ -37,6 +36,9 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     private final static String TEMPLATE_PREFIX="/WEB-INF/templates/";
     private final static String TEMPLATE_SUFFIX=".html";
 
+    /**
+     * 上下文对象
+     */
     private ApplicationContext applicationContext;
 
     @Override
@@ -51,12 +53,12 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         super.addResourceHandlers(registry);
+        registry.addResourceHandler(PATTERN_RESOURCE_IMAGES)
+                .addResourceLocations(LOCATION_RESOURCE_IMAGES);
         registry.addResourceHandler(PATTERN_RESOURCE_CSS)
                 .addResourceLocations(LOCATION_RESOURCE_CSS);
         registry.addResourceHandler(PATTERN_RESOURCE_JS)
                 .addResourceLocations(LOCATION_RESOURCE_JS);
-        registry.addResourceHandler(PATTERN_RESOURCE_IMAGES)
-                .addResourceLocations(LOCATION_RESOURCE_IMAGES);
     }
 
     /**

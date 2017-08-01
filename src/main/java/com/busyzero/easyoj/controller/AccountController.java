@@ -34,7 +34,7 @@ public class AccountController {
      */
     @RequestMapping(value = "/sign-in",method = GET)
     public String signInPage(){
-        return "signInPage";
+        return "account/signInPage";
     }
 
     /**
@@ -57,7 +57,7 @@ public class AccountController {
     @ResponseBody
     @RequestMapping(value = "/sign-up",method = GET)
     public String signUpPage(){
-        return "signUpPage";
+        return "account/signUpPage";
     }
 
     /**

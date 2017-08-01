@@ -12,7 +12,6 @@ import org.springframework.context.support.ResourceBundleMessageSource;
 import org.springframework.core.env.Environment;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.templatemode.TemplateMode;
 import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
@@ -102,9 +101,8 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return messageSource;
     }
 
-    @Primary
     @Bean
-    public TemplateEngine emailTemplateEngine(){
+    public SpringTemplateEngine emailTemplateEngine(){
         final SpringTemplateEngine templateEngine=new SpringTemplateEngine();
         templateEngine.addTemplateResolver(htmlTemplateResolver());
         templateEngine.addTemplateResolver(textTemplateResolver());
