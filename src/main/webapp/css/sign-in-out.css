@@ -77,6 +77,10 @@ a:visited { text-decoration: none;}
     font-size: 18px;
     color: #ffffff;
 }
+
+.btn-sign-in:hover{
+    background-color: #00aeff;
+}
 .note-align-center{
     text-align: center;
     font-size: 14px;

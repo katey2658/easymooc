@@ -6,22 +6,27 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.mvc.annotation.ResponseStatusExceptionResolver;
+import org.springframework.web.servlet.mvc.support.DefaultHandlerExceptionResolver;
 import org.thymeleaf.messageresolver.StandardMessageResolver;
 import org.thymeleaf.spring4.SpringTemplateEngine;
 import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring4.view.ThymeleafViewResolver;
 import org.thymeleaf.templatemode.TemplateMode;
 
+import java.util.List;
+
 /**
  * Created by 11456 on 2017/4/9.
  */
 @EnableWebMvc
 @Configuration
-@ComponentScan(basePackages = {"com.busyzero.easyoj.controller"})
+@ComponentScan(basePackages = {"com.busyzero.easyoj.controller","com.busyzero.easyoj.handler"})
 public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationContextAware{
 
     private static final String PATTERN_RESOURCE_CSS = "/css/**";
@@ -96,6 +101,7 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         return templateEngine;
     }
 
+
     /**
      * 加载模板资源
      * @return
@@ -111,4 +117,5 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         templateResolver.setCacheable(true);
         return templateResolver;
     }
+
 }

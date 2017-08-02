@@ -1,0 +1,58 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    padding:0;
+    margin:0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+a:link { text-decoration: none;}
+a:active { text-decoration:blink;}
+a:hover { text-decoration:underline;}
+a:visited { text-decoration: none;}
+
+.content{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.note-error-block{
+    margin-left: 15%;
+    width:30%;
+    position: absolute;
+}
+.note-title{
+    font-size: 120px;
+    color: #132644;
+    line-height: 20px;
+}
+.note-desc{
+    font-size: 40px;
+    color: #36b1c0;
+    line-height: 10px;
+}
+.note-content{
+    font-size: 18px;
+}
+.img-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.btn-home{
+    height: 40px;
+    width: 140px;
+    background-color: #00aed2;
+    border: none;
+    outline:none;
+    border-radius: 5px;
+    color: #ffffff;
+}
+.btn-home:hover{
+    background-color: #00aeff;
+}

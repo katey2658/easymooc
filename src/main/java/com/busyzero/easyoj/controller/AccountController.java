@@ -2,6 +2,7 @@ package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
+import com.busyzero.easyoj.exception.CourseNotFoundException;
 import com.busyzero.easyoj.service.AccountAuthService;
 import com.busyzero.easyoj.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +31,7 @@ public class AccountController {
 
     /**
      * 请求登录页面
+     * 当用get请求的时候应该来说是直接返回页面，是通过get来请求来做
      * @return
      */
     @RequestMapping(value = "/sign-in",method = GET)
@@ -38,7 +40,8 @@ public class AccountController {
     }
 
     /**
-     * 账号登录
+     * 账号登录请求提交
+     * 在请求提交的时候需要有邮箱地址和密码
      * @param emailAddress
      * @param password
      * @return
@@ -51,7 +54,7 @@ public class AccountController {
     }
 
     /**
-     * 获取注册页面
+     * 获取注册页面：get
      * @return
      */
     @RequestMapping(value = "/sign-up",method = GET)
@@ -60,9 +63,11 @@ public class AccountController {
     }
 
     /**
-     * 账号注册
+     * 账号注册时候的请求提交页面
+     * 但是根据业务需要是有值需要提交
      * @param account
-     * @return
+     * @param locale
+     * @return 操作的结果json
      */
     @ResponseBody
     @RequestMapping(value = "/sign-up",method = POST)
@@ -74,8 +79,8 @@ public class AccountController {
     }
 
     /**
-     * 邮箱点击之后：验证
-     * @param accessKey
+     * 在邮箱验证中会包含一个：验证
+     * @param accessKey 访问字符串，是发送的一个验证码
      * @param emailAddress
      * @return
      */
@@ -87,7 +92,7 @@ public class AccountController {
     }
 
     /**
-     * 检查邮箱是否被注册了
+     * 检查邮箱是否被注册了，如果被注册了就应该不允许继续注册
      * @param emailAddress 输入的邮箱
      * @return
      */

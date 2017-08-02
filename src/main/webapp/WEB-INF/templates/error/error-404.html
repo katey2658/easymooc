@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" content="text/html" http-equiv="content-type">
+    <title>error</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/error.css" th:href="@{/css/error.css}"/>
+</head>
+<body>
+<div class="content">
+    <!--background-->
+    <img class="img-bg" src="../../../images/error/error404.jpg" th:src="@{/images/error/error404.jpg}" alt="">
+    <!--error content-->
+    <div class="note-error-block">
+        <h1 class="note-title" th:text="'Oops!'">Oops!</h1>
+        <h4 class="note-desc" th:text="'Where are we?'">Where are we?</h4>
+        <p class="note-content" th:text="'The page you are looking was moved,renamed or might never existed.'">The page you are looking was moved,renamed or might never existed.</p>
+        <button class="btn-home" th:text="'Go Home'">Go Home</button>
+    </div>
+</div>
+</body>
+</html>

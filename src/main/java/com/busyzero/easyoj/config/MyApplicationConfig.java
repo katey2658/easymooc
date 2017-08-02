@@ -6,12 +6,11 @@ import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;
 import com.busyzero.easyoj.config.service.RootServiceConfig;
 import com.busyzero.easyoj.config.service.SpringMailConfig;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import javax.servlet.Filter;
-import javax.servlet.MultipartConfigElement;
-import javax.servlet.ServletRegistration;
+import javax.servlet.*;
 
 /**
  * Created by 11456 on 2017/6/4.
@@ -83,6 +82,9 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
         registration.setLoadOnStartup(1);
         //设置文件上传目录地址
         registration.setMultipartConfig(new MultipartConfigElement(MULTIPART_LOCATION));
+        //当找不到正确的处理器的时候抛出异常，来让处理
+        registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
         super.customizeRegistration(registration);
     }
+
 }
