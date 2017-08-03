@@ -5,5 +5,12 @@ package com.busyzero.easyoj.service;
  * Created by 11456 on 2017/6/23.
  */
 public interface CourseInfoService {
+    /**
+     * 获取课程目录列表，课程目标
+     * @return
+     */
+    String getCatalogList();
+
+    
 
 }

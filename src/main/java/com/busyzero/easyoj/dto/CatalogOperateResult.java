@@ -1,18 +1,20 @@
 package com.busyzero.easyoj.dto;
+
 import com.busyzero.easyoj.enums.AccountOperateEnum;
+import com.busyzero.easyoj.enums.CatalogOperateEnum;
 
 /**
- * 账户操作结果传输对象
- * Created by 11456 on 2017/6/23.
+ * 课程目录信息操作结果
+ * @author katey2658
  */
-public class AccountOperateResult<T> {
-    /**账户操作类型*/
-    private AccountOperateEnum operateEnum;
+public class CatalogOperateResult<T> {
+    /**课程目录操作类型*/
+    private CatalogOperateEnum operateEnum;
 
     /**操作是否成功*/
     private Boolean isSuccess;
 
-    /**操作的账户对象*/
+    /**操作的课程目录对象*/
     private T data;
 
     /**失败时候的的错误内容*/
@@ -23,7 +25,7 @@ public class AccountOperateResult<T> {
      * @param operateEnum
      * @param isSuccess
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess) {
         this.operateEnum = operateEnum;
         this.isSuccess = isSuccess;
     }
@@ -34,7 +36,7 @@ public class AccountOperateResult<T> {
      * @param isSuccess
      * @param data
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess, T data) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess, T data) {
         this.operateEnum = operateEnum;
         this.isSuccess = isSuccess;
         this.data = data;
@@ -46,17 +48,17 @@ public class AccountOperateResult<T> {
      * @param isSuccess
      * @param errorMessage
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess, String errorMessage) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess, String errorMessage) {
         this.operateEnum = operateEnum;
         this.isSuccess = isSuccess;
         this.errorMessage = errorMessage;
     }
 
-    public AccountOperateEnum getOperateEnum() {
+    public CatalogOperateEnum getOperateEnum() {
         return operateEnum;
     }
 
-    public void setOperateEnum(AccountOperateEnum operateEnum) {
+    public void setOperateEnum(CatalogOperateEnum operateEnum) {
         this.operateEnum = operateEnum;
     }
 

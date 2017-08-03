@@ -6,14 +6,21 @@ import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;
 import com.busyzero.easyoj.config.service.RootServiceConfig;
 import com.busyzero.easyoj.config.service.SpringMailConfig;
-import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 import javax.servlet.*;
 
 /**
- * Created by 11456 on 2017/6/4.
+ * 全局配置类，是应用的入口
+ * 也是会在容器启动时候被访问
+ * {@link AbstractAnnotationConfigDispatcherServletInitializer} 实现了
+ * {@link WebApplicationInitializer}  这个接口会被
+ * {@link org.springframework.web.SpringServletContainerInitializer} 访问
+ * 而SpringServletContainerInitializer 是关于Spring 对于
+ * {@link ServletContainerInitializer}的实现，会在容器启动的时候被访问
+ * @author katey2658
  */
 public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
@@ -23,18 +30,18 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
     private final String MULTIPART_LOCATION="/temp/upload";
 
     /**
-     * 其它组件的注册
+     * 其它组件IOC容器的集成
      * @return
      */
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return new Class[]{RootDaoConfig.class,
-               RedisClusterConfig.class,
-//                CachingConfig.class,
+                RedisClusterConfig.class,
+                //CachingConfig.class,
                 RootServiceConfig.class,
+                SecurityConfig.class,
                 SpringMailConfig.class,
-                SecurityConfig.class
-//                AspectJConfig.class
+                //AspectJConfig.class
         };
     }
 
@@ -44,7 +51,9 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
      */
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[]{WebConfig.class};
+        return new Class[]{
+                WebConfig.class,
+        };
     }
 
     /**
@@ -58,23 +67,24 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
 
     /**
      * 添加过滤器:
-     * 添加了字符过滤器
+     * 添加了字符过滤器 编码utf-8
      * @return
      */
     @Override
     protected Filter[] getServletFilters() {
-        //字符过滤器
+        //设置字符过滤器utf-8
         CharacterEncodingFilter encodingFilter=new CharacterEncodingFilter();
         encodingFilter.setEncoding(CHARACTER_ENCODING);
         encodingFilter.setForceEncoding(true);
-        //添加权限过滤器
-        //TODO katey2658 2017/7/30 不确定这里是否有效，之前说是要配置在web.xml中
-//        DelegatingFilterProxy springSecurityFilterChain=new DelegatingFilterProxy();
         return new Filter[]{encodingFilter};
     }
 
     /**
-     * 配置dispatcherServlet
+     * 配置dispatcherServlet的配置
+     * 在中间配置了关于文件上传目录到/temp/upload.
+     * 以及配置类参数throwExceptionIfNoHandlerFound
+     * 也就是当请求路径找不到合适的处理器来进行处理的时候会抛出异常来进行处理.
+     * @see  com.busyzero.easyoj.handler.GlobalExceptionHandler
      * @param registration
      */
     @Override
@@ -86,5 +96,4 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
         registration.setInitParameter("throwExceptionIfNoHandlerFound", "true");
         super.customizeRegistration(registration);
     }
-
 }
