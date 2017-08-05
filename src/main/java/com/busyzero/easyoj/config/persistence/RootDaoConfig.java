@@ -69,12 +69,19 @@ public class RootDaoConfig {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setTypeAliasesPackage(this.TYPE_ALIASES_PACKAGE);
+        //获得seqsession工厂对象
         SqlSessionFactory factory=sessionFactory.getObject();
+        //获得配置对象
         org.apache.ibatis.session.Configuration configuration=factory.getConfiguration();
+        //使用自动生成的key
         configuration.setUseGeneratedKeys(true);
+        //使用列标签
         configuration.setUseColumnLabel(true);
+        //将下划线转变为驼峰写法
         configuration.setMapUnderscoreToCamelCase(true);
+        //使用复杂集合的结果集
         configuration.setMultipleResultSetsEnabled(true);
+        //启用缓存
         configuration.setCacheEnabled(true);
         return factory;
     }
