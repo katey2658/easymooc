@@ -1,6 +1,5 @@
 package com.busyzero.easyoj.dto;
 
-import com.busyzero.easyoj.enums.AccountOperateEnum;
 import com.busyzero.easyoj.enums.CatalogOperateEnum;
 
 /**
@@ -12,7 +11,7 @@ public class CatalogOperateResult<T> {
     private CatalogOperateEnum operateEnum;
 
     /**操作是否成功*/
-    private Boolean isSuccess;
+    private Boolean success;
 
     /**操作的课程目录对象*/
     private T data;
@@ -23,34 +22,34 @@ public class CatalogOperateResult<T> {
     /**
      * 只是简单的知道成功还是失败
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      */
-    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean success) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
     }
 
     /**
      * 操作成功时候,需要返回携带数据
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      * @param data
      */
-    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess, T data) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean success, T data) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
         this.data = data;
     }
 
     /**
      * 当操作不成功的时候,出现的错误提示
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      * @param errorMessage
      */
-    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean isSuccess, String errorMessage) {
+    public CatalogOperateResult(CatalogOperateEnum operateEnum, Boolean success, String errorMessage) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
         this.errorMessage = errorMessage;
     }
 
@@ -63,11 +62,11 @@ public class CatalogOperateResult<T> {
     }
 
     public Boolean getSuccess() {
-        return isSuccess;
+        return success;
     }
 
     public void setSuccess(Boolean success) {
-        isSuccess = success;
+        this.success = success;
     }
 
     public T getData() {

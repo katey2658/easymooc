@@ -1,7 +1,7 @@
 package com.busyzero.easyoj.config.persistence;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,10 +65,17 @@ public class RootDaoConfig {
      * @throws Exception
      */
     @Bean
-    public SqlSessionFactoryBean sqlSessionFactory() throws Exception {
+    public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setTypeAliasesPackage(this.TYPE_ALIASES_PACKAGE);
-        return sessionFactory;
+        SqlSessionFactory factory=sessionFactory.getObject();
+        org.apache.ibatis.session.Configuration configuration=factory.getConfiguration();
+        configuration.setUseGeneratedKeys(true);
+        configuration.setUseColumnLabel(true);
+        configuration.setMapUnderscoreToCamelCase(true);
+        configuration.setMultipleResultSetsEnabled(true);
+        configuration.setCacheEnabled(true);
+        return factory;
     }
 }

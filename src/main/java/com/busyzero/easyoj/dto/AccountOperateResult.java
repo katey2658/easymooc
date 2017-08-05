@@ -10,7 +10,7 @@ public class AccountOperateResult<T> {
     private AccountOperateEnum operateEnum;
 
     /**操作是否成功*/
-    private Boolean isSuccess;
+    private Boolean success;
 
     /**操作的账户对象*/
     private T data;
@@ -21,34 +21,34 @@ public class AccountOperateResult<T> {
     /**
      * 只是简单的知道成功还是失败
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess) {
+    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean success) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
     }
 
     /**
      * 操作成功时候,需要返回携带数据
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      * @param data
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess, T data) {
+    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean success, T data) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
         this.data = data;
     }
 
     /**
      * 当操作不成功的时候,出现的错误提示
      * @param operateEnum
-     * @param isSuccess
+     * @param success
      * @param errorMessage
      */
-    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean isSuccess, String errorMessage) {
+    public AccountOperateResult(AccountOperateEnum operateEnum, Boolean success, String errorMessage) {
         this.operateEnum = operateEnum;
-        this.isSuccess = isSuccess;
+        this.success = success;
         this.errorMessage = errorMessage;
     }
 
@@ -61,11 +61,11 @@ public class AccountOperateResult<T> {
     }
 
     public Boolean getSuccess() {
-        return isSuccess;
+        return success;
     }
 
     public void setSuccess(Boolean success) {
-        isSuccess = success;
+        this.success = success;
     }
 
     public T getData() {

@@ -1,5 +1,7 @@
 package com.busyzero.easyoj.domain;
 
+import org.apache.ibatis.type.Alias;
+
 import java.time.Instant;
 import java.util.List;
 
@@ -7,6 +9,7 @@ import java.util.List;
  * 学科实体类
  * Created by 11456 on 2017/7/2.
  */
+@Alias("subject")
 public class Subject {
     /**学科编号*/
     private Short subjectId;

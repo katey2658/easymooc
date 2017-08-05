@@ -28,7 +28,7 @@
         a.gmt_create AS a_gmt_create,
         a.gmt_modified AS a_gmt_modified,
         b.subject_id AS b_subject_id,
-        b.subejct_name AS b_subejct_name,
+        b.subject_name AS b_subject_name,
         b.catalog_id AS b_catalog_id,
         b.gmt_create AS b_gmt_create,
         b.gmt_modified AS b_gmt_modified,
@@ -44,10 +44,10 @@
         a.gmt_create AS a_gmt_create,
         a.gmt_modified AS a_gmt_modified,
         b.subject_id AS b_subject_id,
-        b.subejct_name AS b_subejct_name,
+        b.subject_name AS b_subject_name,
         b.catalog_id AS b_catalog_id,
         b.gmt_create AS b_gmt_create,
-        b.gmt_modified AS b_gmt_modified,
+        b.gmt_modified AS b_gmt_modified
         FROM catalog a JOIN subject b ON a.catalog_id=b.catalog_id
     </select>
 
@@ -69,9 +69,9 @@
         <result property="catalogDescription" column="a_catalog_description"/>
         <result property="gmtCreate" column="a_gmt_create"/>
         <result property="gmtModified" column="a_gmt_modified"/>
-        <collection property="subjectList">
+        <collection property="subjectList" ofType="subject">
             <result property="subjectId" column="b_subject_id"/>
-            <result property="subjectName" column="b_subejct_name"/>
+            <result property="subjectName" column="b_subject_name"/>
             <result property="catalogId" column="b_catalog_id"/>
             <result property="gmtCreate" column="b_gmt_create"/>
             <result property="gmtModified" column="b_gmt_modified"/>
