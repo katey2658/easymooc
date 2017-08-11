@@ -13,11 +13,8 @@ import org.springframework.core.env.Environment;
 import javax.sql.DataSource;
 
 /**
- * Created by 11456 on 2017/4/10.
- */
-
-/**
  * 持久层组件集成
+ * @author katey2658
  */
 @Configuration
 @PropertySource("classpath:jdbc.properties")
@@ -36,6 +33,7 @@ public class RootDaoConfig {
 
     private final static String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.domain";
 
+    /**环境变量对象*/
     @Autowired
     private Environment env;
 
