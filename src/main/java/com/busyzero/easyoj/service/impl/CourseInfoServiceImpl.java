@@ -1,9 +1,13 @@
 package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.domain.Catalog;
+import com.busyzero.easyoj.domain.Course;
+import com.busyzero.easyoj.domain.Subject;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
-import com.busyzero.easyoj.enums.CatalogOperateEnum;
+import com.busyzero.easyoj.dto.SubjectOperateResult;
+import com.busyzero.easyoj.enums.DateOperateEnum;
 import com.busyzero.easyoj.repository.CatalogRepository;
+import com.busyzero.easyoj.repository.SubjectRepository;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,9 +24,16 @@ import java.util.List;
 public class CourseInfoServiceImpl implements CourseInfoService {
     private Logger logger= LoggerFactory.getLogger(CourseInfoServiceImpl.class);
 
+    /**定义课程数据列表每一页的数据量是10*/
+    private final int COURSE_PAGE_LIMIT=10;
+
     /**目录信息表操作对象*/
     @Autowired
     private CatalogRepository catalogRepository;
+
+    /**学科目录持久信息操作对象*/
+    @Autowired
+    private SubjectRepository subjectRepository;
 
     /**
      * 获取所有目录数据
@@ -33,17 +44,29 @@ public class CourseInfoServiceImpl implements CourseInfoService {
         List<Catalog> catalogList=catalogRepository.listAll();
         CatalogOperateResult<List<Catalog>> result;
         if (catalogList==null){
-            String errorMessage="目录列表不存在，刚开通网站吧!";
-            result=new CatalogOperateResult(CatalogOperateEnum.OP_QUERY,false,errorMessage);
+            final String MSG_ERROR="目录列表不存在，刚开通网站吧!";
+            result=new CatalogOperateResult(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
         }else{
-            for(Catalog catalog:catalogList){
-                if (catalog!=null){
-                    catalog.toString();
-                }else{
-                    System.out.println("----------------null");
-                }
-            }
-            result=new CatalogOperateResult(CatalogOperateEnum.OP_QUERY,true,catalogList);
+            result=new CatalogOperateResult(DateOperateEnum.OP_QUERY_BATCH,true,catalogList);
+        }
+        return result;
+    }
+
+    /**
+     * 根据页面数据获取学科目录下的课程数据信息
+     * @param subjectId 学科编号
+     * @param page 页码
+     * @return
+     */
+    @Override
+    public SubjectOperateResult<Subject> getSubjectBySubjectIdAndPage(short subjectId, int page) {
+        SubjectOperateResult<Subject> result=null;
+        Subject subject=subjectRepository.getBySubjectId(subjectId,COURSE_PAGE_LIMIT,page);
+        if (subject==null){
+            final String MSG_ERROR="学科信息不存在!";
+            result=new SubjectOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
+        }else{
+            result=new SubjectOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,true,subject);
         }
         return result;
     }

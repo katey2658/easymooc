@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @RequestMapping("/comment")
-public class CourseCommentController {
+public class CommentController {
 
     /**
      * 请求某一门课的评论

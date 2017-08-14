@@ -1,45 +1,32 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Catalog;
-import com.busyzero.easyoj.dto.CatalogOperateResult;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * 课程信息控制器
- * Created by 11456 on 2017/6/23.
+ * 关于课程详细信息处理器,主要是用来对于某一门课的信息进行详细请求
+ * 和提交关于课程相关的信息
+ * @author katey2658
  */
-@RequestMapping("/catalog")
 @Controller
+@RequestMapping("/courses")
 public class CourseInfoController {
 
-    /**课程信息服务对象*/
+    /**课程服务提供对象接口*/
     @Autowired
     private CourseInfoService courseInfoService;
 
     /**
-     * 请求目录数据接口
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping(method = RequestMethod.GET)
-    public CatalogOperateResult<List<Catalog>> requestCatalogList(){
-        CatalogOperateResult<List<Catalog>> result=courseInfoService.getCatalogList();
-        return result;
-    }
-
-    /**
      * 请求对应课程信息
-     * @param courseId
+     * @param courseId 课程Id
      * @return
      */
     @RequestMapping(value = "/{courseId}",method = RequestMethod.GET)
     public String requestCourseInfo(@PathVariable("courseId")Integer courseId){
         return "";
     }
-
 }

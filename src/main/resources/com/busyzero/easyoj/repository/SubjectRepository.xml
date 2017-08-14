@@ -22,6 +22,22 @@
         </foreach>
     </insert>
 
+    <select id="getBySubjectId" resultMap="subjectMap" useCache="true">
+         SELECT
+            a.subject_id AS a_subject_id,
+            a.subject_name AS a_subject_name,
+            a.catalog_id AS a_catalog_id,
+            a.gmt_create AS a_gmt_create,
+            a.gmt_modified AS a_gmt_modified,
+            b.course_id AS b_course_id,
+            b.course_name AS b_course_name,
+            b.course_image AS b_course_image,
+            b.provider_name AS b_provider_name
+            FROM subject a JOIN course b ON a.subject_id=b.subject_id
+            WHERE a.subject_id=#{subjectId}
+            LIMIT #{offset},#{limit}
+    </select>
+
     <select id="listAllBySubjectIds" resultMap="subjectMap" useCache="true">
         <foreach collection="subjectIds" item="item" separator=" UNION ALL ">
             SELECT

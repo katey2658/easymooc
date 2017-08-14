@@ -3,10 +3,10 @@ package com.busyzero.easyoj.dto;
 import com.busyzero.easyoj.enums.DateOperateEnum;
 
 /**
- * 课程目录信息操作结果
+ * 数据信息操作结果基类
  * @author katey2658
  */
-public class CatalogOperateResult<T>  {
+public class DataOperateResultBase<T> {
     /**课程目录操作类型*/
     private DateOperateEnum operateEnum;
 
@@ -24,7 +24,7 @@ public class CatalogOperateResult<T>  {
      * @param operateEnum
      * @param success
      */
-    public CatalogOperateResult(DateOperateEnum operateEnum, Boolean success) {
+    public DataOperateResultBase(DateOperateEnum operateEnum, Boolean success) {
         this.operateEnum = operateEnum;
         this.success = success;
     }
@@ -35,7 +35,7 @@ public class CatalogOperateResult<T>  {
      * @param success
      * @param data
      */
-    public CatalogOperateResult(DateOperateEnum operateEnum, Boolean success, T data) {
+    public DataOperateResultBase(DateOperateEnum operateEnum, Boolean success, T data) {
         this.operateEnum = operateEnum;
         this.success = success;
         this.data = data;
@@ -47,7 +47,7 @@ public class CatalogOperateResult<T>  {
      * @param success
      * @param errorMessage
      */
-    public CatalogOperateResult(DateOperateEnum operateEnum, Boolean success, String errorMessage) {
+    public DataOperateResultBase(DateOperateEnum operateEnum, Boolean success, String errorMessage) {
         this.operateEnum = operateEnum;
         this.success = success;
         this.errorMessage = errorMessage;

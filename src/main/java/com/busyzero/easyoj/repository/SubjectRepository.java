@@ -27,6 +27,18 @@ public interface SubjectRepository {
     int saveAll(Collection<Subject> subjects);
 
     /**
+     * 根据学科id来获取对应的学科信息
+     * 在学科信息中包含了相应的课程列表
+     * @param subjectId
+     * @param offset
+     * @param limit
+     * @return
+     */
+    Subject getBySubjectId(@Param("subjectId")int subjectId,
+                           @Param("offset")int offset,
+                           @Param("limit") int limit);
+
+    /**
      * 根据大类方向编号上来
      * 包括多个学科，里面课程，但是每个学科课程不超过limit个
      * @param subjectIds
