@@ -33,7 +33,7 @@
             b.course_name AS b_course_name,
             b.course_image AS b_course_image,
             b.provider_name AS b_provider_name
-            FROM subject a JOIN course b ON a.subject_id=b.subject_id
+            FROM subject a LEFT JOIN course b ON 1=1
             WHERE a.subject_id=#{subjectId}
             LIMIT #{offset},#{limit}
     </select>
@@ -79,7 +79,7 @@
         <result property="catalogId" column="a_catalog_id"/>
         <result property="gmtCreate" column="a_gmt_create"/>
         <result property="gmtModified" column="a_gmt_modified"/>
-        <collection property="subjectList">
+        <collection property="courseList" notNullColumn="b_course_id">
             <result property="courseId" column="b_course_id"/>
             <result property="courseName" column="b_course_name"/>
             <result property="courseImage" column="b_course_image"/>

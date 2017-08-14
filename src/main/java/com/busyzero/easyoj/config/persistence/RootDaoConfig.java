@@ -81,6 +81,8 @@ public class RootDaoConfig {
         configuration.setMultipleResultSetsEnabled(true);
         //启用缓存
         configuration.setCacheEnabled(true);
+        //处理返回空值问题
+        configuration.setCallSettersOnNulls(true);
         return factory;
     }
 }

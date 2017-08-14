@@ -1,7 +1,6 @@
 package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.domain.Catalog;
-import com.busyzero.easyoj.domain.Course;
 import com.busyzero.easyoj.domain.Subject;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
@@ -61,7 +60,9 @@ public class CourseInfoServiceImpl implements CourseInfoService {
     @Override
     public SubjectOperateResult<Subject> getSubjectBySubjectIdAndPage(short subjectId, int page) {
         SubjectOperateResult<Subject> result=null;
-        Subject subject=subjectRepository.getBySubjectId(subjectId,COURSE_PAGE_LIMIT,page);
+        //根据页数计算偏移量
+        int offset=(page-1)*COURSE_PAGE_LIMIT;
+        Subject subject=subjectRepository.getBySubjectId(subjectId,offset,COURSE_PAGE_LIMIT);
         if (subject==null){
             final String MSG_ERROR="学科信息不存在!";
             result=new SubjectOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);

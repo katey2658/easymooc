@@ -2,21 +2,16 @@ package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.domain.Subject;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
-import com.busyzero.easyoj.repository.SubjectRepository;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.xml.bind.annotation.XmlType;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 课程控制器
  * Created by 11456 on 2017/6/23.
  */
+@ResponseBody
 @Controller
 @RequestMapping("/subjects")
 public class SubjectController {
@@ -31,9 +26,9 @@ public class SubjectController {
      */
     @RequestMapping(method = RequestMethod.GET)
     public SubjectOperateResult<Subject> requestCourseList(){
-        final short DEFAULT_SUBJECTID=1;
+        final short DEFAULT_SUBJECT_ID=1;
         final int DEFAULT_PAGE=1;
-        SubjectOperateResult<Subject> result = courseInfoService.getSubjectBySubjectIdAndPage(DEFAULT_SUBJECTID,DEFAULT_PAGE);
+        SubjectOperateResult<Subject> result = courseInfoService.getSubjectBySubjectIdAndPage(DEFAULT_SUBJECT_ID,DEFAULT_PAGE);
         return result;
     }
 
@@ -45,7 +40,7 @@ public class SubjectController {
      */
     @RequestMapping(value = "/{subjectId}",method = RequestMethod.GET)
     public SubjectOperateResult<Subject> requestSubject(@PathVariable("subjectId")short subjectId,
-                                       @RequestParam(value = "page",defaultValue ="1") int page){
+                                                        @RequestParam(value = "page",defaultValue ="1") int page){
         SubjectOperateResult<Subject> result = courseInfoService.getSubjectBySubjectIdAndPage(subjectId,page);
         return result;
     }
