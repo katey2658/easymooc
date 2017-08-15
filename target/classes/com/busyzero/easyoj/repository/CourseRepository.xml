@@ -42,7 +42,7 @@
     </select>
 
     <select id="listAllBySubjectId" resultType="course" useCache="true">
-        SELECT course_id,subject_id,course_name,course_name,provider_name
+        SELECT course_id,subject_id,course_name,course_name,course_image,provider_name
         FROM course
         WHERE subject_id=#{subjectId}
         LIMIT #{offset},#{limit}

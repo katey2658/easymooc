@@ -40,4 +40,11 @@ public interface CourseInfoService {
      * @return
      */
     CourseOperateResult<List<Course>> getCoursesBySubjectIdAndPage(short subjectId, int page);
+
+    /**
+     * 根据课程编号来获取特定的课程概述信息
+     * @param courseId 课程编号
+     * @return
+     */
+    CourseOperateResult<Course> getCourseInfoByCourseId(int courseId);
 }
