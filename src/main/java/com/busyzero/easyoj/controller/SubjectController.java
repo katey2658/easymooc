@@ -32,6 +32,12 @@ public class SubjectController {
         return result;
     }
 
+    @ResponseBody
+    @RequestMapping(method = RequestMethod.GET)
+    public String requestCourseList(short subjectId,int page){
+        courseInfoService
+    }
+
     /**
      * 请求学科目录列表下的课程数据
      * @param subjectId

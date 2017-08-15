@@ -1,8 +1,10 @@
 package com.busyzero.easyoj.service;
 
 import com.busyzero.easyoj.domain.Catalog;
+import com.busyzero.easyoj.domain.Course;
 import com.busyzero.easyoj.domain.Subject;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
+import com.busyzero.easyoj.dto.CourseOperateResult;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
 
 import java.util.List;
@@ -30,4 +32,12 @@ public interface CourseInfoService {
      * @return
      */
     SubjectOperateResult<Subject> getSubjectBySubjectIdAndPage(short subjectId, int page);
+
+    /**
+     * 根据学科编号获取对应的课程数据
+     * @param subjectId
+     * @param page
+     * @return
+     */
+    CourseOperateResult<List<Course>> getCoursesBySubjectIdAndPage(short subjectId, int page);
 }

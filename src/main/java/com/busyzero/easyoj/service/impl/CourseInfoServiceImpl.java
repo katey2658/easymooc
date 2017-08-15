@@ -1,11 +1,14 @@
 package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.domain.Catalog;
+import com.busyzero.easyoj.domain.Course;
 import com.busyzero.easyoj.domain.Subject;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
+import com.busyzero.easyoj.dto.CourseOperateResult;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
 import com.busyzero.easyoj.enums.DateOperateEnum;
 import com.busyzero.easyoj.repository.CatalogRepository;
+import com.busyzero.easyoj.repository.CourseRepository;
 import com.busyzero.easyoj.repository.SubjectRepository;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.slf4j.Logger;
@@ -33,6 +36,10 @@ public class CourseInfoServiceImpl implements CourseInfoService {
     /**学科目录持久信息操作对象*/
     @Autowired
     private SubjectRepository subjectRepository;
+
+    /**课程信息表访问对象*/
+    @Autowired
+    private CourseRepository courseRepository;
 
     /**
      * 获取所有目录数据
@@ -68,6 +75,25 @@ public class CourseInfoServiceImpl implements CourseInfoService {
             result=new SubjectOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
         }else{
             result=new SubjectOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,true,subject);
+        }
+        return result;
+    }
+
+    /**
+     * 根据学科编号获取对应的课程数据
+     * @param subjectId
+     * @param page
+     * @return
+     */
+    public CourseOperateResult<List<Course>> getCoursesBySubjectIdAndPage(short subjectId, int page){
+        CourseOperateResult<List<Course>> result=null;
+        int offset=(page-1)*COURSE_PAGE_LIMIT;
+        List<Course> courseList=courseRepository.listAllBySubjectId(subjectId,offset,COURSE_PAGE_LIMIT);
+        if (courseList==null){
+            final String MSG_ERROR="课程信息不存在!";
+            result=new CourseOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
+        }else{
+            result=new CourseOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,true,courseList);
         }
         return result;
     }
