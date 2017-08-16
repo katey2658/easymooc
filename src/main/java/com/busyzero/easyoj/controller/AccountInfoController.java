@@ -2,7 +2,6 @@ package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
-import com.busyzero.easyoj.exception.CourseNotFoundException;
 import com.busyzero.easyoj.service.AccountAuthService;
 import com.busyzero.easyoj.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
  */
 @Controller
 @RequestMapping("/account")
-public class AccountController {
+public class AccountInfoController {
     /**注入用户认证服务*/
     @Autowired
     private AccountAuthService accountAuthService;

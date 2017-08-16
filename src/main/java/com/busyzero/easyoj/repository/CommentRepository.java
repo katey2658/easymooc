@@ -29,6 +29,17 @@ public interface CommentRepository {
                                     @Param("limit")int limit);
 
     /**
+     * 根据用户账号编号获取对应的课程评论数据
+     * @param accountId
+     * @param offset
+     * @param limit
+     * @return
+     */
+    List<Comment> listAllByAccountId(@Param("accountId")int accountId,
+                                    @Param("offset")int offset,
+                                    @Param("limit")int limit);
+
+    /**
      * 根据Id删除评论
      * @param commentId
      * @return

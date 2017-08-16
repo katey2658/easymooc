@@ -27,6 +27,25 @@
         WHERE a.course_id=#{courseId}
         LIMIT #{offset},#{limit}
     </select>
+
+    <select id="listAllByAccountId" resultType="comment">
+        SELECT
+        a.comment_id,
+        a.course_id,
+        a.account_id,
+        a.score,
+        a.comment_content,
+        a.gmt_create,
+        a.gmt_modified,
+        b.account_id,
+        b.first_name,
+        b.last_name,
+        b.account_photo
+        FROM comment a JOIN account b
+        ON a.account_id=b.account_id
+        WHERE a.account_id=#{accountId}
+        LIMIT #{offset},#{limit}
+    </select>
     
     <delete id="removeByCommentId">
         DELETE FROM comment
