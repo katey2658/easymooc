@@ -23,6 +23,7 @@ import java.io.IOException;
 @Controller
 @RequestMapping("/verification")
 public class VerificationCodeController {
+    /**验证码在会话中key*/
     private static final String KEY_VERFICATION_CODE="verificationCode";
 
     /**验证码服务提供对象*/

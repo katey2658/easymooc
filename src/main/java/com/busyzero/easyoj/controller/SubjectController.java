@@ -1,15 +1,12 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Course;
 import com.busyzero.easyoj.domain.Subject;
-import com.busyzero.easyoj.dto.CourseOperateResult;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 
 /**
  * 课程控制器

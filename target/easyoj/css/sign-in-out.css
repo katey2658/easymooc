@@ -1,3 +1,4 @@
+
 html{
     width: 100%;
     height: 100%;
@@ -14,6 +15,11 @@ a:active { text-decoration:blink;}
 a:hover { text-decoration:underline;}
 a:visited { text-decoration: none;}
 
+input:-webkit-autofill,textarea:-webkit-autofill,select:-webkit-autofill{
+    background-color: rgb(250,255,189);
+    background-image: none;
+    color: rgb(0,0,0);
+}
 .float-left{
     float: left;
 }
