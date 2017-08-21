@@ -15,6 +15,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.GET;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
+ * 账户控制器
  * Created by 11456 on 2017/6/30.
  */
 @Controller
