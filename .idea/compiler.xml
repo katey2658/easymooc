@@ -7,10 +7,20 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="easyoj" />
+        <module name="easyoj-service-partner-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="easyoj" target="1.8" />
+      <module name="easyoj" target="1.5" />
+      <module name="easyoj-commons-constant" target="1.5" />
+      <module name="easyoj-portal-mooc" target="1.5" />
+      <module name="easyoj-service-commons-model" target="1.5" />
+      <module name="easyoj-service-exam-api" target="1.5" />
+      <module name="easyoj-service-exam-api-impl" target="1.5" />
+      <module name="easyoj-service-mooc-api" target="1.5" />
+      <module name="easyoj-service-mooc-api-impl" target="1.5" />
+      <module name="easyoj-service-mooc-model" target="1.5" />
+      <module name="easyoj-service-partner-api" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

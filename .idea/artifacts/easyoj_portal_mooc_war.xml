@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="easyoj-portal-mooc:war">
+    <output-path>$PROJECT_DIR$/easyoj-portal-mooc/target</output-path>
+    <root id="archive" name="easyoj-portal-mooc.war">
+      <element id="artifact" artifact-name="easyoj-portal-mooc:war exploded" />
+    </root>
+  </artifact>
+</component>
