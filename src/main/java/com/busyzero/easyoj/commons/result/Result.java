@@ -1,4 +1,6 @@
-package com.busyzero.easyoj.commons;
+package com.busyzero.easyoj.commons.result;
+
+import com.busyzero.easyoj.commons.exception.BusinessException;
 
 import java.io.Serializable;
 
@@ -38,6 +40,16 @@ public class Result<T> implements Serializable{
         this.success = false;
         this.errorCode = errorCode;
         this.resultMessage = resultMessage;
+    }
+
+    /**
+     * 通过业务异常对象设置错误信息
+     * @param exception
+     */
+    public void fail(BusinessException exception){
+        this.success = false;
+        this.errorCode = exception.getErrorCode();
+        this.resultMessage = exception.getErrorMessage();
     }
 
     public static long getSerialVersionUID() {
