@@ -15,11 +15,23 @@ public class Account implements Serializable {
     /**账户id*/
     private Integer accountId;
 
+    /**用户账号:可以修改*/
+    private String accountNo;
+
+    /**用户性别:0 无 1男 2女*/
+    private Short gender;
+
+    /**用户年龄*/
+    private Short age;
+
     /**名字*/
     private String firstName;
 
     /**姓氏*/
     private String lastName;
+
+    /**用户手机号*/
+    private String mobile;
 
     /**邮箱地址*/
     private String emailAddress;
@@ -33,6 +45,9 @@ public class Account implements Serializable {
     /**是否有效*/
     private Boolean alive;
 
+    /**地址编码*/
+    private Integer addressCode;
+
     /**创建时间*/
     private Instant gmtCreate;
 
@@ -45,6 +60,30 @@ public class Account implements Serializable {
 
     public void setAccountId(Integer accountId) {
         this.accountId = accountId;
+    }
+
+    public String getAccountNo() {
+        return accountNo;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public Short getGender() {
+        return gender;
+    }
+
+    public void setGender(Short gender) {
+        this.gender = gender;
+    }
+
+    public Short getAge() {
+        return age;
+    }
+
+    public void setAge(Short age) {
+        this.age = age;
     }
 
     public String getFirstName() {
@@ -61,6 +100,14 @@ public class Account implements Serializable {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getMobile() {
+        return mobile;
+    }
+
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getEmailAddress() {
@@ -95,6 +142,14 @@ public class Account implements Serializable {
         this.alive = alive;
     }
 
+    public Integer getAddressCode() {
+        return addressCode;
+    }
+
+    public void setAddressCode(Integer addressCode) {
+        this.addressCode = addressCode;
+    }
+
     public Instant getGmtCreate() {
         return gmtCreate;
     }
@@ -115,12 +170,17 @@ public class Account implements Serializable {
     public String toString() {
         return "Account{" +
                 "accountId=" + accountId +
+                ", accountNo='" + accountNo + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
+                ", mobile='" + mobile + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", accountPhoto='" + accountPhoto + '\'' +
                 ", password='" + password + '\'' +
                 ", alive=" + alive +
+                ", addressCode=" + addressCode +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 '}';
