@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.config;
 
-import com.busyzero.easyoj.config.mvc.SecurityConfig;
+import com.busyzero.easyoj.config.security.SecurityConfig;
 import com.busyzero.easyoj.config.mvc.WebConfig;
 import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;

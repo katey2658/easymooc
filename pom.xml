@@ -29,6 +29,8 @@
     <org.thymeleaf.com.version>3.0.7.RELEASE</org.thymeleaf.com.version>
     <com.sun.mail.version>1.5.6</com.sun.mail.version>
     <redis.clients.version>2.9.0</redis.clients.version>
+    <io.jsonwebtoken.version>0.7.0</io.jsonwebtoken.version>
+    <org.projectlombok.version>1.16.18.1</org.projectlombok.version>
     <org.springframework.data.version>1.8.1.RELEASE</org.springframework.data.version>
   </properties>
   <dependencies>
@@ -185,6 +187,21 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <!--jwt 依赖-->
+    <dependency>
+      <groupId>io.jsonwebtoken</groupId>
+      <artifactId>jjwt</artifactId>
+      <version>${io.jsonwebtoken.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok-maven -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok-maven</artifactId>
+      <version>${org.projectlombok.version}</version>
+      <type>pom</type>
+    </dependency>
+
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-config</artifactId>

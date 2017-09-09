@@ -17,6 +17,20 @@ public interface AccountRepository {
     int saveAccount(Account account);
 
     /**
+     * 根据手机号查询用户信息
+     * @param mobile
+     * @return
+     */
+    Account findByMobile(String mobile);
+
+    /**
+     * 根据账户名获取账号信息
+     * @param accountNo
+     * @return
+     */
+    Account findByAccountNo(String accountNo);
+
+    /**
      * 验证用户名和密码
      * @param emailAddress 邮箱地址
      * @param password 密码
