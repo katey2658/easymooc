@@ -17,8 +17,8 @@ import org.springframework.util.StringUtils;
  * @author 11456
  */
 @Service
-public class JwtUserService implements UserDetailsService {
-    private Logger logger= LoggerFactory.getLogger(JwtUserService.class);
+public class JwtUserServiceImpl implements UserDetailsService {
+    private Logger logger= LoggerFactory.getLogger(JwtUserServiceImpl.class);
     /**
      * 用户数据库数据访问
      */
@@ -26,8 +26,9 @@ public class JwtUserService implements UserDetailsService {
     private AccountRepository accountRepository;
 
     /**
-     * 根据用户名加载用户信息
+     * 根据用户名加载用户信息:并创建对象
      * @param username 用户名
+     * @return 用户详细信息
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -38,14 +39,17 @@ public class JwtUserService implements UserDetailsService {
         Account account = null;
         //如果用户输入的是手机号
         if(StringCheckUtil.isMobile(username)){
+            logger.info("login with mobile:{}",username);
             account = accountRepository.findByMobile(username);
         }
         //如果用户输入的是邮箱
         if (StringCheckUtil.isEmail(username)){
+            logger.info("login with email:{}",username);
             account = accountRepository.findByEmailAddress(username);
         }
         //如果用户输入的是账户名
         if (StringCheckUtil.isAccountNo(username)){
+            logger.info("login with accountNo:{}",username);
             account = accountRepository.findByAccountNo(username);
         }
         if (account == null) {

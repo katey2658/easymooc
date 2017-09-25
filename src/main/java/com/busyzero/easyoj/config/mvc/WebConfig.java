@@ -1,5 +1,6 @@
 package com.busyzero.easyoj.config.mvc;
 
+import com.busyzero.easyoj.config.common.ConfigConstantsPool;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -18,6 +19,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 
 /**
+ * 视图层配置
  * Created by 11456 on 2017/4/9.
  */
 @EnableWebMvc
@@ -32,20 +34,13 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     private final static String LOCATION_RESOURCE_JS="/js/";
     private final static String LOCATION_RESOURCE_IMAGES="/images/";
 
-    private final static String CHARACTER_ENCODING="UTF-8";
-
+    /**模板文件前缀*/
     private final static String TEMPLATE_PREFIX="/WEB-INF/templates/";
+    /**模板文件后缀*/
     private final static String TEMPLATE_SUFFIX=".html";
 
-    /**
-     * 上下文对象
-     */
+    /**上下文对象容器对象*/
     private ApplicationContext applicationContext;
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext=applicationContext;
-    }
 
     /**
      * 处理静态资源
@@ -80,10 +75,9 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         ThymeleafViewResolver viewResolver=new ThymeleafViewResolver();
         viewResolver.setOrder(1);
         viewResolver.setTemplateEngine(templateEngine());
-        viewResolver.setCharacterEncoding(CHARACTER_ENCODING);
+        viewResolver.setCharacterEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         return viewResolver;
     }
-
 
     /**
      * 模板引擎：对内容进行解析
@@ -98,9 +92,9 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         return templateEngine;
     }
 
-
     /**
-     * 加载模板资源
+     * 模板资源解析器：
+     * 通过这个来找到需要什么视图文件
      * @return
      */
     @Bean
@@ -110,9 +104,18 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         templateResolver.setPrefix(TEMPLATE_PREFIX);
         templateResolver.setSuffix(TEMPLATE_SUFFIX);
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding(CHARACTER_ENCODING);
+        templateResolver.setCharacterEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         templateResolver.setCacheable(true);
         return templateResolver;
     }
 
+    /**
+     * 设置上下文容器对象
+     * @param applicationContext
+     * @throws BeansException
+     */
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext=applicationContext;
+    }
 }

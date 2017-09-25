@@ -1,5 +1,6 @@
-package com.busyzero.easyoj.config.filter;
+package com.busyzero.easyoj.config.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -22,9 +23,11 @@ import java.io.IOException;
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
     /**用户权限服务*/
+    @Autowired
     private UserDetailsService userDetailsService;
 
     /**token 工具类*/
+    @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
     @Value("${jwt.header]")

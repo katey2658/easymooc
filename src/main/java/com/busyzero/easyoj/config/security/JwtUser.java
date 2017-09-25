@@ -22,19 +22,19 @@ public class JwtUser implements UserDetails {
     private final String password;
 
     /**用户邮箱*/
-    private final String email;
+    private final String emailAddress;
 
-    /**用户权限*/
+    /**用户权限集*/
     private final Collection<? extends GrantedAuthority> authorities;
 
     /**最后一次密码设置*/
     private final Instant lastPasswordResetDate;
 
-    public JwtUser(Integer accountId, String username, String password, String email, Collection<? extends GrantedAuthority> authorities, Instant lastPasswordResetDate) {
+    public JwtUser(Integer accountId, String username, String password, String emailAddress, Collection<? extends GrantedAuthority> authorities, Instant lastPasswordResetDate) {
         this.accountId = accountId;
         this.username = username;
         this.password = password;
-        this.email = email;
+        this.emailAddress = emailAddress;
         this.authorities = authorities;
         this.lastPasswordResetDate = lastPasswordResetDate;
     }
@@ -47,11 +47,19 @@ public class JwtUser implements UserDetails {
         return authorities;
     }
 
+    /**
+     * 获取密码
+     * @return
+     */
     @Override
     public String getPassword() {
         return password;
     }
 
+    /**
+     * 获取账户名
+     * @return
+     */
     @Override
     public String getUsername() {
         return username;

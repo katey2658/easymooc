@@ -1,15 +1,18 @@
 package com.busyzero.easyoj.service.impl;
 
+import com.busyzero.easyoj.config.security.AuthServiceImpl;
 import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.enums.AccountOperateEnum;
 import com.busyzero.easyoj.repository.AccountRepository;
 import com.busyzero.easyoj.service.AccountAuthService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+
 
 /**
  * 账户认证服务
@@ -17,7 +20,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class AccountAuthServiceImpl implements AccountAuthService {
-    private Logger logger= LoggerFactory.getLogger(AccountAuthServiceImpl.class);
+    private final Logger logger = LoggerFactory.getLogger(AuthServiceImpl.class);
 
     /**在注册时候，生成的缓存key在缓存中的前缀*/
     private static final String SIGN_UP_ACCESSKEY_CACHE_KEY_PREFIX="sign-up.accessKey:";
@@ -25,7 +28,6 @@ public class AccountAuthServiceImpl implements AccountAuthService {
     private static final String SIGN_UP_OBJECT_CACHE_KEY_PREFFIX="accountObj:";
     /**找回密码和修改密码时候的key在缓存中的前缀*/
     private static final String PASSWORD_RESET_ACCESSKLEY_CACHE_KEY_PREFIX="PasswordResetKey:";
-
 
     /**账户数据表操作对象*/
     @Autowired

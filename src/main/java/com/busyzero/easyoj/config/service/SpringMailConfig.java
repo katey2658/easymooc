@@ -55,11 +55,9 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
 
     private static final String RESOLVER_STRING_MODE="HTML5";
 
-    /**
-     * 环境变量
-     */
+    /**环境变量*/
     private Environment env;
-
+    /**上下文容器*/
     private ApplicationContext applicationContext;
 
     @Override
@@ -73,23 +71,23 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
     }
 
     /**
-     * 提供邮件服务
+     * 提供邮件发送服务
      * @return
      */
     @Bean
     public JavaMailSender mailSender(){
         final JavaMailSenderImpl mailSender=new JavaMailSenderImpl();
-        mailSender.setHost(env.getProperty(this.MAIL_HOST));
-        mailSender.setUsername(env.getProperty(this.MAIL_USERNAME));
-        mailSender.setPassword(env.getProperty(this.MAIL_PASSWORD));
-        mailSender.setDefaultEncoding(this.EMAIL_TEMPLATE_ENCODING);
+        mailSender.setHost(env.getProperty(SpringMailConfig.MAIL_HOST));
+        mailSender.setUsername(env.getProperty(SpringMailConfig.MAIL_USERNAME));
+        mailSender.setPassword(env.getProperty(SpringMailConfig.MAIL_PASSWORD));
+        mailSender.setDefaultEncoding(SpringMailConfig.EMAIL_TEMPLATE_ENCODING);
         Properties properties=new Properties();
-        properties.setProperty(this.KEY_SMTP_AUTH
-                ,env.getProperty(this.MAIL_PROPERTIES_SMTP_AUTH));
-        properties.setProperty(this.KEY_SMTP_STARTTLS_ENABLE
-                ,env.getProperty(this.MAIL_SMTP_STARTTLS_ENABLE));
-        properties.setProperty(this.KEY_SMTP_STARTTLS_REQUIRED
-                ,env.getProperty(this.MAIL_SMTP_STARTTLS_REQUIRED));
+        properties.setProperty(SpringMailConfig.KEY_SMTP_AUTH
+                ,env.getProperty(SpringMailConfig.MAIL_PROPERTIES_SMTP_AUTH));
+        properties.setProperty(SpringMailConfig.KEY_SMTP_STARTTLS_ENABLE
+                ,env.getProperty(SpringMailConfig.MAIL_SMTP_STARTTLS_ENABLE));
+        properties.setProperty(SpringMailConfig.KEY_SMTP_STARTTLS_REQUIRED
+                ,env.getProperty(SpringMailConfig.MAIL_SMTP_STARTTLS_REQUIRED));
         mailSender.setJavaMailProperties(properties);
         return mailSender;
     }
@@ -101,6 +99,10 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return messageSource;
     }
 
+    /**
+     * 邮件模板引擎解析器
+     * @return
+     */
     @Bean
     public SpringTemplateEngine emailTemplateEngine(){
         final SpringTemplateEngine templateEngine=new SpringTemplateEngine();
@@ -111,6 +113,10 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return templateEngine;
     }
 
+    /**
+     * 文本解析
+     * @return
+     */
     private ITemplateResolver textTemplateResolver(){
         final ClassLoaderTemplateResolver templateResolver=new ClassLoaderTemplateResolver();
         templateResolver.setOrder(Integer.valueOf(1));
@@ -123,6 +129,10 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return templateResolver;
     }
 
+    /**
+     * html 页面解析
+     * @return
+     */
     private ITemplateResolver htmlTemplateResolver(){
         final ClassLoaderTemplateResolver templateResolver=new ClassLoaderTemplateResolver();
         templateResolver.setOrder(Integer.valueOf(2));
@@ -135,6 +145,10 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         return templateResolver;
     }
 
+    /**
+     * 字符串模板解析
+     * @return
+     */
     private ITemplateResolver stringTemplateResolver(){
         final StringTemplateResolver templateResolver=new StringTemplateResolver();
         templateResolver.setOrder(Integer.valueOf(3));

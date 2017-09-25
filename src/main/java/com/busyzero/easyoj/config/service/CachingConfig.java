@@ -17,7 +17,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 @EnableCaching
 @Configuration
 public class CachingConfig {
-
     /**
      * Redis 缓存管理器
      * @param redisTemplate

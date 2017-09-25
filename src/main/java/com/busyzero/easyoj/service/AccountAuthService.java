@@ -1,5 +1,6 @@
 package com.busyzero.easyoj.service;
 
+import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 
 /**

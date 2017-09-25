@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.config;
 
-import com.busyzero.easyoj.config.security.SecurityConfig;
+import com.busyzero.easyoj.config.security.WebSecurityConfig;
 import com.busyzero.easyoj.config.mvc.WebConfig;
 import com.busyzero.easyoj.config.persistence.RedisClusterConfig;
 import com.busyzero.easyoj.config.persistence.RootDaoConfig;
@@ -39,7 +39,7 @@ public class MyApplicationConfig extends AbstractAnnotationConfigDispatcherServl
                 RedisClusterConfig.class,
                 //CachingConfig.class,
                 RootServiceConfig.class,
-                SecurityConfig.class,
+                WebSecurityConfig.class,
                 SpringMailConfig.class,
                 //AspectJConfig.class
         };

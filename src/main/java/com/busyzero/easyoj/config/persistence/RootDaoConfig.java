@@ -14,24 +14,40 @@ import javax.sql.DataSource;
 
 /**
  * 持久层组件集成
+ *
+ *
  * @author katey2658
  */
 @Configuration
-@PropertySource("classpath:jdbc.properties")
-@MapperScan("com.busyzero.easyoj.repository")
+@PropertySource(RootDaoConfig.DATASOURCE_CONFIG_PROPERTIES_LOCATION)
+@MapperScan(RootDaoConfig.MAPPER_SCAN_PACKAGE)
 public class RootDaoConfig {
+   /**配置文件所在位置*/
+    public static final String DATASOURCE_CONFIG_PROPERTIES_LOCATION = "classpath:jdbc.properties";
+    /**自动扫描映射文件*/
+    public static final String MAPPER_SCAN_PACKAGE = "com.busyzero.easyoj.repository";
 
-    private final static String JDBC_DRIVER="spring.jdbc.driver";
-    private final static String JDBC_URL="spring.jdbc.url";
-    private final static String JDBC_USERNAME="spring.jdbc.username";
-    private final static String JDBC_APSSWORD="spring.jdbc.password";
-    private final static String JDBC_INITSIZE="spring.jdbc.initsize";
-    private final static String JDBC_MINIDLE="spring.jdbc.minidle";
-    private final static String JDBC_MAXACTIVE="spring.jdbc.maxactive";
-    private final static String JDBC_MAXWAIT="spring.jdbc.maxwait";
-    private final static String JDBC_AUTOCOMMIT="spring.jdbc.autocommit";
+    /**模型包名 别名自动扫描*/
+    private static final String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.domain";
 
-    private final static String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.domain";
+    /**驱动*/
+    private static final String CONFIG_DATASOURCE_DRIVER="spring.jdbc.driver";
+    /**连接URL*/
+    private static final String CONFIG_DATASOURCE_URL="spring.jdbc.url";
+    /**用户名*/
+    private static final String CONFIG_DATASOURCE_USERNAME="spring.jdbc.username";
+    /**密码*/
+    private static final String CONFIG_DATASOURCE_PSSWORD="spring.jdbc.password";
+    /**连接池初始大小*/
+    private static final String CONFIG_DATASOURCE_INITSIZE="spring.jdbc.initsize";
+    /**最小闲置*/
+    private static final String CONFIG_DATASOURCE_MINIDLE="spring.jdbc.minidle";
+    /**最大可用*/
+    private static final String CONFIG_DATASOURCE_MAXACTIVE="spring.jdbc.maxactive";
+    /**最大等待时间*/
+    private static final String CONFIG_DATASOURCE_MAXWAIT="spring.jdbc.maxwait";
+    /**事务自动提交*/
+    private static final String CONFIG_DATASOURCE_AUTOCOMMIT="spring.jdbc.autocommit";
 
     /**环境变量对象*/
     @Autowired
@@ -44,16 +60,16 @@ public class RootDaoConfig {
     @Bean
     public DataSource dataSource(){
         DruidDataSource dataSource=new DruidDataSource();
-        dataSource.setDriverClassName(env.getProperty(this.JDBC_DRIVER));
-        dataSource.setUrl(env.getProperty(this.JDBC_URL));
-        dataSource.setUsername(env.getProperty(this.JDBC_USERNAME));
-        dataSource.setPassword(env.getProperty((this.JDBC_APSSWORD)));
+        dataSource.setDriverClassName(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_DRIVER));
+        dataSource.setUrl(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_URL));
+        dataSource.setUsername(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_USERNAME));
+        dataSource.setPassword(env.getProperty((RootDaoConfig.CONFIG_DATASOURCE_PSSWORD)));
 
-        dataSource.setInitialSize(env.getProperty(this.JDBC_INITSIZE,Integer.class));
-        dataSource.setMaxActive(env.getProperty(this.JDBC_MAXACTIVE,Integer.class));
-        dataSource.setMinIdle(env.getProperty(this.JDBC_MINIDLE,Integer.class));
-        dataSource.setMaxWait(env.getProperty(this.JDBC_MAXWAIT,Integer.class));
-        dataSource.setDefaultAutoCommit(env.getProperty(this.JDBC_AUTOCOMMIT,Boolean.class));
+        dataSource.setInitialSize(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_INITSIZE,Integer.class));
+        dataSource.setMaxActive(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_MAXACTIVE,Integer.class));
+        dataSource.setMinIdle(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_MINIDLE,Integer.class));
+        dataSource.setMaxWait(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_MAXWAIT,Integer.class));
+        dataSource.setDefaultAutoCommit(env.getProperty(RootDaoConfig.CONFIG_DATASOURCE_AUTOCOMMIT,Boolean.class));
         return dataSource;
     }
 
@@ -66,7 +82,7 @@ public class RootDaoConfig {
     public SqlSessionFactory sqlSessionFactory() throws Exception {
         SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setTypeAliasesPackage(this.TYPE_ALIASES_PACKAGE);
+        sessionFactory.setTypeAliasesPackage(RootDaoConfig.TYPE_ALIASES_PACKAGE);
         //获得seqsession工厂对象
         SqlSessionFactory factory=sessionFactory.getObject();
         //获得配置对象

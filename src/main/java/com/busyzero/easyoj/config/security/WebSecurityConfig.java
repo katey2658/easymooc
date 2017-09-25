@@ -1,20 +1,23 @@
 package com.busyzero.easyoj.config.security;
 
-import com.busyzero.easyoj.config.filter.JwtAuthenticationTokenFilter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.BeanIds;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
 /**
@@ -24,10 +27,56 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
  */
 @Configuration
 @EnableWebSecurity
-public class SecurityConfig extends WebSecurityConfigurerAdapter {
+@EnableGlobalMethodSecurity(prePostEnabled = true)
+@ComponentScan(basePackages = {"com.busyzero.easyoj.config.security"})
+@PropertySource("classpath:security-config.properties")
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**登录用户信息服务*/
-    private JwtUserService jwtUserService;
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    /**
+     * BCrypt密码编码器
+     * @return
+     */
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+        return new BCryptPasswordEncoder();
+    }
+
+    /**
+     * 权限认证过滤器
+     * @return
+     */
+    @Bean
+    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter(){
+        return new JwtAuthenticationTokenFilter();
+    }
+
+    /**
+     * 授权管理器
+     * @return
+     * @throws Exception
+     */
+    @Bean(name = BeanIds.AUTHENTICATION_MANAGER)
+    @Override
+    public AuthenticationManager authenticationManagerBean() throws Exception {
+        return super.authenticationManagerBean();
+    }
+    /**
+     * 权限构建
+     * @param authenticationManagerBuilder
+     * @throws Exception
+     */
+    @Autowired
+    public void configureAuthentication(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
+        authenticationManagerBuilder
+                // 设置UserDetailsService
+                .userDetailsService(this.userDetailsService)
+                // 使用BCrypt进行密码的hash
+                .passwordEncoder(passwordEncoder());
+    }
 
     /**
      * 配置如何通过拦截器保护请求
@@ -36,16 +85,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http
-                //因为使用的是jwt 所以不需要使用csrf
-                .csrf().disable()
+        //因为使用的是jwt 所以不需要使用csrf
+        http.csrf().disable()
                 //基于token,不需要session
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .authorizeRequests()
                 // 允许对于网站静态资源的无授权访问
                 .antMatchers(HttpMethod.GET,
-                        "/", "/*.html", "/favicon.ico",
+
+                        "/","/account/sign-in","/*.html", "/favicon.ico","/**/*.jpg","/**/*.png",
                         "/**/*.html", "/**/*.css", "/**/*.js").permitAll()
                 //对于获取token的rest api允许匿名访问
                 .antMatchers("/auth/**").permitAll()
@@ -68,7 +117,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 //设置userDetailService
-                .userDetailsService(jwtUserService)
+                .userDetailsService(userDetailsService)
                 //设置密码编码器
                 .passwordEncoder(passwordEncoder());
     }
@@ -81,23 +130,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         super.configure(web);
-    }
-
-    /**
-     * BCrypt密码编码器
-     * @return
-     */
-    @Bean
-    public PasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
-    }
-
-    /**
-     * 权限认证过滤器
-     * @return
-     */
-    @Bean
-    public JwtAuthenticationTokenFilter jwtAuthenticationTokenFilter(){
-        return new JwtAuthenticationTokenFilter();
     }
 }
