@@ -28,9 +28,14 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-@ComponentScan(basePackages = {"com.busyzero.easyoj.config.security"})
-@PropertySource("classpath:security-config.properties")
+@ComponentScan(basePackages = {WebSecurityConfig.SECURITY_PACKAGE_SCANN_LOCATION})
+@PropertySource(WebSecurityConfig.SECURITY_CONFIG_LOCATION)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+    /**安全策略包的扫描*/
+    public static final String SECURITY_PACKAGE_SCANN_LOCATION = "com.busyzero.easyoj.config.security";
+
+    /**安全配置文件地址*/
+    public static final String SECURITY_CONFIG_LOCATION = "classpath:security-config.properties";
 
     /**登录用户信息服务*/
     @Autowired
@@ -94,7 +99,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 // 允许对于网站静态资源的无授权访问
                 .antMatchers(HttpMethod.GET,
 
-                        "/","/account/sign-in","/*.html", "/favicon.ico","/**/*.jpg","/**/*.png",
+                        "/","/*.html", "/favicon.ico","/**/*.jpg","/**/*.png",
                         "/**/*.html", "/**/*.css", "/**/*.js").permitAll()
                 //对于获取token的rest api允许匿名访问
                 .antMatchers("/auth/**").permitAll()

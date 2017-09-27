@@ -40,6 +40,9 @@ public class Account implements Serializable {
     /** 职业*/
     private String profession;
 
+    /**工作机构*/
+    private String institution;
+
     /**名字*/
     private String firstName;
 

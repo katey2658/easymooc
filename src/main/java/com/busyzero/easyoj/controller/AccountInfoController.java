@@ -104,8 +104,8 @@ public class AccountInfoController {
     }
 
     /**
-     * 重置账号密码：
-     * 想邮箱地址发送一个链接地址，用户点击这个地址之后，去选择重置密码
+     * 重置账号密码请求：
+     * 向邮箱地址发送一个链接地址，用户点击这个地址之后，去选择重置密码
      * @param emailAddress 邮箱地址
      * @return
      */
@@ -113,39 +113,42 @@ public class AccountInfoController {
     @RequestMapping(value = "/password-reset",method = POST)
     public AccountOperateResult resetPassword(String emailAddress,Locale locale){
         AccountOperateResult result=null;
-        //直接发送邮件就好
+        //调用邮箱服务进行邮箱验证，并发送一个邮件验证
         result=emailService.passwordReset(emailAddress,locale);
         return result;
     }
 
     /**
-     * 请求页面重置页面
-     * @param accessKey
+     * 请求页面重置页面：
+     * 用户点击发送的邮箱号进行验证
+     * @param secretKey
      * @param emailAddress
      * @return
      */
-    @RequestMapping(value = "/password-reset/{accessKey}",method = GET)
-    public ModelAndView passordRestPage(@PathVariable("accessKey") String accessKey,String emailAddress){
+    @RequestMapping(value = "/password-reset/{secretKey}",method = GET)
+    public ModelAndView passordRestPage(@PathVariable("secretKey") String secretKey,String emailAddress){
         ModelAndView modelAndView=new ModelAndView();
-        modelAndView.addObject("accessKey",accessKey);
+        modelAndView.addObject("secretKey",secretKey);
         modelAndView.addObject("emailAddress",emailAddress);
         modelAndView.setViewName("passordRestPage");
         return modelAndView;
     }
 
     /**
-     *修改账号密码，重置密码
-     * @param accessKey 访问地址
+     *修改账号密码，重置密码：
+     * 1. 首先进行 加密字符串的 校验
+     * 2. 获取用户信息
+     * @param secretKey 访问地址加密验证字符串
      * @param emailAddress 邮箱
      * @param newPassword 新密码
      * @return
      */
     @ResponseBody
-    @RequestMapping(value = "/password-reset/{accessKey}",method = POST)
-    public AccountOperateResult passordRest(@PathVariable("accessKey") String accessKey,
+    @RequestMapping(value = "/password-reset/{secretKey}",method = POST)
+    public AccountOperateResult passordRest(@PathVariable("secretKey") String secretKey,
                              String emailAddress,
                              String newPassword){
-        AccountOperateResult accountOperateResult=accountAuthService.updatePasswordByEmail(emailAddress,accessKey,newPassword);
+        AccountOperateResult accountOperateResult=accountAuthService.updatePasswordByEmail(emailAddress,secretKey,newPassword);
         return accountOperateResult;
     }
 }

@@ -20,7 +20,7 @@ import java.util.Random;
 public class VerificationCodeServiceImpl implements VerificationCodeService {
 
     /**
-     * 获取验证图像码
+     * 获取图像验证码
      * @return
      */
     @Override

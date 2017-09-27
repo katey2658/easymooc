@@ -1,113 +1,6 @@
 --创建数据库
 CREATE DATABASE IF NOT EXISTS easyoj;
 USE easyoj;
--- TODO profile:用户详细信息表 是否对外展示  希望工作类型  技能  工作经验 教育背景 项目 访问问题  工作要求
-
--- 专题列表
--- TODO 有两部风内容被没有写入，一个是教师列表，一个是课程列表，问题列表
-CREATE TABLE if NOT EXISTS specialization{
-specialization_id unsigned INT auto_increment comment "专题编号",
-category VARCHAR (20)NOT NULL comment "目录",
-subject VARCHAR (20) NOT NULL comment "学科",
-title VARCHAR (50) NOT NULL UNIQUE comment "专题标题",
-short_desc VARCHAR (100) NOT NULL comment "简短描述",
-description VARCHAR (255)NOT NULL comment "描述",
-img VARCHAR (100) NOT  NULL comment "图片描述",
-provider_id unsigned INT NOT NULL "提供方id",
-time_start datetime NOT NULL comment "开始时间",
-time_end datetime NOT NULL comment "结束时间",
-}engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学科专题表";
-
--- 课程提供方信息
-CREATE TABLE if NOT EXISTS provider(
-provider_id unsigned INT auto_increment comment "课程编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(provider_id),
-)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "课程提供方信息表";
-
--- 授课教师信息
-CREATE TABLE if NOT EXISTS teacher(
-teacher_id unsigned INT auto_increment comment "授课教师编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(teacher_id),
-)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "授课教师信息表";
-
--- 视频表,字幕就不做了，之后在做吧
-CREATE TABLE if NOT EXISTS video(
-video_id unsigned INT auto_increment comment "视频编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号"
-link VARCHAR (100) NOT NULL comment "视频地址",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(video_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "视频表";
-
--- wiki内容表
-CREATE TABLE if NOT EXISTS wiki(
-wiki_id unsigned INT auto_increment comment "wiki编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号"
-content VARCHAR (1000)  NOT NULL "wiki内容",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(wiki_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "wiki表";
-
--- 测试算是一个模块
--- 测试表
-CREATE TABLE if NOT EXISTS test(
-test_id unsigned INT auto_increment comment "测试编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(test_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "测试表";
-
---用户已经参加的课,是一个中间表
-CREATE TABLE if NOT EXISTS course_join(
-course_join_id unsigned bigint auto_increment comment "id编号",
-course_id unsigned INT NOT NULL comment "已经参加的课id",
-account_id unsigned INT NOT NULL comment "用户id",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(course_join_id),
-KEY idx_account_id(account_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "用户课程表";
-
--- TODO 用户课程进度表
-
--- TODO 总体进度表
-
--- TODO 题目表具体放到mongodb中,这样更加好处理
--- -- -- 题目表
--- CREATE TABLE if NOT EXISTS question(
--- id unsigned bigint auto_increment comment "题目编号",
--- test_id unsigned INT auto_increment comment "测试编号",
--- question_content VARCHAR (100)NOT NULL comment "题目",
--- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
--- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
--- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
--- PRIMARY KEY pk_id(id),
--- KEY idx_test_id(test_id)
--- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "试题表";
-
--- TODO 论坛,交流是一个模块,之后在做吧
--- /learn/machine-learning/discussions/weeks/1
-
--- TODO 课程小节任务完成日志记录表
 
 ------------------------------------我是分界线---------------------
 -- 创建学生用户账户表
@@ -116,11 +9,18 @@ KEY idx_account_id(account_id)
 -- 注：用户详细信息还是要关联账户详细信息表的
 CREATE TABLE IF NOT EXISTS account(
 account_id  INT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "账户编号",
+account_no VARCHAR (32) NOT NULL UNION COMMENT "用户账号：可以修改",
+mobile VARCHAR (11) COMMENT "用户手机号",
+email_address VARCHAR (30) NOT NULL UNIQUE COMMENT "邮箱地址",
+account_type_id TINYINT NOT NULL COMMENT "账户类型",
+password VARCHAR (50) NOT NULL COMMENT "账户密码:需要加密",
+gender TINYINT NOT NULL DEFAULT 1 COMMENT "用户性别:0 无 1 男 2 女",
+age TINYINT COMMENT "用户年龄",
+profession VARCHAR (20) COMMENT "用户职业",
+institution VARCHAR (50)  COMMENT "工作机构",
 first_name VARCHAR (50) NOT NULL COMMENT "名字",
 last_name VARCHAR (50) NOT  NULL COMMENT "姓",
-email_address VARCHAR (30) NOT NULL UNIQUE COMMENT "邮箱地址",
 account_photo VARCHAR (255) NOT NULL DEFAULT "" COMMENT "用户头像",
-password VARCHAR (50) NOT NULL COMMENT "账户密码",
 alive TINYINT NOT NULL DEFAULT 1 COMMENT "账户是否有效",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -309,6 +209,114 @@ INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('经济学',18),('教育',18),('政府与社会',18),('法律',18),('心理学',18);
 INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('学习英语',19),('其它语言',19);
+-- -- TODO profile:用户详细信息表 是否对外展示  希望工作类型  技能  工作经验 教育背景 项目 访问问题  工作要求
+
+-- 专题列表
+-- TODO 有两部风内容被没有写入，一个是教师列表，一个是课程列表，问题列表
+CREATE TABLE if NOT EXISTS specialization{
+specialization_id unsigned INT auto_increment comment "专题编号",
+category VARCHAR (20)NOT NULL comment "目录",
+subject VARCHAR (20) NOT NULL comment "学科",
+title VARCHAR (50) NOT NULL UNIQUE comment "专题标题",
+short_desc VARCHAR (100) NOT NULL comment "简短描述",
+description VARCHAR (255)NOT NULL comment "描述",
+img VARCHAR (100) NOT  NULL comment "图片描述",
+provider_id unsigned INT NOT NULL "提供方id",
+time_start datetime NOT NULL comment "开始时间",
+time_end datetime NOT NULL comment "结束时间",
+}engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学科专题表";
+
+-- 课程提供方信息
+CREATE TABLE if NOT EXISTS provider(
+provider_id unsigned INT auto_increment comment "课程编号",
+-- TODO
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(provider_id),
+)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "课程提供方信息表";
+
+-- 授课教师信息
+CREATE TABLE if NOT EXISTS teacher(
+teacher_id unsigned INT auto_increment comment "授课教师编号",
+-- TODO
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(teacher_id),
+)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "授课教师信息表";
+
+-- 视频表,字幕就不做了，之后在做吧
+CREATE TABLE if NOT EXISTS video(
+video_id unsigned INT auto_increment comment "视频编号",
+task_item_id unsigned INT NOT NULL comment "具体小节编号"
+link VARCHAR (100) NOT NULL comment "视频地址",
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(video_id),
+KEY idx_task_item_id(task_item_id)
+)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "视频表";
+
+-- wiki内容表
+CREATE TABLE if NOT EXISTS wiki(
+wiki_id unsigned INT auto_increment comment "wiki编号",
+task_item_id unsigned INT NOT NULL comment "具体小节编号"
+content VARCHAR (1000)  NOT NULL "wiki内容",
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(wiki_id),
+KEY idx_task_item_id(task_item_id)
+)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "wiki表";
+
+-- 测试算是一个模块
+-- 测试表
+CREATE TABLE if NOT EXISTS test(
+test_id unsigned INT auto_increment comment "测试编号",
+task_item_id unsigned INT NOT NULL comment "具体小节编号",
+-- TODO
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(test_id),
+KEY idx_task_item_id(task_item_id)
+)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "测试表";
+
+--用户已经参加的课,是一个中间表
+CREATE TABLE if NOT EXISTS course_join(
+course_join_id unsigned bigint auto_increment comment "id编号",
+course_id unsigned INT NOT NULL comment "已经参加的课id",
+account_id unsigned INT NOT NULL comment "用户id",
+gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+PRIMARY KEY pk_id(course_join_id),
+KEY idx_account_id(account_id)
+)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "用户课程表";
+
+-- TODO 用户课程进度表
+
+-- TODO 总体进度表
+
+-- TODO 题目表具体放到mongodb中,这样更加好处理
+-- -- -- 题目表
+-- CREATE TABLE if NOT EXISTS question(
+-- id unsigned bigint auto_increment comment "题目编号",
+-- test_id unsigned INT auto_increment comment "测试编号",
+-- question_content VARCHAR (100)NOT NULL comment "题目",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(id),
+-- KEY idx_test_id(test_id)
+-- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "试题表";
+
+-- TODO 论坛,交流是一个模块,之后在做吧
+-- /learn/machine-learning/discussions/weeks/1
+
+-- TODO 课程小节任务完成日志记录表
+
 -- TODO 课程表信息数据
 
 -- TODO 课程表常见问题和回答数据
