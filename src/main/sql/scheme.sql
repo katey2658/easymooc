@@ -9,24 +9,43 @@ USE easyoj;
 -- 注：用户详细信息还是要关联账户详细信息表的
 CREATE TABLE IF NOT EXISTS account(
 account_id  INT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "账户编号",
-account_no VARCHAR (32) NOT NULL UNION COMMENT "用户账号：可以修改",
+account_no VARCHAR (32) NOT NULL  COMMENT "用户账号：可以修改",
 mobile VARCHAR (11) COMMENT "用户手机号",
 email_address VARCHAR (30) NOT NULL UNIQUE COMMENT "邮箱地址",
-account_type_id TINYINT NOT NULL COMMENT "账户类型",
+account_type_id TINYINT UNSIGNED NOT NULL COMMENT "账户类型 1: 学生 2.老师",
 password VARCHAR (50) NOT NULL COMMENT "账户密码:需要加密",
 gender TINYINT NOT NULL DEFAULT 1 COMMENT "用户性别:0 无 1 男 2 女",
-age TINYINT COMMENT "用户年龄",
+age TINYINT UNSIGNED COMMENT "用户年龄",
 profession VARCHAR (20) COMMENT "用户职业",
 institution VARCHAR (50)  COMMENT "工作机构",
 first_name VARCHAR (50) NOT NULL COMMENT "名字",
 last_name VARCHAR (50) NOT  NULL COMMENT "姓",
 account_photo VARCHAR (255) NOT NULL DEFAULT "" COMMENT "用户头像",
-alive TINYINT NOT NULL DEFAULT 1 COMMENT "账户是否有效",
+account_state TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "账户状态:0:正常  1.等待激活  2.注销  3.冻结",
+account_level TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "账户等级:0",
+address VARCHAR (50) COMMENT "住址",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
-KEY idx_emailpassword(email_address,password)
+KEY idx_emailpassword(email_address,password),
+KEY idx_accountno(account_no),
+UNIQUE (account_no)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="学生账户表";
+
+-- 关于用户权限表
+CREATE TABLE IF NOT EXISTS authority_record(
+account_id BIGINT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "编号",
+account_no VARCHAR (32) NOT NULL  COMMENT "用户账号：可以修改",
+authority VARCHAR (10) NOT NULL DEFAULT "USER" COMMENT "用户权限",
+active BOOL NOT NULL DEFAULT true COMMENT "默认有效",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="用户权限表";
+
+--------------
+
+
 
 --目录表 :一级目录
 CREATE TABLE IF NOT EXISTS catalog(

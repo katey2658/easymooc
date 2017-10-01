@@ -13,7 +13,7 @@ import java.util.List;
 @Alias("account")
 public class Account implements Serializable {
 
-    /**账户id*/
+    /**账户编号*/
     private Integer accountId;
 
     /**用户账号:可以修改*/
@@ -56,10 +56,10 @@ public class Account implements Serializable {
     private Short accountState;
 
     /**会员等级*/
-    private String accountLevel;
+    private Short accountLevel;
 
-    /**地址编码*/
-    private Integer addressCode;
+    /**地址*/
+    private Integer address;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -142,6 +142,14 @@ public class Account implements Serializable {
         this.profession = profession;
     }
 
+    public String getInstitution() {
+        return institution;
+    }
+
+    public void setInstitution(String institution) {
+        this.institution = institution;
+    }
+
     public String getFirstName() {
         return firstName;
     }
@@ -174,20 +182,20 @@ public class Account implements Serializable {
         this.accountState = accountState;
     }
 
-    public String getAccountLevel() {
+    public Short getAccountLevel() {
         return accountLevel;
     }
 
-    public void setAccountLevel(String accountLevel) {
+    public void setAccountLevel(Short accountLevel) {
         this.accountLevel = accountLevel;
     }
 
-    public Integer getAddressCode() {
-        return addressCode;
+    public Integer getAddress() {
+        return address;
     }
 
-    public void setAddressCode(Integer addressCode) {
-        this.addressCode = addressCode;
+    public void setAddress(Integer address) {
+        this.address = address;
     }
 
     public Instant getGmtCreate() {
@@ -226,12 +234,13 @@ public class Account implements Serializable {
                 ", gender=" + gender +
                 ", age=" + age +
                 ", profession='" + profession + '\'' +
+                ", institution='" + institution + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", accountPhoto='" + accountPhoto + '\'' +
                 ", accountState=" + accountState +
-                ", accountLevel='" + accountLevel + '\'' +
-                ", addressCode=" + addressCode +
+                ", accountLevel=" + accountLevel +
+                ", address=" + address +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 ", authorities=" + authorities +
