@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.repository;
 
-import com.busyzero.easyoj.domain.Subject;
+import com.busyzero.easyoj.entity.CourseSubject;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.Collection;
@@ -10,21 +10,21 @@ import java.util.List;
  * 学科专业表上对外操作接口
  * Created by 11456 on 2017/7/2.
  */
-public interface SubjectRepository {
+public interface CourseSubjectRepository {
 
     /**
      * 添加一个学科
      * @param subject
      * @return
      */
-    int save(Subject subject);
+    int save(CourseSubject subject);
 
     /**
      * 保存所有学科
      * @param subjects
      * @return
      */
-    int saveAll(Collection<Subject> subjects);
+    int saveAll(Collection<CourseSubject> subjects);
 
     /**
      * 根据学科id来获取对应的学科信息
@@ -34,9 +34,9 @@ public interface SubjectRepository {
      * @param limit
      * @return
      */
-    Subject getBySubjectId(@Param("subjectId")int subjectId,
-                           @Param("offset")int offset,
-                           @Param("limit") int limit);
+    CourseSubject getBySubjectId(@Param("subjectId")int subjectId,
+                                 @Param("offset")int offset,
+                                 @Param("limit") int limit);
 
     /**
      * 根据大类方向编号上来
@@ -45,15 +45,15 @@ public interface SubjectRepository {
      * @param limit
      * @return
      */
-    List<Subject> listAllBySubjectIds(@Param("subjectIds") Collection<Short> subjectIds,
-                                     @Param("limit") int limit);
+    List<CourseSubject> listAllBySubjectIds(@Param("subjectIds") Collection<Short> subjectIds,
+                                            @Param("limit") int limit);
 
     /**
      * 更新一个科目信息
      * @param newSubject
      * @return
      */
-    int updateSubject(Subject newSubject);
+    int updateSubject(CourseSubject newSubject);
 
     /**
      * 根据学科编号进行删除

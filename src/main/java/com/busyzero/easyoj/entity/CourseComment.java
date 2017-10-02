@@ -1,15 +1,18 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
  * 课程评论信息列表
  * Created by 11456 on 2017/6/22.
  */
-@Alias("comment")
-public class Comment {
+@Alias("courseComment")
+public class CourseComment implements Serializable {
+    private static final long serialVersionUID = 78878676127816783L;
+
     /**评论编号*/
     private Long commentId;
 
@@ -32,7 +35,7 @@ public class Comment {
     private Instant timeModified;
 
     /**评论用户信息*/
-    private Account account;
+    private AccountInfo account;
 
     public Long getCommentId() {
         return commentId;
@@ -90,17 +93,17 @@ public class Comment {
         this.timeModified = timeModified;
     }
 
-    public Account getAccount() {
+    public AccountInfo getAccount() {
         return account;
     }
 
-    public void setAccount(Account account) {
+    public void setAccount(AccountInfo account) {
         this.account = account;
     }
 
     @Override
     public String toString() {
-        return "Comment{" +
+        return "CourseComment{" +
                 "commentId=" + commentId +
                 ", courseId=" + courseId +
                 ", accountId=" + accountId +

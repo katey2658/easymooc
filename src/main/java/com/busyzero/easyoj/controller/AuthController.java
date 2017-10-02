@@ -1,7 +1,7 @@
 package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.config.security.AuthService;
-import com.busyzero.easyoj.domain.Account;
+import com.busyzero.easyoj.entity.AccountInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
@@ -50,7 +50,7 @@ public class AuthController {
     }
 
     @RequestMapping(value = "${jwt.route.authentication.register}", method = RequestMethod.POST)
-    public Account register(@RequestBody Account addedUser) throws AuthenticationException{
+    public AccountInfo register(@RequestBody AccountInfo addedUser) throws AuthenticationException{
         return authService.register(addedUser);
     }
 

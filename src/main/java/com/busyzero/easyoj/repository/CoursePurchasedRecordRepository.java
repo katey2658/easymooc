@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.repository;
 
-import com.busyzero.easyoj.domain.CoursePurchasedRecord;
+import com.busyzero.easyoj.entity.CoursePurchasedRecord;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

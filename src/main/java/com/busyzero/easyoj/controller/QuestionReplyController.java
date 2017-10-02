@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.QuestionReply;
+import com.busyzero.easyoj.entity.CourseQuestion;
 import com.busyzero.easyoj.service.QuestionAndReplyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,8 +28,8 @@ public class QuestionReplyController {
      */
     @ResponseBody
     @RequestMapping(value = "/{courseId}",method = RequestMethod.GET)
-    private List<QuestionReply> questionsAndReply(@PathVariable("courseId")Integer courseId){
-        List<QuestionReply> questionReplyList = questionService.queryQuestionReplyByCourseId(courseId);
+    private List<CourseQuestion> questionsAndReply(@PathVariable("courseId")Integer courseId){
+        List<CourseQuestion> questionReplyList = questionService.queryQuestionReplyByCourseId(courseId);
         return questionReplyList;
     }
 }

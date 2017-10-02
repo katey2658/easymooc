@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.config.security;
 
-import com.busyzero.easyoj.domain.Account;
+import com.busyzero.easyoj.entity.AccountInfo;
 
 /**
  * 用户授权服务
@@ -12,7 +12,7 @@ public interface AuthService {
      * @param account
      * @return
      */
-    Account register(Account account);
+    AccountInfo register(AccountInfo account);
 
     /**
      * 登录

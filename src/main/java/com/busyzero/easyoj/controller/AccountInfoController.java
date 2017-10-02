@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Account;
+import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.service.AccountAuthService;
 import com.busyzero.easyoj.service.EmailService;
@@ -71,7 +71,7 @@ public class AccountInfoController {
      */
     @ResponseBody
     @RequestMapping(value = "/sign-up",method = POST)
-    public AccountOperateResult accountSignUp(Account account, Locale locale){
+    public AccountOperateResult accountSignUp(AccountInfo account, Locale locale){
         AccountOperateResult result=null;
         //直接发送邮件就好
         result=emailService.emailAddressSignUp(account,locale);

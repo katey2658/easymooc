@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.repository;
 
-import com.busyzero.easyoj.domain.VideoInfo;
+import com.busyzero.easyoj.entity.VideoInfo;
 
 import java.util.Collection;
 import java.util.List;

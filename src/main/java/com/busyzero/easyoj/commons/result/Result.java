@@ -10,7 +10,7 @@ import java.io.Serializable;
  * @param <T> 数据传输对象的泛型
  */
 public class Result<T> implements Serializable{
-    private static final long serialVersionUID = 7247714666080613254L;
+    public static final long serialVersionUID = 7247714666080613254L;
 
     /**是否成功*/
     private Boolean success;
@@ -50,10 +50,6 @@ public class Result<T> implements Serializable{
         this.success = false;
         this.errorCode = exception.getErrorCode();
         this.resultMessage = exception.getErrorMessage();
-    }
-
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
     }
 
     public Boolean getSuccess() {

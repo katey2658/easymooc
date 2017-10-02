@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.repository;
 
-import com.busyzero.easyoj.domain.WeekTask;
+import com.busyzero.easyoj.entity.WeekTask;
 
 import java.util.List;
 

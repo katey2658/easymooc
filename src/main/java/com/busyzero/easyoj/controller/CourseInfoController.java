@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Course;
+import com.busyzero.easyoj.entity.CourseInfo;
 import com.busyzero.easyoj.dto.CourseOperateResult;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +32,7 @@ public class CourseInfoController {
      */
     @RequestMapping(method = RequestMethod.GET)
     public CourseOperateResult requestCourseList(short subjectId, int page){
-        CourseOperateResult<List<Course>> result=courseInfoService.getCoursesBySubjectIdAndPage(subjectId,page);
+        CourseOperateResult<List<CourseInfo>> result=courseInfoService.getCoursesBySubjectIdAndPage(subjectId,page);
         return result;
     }
 
@@ -44,7 +44,7 @@ public class CourseInfoController {
      */
     @RequestMapping(value = "/{courseId}",method = RequestMethod.GET)
     public CourseOperateResult requestCourseInfo(@PathVariable("courseId")Integer courseId){
-        CourseOperateResult<Course> result=courseInfoService.getCourseInfoByCourseId(courseId);
+        CourseOperateResult<CourseInfo> result=courseInfoService.getCourseInfoByCourseId(courseId);
         return result;
     }
 }

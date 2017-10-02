@@ -1,4 +1,4 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 /**
  * 提供课程信息

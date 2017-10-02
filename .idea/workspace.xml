@@ -7,16 +7,79 @@
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/pom.xml" line="386" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="69" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/QuestionReplyRepository.java" line="32" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="10" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="114" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="84" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseQuestionRepository.java" line="31" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="9" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="144" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d469e7a6-b32c-4355-818d-331f2692c2b0" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Provider.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Subject.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Teacher.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CatalogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CatalogController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CommentController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/QuestionReplyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/QuestionReplyController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/SubjectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/SubjectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseCommentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseCommentService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/QuestionAndReplyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/QuestionAndReplyService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCommentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCommentServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseInfoServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/QuestionAndReplyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/QuestionAndReplyServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/sql/scheme.sql" afterPath="$PROJECT_DIR$/src/main/sql/scheme.sql" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/error.png" afterPath="$PROJECT_DIR$/shot/error.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/sign-in.png" afterPath="$PROJECT_DIR$/shot/sign-in.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/sign-up.png" afterPath="$PROJECT_DIR$/shot/sign-up.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Catalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseCatalog.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseComment.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Course.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/QuestionReply.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Task.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/TaskItem.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/VideoInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/WeekTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/WeekTask.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Wiki.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Wiki.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountInfoRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CatalogRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseCatalogRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CommentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseCommentRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseInfoRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/QuestionReplyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseQuestionRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/SubjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseSubjectRepository.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/easyoj-service-partner-api/target/" />
@@ -51,113 +114,18 @@
     <favorites_list name="easyoj" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4409985">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Account.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-832">
-                  <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#1239#1240#0" expanded="true" />
-                    <element signature="e#1271#1272#0" expanded="true" />
-                    <element signature="e#1322#1323#0" expanded="true" />
-                    <element signature="e#1364#1365#0" expanded="true" />
-                    <element signature="e#1400#1401#0" expanded="true" />
-                    <element signature="e#1432#1433#0" expanded="true" />
-                    <element signature="e#1482#1483#0" expanded="true" />
-                    <element signature="e#1524#1525#0" expanded="true" />
-                    <element signature="e#1557#1558#0" expanded="true" />
-                    <element signature="e#1586#1587#0" expanded="true" />
-                    <element signature="e#1630#1631#0" expanded="true" />
-                    <element signature="e#1666#1667#0" expanded="true" />
-                    <element signature="e#1705#1706#0" expanded="true" />
-                    <element signature="e#1740#1741#0" expanded="true" />
-                    <element signature="e#1796#1797#0" expanded="true" />
-                    <element signature="e#1844#1845#0" expanded="true" />
-                    <element signature="e#1882#1883#0" expanded="true" />
-                    <element signature="e#1916#1917#0" expanded="true" />
-                    <element signature="e#1970#1971#0" expanded="true" />
-                    <element signature="e#2016#2017#0" expanded="true" />
-                    <element signature="e#2051#2052#0" expanded="true" />
-                    <element signature="e#2082#2083#0" expanded="true" />
-                    <element signature="e#2130#2131#0" expanded="true" />
-                    <element signature="e#2170#2171#0" expanded="true" />
-                    <element signature="e#2202#2203#0" expanded="true" />
-                    <element signature="e#2231#2232#0" expanded="true" />
-                    <element signature="e#2274#2275#0" expanded="true" />
-                    <element signature="e#2310#2311#0" expanded="true" />
-                    <element signature="e#2339#2340#0" expanded="true" />
-                    <element signature="e#2365#2366#0" expanded="true" />
-                    <element signature="e#2402#2403#0" expanded="true" />
-                    <element signature="e#2432#2433#0" expanded="true" />
-                    <element signature="e#2469#2470#0" expanded="true" />
-                    <element signature="e#2502#2503#0" expanded="true" />
-                    <element signature="e#2554#2555#0" expanded="true" />
-                    <element signature="e#2598#2599#0" expanded="true" />
-                    <element signature="e#2636#2637#0" expanded="true" />
-                    <element signature="e#2670#2671#0" expanded="true" />
-                    <element signature="e#2724#2725#0" expanded="true" />
-                    <element signature="e#2770#2771#0" expanded="true" />
-                    <element signature="e#2806#2807#0" expanded="true" />
-                    <element signature="e#2838#2839#0" expanded="true" />
-                    <element signature="e#2888#2889#0" expanded="true" />
-                    <element signature="e#2930#2931#0" expanded="true" />
-                    <element signature="e#2965#2966#0" expanded="true" />
-                    <element signature="e#2996#2997#0" expanded="true" />
-                    <element signature="e#3044#3045#0" expanded="true" />
-                    <element signature="e#3084#3085#0" expanded="true" />
-                    <element signature="e#3123#3124#0" expanded="true" />
-                    <element signature="e#3158#3159#0" expanded="true" />
-                    <element signature="e#3214#3215#0" expanded="true" />
-                    <element signature="e#3262#3263#0" expanded="true" />
-                    <element signature="e#3300#3301#0" expanded="true" />
-                    <element signature="e#3335#3336#0" expanded="true" />
-                    <element signature="e#3390#3391#0" expanded="true" />
-                    <element signature="e#3438#3439#0" expanded="true" />
-                    <element signature="e#3476#3477#0" expanded="true" />
-                    <element signature="e#3511#3512#0" expanded="true" />
-                    <element signature="e#3566#3567#0" expanded="true" />
-                    <element signature="e#3614#3615#0" expanded="true" />
-                    <element signature="e#3649#3650#0" expanded="true" />
-                    <element signature="e#3679#3680#0" expanded="true" />
-                    <element signature="e#3726#3727#0" expanded="true" />
-                    <element signature="e#3764#3765#0" expanded="true" />
-                    <element signature="e#3801#3802#0" expanded="true" />
-                    <element signature="e#3833#3834#0" expanded="true" />
-                    <element signature="e#3884#3885#0" expanded="true" />
-                    <element signature="e#3926#3927#0" expanded="true" />
-                    <element signature="e#3965#3966#0" expanded="true" />
-                    <element signature="e#3999#4000#0" expanded="true" />
-                    <element signature="e#4054#4055#0" expanded="true" />
-                    <element signature="e#4100#4101#0" expanded="true" />
-                    <element signature="e#4144#4145#0" expanded="true" />
-                    <element signature="e#4178#4179#0" expanded="true" />
-                    <element signature="e#4238#4239#0" expanded="true" />
-                    <element signature="e#4284#4285#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="scheme.sql" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/sql/scheme.sql">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="325">
-                  <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="AccountAuthService.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="331">
+              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -165,16 +133,14 @@
         <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>DATASOURCE</find>
-      <find>stream()</find>
       <find>collect(</find>
       <find>filter(</find>
       <find>map(</find>
@@ -203,6 +169,8 @@
       <find>join</find>
       <find>now</find>
       <find>HOUR</find>
+      <find>byteToHexString</find>
+      <find>hexStringToByte</find>
     </findStrings>
     <replaceStrings>
       <replace>datetime</replace>
@@ -225,57 +193,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/page/PageResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/page/PageInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/BusinessException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/HomePageController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountInfoService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/AccountInfo.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tools.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ObjectCheckUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/StringCheckUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountManagerController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/filter/JwtTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/SecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/security-config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/filter/JwtAuthenticationTokenFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/common/ConfigConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtAuthenticationTokenFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterValidate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/AbstactObjectCheckUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/exception/AccountRegisterException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ResultCheckUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/JwtTokenUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtTokenUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/common/ConfigConstantsPool.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/WebSecurityConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/VerificationCodeController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Subject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Catalog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/SubjectInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseSubject.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/VerificationCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseCatalog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseComment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/sql/scheme.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountVerificationRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountVerification.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/constants/VerificationConstants.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/VerficationStateEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/AccountStateEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountInfoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/MD5Util.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/MD5EncryptionUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/dto/MailInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -417,12 +385,9 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\webapp\WEB-INF\templates\account" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mail\html" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com\busyzero\easyoj\repository" />
-      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com.busyzero.easyoj.repository" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.busyzero.easyoj.dto" />
+      <recent name="com.busyzero.easyoj.domain" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\workprojects\atomWorkSpace\easyoj\descImg" />
@@ -437,9 +402,12 @@
       <recent name="com.busyzero.easyoj.config.common" />
       <recent name="com.busyzero.easyoj.config.persistence" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.busyzero.easyoj.dto" />
-      <recent name="com.busyzero.easyoj.domain" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\webapp\WEB-INF\templates\account" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\mail\html" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com\busyzero\easyoj\repository" />
+      <recent name="E:\workprojects\atomWorkSpace\easyoj\src\main\resources\com.busyzero.easyoj.repository" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -983,12 +951,12 @@
       <workItem from="1506653225965" duration="25738000" />
       <workItem from="1506733558485" duration="8923000" />
       <workItem from="1506752378566" duration="2657000" />
-      <workItem from="1506755909747" duration="12056000" />
+      <workItem from="1506755909747" duration="49270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1429394000" />
+    <option name="totallyTimeSpent" value="1466608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1011,9 +979,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61616164" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32756132" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22617246" sideWeight="0.43290043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.43290043" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23373677" sideWeight="0.5670996" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Compute Code Lines" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1036,28 +1004,30 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61616164" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18305598" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32612056" sideWeight="0.4969743" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="100" y="100" width="1166" height="568" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.63846153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276923" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24659607" sideWeight="0.4755747" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24659607" sideWeight="0.52442527" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22163388" sideWeight="0.52011496" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61616164" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.4969743" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.43290043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23373677" sideWeight="0.5670996" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Compute Code Lines" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23600605" sideWeight="0.5497835" order="5" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1068,7 +1038,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="17" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1077,314 +1047,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/RootServiceConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="43" column="10" lean-forward="false" selection-start-line="43" selection-start-column="10" selection-end-line="43" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/common/AspectJConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/common/ConfigConstantsPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="38" lean-forward="false" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/SecurityWebApplicationInitializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="25" column="24" lean-forward="false" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="48" column="27" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="650">
-          <caret line="30" column="47" lean-forward="false" selection-start-line="30" selection-start-column="26" selection-end-line="30" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="37" column="9" lean-forward="false" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtAuthenticationTokenFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="36" column="29" lean-forward="false" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtTokenUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="37" column="47" lean-forward="false" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/security-config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="49" lean-forward="false" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/WebSecurityConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" column="10" lean-forward="true" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="56" column="17" lean-forward="false" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/VerificationCodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="43" column="88" lean-forward="true" selection-start-line="43" selection-start-column="88" selection-end-line="43" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="15" column="47" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/dto/VerificationCodeDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="13" column="32" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/Comparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7124">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/lang/Comparable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1924">
-          <caret line="97" column="33" lean-forward="false" selection-start-line="97" selection-start-column="33" selection-end-line="97" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/function/Predicate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="75" column="35" lean-forward="false" selection-start-line="75" selection-start-column="35" selection-end-line="75" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/function/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="67" column="0" lean-forward="true" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/function/Supplier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/concurrent/Callable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/Collection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14352">
-          <caret line="579" column="15" lean-forward="false" selection-start-line="579" selection-start-column="15" selection-end-line="579" selection-end-column="15" />
-          <folding>
-            <element signature="e#26813#26814#0" expanded="false" />
-            <element signature="e#26878#26879#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/stream/Collector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4576">
-          <caret line="206" column="6" lean-forward="false" selection-start-line="206" selection-start-column="6" selection-end-line="206" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179634">
-          <caret line="7012" column="17" lean-forward="false" selection-start-line="7012" selection-start-column="17" selection-end-line="7012" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/function/BiFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="43" column="17" lean-forward="false" selection-start-line="43" selection-start-column="17" selection-end-line="43" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/function/BinaryOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="56" column="43" lean-forward="false" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/stream/IntStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25974">
-          <caret line="1049" column="7" lean-forward="false" selection-start-line="1049" selection-start-column="7" selection-end-line="1049" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/stream/DoubleStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9958">
-          <caret line="424" column="21" lean-forward="false" selection-start-line="424" selection-start-column="21" selection-end-line="424" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/stream/Stream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31980">
-          <caret line="1282" column="21" lean-forward="false" selection-start-line="1282" selection-start-column="21" selection-end-line="1282" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/stream/Collectors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5980">
-          <caret line="295" column="37" lean-forward="false" selection-start-line="295" selection-start-column="37" selection-end-line="295" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/concurrent/RecursiveTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="50" column="17" lean-forward="true" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/concurrent/Future.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-220">
-          <caret line="129" column="18" lean-forward="false" selection-start-line="129" selection-start-column="12" selection-end-line="129" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/sun/nio/ch/CompletedFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/concurrent/CompletableFuture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1409,8 +1071,8 @@
         <state relative-caret-position="204">
           <caret line="197" column="30" lean-forward="false" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
           <folding>
-            <element signature="e#7237#7238#0" expanded="true" />
-            <element signature="e#7290#7291#0" expanded="true" />
+            <element signature="e#7237#7238#0" expanded="false" />
+            <element signature="e#7290#7291#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1455,95 +1117,397 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Teacher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-832">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state relative-caret-position="156">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/TaskItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-787">
+          <caret line="78" column="19" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RedisClusterConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="29" column="17" lean-forward="true" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="26" column="17" lean-forward="true" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/CachingConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/RootServiceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="26" column="7" lean-forward="true" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="7" column="37" lean-forward="true" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/dto/VerificationCodeResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="655">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Task.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="17" column="11" lean-forward="true" selection-start-line="17" selection-start-column="11" selection-end-line="17" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseCatalog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" column="9" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseComment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="12" column="50" lean-forward="false" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
           <folding>
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#1322#1323#0" expanded="true" />
-            <element signature="e#1364#1365#0" expanded="true" />
-            <element signature="e#1400#1401#0" expanded="true" />
-            <element signature="e#1432#1433#0" expanded="true" />
-            <element signature="e#1482#1483#0" expanded="true" />
-            <element signature="e#1524#1525#0" expanded="true" />
-            <element signature="e#1557#1558#0" expanded="true" />
-            <element signature="e#1586#1587#0" expanded="true" />
-            <element signature="e#1630#1631#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-            <element signature="e#1740#1741#0" expanded="true" />
-            <element signature="e#1796#1797#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1882#1883#0" expanded="true" />
-            <element signature="e#1916#1917#0" expanded="true" />
-            <element signature="e#1970#1971#0" expanded="true" />
-            <element signature="e#2016#2017#0" expanded="true" />
-            <element signature="e#2051#2052#0" expanded="true" />
-            <element signature="e#2082#2083#0" expanded="true" />
-            <element signature="e#2130#2131#0" expanded="true" />
-            <element signature="e#2170#2171#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2274#2275#0" expanded="true" />
-            <element signature="e#2310#2311#0" expanded="true" />
-            <element signature="e#2339#2340#0" expanded="true" />
-            <element signature="e#2365#2366#0" expanded="true" />
-            <element signature="e#2402#2403#0" expanded="true" />
-            <element signature="e#2432#2433#0" expanded="true" />
-            <element signature="e#2469#2470#0" expanded="true" />
-            <element signature="e#2502#2503#0" expanded="true" />
-            <element signature="e#2554#2555#0" expanded="true" />
-            <element signature="e#2598#2599#0" expanded="true" />
-            <element signature="e#2636#2637#0" expanded="true" />
-            <element signature="e#2670#2671#0" expanded="true" />
-            <element signature="e#2724#2725#0" expanded="true" />
-            <element signature="e#2770#2771#0" expanded="true" />
-            <element signature="e#2806#2807#0" expanded="true" />
-            <element signature="e#2838#2839#0" expanded="true" />
-            <element signature="e#2888#2889#0" expanded="true" />
-            <element signature="e#2930#2931#0" expanded="true" />
-            <element signature="e#2965#2966#0" expanded="true" />
-            <element signature="e#2996#2997#0" expanded="true" />
-            <element signature="e#3044#3045#0" expanded="true" />
-            <element signature="e#3084#3085#0" expanded="true" />
-            <element signature="e#3123#3124#0" expanded="true" />
-            <element signature="e#3158#3159#0" expanded="true" />
-            <element signature="e#3214#3215#0" expanded="true" />
-            <element signature="e#3262#3263#0" expanded="true" />
-            <element signature="e#3300#3301#0" expanded="true" />
-            <element signature="e#3335#3336#0" expanded="true" />
-            <element signature="e#3390#3391#0" expanded="true" />
-            <element signature="e#3438#3439#0" expanded="true" />
-            <element signature="e#3476#3477#0" expanded="true" />
-            <element signature="e#3511#3512#0" expanded="true" />
-            <element signature="e#3566#3567#0" expanded="true" />
-            <element signature="e#3614#3615#0" expanded="true" />
-            <element signature="e#3649#3650#0" expanded="true" />
-            <element signature="e#3679#3680#0" expanded="true" />
-            <element signature="e#3726#3727#0" expanded="true" />
-            <element signature="e#3764#3765#0" expanded="true" />
-            <element signature="e#3801#3802#0" expanded="true" />
-            <element signature="e#3833#3834#0" expanded="true" />
-            <element signature="e#3884#3885#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-            <element signature="e#3965#3966#0" expanded="true" />
-            <element signature="e#3999#4000#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
-            <element signature="e#4100#4101#0" expanded="true" />
-            <element signature="e#4144#4145#0" expanded="true" />
-            <element signature="e#4178#4179#0" expanded="true" />
-            <element signature="e#4238#4239#0" expanded="true" />
-            <element signature="e#4284#4285#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="104" column="5" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/AbstactObjectCheckUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="32" column="26" lean-forward="false" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="e#411#412#0" expanded="false" />
+            <element signature="e#457#458#0" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
+            <element signature="e#643#644#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseCatalogRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="31" column="31" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountVerificationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/BusinessException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/utils/VerificationCodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+          <folding>
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountVerification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1768">
+          <caret line="86" column="49" lean-forward="true" selection-start-line="86" selection-start-column="49" selection-end-line="86" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1846#1847#0" expanded="true" />
+            <element signature="e#2492#2493#0" expanded="true" />
+            <element signature="e#2550#2551#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/constants/VerificationConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="55" column="31" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/VerificationErrorEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountInfoRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="65" column="13" lean-forward="false" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/AccountStateEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding>
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#568#569#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#666#667#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/MD5EncryptionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="6" column="64" lean-forward="false" selection-start-line="6" selection-start-column="64" selection-end-line="6" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/dto/MailInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/utils/EncryptionUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/enums/VerficationStateEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="e#487#488#0" expanded="true" />
+            <element signature="e#515#516#0" expanded="true" />
+            <element signature="e#558#559#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#626#627#0" expanded="true" />
+            <element signature="e#656#657#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#740#741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="16" column="19" lean-forward="false" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="785">
+          <caret line="92" column="0" lean-forward="true" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-468">
+          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1326">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding>
+            <element signature="e#3959#3960#0" expanded="true" />
+            <element signature="e#3986#3987#0" expanded="true" />
+            <element signature="e#4093#4094#0" expanded="true" />
+            <element signature="e#4120#4121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/sql/scheme.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="45" column="14" lean-forward="false" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="351">
+          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3094">
+          <caret line="130" column="21" lean-forward="true" selection-start-line="130" selection-start-column="21" selection-end-line="130" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -1,12 +1,18 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
+import org.apache.ibatis.type.Alias;
+
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
  * 课程问题的回答
  * Created by 11456 on 2017/6/22.
  */
-public class QuestionReply {
+@Alias("courseQuestion")
+public class CourseQuestion implements Serializable {
+    private static final long serialVersionUID = 78878676127816785L;
+
     /**问题编号*/
     private Long questionReplyId;
 
@@ -75,7 +81,7 @@ public class QuestionReply {
 
     @Override
     public String toString() {
-        return "QuestionReply{" +
+        return "CourseQuestion{" +
                 "questionReplyId=" + questionReplyId +
                 ", courseId=" + courseId +
                 ", questionContent='" + questionContent + '\'' +

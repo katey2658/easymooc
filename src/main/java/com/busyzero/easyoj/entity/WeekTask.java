@@ -1,4 +1,4 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 

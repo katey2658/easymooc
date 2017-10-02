@@ -28,7 +28,8 @@ public class RootDaoConfig {
     public static final String MAPPER_SCAN_PACKAGE = "com.busyzero.easyoj.repository";
 
     /**模型包名 别名自动扫描*/
-    private static final String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.domain";
+    private static final String TYPE_ALIASES_PACKAGE="com.busyzero.easyoj.entity";
+
 
     /**驱动*/
     private static final String CONFIG_DATASOURCE_DRIVER="spring.jdbc.driver";

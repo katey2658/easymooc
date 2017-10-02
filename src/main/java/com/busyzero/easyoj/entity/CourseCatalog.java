@@ -1,7 +1,8 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.List;
 
@@ -11,8 +12,9 @@ import java.util.List;
  *
  * Created by 11456 on 2017/7/2.
  */
-@Alias("catalog")
-public class Catalog {
+@Alias("courseCatalog")
+public class CourseCatalog implements Serializable{
+    private static final long serialVersionUID = 78878676127816779L;
 
     /**编号*/
     private Short catalogId;
@@ -21,7 +23,7 @@ public class Catalog {
     private String catalogName;
 
     /**简单描述*/
-    private String catalogDescription;
+    private String catalogDesc;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -30,7 +32,7 @@ public class Catalog {
     private Instant gmtModified;
 
     /**目录项下二级学科列表:因为不多，所以不要分页*/
-    private List<Subject> subjectList;
+    private List<CourseSubject> subjectList;
 
     public Short getCatalogId() {
         return catalogId;
@@ -48,12 +50,12 @@ public class Catalog {
         this.catalogName = catalogName;
     }
 
-    public String getCatalogDescription() {
-        return catalogDescription;
+    public String getCatalogDesc() {
+        return catalogDesc;
     }
 
-    public void setCatalogDescription(String catalogDescription) {
-        this.catalogDescription = catalogDescription;
+    public void setCatalogDesc(String catalogDesc) {
+        this.catalogDesc = catalogDesc;
     }
 
     public Instant getGmtCreate() {
@@ -72,20 +74,20 @@ public class Catalog {
         this.gmtModified = gmtModified;
     }
 
-    public List<Subject> getSubjectList() {
+    public List<CourseSubject> getSubjectList() {
         return subjectList;
     }
 
-    public void setSubjectList(List<Subject> subjectList) {
+    public void setSubjectList(List<CourseSubject> subjectList) {
         this.subjectList = subjectList;
     }
 
     @Override
     public String toString() {
-        return "Catalog{" +
+        return "CourseCatalog{" +
                 "catalogId=" + catalogId +
                 ", catalogName='" + catalogName + '\'' +
-                ", catalogDescription='" + catalogDescription + '\'' +
+                ", catalogDesc='" + catalogDesc + '\'' +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 ", subjectList=" + subjectList +

@@ -1,7 +1,8 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
@@ -11,7 +12,8 @@ import java.util.List;
  * Created by 11456 on 2017/7/4.
  */
 @Alias("coursePurchasedRecord")
-public class CoursePurchasedRecord {
+public class CoursePurchasedRecord implements Serializable {
+    private static final long serialVersionUID = 78878676127816784L;
 
     /**用户购买记录编号*/
     private Long coursePurchasedRecordId;
@@ -50,7 +52,7 @@ public class CoursePurchasedRecord {
     private Instant gmtModified;
 
     /**已经购买记录:概念中包含没有付款的*/
-    private List<Course> courseList;
+    private List<CourseInfo> courseList;
 
     public Long getCoursePurchasedRecordId() {
         return coursePurchasedRecordId;

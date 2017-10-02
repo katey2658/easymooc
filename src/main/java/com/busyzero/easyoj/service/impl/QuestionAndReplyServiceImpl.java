@@ -1,7 +1,7 @@
 package com.busyzero.easyoj.service.impl;
 
-import com.busyzero.easyoj.domain.QuestionReply;
-import com.busyzero.easyoj.repository.QuestionReplyRepository;
+import com.busyzero.easyoj.entity.CourseQuestion;
+import com.busyzero.easyoj.repository.CourseQuestionRepository;
 import com.busyzero.easyoj.service.QuestionAndReplyService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,7 +20,7 @@ public class QuestionAndReplyServiceImpl implements QuestionAndReplyService {
 
     /**问题和答复数据库接口*/
     @Autowired
-    private QuestionReplyRepository questionReplyRepository;
+    private CourseQuestionRepository questionReplyRepository;
 
     /**
      * 问题和答复列表
@@ -28,8 +28,8 @@ public class QuestionAndReplyServiceImpl implements QuestionAndReplyService {
      * @return
      */
     @Override
-    public List<QuestionReply> queryQuestionReplyByCourseId(Integer courseId) {
-        List<QuestionReply> questionReplyList=questionReplyRepository.listAllByCourseId(courseId);
+    public List<CourseQuestion> queryQuestionReplyByCourseId(Integer courseId) {
+        List<CourseQuestion> questionReplyList=questionReplyRepository.listAllByCourseId(courseId);
         return questionReplyList;
     }
 }

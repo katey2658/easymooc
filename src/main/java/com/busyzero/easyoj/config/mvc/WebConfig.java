@@ -57,17 +57,9 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
                 .addResourceLocations(LOCATION_RESOURCE_JS);
     }
 
-    /**
-     * 注册拦截器
-     * @param registry
-     */
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        super.addInterceptors(registry);
-    }
 
     /**
-     * 视图解析
+     * 视图解析器：将视图进行解析
      * @return
      */
     @Bean
@@ -80,7 +72,7 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
     }
 
     /**
-     * 模板引擎：对内容进行解析
+     * 模板引擎：对模板内容进行解析渲染
      * @return
      */
     @Bean
@@ -107,6 +99,15 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         templateResolver.setCharacterEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         templateResolver.setCacheable(true);
         return templateResolver;
+    }
+
+    /**
+     * 注册拦截器<br>
+     * @param registry
+     */
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+        super.addInterceptors(registry);
     }
 
     /**

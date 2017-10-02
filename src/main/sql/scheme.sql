@@ -2,12 +2,11 @@
 CREATE DATABASE IF NOT EXISTS easyoj;
 USE easyoj;
 
-------------------------------------我是分界线---------------------
 -- 创建学生用户账户表
 -- 这里的考量是id 不会达到那么大的数据量
 -- 注：这里采用邮箱和密码来做覆盖索引，提高查找性能
 -- 注：用户详细信息还是要关联账户详细信息表的
-CREATE TABLE IF NOT EXISTS account(
+CREATE TABLE IF NOT EXISTS account_info(
 account_id  INT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "账户编号",
 account_no VARCHAR (32) NOT NULL  COMMENT "用户账号：可以修改",
 mobile VARCHAR (11) COMMENT "用户手机号",
@@ -29,39 +28,56 @@ gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_emailpassword(email_address,password),
 KEY idx_accountno(account_no),
-UNIQUE (account_no)
+UNIQUE (account_no),
+UNIQUE (mobile),
+UNIQUE (email_address)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="学生账户表";
 
--- 关于用户权限表
-CREATE TABLE IF NOT EXISTS authority_record(
-account_id BIGINT UNSIGNED  PRIMARY KEY AUTO_INCREMENT  COMMENT "编号",
+-- 关于用户权限记录表
+CREATE TABLE IF NOT EXISTS account_authority(
+authority_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT  COMMENT "编号",
+account_id BIGINT UNSIGNED COMMENT "用户编号",
 account_no VARCHAR (32) NOT NULL  COMMENT "用户账号：可以修改",
 authority VARCHAR (10) NOT NULL DEFAULT "USER" COMMENT "用户权限",
 active BOOL NOT NULL DEFAULT true COMMENT "默认有效",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_accountno(account_no)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="用户权限表";
 
---------------
-
-
+-- 验证码记录表
+CREATE TABLE IF NOT EXISTS account_verification(
+verification_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT  COMMENT "编号",
+account_id BIGINT UNSIGNED COMMENT "账户编号",
+account_no VARCHAR (32) COMMENT "用户账号",
+mobile VARCHAR (11) COMMENT "用户手机号",
+email_address VARCHAR (30) COMMENT "邮箱地址",
+error_input TINYINT NOT DEFAULT 0 COMMENT "输入错误次数",
+verification_code VARCHAR (10) NOT NULL COMMENT "验证码",
+invalid_time DATETIME NOT NULL COMMENT "验证码失效时间",
+verification_state TINYINT NOT NULL DEFAULT 1 COMMENT "验证状态: 0.无效 1.正常 2.超时失效 3.验证",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间"
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8  COMMENT="验证码记录表";
 
 --目录表 :一级目录
-CREATE TABLE IF NOT EXISTS catalog(
+CREATE TABLE IF NOT EXISTS course_catalog(
 catalog_id TINYINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "目录列表项编号",
 catalog_name VARCHAR (20) NOT NULL COMMENT "目录项名",
-catalog_description VARCHAR (200) NOT NULL COMMENT "描述",
+catalog_desc VARCHAR (200) NOT NULL DEFAULT "" COMMENT "描述",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间"
 )ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT="一级目录表";
 
 --学科表：二级目录
-CREATE TABLE IF NOT EXISTS subject(
+CREATE TABLE IF NOT EXISTS course_subject(
 subject_id SMALLINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "学科编号",
-subject_name VARCHAR (50) NOT NULL COMMENT "学科名字",
 catalog_id TINYINT UNSIGNED COMMENT "目录列表项编号",
+subject_name VARCHAR (50) NOT NULL COMMENT "学科名字",
+subject_desc  VARCHAR (100) NOT NULL DEFAULT "" COMMENT "学科描述",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
@@ -69,16 +85,15 @@ KEY (catalog_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT="二级学科表";
 
 -- 课程列表
-CREATE TABLE IF NOT EXISTS course(
+CREATE TABLE IF NOT EXISTS course_info(
 course_id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "课程编号",
 subject_id SMALLINT UNSIGNED NOT NULL COMMENT "所属学科编号",
 course_name VARCHAR (50) NOT NULL UNIQUE COMMENT "课程名",
 description VARCHAR (500)NOT NULL COMMENT "课程概述",
+overt BOOL NOT NULL DEFAULT FALSE COMMENT "是否公开",
+invite_code VARCHAR (20) COMMENT "邀请码",
 pre_condition VARCHAR (255) COMMENT "课程前提条件",
 course_image VARCHAR (255) NOT NULL COMMENT "课程描述图片",
-provider_name VARCHAR (50) NOT NULL COMMENT "课程提供方名称",
-provider_logo VARCHAR (255) NOT NULL COMMENT "课程提供方logoUrl",
-provider_id INT UNSIGNED NOT NULL COMMENT "课程提供方信息编号",
 teacher_photo VARCHAR (255) NOT NULL COMMENT "授课老师头像",
 teacher_name VARCHAR (50) NOT NULL COMMENT "授课老师姓名",
 teacher_job_title VARCHAR (20) NOT NULL COMMENT "授课教师职称",
@@ -90,6 +105,8 @@ student_level  VARCHAR (10) COMMENT "适用学生级别",
 time_learn VARCHAR (10) COMMENT "平均每周学习时间",
 language_to_teach VARCHAR (50) NOT NULL COMMENT "授课语言",
 pass_condition VARCHAR (50) NOT NULL COMMENT "通过条件",
+max_number INT  NOT NULL DEFAULT 65525 COMMENT "学生人数限制",
+course_state TINYINT NOT NULL DEFAULT 1 COMMENT "课程状态:1.审核中  2.正常  3. 还没有开始  4.满员  5.冻结  6.过期",
 price_with_certificate DECIMAL (10,2) DEFAULT 0.00 COMMENT "有证书的价格",
 price_with_no_certificate DECIMAL (10,2) DEFAULT 0.00 COMMENT "没有证书的价格",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
@@ -97,12 +114,11 @@ gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_subject_id(subject_id),
 KEY idx_course_name(course_name),
-KEY idx_provider_id(provider_id),
 KEY idx_teacher_id(teacher_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程信息表";
 
 --课程问题列表回答表
-CREATE TABLE IF NOT EXISTS question_reply(
+CREATE TABLE IF NOT EXISTS course_question(
 question_reply_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "问题编号",
 course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
 question_content VARCHAR (100) NOT  NULL COMMENT "问题概述",
@@ -125,6 +141,8 @@ gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_course_id(course_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程评论信息表";
+
+------------------------------------我是分界线---------------------
 
 -- 授课大纲，包含阅读，视频，每周测试
 CREATE TABLE IF NOT EXISTS week_task(

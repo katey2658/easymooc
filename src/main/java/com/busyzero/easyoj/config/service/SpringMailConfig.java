@@ -1,5 +1,6 @@
 package com.busyzero.easyoj.config.service;
 
+import com.busyzero.easyoj.config.common.ConfigConstantsPool;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
@@ -31,8 +32,6 @@ import java.util.Properties;
 @Configuration
 @PropertySource("classpath:mail.properties")
 public class SpringMailConfig implements ApplicationContextAware,EnvironmentAware{
-
-    public static final String EMAIL_TEMPLATE_ENCODING="UTF-8";
 
     private static final String MAIL_HOST="spring.mail.server.host";
     private static final String MAIL_PORT="spring.mail.server.port";
@@ -80,7 +79,7 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         mailSender.setHost(env.getProperty(SpringMailConfig.MAIL_HOST));
         mailSender.setUsername(env.getProperty(SpringMailConfig.MAIL_USERNAME));
         mailSender.setPassword(env.getProperty(SpringMailConfig.MAIL_PASSWORD));
-        mailSender.setDefaultEncoding(SpringMailConfig.EMAIL_TEMPLATE_ENCODING);
+        mailSender.setDefaultEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         Properties properties=new Properties();
         properties.setProperty(SpringMailConfig.KEY_SMTP_AUTH
                 ,env.getProperty(SpringMailConfig.MAIL_PROPERTIES_SMTP_AUTH));
@@ -103,7 +102,7 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
      * 邮件模板引擎解析器
      * @return
      */
-    @Bean
+    @Bean(name = "emailTemplateEngine")
     public SpringTemplateEngine emailTemplateEngine(){
         final SpringTemplateEngine templateEngine=new SpringTemplateEngine();
         templateEngine.addTemplateResolver(htmlTemplateResolver());
@@ -124,7 +123,7 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         templateResolver.setPrefix(this.RESOLVER_TEXT_PREFIX);
         templateResolver.setSuffix(this.RESOLVER_TEXT_SUFFIX);
         templateResolver.setTemplateMode(TemplateMode.TEXT);
-        templateResolver.setCharacterEncoding(EMAIL_TEMPLATE_ENCODING);
+        templateResolver.setCharacterEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         templateResolver.setCacheable(false);
         return templateResolver;
     }
@@ -140,7 +139,7 @@ public class SpringMailConfig implements ApplicationContextAware,EnvironmentAwar
         templateResolver.setPrefix(this.RESOLVER_HTML_PREFIX);
         templateResolver.setSuffix(this.RESOLVER_HTML_SUFFIX);
         templateResolver.setTemplateMode(TemplateMode.HTML);
-        templateResolver.setCharacterEncoding(EMAIL_TEMPLATE_ENCODING);
+        templateResolver.setCharacterEncoding(ConfigConstantsPool.CHARACTER_ENCODING);
         templateResolver.setCacheable(false);
         return templateResolver;
     }

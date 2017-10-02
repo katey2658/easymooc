@@ -3,8 +3,8 @@ package com.busyzero.easyoj.config.security;
 import com.busyzero.easyoj.commons.tool.ParameterCheckUtil;
 import com.busyzero.easyoj.commons.tool.ResultCheckUtil;
 import com.busyzero.easyoj.commons.tool.StringCheckUtil;
-import com.busyzero.easyoj.domain.Account;
-import com.busyzero.easyoj.repository.AccountRepository;
+import com.busyzero.easyoj.entity.AccountInfo;
+import com.busyzero.easyoj.repository.AccountInfoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,7 +43,7 @@ public class AuthServiceImpl implements AuthService {
 
     /**账户数据表操作对象*/
     @Autowired
-    private AccountRepository accountRepository;
+    private AccountInfoRepository accountRepository;
 
     /**令牌头*/
     @Value("${jwt.tokenHead}")
@@ -60,10 +60,10 @@ public class AuthServiceImpl implements AuthService {
      * @return
      */
     @Override
-    public Account register(Account account) {
+    public AccountInfo register(AccountInfo account) {
         //检查用户是否已经被注册
         final String accountNo=account.getAccountNo();
-        Account acc=accountRepository.findByAccountNo(accountNo);
+        AccountInfo acc=accountRepository.findByAccountNo(accountNo);
         if (ParameterCheckUtil.isNotNull(acc)){
             return null;
         }

@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Catalog;
+import com.busyzero.easyoj.entity.CourseCatalog;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +29,8 @@ public class CatalogController {
      */
     @ResponseBody
     @RequestMapping(method = RequestMethod.GET)
-    public CatalogOperateResult<List<Catalog>> requestCatalogList(){
-        CatalogOperateResult<List<Catalog>> result=courseInfoService.getCatalogList();
+    public CatalogOperateResult<List<CourseCatalog>> requestCatalogList(){
+        CatalogOperateResult<List<CourseCatalog>> result=courseInfoService.getCatalogList();
         return result;
     }
 }

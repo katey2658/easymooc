@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.config.security;
 
-import com.busyzero.easyoj.domain.Account;
+import com.busyzero.easyoj.entity.AccountInfo;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.List;
@@ -20,7 +20,7 @@ public final class JwtUserFactory {
      * @param account
      * @return
      */
-    public static JwtUser create(Account account){
+    public static JwtUser create(AccountInfo account){
         return new JwtUser(account.getAccountId(),
                 account.getAccountNo(),
                 account.getPassword(),

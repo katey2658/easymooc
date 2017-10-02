@@ -1,6 +1,5 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.Account;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 
 /**
@@ -9,7 +8,7 @@ import com.busyzero.easyoj.dto.AccountOperateResult;
  */
 public interface AccountAuthService {
     /**
-     * 账户登录
+     * 通过邮箱进行
      * @param emailAddress 输入的邮箱地址
      * @param password 输入的密码
      * @return 登录结果

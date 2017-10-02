@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.repository;
 
-import com.busyzero.easyoj.domain.Task;
+import com.busyzero.easyoj.entity.Task;
 
 import java.util.Collection;
 import java.util.List;

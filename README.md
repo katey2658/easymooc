@@ -41,8 +41,8 @@ easyoj是关于构建现代化在线教育和学习系统的一个规划项目�
 
 #### 页面描述
 ##### 登录页面
-![登录](descImg/sign-in.png)
+![登录](shot/sign-in.png)
 ##### 注册页面
-![注册](descImg/sign-up.png)
+![注册](shot/sign-up.png)
 ##### 错误页面
-![错误](descImg/error.png)
+![错误](shot/error.png)

@@ -1,10 +1,10 @@
 package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.config.security.AuthServiceImpl;
-import com.busyzero.easyoj.domain.Account;
+import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.enums.AccountOperateEnum;
-import com.busyzero.easyoj.repository.AccountRepository;
+import com.busyzero.easyoj.repository.AccountInfoRepository;
 import com.busyzero.easyoj.service.AccountAuthService;
 
 import org.slf4j.Logger;
@@ -31,7 +31,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
 
     /**账户数据表操作对象*/
     @Autowired
-    private AccountRepository accountRepository;
+    private AccountInfoRepository accountRepository;
 
     /**缓存数据库操作模板*/
     @Autowired
@@ -50,7 +50,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
             logger.info("emailAddress or password is null or empty");
             return new AccountOperateResult(AccountOperateEnum.OP_SIGNIN,false,"账户和密码不能为空");
         }
-        Account account=accountRepository.findByEmailAddress(emailAddress);
+        AccountInfo account=accountRepository.findByEmailAddress(emailAddress);
         if (account!=null&&password.equals(account.getPassword())){
            //用户存在
             logger.info("all things is right ");
@@ -85,7 +85,7 @@ public class AccountAuthServiceImpl implements AccountAuthService {
         if (accessKey.equals(accessKeyGet)){
             //成功匹配就把对象从缓存中取出信息录入数据库
             String accountObjKey=SIGN_UP_OBJECT_CACHE_KEY_PREFFIX+emailAddress;
-            Account account= (Account) redisTemplate.opsForValue().get(accountObjKey);
+            AccountInfo account= (AccountInfo) redisTemplate.opsForValue().get(accountObjKey);
             accountRepository.saveAccount(account);
             return new AccountOperateResult(AccountOperateEnum.OP_SIGNUP,true);
         }

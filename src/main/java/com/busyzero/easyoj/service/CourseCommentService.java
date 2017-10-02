@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.Comment;
+import com.busyzero.easyoj.entity.CourseComment;
 import com.busyzero.easyoj.dto.CommentOperateResult;
 
 import java.util.List;
@@ -17,7 +17,7 @@ public interface CourseCommentService {
      * @param page 页码
      * @return
      */
-    CommentOperateResult<List<Comment>> getCommentsByCourseId(int courseId,int page);
+    CommentOperateResult<List<CourseComment>> getCommentsByCourseId(int courseId, int page);
 
     /**
      * 根据用户账号编号获取评论信息
@@ -25,12 +25,12 @@ public interface CourseCommentService {
      * @param page 页码
      * @return
      */
-    CommentOperateResult<List<Comment>> getCommentsByAccountId(int accountId,int page);
+    CommentOperateResult<List<CourseComment>> getCommentsByAccountId(int accountId, int page);
 
     /**
      * 发布课程评论和打分
      * @param comment 评论对象
      * @return
      */
-    CommentOperateResult publishCourseComment(Comment comment);
+    CommentOperateResult publishCourseComment(CourseComment comment);
 }

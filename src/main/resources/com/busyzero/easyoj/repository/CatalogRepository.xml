@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.busyzero.easyoj.repository.CatalogRepository">
+<mapper namespace="com.busyzero.easyoj.repository.CourseCatalogRepository">
 
     <cache
             eviction="FIFO"
@@ -12,12 +12,12 @@
 
     <insert id="save" parameterType="catalog">
         INSERT INTO catalog(catalog_name,catalog_description)
-        VALUES (#{catalogName},#{catalogDescription})
+        VALUES (#{catalogName},#{catalogDesc})
     </insert>
 
     <insert id="saveAll" parameterType="catalog">
         INSERT INTO catalog(catalog_name,catalog_description)
-        VALUES (#{catalogName},#{catalogDescription})
+        VALUES (#{catalogName},#{catalogDesc})
     </insert>
 
     <select id="findByCatalogId" resultMap="catalogMap" useCache="true">
@@ -54,7 +54,7 @@
     <update id="updateCatalog" parameterType="catalog">
         UPDATE catalog
         SET catalog_name=#{catalogName}
-        catalog_description=#{catalogDescription}
+        catalog_description=#{catalogDesc}
         WHERE catalog_id=#{catalogId}
     </update>
 
@@ -66,7 +66,7 @@
     <resultMap id="catalogMap" type="catalog">
         <result property="catalogId" column="a_catalog_id"/>
         <result property="catalogName" column="a_catalog_name"/>
-        <result property="catalogDescription" column="a_catalog_description"/>
+        <result property="catalogDesc" column="a_catalog_description"/>
         <result property="gmtCreate" column="a_gmt_create"/>
         <result property="gmtModified" column="a_gmt_modified"/>
         <collection property="subjectList" ofType="subject">

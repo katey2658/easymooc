@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Subject;
+import com.busyzero.easyoj.entity.CourseSubject;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
 import com.busyzero.easyoj.service.CourseInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +26,10 @@ public class SubjectController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    public SubjectOperateResult<Subject> requestCoursesList(){
+    public SubjectOperateResult<CourseSubject> requestCoursesList(){
         final short DEFAULT_SUBJECT_ID=1;
         final int DEFAULT_PAGE=1;
-        SubjectOperateResult<Subject> result = courseInfoService.getSubjectBySubjectIdAndPage(DEFAULT_SUBJECT_ID,DEFAULT_PAGE);
+        SubjectOperateResult<CourseSubject> result = courseInfoService.getSubjectBySubjectIdAndPage(DEFAULT_SUBJECT_ID,DEFAULT_PAGE);
         return result;
     }
 
@@ -40,9 +40,9 @@ public class SubjectController {
      * @return
      */
     @RequestMapping(value = "/{subjectId}",method = RequestMethod.GET)
-    public SubjectOperateResult<Subject> requestSubject(@PathVariable("subjectId")short subjectId,
-                                                        @RequestParam(value = "page",defaultValue ="1") int page){
-        SubjectOperateResult<Subject> result = courseInfoService.getSubjectBySubjectIdAndPage(subjectId,page);
+    public SubjectOperateResult<CourseSubject> requestSubject(@PathVariable("subjectId")short subjectId,
+                                                              @RequestParam(value = "page",defaultValue ="1") int page){
+        SubjectOperateResult<CourseSubject> result = courseInfoService.getSubjectBySubjectIdAndPage(subjectId,page);
         return result;
     }
 }

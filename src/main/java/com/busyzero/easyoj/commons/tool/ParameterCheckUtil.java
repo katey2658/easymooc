@@ -5,5 +5,4 @@ package com.busyzero.easyoj.commons.tool;
  * @author 11456
  */
 public class ParameterCheckUtil extends AbstactObjectCheckUtil {
-
 }

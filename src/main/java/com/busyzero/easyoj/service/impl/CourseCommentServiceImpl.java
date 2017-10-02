@@ -1,9 +1,9 @@
 package com.busyzero.easyoj.service.impl;
 
-import com.busyzero.easyoj.domain.Comment;
+import com.busyzero.easyoj.entity.CourseComment;
 import com.busyzero.easyoj.dto.CommentOperateResult;
 import com.busyzero.easyoj.enums.DateOperateEnum;
-import com.busyzero.easyoj.repository.CommentRepository;
+import com.busyzero.easyoj.repository.CourseCommentRepository;
 import com.busyzero.easyoj.service.CourseCommentService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,7 +23,7 @@ public class CourseCommentServiceImpl implements CourseCommentService {
 
     /**关于评论信息表的访问接口*/
     @Autowired
-    private CommentRepository commentRepository;
+    private CourseCommentRepository commentRepository;
 
     /**
      * 提供课程相关评论
@@ -32,10 +32,10 @@ public class CourseCommentServiceImpl implements CourseCommentService {
      * @return
      */
     @Override
-    public CommentOperateResult<List<Comment>> getCommentsByCourseId(int courseId, int page) {
-        CommentOperateResult<List<Comment>> result=null;
+    public CommentOperateResult<List<CourseComment>> getCommentsByCourseId(int courseId, int page) {
+        CommentOperateResult<List<CourseComment>> result=null;
         final int offset=page*PAGE_LIMIT;
-        List<Comment> commentList=commentRepository.listAllByCourseId(courseId,offset,PAGE_LIMIT);
+        List<CourseComment> commentList=commentRepository.listAllByCourseId(courseId,offset,PAGE_LIMIT);
         if(commentList==null){
             final String MSG_ERROR="所访问信息不存在";
             result=new CommentOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
@@ -52,10 +52,10 @@ public class CourseCommentServiceImpl implements CourseCommentService {
      * @return
      */
     @Override
-    public CommentOperateResult<List<Comment>> getCommentsByAccountId(int accountId, int page) {
-        CommentOperateResult<List<Comment>> result=null;
+    public CommentOperateResult<List<CourseComment>> getCommentsByAccountId(int accountId, int page) {
+        CommentOperateResult<List<CourseComment>> result=null;
         final int offset=page*PAGE_LIMIT;
-        List<Comment> commentList=commentRepository.listAllByAccountId(accountId,offset,PAGE_LIMIT);
+        List<CourseComment> commentList=commentRepository.listAllByAccountId(accountId,offset,PAGE_LIMIT);
         if(commentList==null){
             final String MSG_ERROR="所访问信息不存在";
             result=new CommentOperateResult<>(DateOperateEnum.OP_QUERY_BATCH,false,MSG_ERROR);
@@ -71,7 +71,7 @@ public class CourseCommentServiceImpl implements CourseCommentService {
      * @return
      */
     @Override
-    public CommentOperateResult publishCourseComment(Comment comment) {
+    public CommentOperateResult publishCourseComment(CourseComment comment) {
         //TODO: katey2658 2017/8/16 想一下关于这个校验放在哪里比较好，还是选择做一个工具类
         //结果码
         final int code=commentRepository.save(comment);

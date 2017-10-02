@@ -5,6 +5,16 @@ package com.busyzero.easyoj.commons.exception;
  * @author katey2658
  */
 public enum ExceptionCodeEnum {
+    VERIFICATION_NOT_FOUND(8101,"验证编码实例不存在"),
+    VERIFICATION_ERROR_INPUT(8102,"验证码输入错误"),
+    VERIFICATION_ERROR_INPUT_MAX(8103,"验证码错误达到最大次数"),
+    VERIFICATION_ERROR_OVERTIME(8104,"验证码已经失效"),
+
+    ACCOUNTINFO_NOT_FOUND(8201,"账户信息不存在"),
+    ACCOUNTINFO_EMAIL_NOT_EQUAL(8202,"账户信息中注册邮箱不符合"),
+    ACCPOUNTINFO_PARAMETER_ERROR(8203,"参数校验失败或不合法"),
+
+    MAIL_SEND_ERROR(8301,"邮件发送失败")
     ;
 
     /**错误码*/

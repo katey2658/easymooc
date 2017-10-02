@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.QuestionReply;
+import com.busyzero.easyoj.entity.CourseQuestion;
 
 import java.util.List;
 
@@ -15,5 +15,5 @@ public interface QuestionAndReplyService {
      * @param courseId
      * @return
      */
-    List<QuestionReply> queryQuestionReplyByCourseId(Integer courseId);
+    List<CourseQuestion> queryQuestionReplyByCourseId(Integer courseId);
 }

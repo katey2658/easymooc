@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.domain.Comment;
+import com.busyzero.easyoj.entity.CourseComment;
 import com.busyzero.easyoj.dto.CommentOperateResult;
 import com.busyzero.easyoj.service.CourseCommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +39,7 @@ public class CommentController {
      * @return
      */
     @RequestMapping(value = "/{courseId}",method = RequestMethod.POST)
-    public CommentOperateResult requestPublishCourseComment(Comment comment){
+    public CommentOperateResult requestPublishCourseComment(CourseComment comment){
         CommentOperateResult result=courseCommentService.publishCourseComment(comment);
         return result;
     }

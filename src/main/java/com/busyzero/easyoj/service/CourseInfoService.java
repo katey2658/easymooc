@@ -1,8 +1,8 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.Catalog;
-import com.busyzero.easyoj.domain.Course;
-import com.busyzero.easyoj.domain.Subject;
+import com.busyzero.easyoj.entity.CourseCatalog;
+import com.busyzero.easyoj.entity.CourseInfo;
+import com.busyzero.easyoj.entity.CourseSubject;
 import com.busyzero.easyoj.dto.CatalogOperateResult;
 import com.busyzero.easyoj.dto.CourseOperateResult;
 import com.busyzero.easyoj.dto.SubjectOperateResult;
@@ -23,7 +23,7 @@ public interface CourseInfoService {
      * 内容就显得有很多意义了。
      * @return
      */
-    CatalogOperateResult<List<Catalog>> getCatalogList();
+    CatalogOperateResult<List<CourseCatalog>> getCatalogList();
 
     /**
      * 根据页面数据获取学科目录下的课程数据信息
@@ -31,7 +31,7 @@ public interface CourseInfoService {
      * @param page 页码
      * @return
      */
-    SubjectOperateResult<Subject> getSubjectBySubjectIdAndPage(short subjectId, int page);
+    SubjectOperateResult<CourseSubject> getSubjectBySubjectIdAndPage(short subjectId, int page);
 
     /**
      * 根据学科编号获取对应的课程数据
@@ -39,12 +39,12 @@ public interface CourseInfoService {
      * @param page
      * @return
      */
-    CourseOperateResult<List<Course>> getCoursesBySubjectIdAndPage(short subjectId, int page);
+    CourseOperateResult<List<CourseInfo>> getCoursesBySubjectIdAndPage(short subjectId, int page);
 
     /**
      * 根据课程编号来获取特定的课程概述信息
      * @param courseId 课程编号
      * @return
      */
-    CourseOperateResult<Course> getCourseInfoByCourseId(int courseId);
+    CourseOperateResult<CourseInfo> getCourseInfoByCourseId(int courseId);
 }

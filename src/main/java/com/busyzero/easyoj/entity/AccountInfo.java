@@ -1,4 +1,4 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
@@ -10,8 +10,9 @@ import java.util.List;
  * 用户账户信息表
  * Created by 11456 on 2017/6/22.
  */
-@Alias("account")
-public class Account implements Serializable {
+@Alias("accountInfo")
+public class AccountInfo implements Serializable {
+    private static final long serialVersionUID = 78878676127816778L;
 
     /**账户编号*/
     private Integer accountId;
@@ -25,17 +26,17 @@ public class Account implements Serializable {
     /**邮箱地址*/
     private String emailAddress;
 
-    /** 账户类型 1:学生  2：教师*/
+    /** 账户类型 1:学生  2：教师 */
     private String accountType;
 
-    /**密码*/
+    /**密码：MD5加密*/
     private String password;
 
     /**用户性别:0 无 1男 2女*/
-    private Short gender;
+    private Integer gender;
 
     /**用户年龄*/
-    private Short age;
+    private Integer age;
 
     /** 职业*/
     private String profession;
@@ -53,10 +54,10 @@ public class Account implements Serializable {
     private String accountPhoto;
 
     /**账户状态： 0：正常  1.等待激活  2.注销  3.冻结 */
-    private Short accountState;
+    private Integer accountState;
 
     /**会员等级*/
-    private Short accountLevel;
+    private Integer accountLevel;
 
     /**地址*/
     private Integer address;
@@ -118,19 +119,19 @@ public class Account implements Serializable {
         this.password = password;
     }
 
-    public Short getGender() {
+    public Integer getGender() {
         return gender;
     }
 
-    public void setGender(Short gender) {
+    public void setGender(Integer gender) {
         this.gender = gender;
     }
 
-    public Short getAge() {
+    public Integer getAge() {
         return age;
     }
 
-    public void setAge(Short age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 
@@ -174,19 +175,19 @@ public class Account implements Serializable {
         this.accountPhoto = accountPhoto;
     }
 
-    public Short getAccountState() {
+    public Integer getAccountState() {
         return accountState;
     }
 
-    public void setAccountState(Short accountState) {
+    public void setAccountState(Integer accountState) {
         this.accountState = accountState;
     }
 
-    public Short getAccountLevel() {
+    public Integer getAccountLevel() {
         return accountLevel;
     }
 
-    public void setAccountLevel(Short accountLevel) {
+    public void setAccountLevel(Integer accountLevel) {
         this.accountLevel = accountLevel;
     }
 
@@ -224,7 +225,7 @@ public class Account implements Serializable {
 
     @Override
     public String toString() {
-        return "Account{" +
+        return "AccountInfo{" +
                 "accountId=" + accountId +
                 ", accountNo='" + accountNo + '\'' +
                 ", mobile='" + mobile + '\'' +

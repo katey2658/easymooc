@@ -1,26 +1,56 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.domain.Account;
-import com.busyzero.easyoj.dto.AccountOperateResult;
-import java.util.Locale;
+import com.busyzero.easyoj.commons.result.Result;
+import org.thymeleaf.context.Context;
+
 
 /**
- * 邮件服务接口
+ * 邮件服务接口:
+ * 说明 邮件服务接口只负责发送，不管参数是什么
  * Created by 11456 on 2017/6/23.
  */
 public interface EmailService {
-
     /**
-     * 账户注册的时候的需要发送给邮箱验证
-     * @param account
+     * 发送邮箱绑定邮件
+     *
+     * @param result
+     * @param emailAddress
+     * @param context
      * @return
      */
-    AccountOperateResult emailAddressSignUp(Account account, Locale locale) ;
+    Result<Boolean> sendEmailBindVerification(Result<Boolean> result, String emailAddress, Context context);
 
     /**
-     * 忘记密码时候发送的邮箱验证
+     * 发送邮箱解绑邮件
+     * @param result
+     * @param emailAddress
+     * @param context
+     * @return
+     */
+    Result<Boolean> sendEmailUnbundVerification(Result<Boolean> result,String emailAddress,Context context);
+
+    /**
+     * 发送数字验证码
+     * @param result
+     * @param emailAddress
+     * @param context
+     * @return
+     */
+    Result<Boolean> sendNumberVerification(Result<Boolean> result,String emailAddress,String number,Context context);
+
+    /**
+     * 发送推广邮件
+     * @param result
      * @param emailAddress
      * @return
      */
-    AccountOperateResult passwordReset(String emailAddress,Locale locale);
+    Result<Boolean> sendDirectMail(Result<Boolean> result,String emailAddress);
+
+    /**
+     * 发送课程消息模板
+     * @param result
+     * @param emailAddress
+     * @return
+     */
+    Result<Boolean> sendCourseInfoMail(Result<Boolean> result,String emailAddress);
 }

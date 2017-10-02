@@ -1,7 +1,8 @@
-package com.busyzero.easyoj.domain;
+package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
@@ -10,8 +11,10 @@ import java.util.List;
  * 课程信息表
  * Created by 11456 on 2017/6/22.
  */
-@Alias("course")
-public class Course {
+@Alias("courseInfo")
+public class CourseInfo implements Serializable {
+    private static final long serialVersionUID = 78878676127816781L;
+
     /**课程编号*/
     private Integer courseId;
 
@@ -20,6 +23,12 @@ public class Course {
 
     /**课程名*/
     private String courseName;
+
+    /**是否公开*/
+    private Boolean overt;
+
+    /**当不公开的时候的邀请码*/
+    private String inviteCode;
 
     /**课程概述*/
     private String description;
@@ -30,29 +39,20 @@ public class Course {
     /**课程图片*/
     private String courseImage;
 
-    /**课程提供方名字称*/
-    private String providerName;
-
-    /**课程提供方logo*/
-    private String providerLogo;
-
-    /**课程提供方ID*/
-    private Integer providerId;
-
     /**授课老师头像*/
     private String teacherPhoto;
 
     /**授课老师全名*/
     private String teacherName;
 
+    /**教学方教师编号*/
+    private Integer teacherId;
+
     /**授课老师职称*/
     private String teacherJobTitle;
 
     /**授课教师签名*/
     private String teacherSignature;
-
-    /**教学方教师编号*/
-    private Integer teacherId;
 
     /**课程开始时间*/
     private Instant timeStart;
@@ -72,6 +72,12 @@ public class Course {
     /**通过课程条件*/
     private String passCondition;
 
+    /**学生限制*/
+    private String maxNumber;
+
+    /**课程状态:1.审核中  2.正常  3. 还没有开始  4.满员  5.冻结  6.过期 */
+    private Short courseState;
+
     /**有证书价格*/
     private BigDecimal priceWithCertificate;
 
@@ -84,17 +90,14 @@ public class Course {
     /**最后修改时间*/
     private Instant gmtModified;
 
-    /**提供方信息*/
-    private Provider provider;
-
     /** 教学方信息*/
-    private Teacher teacher;
+    private AccountInfo teacher;
 
     /**课程列表加回答*/
-    private List<QuestionReply> questionReplyList;
+    private List<CourseQuestion> courseQuestionList;
 
     /**评论信息列表:只取4条暂时*/
-    private List<Comment>commentList;
+    private List<CourseComment> courseCommentList;
 
     /**授课大纲信息表：只存放一周*/
     private List<WeekTask> weekTaskList;
@@ -123,6 +126,22 @@ public class Course {
         this.courseName = courseName;
     }
 
+    public Boolean getOvert() {
+        return overt;
+    }
+
+    public void setOvert(Boolean overt) {
+        this.overt = overt;
+    }
+
+    public String getInviteCode() {
+        return inviteCode;
+    }
+
+    public void setInviteCode(String inviteCode) {
+        this.inviteCode = inviteCode;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -147,30 +166,6 @@ public class Course {
         this.courseImage = courseImage;
     }
 
-    public String getProviderName() {
-        return providerName;
-    }
-
-    public void setProviderName(String providerName) {
-        this.providerName = providerName;
-    }
-
-    public String getProviderLogo() {
-        return providerLogo;
-    }
-
-    public void setProviderLogo(String providerLogo) {
-        this.providerLogo = providerLogo;
-    }
-
-    public Integer getProviderId() {
-        return providerId;
-    }
-
-    public void setProviderId(Integer providerId) {
-        this.providerId = providerId;
-    }
-
     public String getTeacherPhoto() {
         return teacherPhoto;
     }
@@ -187,6 +182,14 @@ public class Course {
         this.teacherName = teacherName;
     }
 
+    public Integer getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(Integer teacherId) {
+        this.teacherId = teacherId;
+    }
+
     public String getTeacherJobTitle() {
         return teacherJobTitle;
     }
@@ -201,14 +204,6 @@ public class Course {
 
     public void setTeacherSignature(String teacherSignature) {
         this.teacherSignature = teacherSignature;
-    }
-
-    public Integer getTeacherId() {
-        return teacherId;
-    }
-
-    public void setTeacherId(Integer teacherId) {
-        this.teacherId = teacherId;
     }
 
     public Instant getTimeStart() {
@@ -259,6 +254,22 @@ public class Course {
         this.passCondition = passCondition;
     }
 
+    public String getMaxNumber() {
+        return maxNumber;
+    }
+
+    public void setMaxNumber(String maxNumber) {
+        this.maxNumber = maxNumber;
+    }
+
+    public Short getCourseState() {
+        return courseState;
+    }
+
+    public void setCourseState(Short courseState) {
+        this.courseState = courseState;
+    }
+
     public BigDecimal getPriceWithCertificate() {
         return priceWithCertificate;
     }
@@ -291,36 +302,32 @@ public class Course {
         this.gmtModified = gmtModified;
     }
 
-    public Provider getProvider() {
-        return provider;
-    }
-
-    public void setProvider(Provider provider) {
-        this.provider = provider;
-    }
-
-    public Teacher getTeacher() {
+    public AccountInfo getTeacher() {
         return teacher;
     }
 
-    public void setTeacher(Teacher teacher) {
+    public void setTeacher(AccountInfo teacher) {
         this.teacher = teacher;
     }
 
-    public List<QuestionReply> getQuestionReplyList() {
-        return questionReplyList;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public void setQuestionReplyList(List<QuestionReply> questionReplyList) {
-        this.questionReplyList = questionReplyList;
+    public List<CourseQuestion> getCourseQuestionList() {
+        return courseQuestionList;
     }
 
-    public List<Comment> getCommentList() {
-        return commentList;
+    public void setCourseQuestionList(List<CourseQuestion> courseQuestionList) {
+        this.courseQuestionList = courseQuestionList;
     }
 
-    public void setCommentList(List<Comment> commentList) {
-        this.commentList = commentList;
+    public List<CourseComment> getCourseCommentList() {
+        return courseCommentList;
+    }
+
+    public void setCourseCommentList(List<CourseComment> courseCommentList) {
+        this.courseCommentList = courseCommentList;
     }
 
     public List<WeekTask> getWeekTaskList() {
@@ -333,35 +340,35 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
+        return "CourseInfo{" +
                 "courseId=" + courseId +
                 ", subjectId=" + subjectId +
                 ", courseName='" + courseName + '\'' +
+                ", overt=" + overt +
+                ", inviteCode='" + inviteCode + '\'' +
                 ", description='" + description + '\'' +
                 ", preCondition='" + preCondition + '\'' +
                 ", courseImage='" + courseImage + '\'' +
-                ", providerName='" + providerName + '\'' +
-                ", providerLogo='" + providerLogo + '\'' +
-                ", providerId=" + providerId +
                 ", teacherPhoto='" + teacherPhoto + '\'' +
                 ", teacherName='" + teacherName + '\'' +
+                ", teacherId=" + teacherId +
                 ", teacherJobTitle='" + teacherJobTitle + '\'' +
                 ", teacherSignature='" + teacherSignature + '\'' +
-                ", teacherId=" + teacherId +
                 ", timeStart=" + timeStart +
                 ", timeEnd=" + timeEnd +
                 ", studentLevel='" + studentLevel + '\'' +
                 ", timeLearn='" + timeLearn + '\'' +
                 ", languageToTeach='" + languageToTeach + '\'' +
                 ", passCondition='" + passCondition + '\'' +
+                ", maxNumber='" + maxNumber + '\'' +
+                ", courseState=" + courseState +
                 ", priceWithCertificate=" + priceWithCertificate +
                 ", priceWithNoCertificate=" + priceWithNoCertificate +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
-                ", provider=" + provider +
                 ", teacher=" + teacher +
-                ", questionReplyList=" + questionReplyList +
-                ", commentList=" + commentList +
+                ", courseQuestionList=" + courseQuestionList +
+                ", courseCommentList=" + courseCommentList +
                 ", weekTaskList=" + weekTaskList +
                 '}';
     }
