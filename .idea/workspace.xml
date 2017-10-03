@@ -5,81 +5,13 @@
       <artifact name="easyoj:war exploded" />
     </artifacts-to-build>
   </component>
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/pom.xml" line="386" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="84" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseQuestionRepository.java" line="31" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="9" />
-    <bookmark url="file://$PROJECT_DIR$/src/main/sql/scheme.sql" line="144" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="d469e7a6-b32c-4355-818d-331f2692c2b0" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Provider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Subject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Teacher.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/exception/ExceptionCodeEnum.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/result/Result.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterCheckUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/service/SpringMailConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AccountInfoController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CatalogController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CatalogController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CommentController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CommentController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/CourseInfoController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/QuestionReplyController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/QuestionReplyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/SubjectController.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/SubjectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CoursePurchasedRecordRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskItemRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/TaskRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/VideoInfoRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/WeekTaskRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseCommentService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseCommentService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/EmailService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/QuestionAndReplyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/QuestionAndReplyService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCommentServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCommentServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseInfoServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseInfoServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/QuestionAndReplyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/QuestionAndReplyServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/AccountRepository.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CatalogRepository.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CommentRepository.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/CourseRepository.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/QuestionReplyRepository.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" afterPath="$PROJECT_DIR$/src/main/resources/com/busyzero/easyoj/repository/SubjectRepository.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/sql/scheme.sql" afterPath="$PROJECT_DIR$/src/main/sql/scheme.sql" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/error.png" afterPath="$PROJECT_DIR$/shot/error.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/sign-in.png" afterPath="$PROJECT_DIR$/shot/sign-in.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/descImg/sign-up.png" afterPath="$PROJECT_DIR$/shot/sign-up.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Catalog.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseCatalog.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Comment.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseComment.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Course.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/CoursePurchasedRecord.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/QuestionReply.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Task.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Task.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/TaskItem.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/TaskItem.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/VideoInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/VideoInfo.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/WeekTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/WeekTask.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Wiki.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Wiki.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountInfoRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CatalogRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseCatalogRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CommentRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseCommentRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseInfoRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/QuestionReplyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseQuestionRepository.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/SubjectRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/CourseSubjectRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/QuestionAndReplyService.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseQuestionService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/QuestionAndReplyServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCourseQuestionServiceImpl.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/easyoj-service-partner-api/target/" />
@@ -115,12 +47,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AccountAuthService.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java">
+      <file leaf-file-name="QuizRecordItem.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizRecordItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="331">
-              <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-              <folding />
+            <state relative-caret-position="214">
+              <caret line="254" column="18" lean-forward="false" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+              <folding>
+                <element signature="e#1748#1749#0" expanded="true" />
+                <element signature="e#1777#1778#0" expanded="true" />
+                <element signature="e#1822#1823#0" expanded="true" />
+                <element signature="e#1858#1859#0" expanded="true" />
+                <element signature="e#1898#1899#0" expanded="true" />
+                <element signature="e#1933#1934#0" expanded="true" />
+                <element signature="e#1990#1991#0" expanded="true" />
+                <element signature="e#2038#2039#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,10 +134,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtUserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/JwtAuthenticationTokenFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/security/AuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/ParameterValidate.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/tool/AbstactObjectCheckUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/exception/AccountRegisterException.java" />
@@ -213,10 +150,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/controller/VerificationCodeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/domain/Account.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Subject.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/mvc/WebConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/config/persistence/RootDaoConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Catalog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/SubjectInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseSubject.java" />
@@ -225,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseComment.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java" />
-        <option value="$PROJECT_DIR$/src/main/sql/scheme.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/repository/AccountVerificationRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/AccountVerification.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/commons/constants/VerificationConstants.java" />
@@ -244,6 +178,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/EmailServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/VerificationCodeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/sql/scheme.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizTask.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizItem.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizRecordItem.java" />
       </list>
     </option>
   </component>
@@ -301,9 +242,11 @@
     </option>
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="width" value="1366" />
-    <option name="height" value="768" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1378" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -355,6 +298,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="easyoj" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="easyoj" type="b2602c69:ProjectViewProjectNode" />
@@ -951,12 +903,12 @@
       <workItem from="1506653225965" duration="25738000" />
       <workItem from="1506733558485" duration="8923000" />
       <workItem from="1506752378566" duration="2657000" />
-      <workItem from="1506755909747" duration="49270000" />
+      <workItem from="1506755909747" duration="77846000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1466608000" />
+    <option name="totallyTimeSpent" value="1495184000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -968,7 +920,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1366" height="768" extended-state="6" />
+    <frame x="0" y="0" width="1366" height="768" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -979,9 +932,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.61616164" sideWeight="0.4969743" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35209236" sideWeight="0.4969743" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.43290043" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19515885" sideWeight="0.43290043" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23373677" sideWeight="0.5670996" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Compute Code Lines" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32756132" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1038,7 +991,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1047,96 +1000,10 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/util/concurrent/CompletableFuture.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="2035" column="59" lean-forward="true" selection-start-line="2035" selection-start-column="59" selection-end-line="2035" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/Clock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="214">
-          <caret line="497" column="8" lean-forward="false" selection-start-line="497" selection-start-column="8" selection-end-line="497" selection-end-column="8" />
-          <folding>
-            <element signature="e#7523#7524#0" expanded="false" />
-            <element signature="e#7585#7586#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/LocalDate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="197" column="30" lean-forward="false" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
-          <folding>
-            <element signature="e#7237#7238#0" expanded="false" />
-            <element signature="e#7290#7291#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/temporal/TemporalField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="113" column="10" lean-forward="true" selection-start-line="113" selection-start-column="10" selection-end-line="113" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/Month.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3288">
-          <caret line="105" column="12" lean-forward="false" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/temporal/ChronoField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="218" column="28" lean-forward="true" selection-start-line="218" selection-start-column="28" selection-end-line="218" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/InstantMessingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/Duration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="141" column="7" lean-forward="true" selection-start-line="141" selection-start-column="7" selection-end-line="141" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Teacher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/Provider.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/TaskItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-787">
-          <caret line="78" column="19" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1213,36 +1080,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CoursePurchasedRecord.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="222">
           <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="66" lean-forward="false" selection-start-line="13" selection-start-column="66" selection-end-line="13" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseSubject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="104" column="5" lean-forward="true" selection-start-line="104" selection-start-column="5" selection-end-line="104" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1273,7 +1114,7 @@
         <state relative-caret-position="383">
           <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1291,8 +1132,8 @@
         <state relative-caret-position="499">
           <caret line="75" column="33" lean-forward="true" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
           <folding>
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#546#547#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1350,14 +1191,14 @@
         <state relative-caret-position="260">
           <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
-            <element signature="e#497#498#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#636#637#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="false" />
+            <element signature="e#525#526#0" expanded="false" />
+            <element signature="e#568#569#0" expanded="false" />
+            <element signature="e#602#603#0" expanded="false" />
+            <element signature="e#636#637#0" expanded="false" />
+            <element signature="e#666#667#0" expanded="false" />
+            <element signature="e#712#713#0" expanded="false" />
+            <element signature="e#750#751#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1367,7 +1208,7 @@
         <state relative-caret-position="204">
           <caret line="58" column="26" lean-forward="false" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1401,14 +1242,14 @@
         <state relative-caret-position="305">
           <caret line="29" column="27" lean-forward="true" selection-start-line="29" selection-start-column="27" selection-end-line="29" selection-end-column="27" />
           <folding>
-            <element signature="e#487#488#0" expanded="true" />
-            <element signature="e#515#516#0" expanded="true" />
-            <element signature="e#558#559#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-            <element signature="e#740#741#0" expanded="true" />
+            <element signature="e#487#488#0" expanded="false" />
+            <element signature="e#515#516#0" expanded="false" />
+            <element signature="e#558#559#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#626#627#0" expanded="false" />
+            <element signature="e#656#657#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1434,17 +1275,7 @@
         <state relative-caret-position="520">
           <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-468">
-          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1454,7 +1285,7 @@
         <state relative-caret-position="1326">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1464,10 +1295,10 @@
         <state relative-caret-position="130">
           <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <element signature="e#3959#3960#0" expanded="true" />
-            <element signature="e#3986#3987#0" expanded="true" />
-            <element signature="e#4093#4094#0" expanded="true" />
-            <element signature="e#4120#4121#0" expanded="true" />
+            <element signature="e#3959#3960#0" expanded="false" />
+            <element signature="e#3986#3987#0" expanded="false" />
+            <element signature="e#4093#4094#0" expanded="false" />
+            <element signature="e#4120#4121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1488,14 +1319,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/sql/scheme.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="55" column="51" lean-forward="true" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/AccountAuthServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3094">
@@ -1504,11 +1327,374 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="9" lean-forward="true" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/AccountAuthService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
+        <state relative-caret-position="345">
           <caret line="35" column="17" lean-forward="true" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/VerificationCodeServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3094">
+          <caret line="39" column="10" lean-forward="false" selection-start-line="39" selection-start-column="10" selection-end-line="39" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/PaperTestServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/impl/CourseCourseQuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-31">
+          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/service/CourseInfoService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/TaskItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="78" column="19" lean-forward="true" selection-start-line="78" selection-start-column="19" selection-end-line="78" selection-end-column="19" />
+          <folding>
+            <element signature="e#1324#1325#0" expanded="false" />
+            <element signature="e#1357#1358#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="26" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="90" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/dep-env/java/jdk-9/lib/src.zip!/java.base/java/time/Duration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-90">
+          <caret line="132" column="19" lean-forward="false" selection-start-line="132" selection-start-column="19" selection-end-line="132" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/scheme.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="206" column="0" lean-forward="true" selection-start-line="206" selection-start-column="0" selection-end-line="206" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/CourseSubject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" column="31" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="166" column="7" lean-forward="true" selection-start-line="166" selection-start-column="7" selection-end-line="166" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1794">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1525#1526#0" expanded="true" />
+            <element signature="e#1556#1557#0" expanded="true" />
+            <element signature="e#1602#1603#0" expanded="true" />
+            <element signature="e#1642#1643#0" expanded="true" />
+            <element signature="e#1673#1674#0" expanded="true" />
+            <element signature="e#1702#1703#0" expanded="true" />
+            <element signature="e#1744#1745#0" expanded="true" />
+            <element signature="e#1780#1781#0" expanded="true" />
+            <element signature="e#1817#1818#0" expanded="true" />
+            <element signature="e#1849#1850#0" expanded="true" />
+            <element signature="e#1900#1901#0" expanded="true" />
+            <element signature="e#1942#1943#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="e#2014#2015#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="e#2158#2159#0" expanded="true" />
+            <element signature="e#2197#2198#0" expanded="true" />
+            <element signature="e#2260#2261#0" expanded="true" />
+            <element signature="e#2316#2317#0" expanded="true" />
+            <element signature="e#2358#2359#0" expanded="true" />
+            <element signature="e#2395#2396#0" expanded="true" />
+            <element signature="e#2456#2457#0" expanded="true" />
+            <element signature="e#2508#2509#0" expanded="true" />
+            <element signature="e#2549#2550#0" expanded="true" />
+            <element signature="e#2587#2588#0" expanded="true" />
+            <element signature="e#2648#2649#0" expanded="true" />
+            <element signature="e#2702#2703#0" expanded="true" />
+            <element signature="e#2743#2744#0" expanded="true" />
+            <element signature="e#2779#2780#0" expanded="true" />
+            <element signature="e#2838#2839#0" expanded="true" />
+            <element signature="e#2888#2889#0" expanded="true" />
+            <element signature="e#2927#2928#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
+            <element signature="e#3020#3021#0" expanded="true" />
+            <element signature="e#3070#3071#0" expanded="true" />
+            <element signature="e#3114#3115#0" expanded="true" />
+            <element signature="e#3153#3154#0" expanded="true" />
+            <element signature="e#3218#3219#0" expanded="true" />
+            <element signature="e#3274#3275#0" expanded="true" />
+            <element signature="e#3311#3312#0" expanded="true" />
+            <element signature="e#3345#3346#0" expanded="true" />
+            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#3444#3445#0" expanded="true" />
+            <element signature="e#3486#3487#0" expanded="true" />
+            <element signature="e#3523#3524#0" expanded="true" />
+            <element signature="e#3584#3585#0" expanded="true" />
+            <element signature="e#3636#3637#0" expanded="true" />
+            <element signature="e#3676#3677#0" expanded="true" />
+            <element signature="e#3713#3714#0" expanded="true" />
+            <element signature="e#3772#3773#0" expanded="true" />
+            <element signature="e#3824#3825#0" expanded="true" />
+            <element signature="e#3869#3870#0" expanded="true" />
+            <element signature="e#3909#3910#0" expanded="true" />
+            <element signature="e#3976#3977#0" expanded="true" />
+            <element signature="e#4034#4035#0" expanded="true" />
+            <element signature="e#4070#4071#0" expanded="true" />
+            <element signature="e#4103#4104#0" expanded="true" />
+            <element signature="e#4154#4155#0" expanded="true" />
+            <element signature="e#4198#4199#0" expanded="true" />
+            <element signature="e#4239#4240#0" expanded="true" />
+            <element signature="e#4275#4276#0" expanded="true" />
+            <element signature="e#4334#4335#0" expanded="true" />
+            <element signature="e#4384#4385#0" expanded="true" />
+            <element signature="e#4419#4420#0" expanded="true" />
+            <element signature="e#4451#4452#0" expanded="true" />
+            <element signature="e#4500#4501#0" expanded="true" />
+            <element signature="e#4542#4543#0" expanded="true" />
+            <element signature="e#4578#4579#0" expanded="true" />
+            <element signature="e#4611#4612#0" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
+            <element signature="e#4743#4744#0" expanded="true" />
+            <element signature="e#4777#4778#0" expanded="true" />
+            <element signature="e#4830#4831#0" expanded="true" />
+            <element signature="e#4876#4877#0" expanded="true" />
+            <element signature="e#4913#4914#0" expanded="true" />
+            <element signature="e#4945#4946#0" expanded="true" />
+            <element signature="e#4996#4997#0" expanded="true" />
+            <element signature="e#5038#5039#0" expanded="true" />
+            <element signature="e#5073#5074#0" expanded="true" />
+            <element signature="e#5103#5104#0" expanded="true" />
+            <element signature="e#5150#5151#0" expanded="true" />
+            <element signature="e#5188#5189#0" expanded="true" />
+            <element signature="e#5225#5226#0" expanded="true" />
+            <element signature="e#5256#5257#0" expanded="true" />
+            <element signature="e#5306#5307#0" expanded="true" />
+            <element signature="e#5346#5347#0" expanded="true" />
+            <element signature="e#5383#5384#0" expanded="true" />
+            <element signature="e#5415#5416#0" expanded="true" />
+            <element signature="e#5466#5467#0" expanded="true" />
+            <element signature="e#5508#5509#0" expanded="true" />
+            <element signature="e#5547#5548#0" expanded="true" />
+            <element signature="e#5581#5582#0" expanded="true" />
+            <element signature="e#5636#5637#0" expanded="true" />
+            <element signature="e#5682#5683#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="103" column="20" lean-forward="true" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2185#2186#0" expanded="true" />
+            <element signature="e#2214#2215#0" expanded="true" />
+            <element signature="e#2256#2257#0" expanded="true" />
+            <element signature="e#2292#2293#0" expanded="true" />
+            <element signature="e#2328#2329#0" expanded="true" />
+            <element signature="e#2359#2360#0" expanded="true" />
+            <element signature="e#2408#2409#0" expanded="true" />
+            <element signature="e#2448#2449#0" expanded="true" />
+            <element signature="e#2484#2485#0" expanded="true" />
+            <element signature="e#2517#2518#0" expanded="true" />
+            <element signature="e#2568#2569#0" expanded="true" />
+            <element signature="e#2612#2613#0" expanded="true" />
+            <element signature="e#2649#2650#0" expanded="true" />
+            <element signature="e#2683#2684#0" expanded="true" />
+            <element signature="e#2736#2737#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#2826#2827#0" expanded="true" />
+            <element signature="e#2866#2867#0" expanded="true" />
+            <element signature="e#2932#2933#0" expanded="true" />
+            <element signature="e#2990#2991#0" expanded="true" />
+            <element signature="e#3024#3025#0" expanded="true" />
+            <element signature="e#3055#3056#0" expanded="true" />
+            <element signature="e#3102#3103#0" expanded="true" />
+            <element signature="e#3142#3143#0" expanded="true" />
+            <element signature="e#3177#3178#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
+            <element signature="e#3258#3259#0" expanded="true" />
+            <element signature="e#3300#3301#0" expanded="true" />
+            <element signature="e#3338#3339#0" expanded="true" />
+            <element signature="e#3372#3373#0" expanded="true" />
+            <element signature="e#3426#3427#0" expanded="true" />
+            <element signature="e#3472#3473#0" expanded="true" />
+            <element signature="e#3509#3510#0" expanded="true" />
+            <element signature="e#3542#3543#0" expanded="true" />
+            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#3638#3639#0" expanded="true" />
+            <element signature="e#3672#3673#0" expanded="true" />
+            <element signature="e#3702#3703#0" expanded="true" />
+            <element signature="e#3748#3749#0" expanded="true" />
+            <element signature="e#3786#3787#0" expanded="true" />
+            <element signature="e#3820#3821#0" expanded="true" />
+            <element signature="e#3849#3850#0" expanded="true" />
+            <element signature="e#3894#3895#0" expanded="true" />
+            <element signature="e#3930#3931#0" expanded="true" />
+            <element signature="e#3964#3965#0" expanded="true" />
+            <element signature="e#3994#3995#0" expanded="true" />
+            <element signature="e#4040#4041#0" expanded="true" />
+            <element signature="e#4078#4079#0" expanded="true" />
+            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#4141#4142#0" expanded="true" />
+            <element signature="e#4186#4187#0" expanded="true" />
+            <element signature="e#4222#4223#0" expanded="true" />
+            <element signature="e#4256#4257#0" expanded="true" />
+            <element signature="e#4286#4287#0" expanded="true" />
+            <element signature="e#4332#4333#0" expanded="true" />
+            <element signature="e#4370#4371#0" expanded="true" />
+            <element signature="e#4404#4405#0" expanded="true" />
+            <element signature="e#4433#4434#0" expanded="true" />
+            <element signature="e#4478#4479#0" expanded="true" />
+            <element signature="e#4514#4515#0" expanded="true" />
+            <element signature="e#4548#4549#0" expanded="true" />
+            <element signature="e#4578#4579#0" expanded="true" />
+            <element signature="e#4624#4625#0" expanded="true" />
+            <element signature="e#4662#4663#0" expanded="true" />
+            <element signature="e#4696#4697#0" expanded="true" />
+            <element signature="e#4725#4726#0" expanded="true" />
+            <element signature="e#4770#4771#0" expanded="true" />
+            <element signature="e#4806#4807#0" expanded="true" />
+            <element signature="e#4840#4841#0" expanded="true" />
+            <element signature="e#4870#4871#0" expanded="true" />
+            <element signature="e#4916#4917#0" expanded="true" />
+            <element signature="e#4954#4955#0" expanded="true" />
+            <element signature="e#4988#4989#0" expanded="true" />
+            <element signature="e#5017#5018#0" expanded="true" />
+            <element signature="e#5062#5063#0" expanded="true" />
+            <element signature="e#5098#5099#0" expanded="true" />
+            <element signature="e#5138#5139#0" expanded="true" />
+            <element signature="e#5175#5176#0" expanded="true" />
+            <element signature="e#5234#5235#0" expanded="true" />
+            <element signature="e#5286#5287#0" expanded="true" />
+            <element signature="e#5322#5323#0" expanded="true" />
+            <element signature="e#5354#5355#0" expanded="true" />
+            <element signature="e#5404#5405#0" expanded="true" />
+            <element signature="e#5446#5447#0" expanded="true" />
+            <element signature="e#5482#5483#0" expanded="true" />
+            <element signature="e#5514#5515#0" expanded="true" />
+            <element signature="e#5564#5565#0" expanded="true" />
+            <element signature="e#5606#5607#0" expanded="true" />
+            <element signature="e#5642#5643#0" expanded="true" />
+            <element signature="e#5674#5675#0" expanded="true" />
+            <element signature="e#5724#5725#0" expanded="true" />
+            <element signature="e#5766#5767#0" expanded="true" />
+            <element signature="e#5804#5805#0" expanded="true" />
+            <element signature="e#5838#5839#0" expanded="true" />
+            <element signature="e#5892#5893#0" expanded="true" />
+            <element signature="e#5938#5939#0" expanded="true" />
+            <element signature="e#5979#5980#0" expanded="true" />
+            <element signature="e#6016#6017#0" expanded="true" />
+            <element signature="e#6076#6077#0" expanded="true" />
+            <element signature="e#6128#6129#0" expanded="true" />
+            <element signature="e#6180#6181#0" expanded="true" />
+            <element signature="e#6228#6229#0" expanded="true" />
+            <element signature="e#6417#6418#0" expanded="true" />
+            <element signature="e#6446#6447#0" expanded="true" />
+            <element signature="e#6490#6491#0" expanded="true" />
+            <element signature="e#6526#6527#0" expanded="true" />
+            <element signature="e#6570#6571#0" expanded="true" />
+            <element signature="e#6611#6612#0" expanded="true" />
+            <element signature="e#6678#6679#0" expanded="true" />
+            <element signature="e#6738#6739#0" expanded="true" />
+            <element signature="e#6782#6783#0" expanded="true" />
+            <element signature="e#6823#6824#0" expanded="true" />
+            <element signature="e#6890#6891#0" expanded="true" />
+            <element signature="e#6950#6951#0" expanded="true" />
+            <element signature="e#6986#6987#0" expanded="true" />
+            <element signature="e#7019#7020#0" expanded="true" />
+            <element signature="e#7070#7071#0" expanded="true" />
+            <element signature="e#7114#7115#0" expanded="true" />
+            <element signature="e#7151#7152#0" expanded="true" />
+            <element signature="e#7183#7184#0" expanded="true" />
+            <element signature="e#7234#7235#0" expanded="true" />
+            <element signature="e#7276#7277#0" expanded="true" />
+            <element signature="e#7315#7316#0" expanded="true" />
+            <element signature="e#7349#7350#0" expanded="true" />
+            <element signature="e#7404#7405#0" expanded="true" />
+            <element signature="e#7450#7451#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/busyzero/easyoj/entity/QuizRecordItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="254" column="18" lean-forward="false" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+          <folding>
+            <element signature="e#1748#1749#0" expanded="true" />
+            <element signature="e#1777#1778#0" expanded="true" />
+            <element signature="e#1822#1823#0" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1933#1934#0" expanded="true" />
+            <element signature="e#1990#1991#0" expanded="true" />
+            <element signature="e#2038#2039#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

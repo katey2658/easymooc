@@ -8,7 +8,7 @@ import java.util.List;
  * 问题和回答接口
  * @author  katey2658
  */
-public interface QuestionAndReplyService {
+public interface CourseQuestionService {
 
     /**
      * 根据课程编号来获取问题和答复列表

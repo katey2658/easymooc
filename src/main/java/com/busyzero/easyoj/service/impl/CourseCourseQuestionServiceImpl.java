@@ -2,7 +2,7 @@ package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.entity.CourseQuestion;
 import com.busyzero.easyoj.repository.CourseQuestionRepository;
-import com.busyzero.easyoj.service.QuestionAndReplyService;
+import com.busyzero.easyoj.service.CourseQuestionService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,8 +15,8 @@ import java.util.List;
  * @author  katey2658
  */
 @Service
-public class QuestionAndReplyServiceImpl implements QuestionAndReplyService {
-    private Logger logger= LoggerFactory.getLogger(QuestionAndReplyServiceImpl.class);
+public class CourseCourseQuestionServiceImpl implements CourseQuestionService {
+    private Logger logger= LoggerFactory.getLogger(CourseCourseQuestionServiceImpl.class);
 
     /**问题和答复数据库接口*/
     @Autowired

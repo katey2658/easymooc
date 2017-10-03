@@ -1,7 +1,7 @@
 package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.entity.CourseQuestion;
-import com.busyzero.easyoj.service.QuestionAndReplyService;
+import com.busyzero.easyoj.service.CourseQuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +19,7 @@ public class QuestionReplyController {
 
     /**常见问题和答复接口*/
     @Autowired
-    private QuestionAndReplyService questionService;
+    private CourseQuestionService questionService;
 
     /**
      * 处理对应课程的问答

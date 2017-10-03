@@ -142,6 +142,67 @@ ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_course_id(course_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="课程评论信息表";
 
+-- 创建测试表
+CREATE TABLE IF NOT EXISTS quiz_task(
+quiz_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "测试编号",
+quiz_code VARCHAR (16) NOT NULL COMMENT "测试编码：按规则自动生成",
+quiz_title VARCHAR (50) NOT NULL COMMENT "测试标题:默认是测试编码",
+course_id INT NOT NULL COMMENT "课程编号",
+teacher_id INT NOT NULL COMMENT "教师账户编号",
+quiz_type TINYINT NOT NULL DEFAULT 3 COMMENT"测试类型：1.单元测试  2.阶段性测试  3.综合测试  4.问卷测试：非课程知识点 ",
+unit_number TINYINT COMMENT "单元号",
+stage_number TINYINT COMMENT "阶段编号：一般来说,大于等于该阶段的题都符合",
+questionnaire_code VARCHAR (20) COMMENT "问卷编码",
+auto_fit BOOL NOT NULL DEFAULT FALSE COMMENT "是否自动组卷",
+time_start DATETIME NOT NULL COMMENT "开始时间",
+time_end DATETIME NOT NULL COMMENT "结束时间",
+duration BIGINT NOT NULL COMMENT "持续时间",
+quiz_state TINYINT NOT NULL DEFAULT 3 COMMENT "测试状态:1.审核中  2.正常  3. 还没有开始  4.废弃  5.冻结  6.过期 ",
+full_score TINYINT NOT NULL DEFAULT 100 COMMENT "满分成绩：默认100分",
+single BOOL NOT NULL DEFAULT FALSE COMMENT "是否有单选:默认false",
+single_weight TINYINT NOT NULL DEFAULT 5 COMMENT "单选题分值权重:5",
+single_number TINYINT NOT NULL DEFAULT 20 COMMENT "单选题数目，默认20",
+single_easy_weight TINYINT NOT NULL DEFAULT 5 COMMENT "单选题中简单权重",
+single_middle_weight TINYINT NOT NULL DEFAULT 3 COMMENT "单选题中中等权重",
+single_hard_weight TINYINT NOT NULL DEFAULT 2 COMMENT "单选题中困难题型权重",
+multiple BOOL NOT NULL DEFAULT FALSE COMMENT "是否含有复选题目",
+multiple_weight TINYINT NOT NULL DEFAULT 5 COMMENT "多选题分值权重",
+multiple_numbers TINYINT NOT NULL DEFAULT 20 COMMENT "多选题题目数量",
+multiple_easy_weight TINYINT NOT NULL DEFAULT 5 COMMENT "多选题中简单权重",
+multiple_middle_wieght TINYINT NOT NULL DEFAULT 3 COMMENT "多选题中中等权重",
+multiple_hard_weight TINYINT NOT NULL DEFAULT 2 COMMENT "多选题中困难权重",
+complete BOOL NOT NULL DEFAULT FALSE COMMENT "是否有填空题",
+complete_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题分值权重",
+complete_number TINYINT NOT NULL DEFAULT 0 COMMENT "填空题数量",
+complete_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题简单权重",
+complete_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题中等权重",
+complete_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题困难权重",
+resume BOOL NOT NULL DEFAULT FALSE COMMENT "是否有简述题",
+resume_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题分值权重",
+resume_number TINYINT NOT NULL DEFAULT 0 COMMENT "简述题数量",
+resume_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题简单权重",
+resume_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题中等权重",
+resume_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题困难权重",
+synthesis BOOL NOT NULL DEFAULT FALSE COMMENT "是否有综合题",
+synthesis_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题分值权重",
+synthesis_number TINYINT NOT NULL DEFAULT 0 COMMENT "综合题数量",
+synthesis_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题简单权重",
+synthesis_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题中等权重",
+synthesis_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题困难权重",
+extra BOOL NOT NULL DEFAULT FALSE COMMENT "是否有附加题",
+extra_score TINYINT NOT NULL DEFAULT 10 COMMENT "附加题分数",
+extra_item_id BIGINT COMMENT "附加题考题",
+points VARCHAR (255) NOT NULL COMMENT "考点：多个考点之间用逗号进行分割",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_courseid(course_id),
+KEY idx_quizstate(quiz_state),
+UNIQUE (quiz_code)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="测试信息表";
+
+
+
 ------------------------------------我是分界线---------------------
 
 -- 授课大纲，包含阅读，视频，每周测试
