@@ -125,7 +125,7 @@ public class CourseInfoServiceImpl implements CourseInfoService {
             final String MSG_ERROR="所请求的课程信息不存在!";
             result=new CourseOperateResult<>(DateOperateEnum.OP_QUERY,false,MSG_ERROR);
         }else{
-            course.setCommentList(commentList);
+            course.setCourseCommentList(commentList);
             course.setWeekTaskList(weekTaskList);
             result=new CourseOperateResult<>(DateOperateEnum.OP_QUERY,true,course);
         }

@@ -1,29 +1,24 @@
 package com.busyzero.easyoj.enums;
 
+
 /**
- * 账户状态枚举
+ * 验证状态枚举
  * @author 11456
  */
-public enum AccountStateEnum {
-    STATE_NORMAL(0,"正常"),
-    STATE_WAIT_ACTIVATE(1,"等待激活"),
-    STATE_DELETE(2,"注销"),
-    STATE_FREEZE(3,"冻结")
-    ;
-
-    /**状态码*/
+public enum VerificationStateEnum {
+    STATE_INVALID(0,"无效"),
+    STATE_NORMAL(1,"正常"),
+    STATE_OVERTIME(2,"超时失效"),
+    STATE_VALID(3,"已经验证"),
+    STATE_ERROR_MAX(4,"上限失效");
+    /**错误码*/
     private short state;
 
-    /**状态信息*/
+    /**错误信息*/
     private String message;
 
-    /**
-     * 构造器
-     * @param state
-     * @param message
-     */
-    AccountStateEnum(int state, String message) {
-        this.state = (short)state;
+    VerificationStateEnum(int state, String message) {
+        this.state =(short)state;
         this.message = message;
     }
 

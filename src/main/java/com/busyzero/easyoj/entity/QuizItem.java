@@ -1,5 +1,7 @@
 package com.busyzero.easyoj.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.time.Instant;
 
@@ -7,6 +9,7 @@ import java.time.Instant;
  * 相应的题目
  * @author 11456
  */
+@Alias("quizItem")
 public class QuizItem implements Serializable {
     private static final long serialVersionUID = 78878676127816787L;
 
@@ -26,7 +29,7 @@ public class QuizItem implements Serializable {
     private String questionnaireCode;
 
     /**题目类型:1.单选  2.多选  3.填空题  4.简答题  5.综合题  6.附加题*/
-    private Short itmeType;
+    private Short itemType;
 
     /**状态：1.审核中  2.正常  3.废弃  4.冻结，被排除  默认正常*/
     private Short itemState;
@@ -72,7 +75,7 @@ public class QuizItem implements Serializable {
     /**选择E*/
     private String optionE;
 
-    /**E选择是否争取*/
+    /**E选择是否正确*/
     private Boolean eRight;
 
     /**填空数<=3：当为填空题的时候进行需要填写的内容*/
@@ -94,7 +97,7 @@ public class QuizItem implements Serializable {
     private String synthesisRight;
 
     /**综合题附件：一般为图片*/
-    private String synthesisRightAttachement;
+    private String synthesisRightAttachment;
 
     /**考点*/
     private String points;
@@ -105,7 +108,7 @@ public class QuizItem implements Serializable {
     private Short degreeOfDifficulty;
 
     /**频率系数:频率越大，同等条件下，越不容易被选到*/
-    private Short degereeOfFrequency;
+    private Short degreeOfFrequency;
 
     /**题目权重,也就是重要值，这个一般是由录入者来进行确定，但也会出现相应的变化*/
     private Short itemWeight;
@@ -156,12 +159,12 @@ public class QuizItem implements Serializable {
         this.questionnaireCode = questionnaireCode;
     }
 
-    public Short getItmeType() {
-        return itmeType;
+    public Short getItemType() {
+        return itemType;
     }
 
-    public void setItmeType(Short itmeType) {
-        this.itmeType = itmeType;
+    public void setItemType(Short itemType) {
+        this.itemType = itemType;
     }
 
     public Short getItemState() {
@@ -316,12 +319,12 @@ public class QuizItem implements Serializable {
         this.synthesisRight = synthesisRight;
     }
 
-    public String getSynthesisRightAttachement() {
-        return synthesisRightAttachement;
+    public String getSynthesisRightAttachment() {
+        return synthesisRightAttachment;
     }
 
-    public void setSynthesisRightAttachement(String synthesisRightAttachement) {
-        this.synthesisRightAttachement = synthesisRightAttachement;
+    public void setSynthesisRightAttachment(String synthesisRightAttachment) {
+        this.synthesisRightAttachment = synthesisRightAttachment;
     }
 
     public String getPoints() {
@@ -340,12 +343,12 @@ public class QuizItem implements Serializable {
         this.degreeOfDifficulty = degreeOfDifficulty;
     }
 
-    public Short getDegereeOfFrequency() {
-        return degereeOfFrequency;
+    public Short getDegreeOfFrequency() {
+        return degreeOfFrequency;
     }
 
-    public void setDegereeOfFrequency(Short degereeOfFrequency) {
-        this.degereeOfFrequency = degereeOfFrequency;
+    public void setDegreeOfFrequency(Short degreeOfFrequency) {
+        this.degreeOfFrequency = degreeOfFrequency;
     }
 
     public Short getItemWeight() {
@@ -380,7 +383,7 @@ public class QuizItem implements Serializable {
                 ", unitNumber=" + unitNumber +
                 ", stageNumber=" + stageNumber +
                 ", questionnaireCode='" + questionnaireCode + '\'' +
-                ", itmeType=" + itmeType +
+                ", itemType=" + itemType +
                 ", itemState=" + itemState +
                 ", itemContent='" + itemContent + '\'' +
                 ", attachment='" + attachment + '\'' +
@@ -400,10 +403,10 @@ public class QuizItem implements Serializable {
                 ", cComplete='" + cComplete + '\'' +
                 ", resumeRight='" + resumeRight + '\'' +
                 ", synthesisRight='" + synthesisRight + '\'' +
-                ", synthesisRightAttachement='" + synthesisRightAttachement + '\'' +
+                ", synthesisRightAttachment='" + synthesisRightAttachment + '\'' +
                 ", points='" + points + '\'' +
                 ", degreeOfDifficulty=" + degreeOfDifficulty +
-                ", degereeOfFrequency=" + degereeOfFrequency +
+                ", degreeOfFrequency=" + degreeOfFrequency +
                 ", itemWeight=" + itemWeight +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +

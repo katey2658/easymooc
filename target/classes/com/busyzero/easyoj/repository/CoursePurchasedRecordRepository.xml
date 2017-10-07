@@ -13,7 +13,7 @@
         paid,price_course,price_paid_actual,
         discount_percent,method_paid,bill_code,
         gmt_create,gmt_modified
-        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+        WHERE course_purchased_record_id=#{recordId}
     </select>
 
     <select id="listAllByAccountId" resultType="coursePurchasedRecord">
@@ -56,7 +56,7 @@
     <update id="updateValidByCoursePurchasedRecordId">
         UPDATE course_purchased_record
         SET valid=0
-        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+        WHERE course_purchased_record_id=#{recordId}
     </update>
 
     <update id="updatePaidByBillCode">
@@ -64,6 +64,6 @@
         SET bill_code=#{billCode},
         method_paid=#{methodPaid},
         paid=1
-        WHERE course_purchased_record_id=#{coursePurchasedRecordId}
+        WHERE course_purchased_record_id=#{recordId}
     </update>
 </mapper>

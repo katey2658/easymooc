@@ -8,7 +8,7 @@ import com.busyzero.easyoj.commons.tool.ResultCheckUtil;
 import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.entity.AccountVerification;
 import com.busyzero.easyoj.enums.AccountStateEnum;
-import com.busyzero.easyoj.enums.VerficationStateEnum;
+import com.busyzero.easyoj.enums.VerificationStateEnum;
 import com.busyzero.easyoj.repository.AccountInfoRepository;
 import com.busyzero.easyoj.repository.AccountVerificationRepository;
 import com.busyzero.easyoj.service.EmailService;
@@ -297,7 +297,7 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
             //时间超时
             logger.info("the verification is overtime");
             result.fail(new BusinessException(ExceptionCodeEnum.VERIFICATION_ERROR_OVERTIME));
-            verification.setVerificationState(VerficationStateEnum.STATE_OVERTIME.getState());
+            verification.setVerificationState(VerificationStateEnum.STATE_OVERTIME.getState());
             verificationRepository.updateVerificationState(verification);
             return result;
         }
@@ -307,7 +307,7 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
             verification.setErrorInput(verification.getErrorInput() + 1);
             if (verification.getErrorInput() > 3) {
                 logger.info("the verification input is wrong:{},the verification error number is to max:{}", verification.getVerificationCode(), 3);
-                verification.setVerificationState(VerficationStateEnum.STATE_ERROR_MAX.getState());
+                verification.setVerificationState(VerificationStateEnum.STATE_ERROR_MAX.getState());
                 result.fail(new BusinessException(ExceptionCodeEnum.VERIFICATION_ERROR_INPUT_MAX));
             } else {
                 logger.info("the verification input is wrong:{},the verification error number now is {}", verification.getVerificationCode(), verification.getErrorInput());
@@ -317,7 +317,7 @@ public class VerificationCodeServiceImpl implements VerificationCodeService {
         }
         //更新验证码状态
         logger.info("the verification input is correct :{}", verification.getVerificationCode());
-        verification.setVerificationState(VerficationStateEnum.STATE_VALID.getState());
+        verification.setVerificationState(VerificationStateEnum.STATE_VALID.getState());
         verificationRepository.updateVerificationState(verification);
         return result;
     }

@@ -147,51 +147,51 @@ CREATE TABLE IF NOT EXISTS quiz_task(
 quiz_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "测试编号",
 quiz_code VARCHAR (16) NOT NULL COMMENT "测试编码：按规则自动生成",
 quiz_title VARCHAR (50) NOT NULL COMMENT "测试标题:默认是测试编码",
-course_id INT NOT NULL COMMENT "课程编号",
-teacher_id INT NOT NULL COMMENT "教师账户编号",
+course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
+teacher_id INT UNSIGNED NOT NULL COMMENT "教师账户编号",
 quiz_type TINYINT NOT NULL DEFAULT 3 COMMENT"测试类型：1.单元测试  2.阶段性测试  3.综合测试  4.问卷测试：非课程知识点 ",
-unit_number TINYINT COMMENT "单元号",
-stage_number TINYINT COMMENT "阶段编号：一般来说,大于等于该阶段的题都符合",
+unit_number TINYINT UNSIGNED COMMENT "单元号",
+stage_number TINYINT UNSIGNED COMMENT "阶段编号：一般来说,大于等于该阶段的题都符合",
 questionnaire_code VARCHAR (20) COMMENT "问卷编码",
 auto_fit BOOL NOT NULL DEFAULT FALSE COMMENT "是否自动组卷",
 time_start DATETIME NOT NULL COMMENT "开始时间",
 time_end DATETIME NOT NULL COMMENT "结束时间",
-duration BIGINT NOT NULL COMMENT "持续时间",
+duration BIGINT UNSIGNED NOT NULL COMMENT "持续时间",
 quiz_state TINYINT NOT NULL DEFAULT 3 COMMENT "测试状态:1.审核中  2.正常  3. 还没有开始  4.废弃  5.冻结  6.过期 ",
-full_score TINYINT NOT NULL DEFAULT 100 COMMENT "满分成绩：默认100分",
+full_score TINYINT UNSIGNED NOT NULL DEFAULT 100 COMMENT "满分成绩：默认100分",
 single BOOL NOT NULL DEFAULT FALSE COMMENT "是否有单选:默认false",
-single_weight TINYINT NOT NULL DEFAULT 5 COMMENT "单选题分值权重:5",
-single_number TINYINT NOT NULL DEFAULT 20 COMMENT "单选题数目，默认20",
-single_easy_weight TINYINT NOT NULL DEFAULT 5 COMMENT "单选题中简单权重",
-single_middle_weight TINYINT NOT NULL DEFAULT 3 COMMENT "单选题中中等权重",
-single_hard_weight TINYINT NOT NULL DEFAULT 2 COMMENT "单选题中困难题型权重",
+single_weight TINYINT UNSIGNED NOT NULL DEFAULT 5 COMMENT "单选题分值权重:5",
+single_number TINYINT UNSIGNED NOT NULL DEFAULT 20 COMMENT "单选题数目，默认20",
+single_easy_weight TINYINT UNSIGNED NOT NULL DEFAULT 5 COMMENT "单选题中简单权重",
+single_middle_weight TINYINT UNSIGNED NOT NULL DEFAULT 3 COMMENT "单选题中中等权重",
+single_hard_weight TINYINT UNSIGNED NOT NULL DEFAULT 2 COMMENT "单选题中困难题型权重",
 multiple BOOL NOT NULL DEFAULT FALSE COMMENT "是否含有复选题目",
-multiple_weight TINYINT NOT NULL DEFAULT 5 COMMENT "多选题分值权重",
-multiple_numbers TINYINT NOT NULL DEFAULT 20 COMMENT "多选题题目数量",
-multiple_easy_weight TINYINT NOT NULL DEFAULT 5 COMMENT "多选题中简单权重",
-multiple_middle_wieght TINYINT NOT NULL DEFAULT 3 COMMENT "多选题中中等权重",
-multiple_hard_weight TINYINT NOT NULL DEFAULT 2 COMMENT "多选题中困难权重",
+multiple_weight TINYINT UNSIGNED NOT NULL DEFAULT 5 COMMENT "多选题分值权重",
+multiple_numbers TINYINT UNSIGNED NOT NULL DEFAULT 20 COMMENT "多选题题目数量",
+multiple_easy_weight TINYINT UNSIGNED NOT NULL DEFAULT 5 COMMENT "多选题中简单权重",
+multiple_middle_wieght TINYINT UNSIGNED NOT NULL DEFAULT 3 COMMENT "多选题中中等权重",
+multiple_hard_weight TINYINT UNSIGNED NOT NULL DEFAULT 2 COMMENT "多选题中困难权重",
 complete BOOL NOT NULL DEFAULT FALSE COMMENT "是否有填空题",
-complete_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题分值权重",
-complete_number TINYINT NOT NULL DEFAULT 0 COMMENT "填空题数量",
-complete_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题简单权重",
-complete_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题中等权重",
-complete_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "填空题困难权重",
+complete_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题分值权重",
+complete_number TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题数量",
+complete_easy_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题简单权重",
+complete_middle_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题中等权重",
+complete_hard_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题困难权重",
 resume BOOL NOT NULL DEFAULT FALSE COMMENT "是否有简述题",
-resume_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题分值权重",
-resume_number TINYINT NOT NULL DEFAULT 0 COMMENT "简述题数量",
-resume_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题简单权重",
-resume_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题中等权重",
-resume_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "简述题困难权重",
+resume_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简述题分值权重",
+resume_number TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简述题数量",
+resume_easy_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简述题简单权重",
+resume_middle_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简述题中等权重",
+resume_hard_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简述题困难权重",
 synthesis BOOL NOT NULL DEFAULT FALSE COMMENT "是否有综合题",
-synthesis_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题分值权重",
-synthesis_number TINYINT NOT NULL DEFAULT 0 COMMENT "综合题数量",
-synthesis_easy_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题简单权重",
-synthesis_middle_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题中等权重",
-synthesis_hard_weight TINYINT NOT NULL DEFAULT 0 COMMENT "综合题困难权重",
+synthesis_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题分值权重",
+synthesis_number TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题数量",
+synthesis_easy_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题简单权重",
+synthesis_middle_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题中等权重",
+synthesis_hard_weight TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题困难权重",
 extra BOOL NOT NULL DEFAULT FALSE COMMENT "是否有附加题",
-extra_score TINYINT NOT NULL DEFAULT 10 COMMENT "附加题分数",
-extra_item_id BIGINT COMMENT "附加题考题",
+extra_score TINYINT UNSIGNED NOT NULL DEFAULT 10 COMMENT "附加题分数",
+extra_item_id BIGINT UNSIGNED COMMENT "附加题考题",
 points VARCHAR (255) NOT NULL COMMENT "考点：多个考点之间用逗号进行分割",
 gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
 gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
@@ -201,7 +201,116 @@ KEY idx_quizstate(quiz_state),
 UNIQUE (quiz_code)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="测试信息表";
 
+-- 创建测试题目表
+CREATE TABLE IF NOT EXISTS quiz_item(
+item_id BIGINT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT "题目编号",
+course_id INT NOT NULL COMMENT "课程编号",
+unit_number TINYINT UNSIGNED COMMENT "单元号(作为单元测试参考项)",
+stage_number TINYINT UNSIGNED COMMENT "阶段编号(作为阶段测试参考项)",
+questionnaire_code VARCHAR (16) COMMENT "测试编码(作为问卷测试参考项)",
+item_type TINYINT  NOT NULL DEFAULT 1 COMMENT "题目类型：1.单选  2.多选  3.填空题  4.简答题  5.综合题  6.附加题",
+item_state TINYINT NOT NULL DEFAULT 2 COMMENT "状态：1.审核中  2.正常  3.废弃  4.冻结，被排除  默认正常",
+item_content VARCHAR (255) NOT NULL COMMENT "题目内容",
+accachment VARCHAR (100) COMMENT "附件：一般为图片，暂时没有其它的打算",
+option_a VARCHAR (50) COMMENT "选项A",
+a_right BOOL NOT NULL DEFAULT FALSE COMMENT "A选项是否正确",
+option_b VARCHAR (50) COMMENT "选项B",
+b_right BOOL NOT NULL DEFAULT FALSE COMMENT "B选项是否正确",
+option_c VARCHAR (50) COMMENT "选项C",
+c_right BOOL NOT NULL DEFAULT FALSE COMMENT "C选项是否正确",
+option_d VARCHAR (50) COMMENT "选项D",
+d_right BOOL NOT NULL DEFAULT FALSE COMMENT "D选项是否正确",
+option_e VARCHAR (50) COMMENT "选项E",
+e_right BOOL NOT NULL DEFAULT FALSE COMMENT "E选项是否正确",
+complete_number TINYINT NOT NULL DEFAULT 0 COMMENT "填空数<=3：当为填空题的时候进行需要填写的内容",
+a_complete VARCHAR (20) COMMENT "填空A答案",
+b_complete VARCHAR (20) COMMENT "填空B答案",
+c_complete VARCHAR (20) COMMENT "填空C答案",
+resume_right VARCHAR (100) COMMENT "简述题答案",
+synthesis_right VARCHAR (100) COMMENT "综合题答案",
+synthesis_right_attachment VARCHAR (100) COMMENT "综合题附件：一般为图片",
+points VARCHAR (50) NOT NULL DEFAULT ""  COMMENT "考点",
+degree_of_difficulty TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "难度系数",
+degree_of_frequency TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "频率系数:频率越大，同等条件下，越不容易被选到",
+item_weight TINYINT UNSIGNED NOT NULL DEFAULT 5 COMMENT "题目权重,也就是重要值，这个一般是由录入者来进行确定，但也会出现相应的变化",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_courseid(course_id),
+KEY idx_itemtype(item_type)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="题目信息表";
 
+-- 测试相关参数表
+CREATE TABLE IF NOT EXISTS quiz_record(
+record_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "考卷编号",
+quiz_id BIGINT UNSIGNED NOT NULL COMMENT "考试编号",
+account_id INT UNSIGNED NOT NULL COMMENT "账户编号",
+from_record_id BIGINT UNSIGNED COMMENT "如果是同一份试卷，一样的题目",
+single_total_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "单选成绩",
+single_accuracy INT UNSIGNED COMMENT "单选正确率：千分比",
+multi_total_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "多选总成绩",
+multi_accuracy INT UNSIGNED COMMENT "多选正确率:千分比",
+complete_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "填空题",
+complete_accuracy INT UNSIGNED COMMENT "填空正确率：千分比",
+resume_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "简答题总成绩",
+resume_accuracy INT UNSIGNED COMMENT "简述题正确率:千分比",
+synthesis_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "综合题总成绩",
+synthesis_accuracy INT UNSIGNED COMMENT "综合题正确率：千分比",
+full_score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "测试总成绩",
+record_state TINYINT NOT NULL DEFAULT 5 COMMENT "测试记录状态：1.考试中  2.正常结束  3.超时  4.异常退出 5.还没有开始",
+time_start DATETIME NOT NULL COMMENT "测试开始时间",
+time_end DATETIME COMMENT "测试结束时间",
+duration BIGINT UNSIGNED COMMENT "考试用时",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY idx_courseid(quiz_id),
+KEY idx_accountid(account_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="测试记录表";
+
+-- 考卷详细表
+CREATE TABLE IF NOT EXISTS quiz_record_item(
+record_item_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "测试试卷题目编号",
+record_id BIGINT UNSIGNED NOT NULL COMMENT "测试编号",
+item_id BIGINT UNSIGNED NOT NULL COMMENT "题目编号",
+answer BOOL NOT NULL DEFAULT FALSE COMMENT "是否正确",
+answer_degree INT NOT NULL COMMENT "答案相似度：千分比",
+choice_a BOOL NOT NULL DEFAULT FALSE COMMENT "是否选择了A",
+choice_b BOOL NOT NULL DEFAULT FALSE COMMENT "是否选择了B",
+choice_c BOOL NOT NULL DEFAULT FALSE COMMENT "是否选择了C",
+choice_d BOOL NOT NULL DEFAULT FALSE COMMENT "是否选择了D",
+choice_e BOOL NOT NULL DEFAULT FALSE COMMENT "是否选择了E",
+a_input VARCHAR (20) COMMENT "填空A输入",
+b_input VARCHAR (20) COMMENT "填空b输入",
+c_input VARCHAR (20) COMMENT "填空c输入",
+resume_input VARCHAR (100) COMMENT "简述题输入",
+resume_input_attachment VARCHAR (100) COMMENT "简述题附件",
+synthesis_input VARCHAR (100) COMMENT "综合题输入",
+synthesis_input_attachment VARCHAR (100) COMMENT "综合题输入可以能有附件:一般为图片",
+score TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "题目分数",
+score_record TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "得分",
+feedback VARCHAR (100) DEFAULT "题型反馈",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间"
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="题目记录表";
+
+-- 用户购买课程记录表：这里暂时先不考虑收费问题
+CREATE TABLE IF NOT EXISTS course_join_record(
+record_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "课程加入记录编号",
+account_id INT UNSIGNED NOT NULL COMMENT "用户账户编号",
+course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
+record_state TINYINT NOT NULL DEFAULT 0  COMMENT "状态:0.无效  1.申请中  2.申请被拒绝  3.申请通过  4.等待支付 5.支付成功 ",
+price_course DECIMAL (10,2) NOT NULL  DEFAULT 0.00 COMMENT "课程价格",
+price_paid_actual DECIMAL(10,2) NOT NULL DEFAULT 0.00 COMMENT "实际付款",
+discount_percent INT UNSIGNED NOT NULL DEFAULT 0 COMMENT "折扣优惠千分比",
+method_paid TINYINT NOT NULL DEFAULT 1 COMMENT "选择支付方式 1.网银 2.支付宝 3.微信",
+bill_code VARCHAR (50) NOT NULL DEFAULT "" COMMENT "用户支付后生成的账单号",
+gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
+gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
+KEY (account_id,course_id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="用户购买记录表";
 
 ------------------------------------我是分界线---------------------
 
@@ -246,23 +355,7 @@ ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
 KEY idx_task_id(task_id)
 )ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="具体内容表";
 
--- 用户购买选课记录表
-CREATE TABLE IF NOT EXISTS course_purchased_record(
-course_purchased_record_id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT COMMENT "用户购买记录编号",
-account_id INT UNSIGNED NOT NULL COMMENT "用户编号",
-course_id INT UNSIGNED NOT NULL COMMENT "课程编号",
-valid TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "默认是有效",
-paid TINYINT UNSIGNED NOT NULL DEFAULT 0  COMMENT "是否已经付款",
-price_course DECIMAL (10,2) NOT NULL  COMMENT "课程价格",
-price_paid_actual DECIMAL(10,2) NOT NULL COMMENT "实际付款",
-discount_percent TINYINT UNSIGNED NOT NULL DEFAULT 0 COMMENT "折扣优惠百分比",
-method_paid TINYINT UNSIGNED NOT NULL DEFAULT 1 COMMENT "选择支付方式 1.网银 2.支付宝 3.微信",
-bill_code VARCHAR (255) NOT NULL DEFAULT "" COMMENT "用户支付后生成的账单号",
-gmt_create DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT "创建时间",
-gmt_modified DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP COMMENT "最后修改时间",
-KEY (account_id,course_id)
-)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT="用户购买记录表";
+
 
 ------------------------------------我是分界线------------------
 -- data 数据  先插入一些记录数据
@@ -307,97 +400,88 @@ INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('经济学',18),('教育',18),('政府与社会',18),('法律',18),('心理学',18);
 INSERT INTO subject(subejct_name,catalog_id)
 VALUES ('学习英语',19),('其它语言',19);
--- -- TODO profile:用户详细信息表 是否对外展示  希望工作类型  技能  工作经验 教育背景 项目 访问问题  工作要求
 
 -- 专题列表
--- TODO 有两部风内容被没有写入，一个是教师列表，一个是课程列表，问题列表
-CREATE TABLE if NOT EXISTS specialization{
-specialization_id unsigned INT auto_increment comment "专题编号",
-category VARCHAR (20)NOT NULL comment "目录",
-subject VARCHAR (20) NOT NULL comment "学科",
-title VARCHAR (50) NOT NULL UNIQUE comment "专题标题",
-short_desc VARCHAR (100) NOT NULL comment "简短描述",
-description VARCHAR (255)NOT NULL comment "描述",
-img VARCHAR (100) NOT  NULL comment "图片描述",
-provider_id unsigned INT NOT NULL "提供方id",
-time_start datetime NOT NULL comment "开始时间",
-time_end datetime NOT NULL comment "结束时间",
-}engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学科专题表";
+-- CREATE TABLE if NOT EXISTS specialization{
+-- specialization_id unsigned INT auto_increment comment "专题编号",
+-- category VARCHAR (20)NOT NULL comment "目录",
+-- subject VARCHAR (20) NOT NULL comment "学科",
+-- title VARCHAR (50) NOT NULL UNIQUE comment "专题标题",
+-- short_desc VARCHAR (100) NOT NULL comment "简短描述",
+-- description VARCHAR (255)NOT NULL comment "描述",
+-- img VARCHAR (100) NOT  NULL comment "图片描述",
+-- provider_id unsigned INT NOT NULL "提供方id",
+-- time_start datetime NOT NULL comment "开始时间",
+-- time_end datetime NOT NULL comment "结束时间",
+-- }engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "学科专题表";
 
 -- 课程提供方信息
-CREATE TABLE if NOT EXISTS provider(
-provider_id unsigned INT auto_increment comment "课程编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(provider_id),
-)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "课程提供方信息表";
+-- CREATE TABLE if NOT EXISTS provider(
+-- provider_id unsigned INT auto_increment comment "课程编号",
+-- -- TODO
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(provider_id),
+-- )engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "课程提供方信息表";
 
 -- 授课教师信息
-CREATE TABLE if NOT EXISTS teacher(
-teacher_id unsigned INT auto_increment comment "授课教师编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(teacher_id),
-)engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "授课教师信息表";
+-- CREATE TABLE if NOT EXISTS teacher(
+-- teacher_id unsigned INT auto_increment comment "授课教师编号",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(teacher_id),
+-- )engine=innodb auto_increment=100 DEFAULT charset=utf8  COMMENT "授课教师信息表";
 
 -- 视频表,字幕就不做了，之后在做吧
-CREATE TABLE if NOT EXISTS video(
-video_id unsigned INT auto_increment comment "视频编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号"
-link VARCHAR (100) NOT NULL comment "视频地址",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(video_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "视频表";
+-- CREATE TABLE if NOT EXISTS video(
+-- video_id unsigned INT auto_increment comment "视频编号",
+-- task_item_id unsigned INT NOT NULL comment "具体小节编号"
+-- link VARCHAR (100) NOT NULL comment "视频地址",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(video_id),
+-- KEY idx_task_item_id(task_item_id)
+-- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "视频表";
 
 -- wiki内容表
-CREATE TABLE if NOT EXISTS wiki(
-wiki_id unsigned INT auto_increment comment "wiki编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号"
-content VARCHAR (1000)  NOT NULL "wiki内容",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(wiki_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "wiki表";
+-- CREATE TABLE if NOT EXISTS wiki(
+-- wiki_id unsigned INT auto_increment comment "wiki编号",
+-- task_item_id unsigned INT NOT NULL comment "具体小节编号"
+-- content VARCHAR (1000)  NOT NULL "wiki内容",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(wiki_id),
+-- KEY idx_task_item_id(task_item_id)
+-- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "wiki表";
 
 -- 测试算是一个模块
 -- 测试表
-CREATE TABLE if NOT EXISTS test(
-test_id unsigned INT auto_increment comment "测试编号",
-task_item_id unsigned INT NOT NULL comment "具体小节编号",
--- TODO
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(test_id),
-KEY idx_task_item_id(task_item_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "测试表";
+-- CREATE TABLE if NOT EXISTS test(
+-- test_id unsigned INT auto_increment comment "测试编号",
+-- task_item_id unsigned INT NOT NULL comment "具体小节编号",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(test_id),
+-- KEY idx_task_item_id(task_item_id)
+-- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "测试表";
 
 --用户已经参加的课,是一个中间表
-CREATE TABLE if NOT EXISTS course_join(
-course_join_id unsigned bigint auto_increment comment "id编号",
-course_id unsigned INT NOT NULL comment "已经参加的课id",
-account_id unsigned INT NOT NULL comment "用户id",
-gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
-gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
-ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
-PRIMARY KEY pk_id(course_join_id),
-KEY idx_account_id(account_id)
-)engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "用户课程表";
+-- CREATE TABLE if NOT EXISTS course_join(
+-- course_join_id unsigned bigint auto_increment comment "id编号",
+-- course_id unsigned INT NOT NULL comment "已经参加的课id",
+-- account_id unsigned INT NOT NULL comment "用户id",
+-- gmt_create datetime NOT NULL DEFAULT CURRENT_TIMESTAMP comment "创建时间",
+-- gmt_modified data_time NOT NULL DEFAULT CURRENT_TIMESTAMP
+-- ON UPDATE CURRENT_TIMESTAMP comment "最后修改时间",
+-- PRIMARY KEY pk_id(course_join_id),
+-- KEY idx_account_id(account_id)
+-- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "用户课程表";
 
--- TODO 用户课程进度表
-
--- TODO 总体进度表
-
--- TODO 题目表具体放到mongodb中,这样更加好处理
 -- -- -- 题目表
 -- CREATE TABLE if NOT EXISTS question(
 -- id unsigned bigint auto_increment comment "题目编号",
@@ -410,14 +494,4 @@ KEY idx_account_id(account_id)
 -- KEY idx_test_id(test_id)
 -- )engine=innodb auto_increment=1000 DEFAULT charset=utf8  COMMENT "试题表";
 
--- TODO 论坛,交流是一个模块,之后在做吧
--- /learn/machine-learning/discussions/weeks/1
-
--- TODO 课程小节任务完成日志记录表
-
--- TODO 课程表信息数据
-
--- TODO 课程表常见问题和回答数据
-
--- TODO 评论表信息数据
 

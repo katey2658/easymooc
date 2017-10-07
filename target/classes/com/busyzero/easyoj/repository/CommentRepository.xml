@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.busyzero.easyoj.repository.CommentRepository">
+<mapper namespace="com.busyzero.easyoj.repository.CourseCommentRepository">
     
     <insert id="save">
         INSERT INTO comment(course_id,account_id,score,comment_content)

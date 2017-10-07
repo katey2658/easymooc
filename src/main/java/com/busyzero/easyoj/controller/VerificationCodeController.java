@@ -1,5 +1,6 @@
 package com.busyzero.easyoj.controller;
 
+import com.busyzero.easyoj.commons.result.Result;
 import com.busyzero.easyoj.dto.VerificationCodeResult;
 import com.busyzero.easyoj.dto.VerificationCodeDto;
 import com.busyzero.easyoj.service.VerificationCodeService;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 /**
@@ -41,7 +43,7 @@ public class VerificationCodeController {
     @RequestMapping(value = "/imgCode",method = RequestMethod.GET)
     public void requestImageCode(HttpServletRequest request,
                                  HttpServletResponse response){
-        VerificationCodeResult<VerificationCodeDto> result=verificationCodeService.getVerificationImage();
+        Result<BufferedImage> result=verificationCodeService.getVerificationImage(4);
         /*
         //放弃这个方案，因为会采用集群方案，session 不一定在那一个机器上，所以还是暂时先存入数据库中
         HttpSession session=request.getSession();
@@ -50,7 +52,7 @@ public class VerificationCodeController {
         */
         try {
             //输出验证图像
-            ImageIO.write(result.getSuccessObj().getImage(),"PNG",response.getOutputStream());
+            ImageIO.write(result.getResultObj(),"PNG",response.getOutputStream());
         } catch (IOException e) {
             logger.debug("the error message is :{}",e.getMessage());
             e.printStackTrace();
@@ -65,10 +67,10 @@ public class VerificationCodeController {
      */
     @ResponseBody
     @RequestMapping(value = "/imageCode",method = RequestMethod.POST)
-    public VerificationCodeResult requestImageCodeCheck(HttpServletRequest request,
+    public Result<Boolean> requestImageCodeCheck(HttpServletRequest request,
                                                         String imageCode){
         String verificationCode = (String) request.getSession().getAttribute(KEY_VERFICATION_CODE);
-        VerificationCodeResult result = verificationCodeService.checkVerificationCodeIgnoreCase(imageCode,verificationCode);
+        Result<Boolean> result = verificationCodeService.checkVerificationImageCode(1111,verificationCode);
         return result;
     }
 }

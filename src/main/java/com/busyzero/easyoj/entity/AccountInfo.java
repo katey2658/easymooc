@@ -54,7 +54,7 @@ public class AccountInfo implements Serializable {
     private String accountPhoto;
 
     /**账户状态： 0：正常  1.等待激活  2.注销  3.冻结 */
-    private Integer accountState;
+    private Short accountState;
 
     /**会员等级*/
     private Integer accountLevel;
@@ -175,11 +175,11 @@ public class AccountInfo implements Serializable {
         this.accountPhoto = accountPhoto;
     }
 
-    public Integer getAccountState() {
+    public Short getAccountState() {
         return accountState;
     }
 
-    public void setAccountState(Integer accountState) {
+    public void setAccountState(Short accountState) {
         this.accountState = accountState;
     }
 

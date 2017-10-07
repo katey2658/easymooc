@@ -2,7 +2,7 @@ package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.dto.AccountOperateResult;
-import com.busyzero.easyoj.service.AccountAuthService;
+import com.busyzero.easyoj.service.AccountInfoService;
 import com.busyzero.easyoj.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,7 +23,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 public class AccountInfoController {
     /**注入用户认证服务*/
     @Autowired
-    private AccountAuthService accountAuthService;
+    private AccountInfoService accountInfoService;
 
     /**注入邮箱服务*/
     @Autowired
@@ -49,7 +49,7 @@ public class AccountInfoController {
     @ResponseBody
     @RequestMapping(value = "/sign-in",method = POST)
     public AccountOperateResult accountSignIn(String emailAddress,String password){
-        AccountOperateResult result=accountAuthService.accountSignIn(emailAddress,password);
+        AccountOperateResult result=accountInfoService.accountSignIn(emailAddress,password);
         return result;
     }
 
@@ -73,8 +73,6 @@ public class AccountInfoController {
     @RequestMapping(value = "/sign-up",method = POST)
     public AccountOperateResult accountSignUp(AccountInfo account, Locale locale){
         AccountOperateResult result=null;
-        //直接发送邮件就好
-        result=emailService.emailAddressSignUp(account,locale);
         return result;
     }
 
@@ -87,7 +85,7 @@ public class AccountInfoController {
     @ResponseBody
     @RequestMapping(value = "/sign-up/{accessKey}",method = GET)
     public AccountOperateResult accountignUpCheck(@PathVariable("accessKey")String accessKey, String emailAddress){
-        AccountOperateResult result = accountAuthService.accountSignUpAccessKeyCheck(emailAddress,accessKey);
+        AccountOperateResult result = accountInfoService.accountSignUpAccessKeyCheck(emailAddress,accessKey);
         return result;
     }
 
@@ -99,7 +97,7 @@ public class AccountInfoController {
     @ResponseBody
     @RequestMapping(value = "/sign-up/emailAddress",method = GET)
     public AccountOperateResult checkEmailAddress(String emailAddress){
-        AccountOperateResult result=accountAuthService.emailIsHasRegisted(emailAddress);
+        AccountOperateResult result=accountInfoService.emailIsHasRegisted(emailAddress);
         return result;
     }
 
@@ -114,7 +112,6 @@ public class AccountInfoController {
     public AccountOperateResult resetPassword(String emailAddress,Locale locale){
         AccountOperateResult result=null;
         //调用邮箱服务进行邮箱验证，并发送一个邮件验证
-        result=emailService.passwordReset(emailAddress,locale);
         return result;
     }
 
@@ -148,7 +145,7 @@ public class AccountInfoController {
     public AccountOperateResult passordRest(@PathVariable("secretKey") String secretKey,
                              String emailAddress,
                              String newPassword){
-        AccountOperateResult accountOperateResult=accountAuthService.updatePasswordByEmail(emailAddress,secretKey,newPassword);
+        AccountOperateResult accountOperateResult=accountInfoService.updatePasswordByEmail(emailAddress,secretKey,newPassword);
         return accountOperateResult;
     }
 }

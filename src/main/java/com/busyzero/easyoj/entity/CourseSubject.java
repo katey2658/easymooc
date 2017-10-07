@@ -10,7 +10,7 @@ import java.util.List;
  * 学科实体类
  * Created by 11456 on 2017/7/2.
  */
-@Alias("CourseSubject")
+@Alias("courseSubject")
 public class CourseSubject implements Serializable {
     private static final long serialVersionUID = 78878676127816780L;
 

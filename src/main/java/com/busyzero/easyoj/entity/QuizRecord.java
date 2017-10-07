@@ -1,5 +1,7 @@
 package com.busyzero.easyoj.entity;
 
+import org.apache.ibatis.type.Alias;
+
 import java.io.Serializable;
 import java.time.Duration;
 import java.time.Instant;
@@ -8,6 +10,7 @@ import java.time.Instant;
  * 测试相关参数的记录
  * @author 11456
  */
+@Alias("quizRecord")
 public class QuizRecord implements Serializable {
     private static final long serialVersionUID = 78878676127816788L;
 
@@ -24,13 +27,13 @@ public class QuizRecord implements Serializable {
     private Long fromRecordId;
 
     /**单选总成绩*/
-    private Short singleTotalSocre;
+    private Short singleTotalScore;
 
     /**单选正确率:千分比*/
     private Integer singleAccuracy;
 
     /**多选总成绩*/
-    private Short multiTotalSocre;
+    private Short multiTotalScore;
 
     /**多选正确率:千分比*/
     private Integer multiAccuracy;
@@ -65,7 +68,7 @@ public class QuizRecord implements Serializable {
     /**试卷得分总分*/
     private Short totalScore;
 
-    /**测试记录状态：1.考试中  2.正常结束  3.超时  4.异常退出*/
+    /**测试记录状态：1.考试中  2.正常结束  3.超时  4.异常退出 5.还没有开始*/
     private Short recordState;
 
     /**开始时间*/
@@ -115,12 +118,12 @@ public class QuizRecord implements Serializable {
         this.fromRecordId = fromRecordId;
     }
 
-    public Short getSingleTotalSocre() {
-        return singleTotalSocre;
+    public Short getSingleTotalScore() {
+        return singleTotalScore;
     }
 
-    public void setSingleTotalSocre(Short singleTotalSocre) {
-        this.singleTotalSocre = singleTotalSocre;
+    public void setSingleTotalScore(Short singleTotalScore) {
+        this.singleTotalScore = singleTotalScore;
     }
 
     public Integer getSingleAccuracy() {
@@ -131,12 +134,12 @@ public class QuizRecord implements Serializable {
         this.singleAccuracy = singleAccuracy;
     }
 
-    public Short getMultiTotalSocre() {
-        return multiTotalSocre;
+    public Short getMultiTotalScore() {
+        return multiTotalScore;
     }
 
-    public void setMultiTotalSocre(Short multiTotalSocre) {
-        this.multiTotalSocre = multiTotalSocre;
+    public void setMultiTotalScore(Short multiTotalScore) {
+        this.multiTotalScore = multiTotalScore;
     }
 
     public Integer getMultiAccuracy() {
@@ -282,9 +285,9 @@ public class QuizRecord implements Serializable {
                 ", quizId=" + quizId +
                 ", accountId=" + accountId +
                 ", fromRecordId=" + fromRecordId +
-                ", singleTotalSocre=" + singleTotalSocre +
+                ", singleTotalScore=" + singleTotalScore +
                 ", singleAccuracy=" + singleAccuracy +
-                ", multiTotalSocre=" + multiTotalSocre +
+                ", multiTotalScore=" + multiTotalScore +
                 ", multiAccuracy=" + multiAccuracy +
                 ", completeScore=" + completeScore +
                 ", completeAccuracy=" + completeAccuracy +

@@ -37,7 +37,7 @@ public class AccountVerification implements Serializable{
     private Instant invalidTime;
 
     /**验证状态: 0.无效 1.正常 2.超时失效 3.验证*/
-    private Integer verificationState;
+    private Short verificationState;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -113,11 +113,11 @@ public class AccountVerification implements Serializable{
         this.invalidTime = invalidTime;
     }
 
-    public Integer getVerificationState() {
+    public Short getVerificationState() {
         return verificationState;
     }
 
-    public void setVerificationState(Integer verificationState) {
+    public void setVerificationState(Short verificationState) {
         this.verificationState = verificationState;
     }
 

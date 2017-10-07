@@ -1,28 +1,24 @@
 package com.busyzero.easyoj.enums;
 
 /**
- * 账户状态枚举
+ * 课程申请状态枚举
  * @author 11456
  */
-public enum AccountStateEnum {
-    STATE_NORMAL(0,"正常"),
-    STATE_WAIT_ACTIVATE(1,"等待激活"),
-    STATE_DELETE(2,"注销"),
-    STATE_FREEZE(3,"冻结")
+public enum CourseJoinRecordStateEnum {
+    STATE_INVALID(0,"无效"),
+    STATE_APPLYING(1,"申请中"),
+    STATE_APPLY_REFUSED(2,"申请不通过"),
+    STATE_APPLY_PASS(3,"申请通过"),
+    STATE_WAITING_PAY(4,"等待支付"),
+    STATE_PAY_SUCCESS(5,"支付成功")
     ;
-
     /**状态码*/
     private short state;
 
     /**状态信息*/
     private String message;
 
-    /**
-     * 构造器
-     * @param state
-     * @param message
-     */
-    AccountStateEnum(int state, String message) {
+    CourseJoinRecordStateEnum(int state, String message) {
         this.state = (short)state;
         this.message = message;
     }

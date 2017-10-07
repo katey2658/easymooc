@@ -1,28 +1,24 @@
 package com.busyzero.easyoj.enums;
 
 /**
- * 账户状态枚举
+ * 课程状态枚举
  * @author 11456
  */
-public enum AccountStateEnum {
-    STATE_NORMAL(0,"正常"),
-    STATE_WAIT_ACTIVATE(1,"等待激活"),
-    STATE_DELETE(2,"注销"),
-    STATE_FREEZE(3,"冻结")
+public enum CourseStateEnum {
+    STATE_UNDER_REVIEW(1,"审核中"),
+    STATE_NORMAL(2,"正常"),
+    STATE_NOT_BEGIN(3,"还没有开始"),
+    STATE_FILL(4,"满员"),
+    STATE_FREEZE(5,"冻结"),
+    STATE_OVERTIME(6,"过期")
     ;
-
     /**状态码*/
     private short state;
 
     /**状态信息*/
     private String message;
 
-    /**
-     * 构造器
-     * @param state
-     * @param message
-     */
-    AccountStateEnum(int state, String message) {
+    CourseStateEnum(int state, String message) {
         this.state = (short)state;
         this.message = message;
     }

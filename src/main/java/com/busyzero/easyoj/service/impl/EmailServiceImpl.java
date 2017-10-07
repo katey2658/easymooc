@@ -4,7 +4,6 @@ import com.busyzero.easyoj.commons.exception.BusinessException;
 import com.busyzero.easyoj.commons.exception.ExceptionCodeEnum;
 import com.busyzero.easyoj.commons.result.Result;
 import com.busyzero.easyoj.config.common.ConfigConstantsPool;
-import com.busyzero.easyoj.service.AccountAuthService;
 import com.busyzero.easyoj.service.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

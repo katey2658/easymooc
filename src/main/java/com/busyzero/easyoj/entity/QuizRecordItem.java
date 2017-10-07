@@ -1,12 +1,16 @@
 package com.busyzero.easyoj.entity;
 
+import org.apache.ibatis.type.Alias;
+
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
  * 用来记录考卷状况
  * @author 11456
  */
-public class QuizRecordItem {
+@Alias("quizRecordItem")
+public class QuizRecordItem implements Serializable {
     private static final long serialVersionUID = 78878676127816789L;
 
     /**测试试卷题目编号*/
