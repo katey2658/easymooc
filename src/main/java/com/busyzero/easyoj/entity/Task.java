@@ -7,8 +7,9 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 每周详细任务列表
- * Created by 11456 on 2017/6/22.
+ * <Description>每周详细任务列表</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("task")
 public class Task {

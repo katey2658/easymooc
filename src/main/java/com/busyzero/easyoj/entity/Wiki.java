@@ -1,12 +1,15 @@
 package com.busyzero.easyoj.entity;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 课程文字资料
- * Created by 11456 on 2017/6/22.
+ * <Description>课程文字资料</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
-public class Wiki {
+public class Wiki implements Serializable {
+    private static final long serialVersionUID = -78878973287908329L;
     /**wiki 编号*/
     private Integer wikiId;
 

@@ -6,8 +6,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 相应的题目
- * @author 11456
+ * <Descritption>相应的题目</Descritption>
+ * @author katey2658
+ * @date 2018/3/5
  */
 @Alias("quizItem")
 public class QuizItem implements Serializable {
@@ -20,19 +21,19 @@ public class QuizItem implements Serializable {
     private Integer courseId;
 
     /**单元号*/
-    private Short unitNumber;
+    private Integer unitNumber;
 
     /**阶段号*/
-    private Short stageNumber;
+    private Integer stageNumber;
 
     /**问卷编号*/
     private String questionnaireCode;
 
     /**题目类型:1.单选  2.多选  3.填空题  4.简答题  5.综合题  6.附加题*/
-    private Short itemType;
+    private Integer itemType;
 
     /**状态：1.审核中  2.正常  3.废弃  4.冻结，被排除  默认正常*/
-    private Short itemState;
+    private Integer itemState;
 
     /**题目内容*/
     private String itemContent;
@@ -79,7 +80,7 @@ public class QuizItem implements Serializable {
     private Boolean eRight;
 
     /**填空数<=3：当为填空题的时候进行需要填写的内容*/
-    private Short completeNumber;
+    private Integer completeNumber;
 
     /**填空A答案*/
     private String aComplete;
@@ -105,13 +106,16 @@ public class QuizItem implements Serializable {
     /** 以下为一些参考系数,用来进行选择,会不断进行变化*/
 
     /**难度系数初始值都相同：*/
-    private Short degreeOfDifficulty;
+    private Integer degreeOfDifficulty;
 
     /**频率系数:频率越大，同等条件下，越不容易被选到*/
-    private Short degreeOfFrequency;
+    private Integer degreeOfFrequency;
 
     /**题目权重,也就是重要值，这个一般是由录入者来进行确定，但也会出现相应的变化*/
-    private Short itemWeight;
+    private Integer itemWeight;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -135,19 +139,19 @@ public class QuizItem implements Serializable {
         this.courseId = courseId;
     }
 
-    public Short getUnitNumber() {
+    public Integer getUnitNumber() {
         return unitNumber;
     }
 
-    public void setUnitNumber(Short unitNumber) {
+    public void setUnitNumber(Integer unitNumber) {
         this.unitNumber = unitNumber;
     }
 
-    public Short getStageNumber() {
+    public Integer getStageNumber() {
         return stageNumber;
     }
 
-    public void setStageNumber(Short stageNumber) {
+    public void setStageNumber(Integer stageNumber) {
         this.stageNumber = stageNumber;
     }
 
@@ -159,19 +163,19 @@ public class QuizItem implements Serializable {
         this.questionnaireCode = questionnaireCode;
     }
 
-    public Short getItemType() {
+    public Integer getItemType() {
         return itemType;
     }
 
-    public void setItemType(Short itemType) {
+    public void setItemType(Integer itemType) {
         this.itemType = itemType;
     }
 
-    public Short getItemState() {
+    public Integer getItemState() {
         return itemState;
     }
 
-    public void setItemState(Short itemState) {
+    public void setItemState(Integer itemState) {
         this.itemState = itemState;
     }
 
@@ -271,11 +275,11 @@ public class QuizItem implements Serializable {
         this.eRight = eRight;
     }
 
-    public Short getCompleteNumber() {
+    public Integer getCompleteNumber() {
         return completeNumber;
     }
 
-    public void setCompleteNumber(Short completeNumber) {
+    public void setCompleteNumber(Integer completeNumber) {
         this.completeNumber = completeNumber;
     }
 
@@ -335,28 +339,36 @@ public class QuizItem implements Serializable {
         this.points = points;
     }
 
-    public Short getDegreeOfDifficulty() {
+    public Integer getDegreeOfDifficulty() {
         return degreeOfDifficulty;
     }
 
-    public void setDegreeOfDifficulty(Short degreeOfDifficulty) {
+    public void setDegreeOfDifficulty(Integer degreeOfDifficulty) {
         this.degreeOfDifficulty = degreeOfDifficulty;
     }
 
-    public Short getDegreeOfFrequency() {
+    public Integer getDegreeOfFrequency() {
         return degreeOfFrequency;
     }
 
-    public void setDegreeOfFrequency(Short degreeOfFrequency) {
+    public void setDegreeOfFrequency(Integer degreeOfFrequency) {
         this.degreeOfFrequency = degreeOfFrequency;
     }
 
-    public Short getItemWeight() {
+    public Integer getItemWeight() {
         return itemWeight;
     }
 
-    public void setItemWeight(Short itemWeight) {
+    public void setItemWeight(Integer itemWeight) {
         this.itemWeight = itemWeight;
+    }
+
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
     }
 
     public Instant getGmtCreate() {
@@ -408,6 +420,7 @@ public class QuizItem implements Serializable {
                 ", degreeOfDifficulty=" + degreeOfDifficulty +
                 ", degreeOfFrequency=" + degreeOfFrequency +
                 ", itemWeight=" + itemWeight +
+                ", delFlag=" + delFlag +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 '}';

@@ -8,8 +8,9 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 用户购买课程记录表
- * Created by 11456 on 2017/7/4.
+ * <Description>用户购买课程记录表</Description>
+ * @author katey2658
+ * @date 2017/7/4.
  */
 @Alias("courseJoinRecord")
 public class CourseJoinRecord implements Serializable {
@@ -25,7 +26,7 @@ public class CourseJoinRecord implements Serializable {
     private Integer courseId;
 
     /**状态:0.无效  1.申请中  2.申请被拒绝  3.申请通过  4.等待支付 5.支付成功 */
-    private Short recordState;
+    private Integer recordState;
 
     /**课程原本价格*/
     private BigDecimal priceCourse;
@@ -37,7 +38,7 @@ public class CourseJoinRecord implements Serializable {
     private Integer discountPercent;
 
     /**选择支付方式 1.网银 2.支付宝 3.微信*/
-    private Short methodPaid;
+    private Integer methodPaid;
 
     /**账单编号*/
     private String billCode;
@@ -72,11 +73,11 @@ public class CourseJoinRecord implements Serializable {
         this.courseId = courseId;
     }
 
-    public Short getRecordState() {
+    public Integer getRecordState() {
         return recordState;
     }
 
-    public void setRecordState(Short recordState) {
+    public void setRecordState(Integer recordState) {
         this.recordState = recordState;
     }
 
@@ -104,11 +105,11 @@ public class CourseJoinRecord implements Serializable {
         this.discountPercent = discountPercent;
     }
 
-    public Short getMethodPaid() {
+    public Integer getMethodPaid() {
         return methodPaid;
     }
 
-    public void setMethodPaid(Short methodPaid) {
+    public void setMethodPaid(Integer methodPaid) {
         this.methodPaid = methodPaid;
     }
 

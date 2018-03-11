@@ -1,4 +1,57 @@
-##EasyOJ 
+## EasyOJ项目设计和实现
+### 一．	项目概述
+> EasyOJ是一个在线评测系统，其主要受众为老师和学生关系型用户。为其提供了一个简单快捷的在线题型自动组卷和测试结果统计的应用平台。
+
+### 二．	模块设计
+#### 权限模块
+权限模块主要负责用户
+#### 课程模块：
+#### 评测模块
+#### 组卷和统计模块
+#### 消息模块
+#### 验证模块
+#### 搜索模块
+#### 后台管理模块
+
+### 三．	功能设计
+##### 账户权限服务：AccountAuthService
+
+##### 账户信息服务：AccountInfoService
+
+##### 验证服务： VerificationService
+
+##### 邮件服务： EmailService
+
+##### 短信服务：ShortMessageService
+
+##### 课程信息服务：CourseInfoService
+
+##### 课程评论服务：CourseCommentService
+
+##### 课程问题服务: CourseQuestionService
+
+##### 测试信息服务：QuizTaskServic`
+
+##### 测试组卷服务：QuizAlgorithmService
+
+##### 测试统计服务：QuizStatisticsService
+
+##### 消息发布服务：MessagePublishSe rvice
+
+##### 消息接收服务：MessageReceiveService
+
+##### 搜索服务：SearchService
+
+##### 支付服务：PayService
+
+### 四. 页面描述
+##### 登录页面
+![登录](shot/sign-in.png)
+##### 注册页面
+![注册](shot/sign-up.png)
+##### 错误页面
+![错误](shot/error.png)
+
 #### 项目描述
 easyoj是关于构建现代化在线教育和学习系统的一个规划项目。
 围绕着这个规划将产生最终四个独立的系统：
@@ -39,10 +92,3 @@ easyoj是关于构建现代化在线教育和学习系统的一个规划项目�
 - 课程笔记服务
 - 用户分享服务
 
-#### 页面描述
-##### 登录页面
-![登录](shot/sign-in.png)
-##### 注册页面
-![注册](shot/sign-up.png)
-##### 错误页面
-![错误](shot/error.png)

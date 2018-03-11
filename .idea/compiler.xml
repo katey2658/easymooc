@@ -10,7 +10,7 @@
         <module name="easyoj-service-partner-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel target="9">
       <module name="easyoj" target="1.8" />
     </bytecodeTargetLevel>
   </component>

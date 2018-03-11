@@ -5,8 +5,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 用户验证码
- * @author 11456
+ * <Description>用户验证码</Description>
+ * @author katey2658
+ * @date 2018/3/4
  */
 @Alias("accountVerification")
 public class AccountVerification implements Serializable{
@@ -37,7 +38,7 @@ public class AccountVerification implements Serializable{
     private Instant invalidTime;
 
     /**验证状态: 0.无效 1.正常 2.超时失效 3.验证*/
-    private Short verificationState;
+    private Integer verificationState;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -113,11 +114,11 @@ public class AccountVerification implements Serializable{
         this.invalidTime = invalidTime;
     }
 
-    public Short getVerificationState() {
+    public Integer getVerificationState() {
         return verificationState;
     }
 
-    public void setVerificationState(Short verificationState) {
+    public void setVerificationState(Integer verificationState) {
         this.verificationState = verificationState;
     }
 

@@ -15,7 +15,7 @@
     <junit.version>4.8.2</junit.version>
     <org.slf4j.version>1.7.24</org.slf4j.version>
     <ch.qos.logback.version>1.1.11</ch.qos.logback.version>
-    <mysql.version>6.0.5</mysql.version>
+    <mysql.version>6.0.5</mysql.version >
     <org.mybatis.version>3.4.1</org.mybatis.version>
     <com.alibaba.version>1.0.26</com.alibaba.version>
     <org.mybatis-spring.version>6.0.5</org.mybatis-spring.version>
@@ -367,6 +367,7 @@
       <version>${org.mockito.version}</version>
     </dependency>
   </dependencies>
+
 
   <build>
     <finalName>easyoj</finalName>

@@ -1,9 +1,7 @@
 package com.busyzero.easyoj.controller;
 
 import com.busyzero.easyoj.commons.result.Result;
-import com.busyzero.easyoj.dto.VerificationCodeResult;
-import com.busyzero.easyoj.dto.VerificationCodeDto;
-import com.busyzero.easyoj.service.VerificationCodeService;
+import com.busyzero.easyoj.service.VerificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +31,7 @@ public class VerificationCodeController {
 
     /**验证码服务提供对象*/
     @Autowired
-    private VerificationCodeService verificationCodeService;
+    private VerificationService verificationCodeService;
 
     /**
      * 请求一个图片验证码

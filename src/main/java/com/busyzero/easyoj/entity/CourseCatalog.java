@@ -7,17 +7,16 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 目录项：
- * 注：这是视频目录的第一级\
- *
- * Created by 11456 on 2017/7/2.
+ * <Description>目录项：注：这是视频目录的第一级</Description>
+ * @author katey2658
+ * @date 2017/7/2.
  */
 @Alias("courseCatalog")
 public class CourseCatalog implements Serializable{
     private static final long serialVersionUID = 78878676127816779L;
 
     /**编号*/
-    private Short catalogId;
+    private Integer catalogId;
 
     /**目录项名*/
     private String catalogName;
@@ -31,14 +30,17 @@ public class CourseCatalog implements Serializable{
     /**上一次修改时间*/
     private Instant gmtModified;
 
+    /** 删除标志 0 正常 1: 删除 */
+    private Integer delFlag;
+
     /**目录项下二级学科列表:因为不多，所以不要分页*/
     private List<CourseSubject> subjectList;
 
-    public Short getCatalogId() {
+    public Integer getCatalogId() {
         return catalogId;
     }
 
-    public void setCatalogId(Short catalogId) {
+    public void setCatalogId(Integer catalogId) {
         this.catalogId = catalogId;
     }
 
@@ -82,6 +84,14 @@ public class CourseCatalog implements Serializable{
         this.subjectList = subjectList;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "CourseCatalog{" +
@@ -90,6 +100,7 @@ public class CourseCatalog implements Serializable{
                 ", catalogDesc='" + catalogDesc + '\'' +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
+                ", delFlag=" + delFlag +
                 ", subjectList=" + subjectList +
                 '}';
     }

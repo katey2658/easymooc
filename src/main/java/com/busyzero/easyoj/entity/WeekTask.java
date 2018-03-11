@@ -2,15 +2,18 @@ package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.List;
 
 /**
- * 每周授课大纲信息
- * Created by 11456 on 2017/6/22.
+ * <Description>每周授课大纲信息</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("weekTask")
-public class WeekTask {
+public class WeekTask implements Serializable {
+    private static final long serialVersionUID = -789067543676367887L;
     /**每周任务编号*/
     private Integer weekTaskId;
 

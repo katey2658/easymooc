@@ -7,8 +7,8 @@ import java.time.Duration;
 import java.time.Instant;
 
 /**
- * 测试相关参数的记录
- * @author 11456
+ * <Description>测试相关参数的记录</Description>
+ * @author katey2658
  */
 @Alias("quizRecord")
 public class QuizRecord implements Serializable {
@@ -27,49 +27,49 @@ public class QuizRecord implements Serializable {
     private Long fromRecordId;
 
     /**单选总成绩*/
-    private Short singleTotalScore;
+    private Integer singleTotalScore;
 
     /**单选正确率:千分比*/
     private Integer singleAccuracy;
 
     /**多选总成绩*/
-    private Short multiTotalScore;
+    private Integer multiTotalScore;
 
     /**多选正确率:千分比*/
     private Integer multiAccuracy;
 
     /**填空总成绩*/
-    private Short completeScore;
+    private Integer completeScore;
 
     /**多选正确率:千分比*/
     private Integer completeAccuracy;
 
     /**简述总成绩*/
-    private Short resumeScore;
+    private Integer resumeScore;
 
     /**简述正确率:千分比*/
     private Integer resumeAccuracy;
 
     /**综合总成绩*/
-    private Short synthesisScore;
+    private Integer synthesisScore;
 
     /**综合正确率:千分比*/
     private Integer synthesisAccuracy;
 
     /**附加总成绩*/
-    private Short extraScore;
+    private Integer extraScore;
 
     /**附加正确率:千分比*/
     private Integer extraAccuracy;
 
     /**试卷总分*/
-    private Short fullScore;
+    private Integer fullScore;
 
     /**试卷得分总分*/
-    private Short totalScore;
+    private Integer totalScore;
 
     /**测试记录状态：1.考试中  2.正常结束  3.超时  4.异常退出 5.还没有开始*/
-    private Short recordState;
+    private Integer recordState;
 
     /**开始时间*/
     private Instant timeStart;
@@ -79,6 +79,9 @@ public class QuizRecord implements Serializable {
 
     /**考试用时*/
     private Duration duration;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -118,11 +121,11 @@ public class QuizRecord implements Serializable {
         this.fromRecordId = fromRecordId;
     }
 
-    public Short getSingleTotalScore() {
+    public Integer getSingleTotalScore() {
         return singleTotalScore;
     }
 
-    public void setSingleTotalScore(Short singleTotalScore) {
+    public void setSingleTotalScore(Integer singleTotalScore) {
         this.singleTotalScore = singleTotalScore;
     }
 
@@ -134,11 +137,11 @@ public class QuizRecord implements Serializable {
         this.singleAccuracy = singleAccuracy;
     }
 
-    public Short getMultiTotalScore() {
+    public Integer getMultiTotalScore() {
         return multiTotalScore;
     }
 
-    public void setMultiTotalScore(Short multiTotalScore) {
+    public void setMultiTotalScore(Integer multiTotalScore) {
         this.multiTotalScore = multiTotalScore;
     }
 
@@ -150,11 +153,11 @@ public class QuizRecord implements Serializable {
         this.multiAccuracy = multiAccuracy;
     }
 
-    public Short getCompleteScore() {
+    public Integer getCompleteScore() {
         return completeScore;
     }
 
-    public void setCompleteScore(Short completeScore) {
+    public void setCompleteScore(Integer completeScore) {
         this.completeScore = completeScore;
     }
 
@@ -166,11 +169,11 @@ public class QuizRecord implements Serializable {
         this.completeAccuracy = completeAccuracy;
     }
 
-    public Short getResumeScore() {
+    public Integer getResumeScore() {
         return resumeScore;
     }
 
-    public void setResumeScore(Short resumeScore) {
+    public void setResumeScore(Integer resumeScore) {
         this.resumeScore = resumeScore;
     }
 
@@ -182,11 +185,11 @@ public class QuizRecord implements Serializable {
         this.resumeAccuracy = resumeAccuracy;
     }
 
-    public Short getSynthesisScore() {
+    public Integer getSynthesisScore() {
         return synthesisScore;
     }
 
-    public void setSynthesisScore(Short synthesisScore) {
+    public void setSynthesisScore(Integer synthesisScore) {
         this.synthesisScore = synthesisScore;
     }
 
@@ -198,11 +201,11 @@ public class QuizRecord implements Serializable {
         this.synthesisAccuracy = synthesisAccuracy;
     }
 
-    public Short getExtraScore() {
+    public Integer getExtraScore() {
         return extraScore;
     }
 
-    public void setExtraScore(Short extraScore) {
+    public void setExtraScore(Integer extraScore) {
         this.extraScore = extraScore;
     }
 
@@ -214,27 +217,27 @@ public class QuizRecord implements Serializable {
         this.extraAccuracy = extraAccuracy;
     }
 
-    public Short getFullScore() {
+    public Integer getFullScore() {
         return fullScore;
     }
 
-    public void setFullScore(Short fullScore) {
+    public void setFullScore(Integer fullScore) {
         this.fullScore = fullScore;
     }
 
-    public Short getTotalScore() {
+    public Integer getTotalScore() {
         return totalScore;
     }
 
-    public void setTotalScore(Short totalScore) {
+    public void setTotalScore(Integer totalScore) {
         this.totalScore = totalScore;
     }
 
-    public Short getRecordState() {
+    public Integer getRecordState() {
         return recordState;
     }
 
-    public void setRecordState(Short recordState) {
+    public void setRecordState(Integer recordState) {
         this.recordState = recordState;
     }
 

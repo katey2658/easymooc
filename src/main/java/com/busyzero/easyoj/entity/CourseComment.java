@@ -6,8 +6,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 课程评论信息列表
- * Created by 11456 on 2017/6/22.
+ * <Description>课程评论信息列表</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("courseComment")
 public class CourseComment implements Serializable {
@@ -23,10 +24,13 @@ public class CourseComment implements Serializable {
     private Integer accountId;
 
     /**打分*/
-    private Short score;
+    private Integer score;
 
     /**评论*/
     private String commentContent;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant timeStart;
@@ -61,11 +65,11 @@ public class CourseComment implements Serializable {
         this.accountId = accountId;
     }
 
-    public Short getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(Short score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
@@ -101,6 +105,14 @@ public class CourseComment implements Serializable {
         this.account = account;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "CourseComment{" +
@@ -109,6 +121,7 @@ public class CourseComment implements Serializable {
                 ", accountId=" + accountId +
                 ", score=" + score +
                 ", commentContent='" + commentContent + '\'' +
+                ", delFlag=" + delFlag +
                 ", timeStart=" + timeStart +
                 ", timeModified=" + timeModified +
                 ", account=" + account +

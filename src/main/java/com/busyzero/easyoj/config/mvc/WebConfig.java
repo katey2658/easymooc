@@ -20,6 +20,7 @@ import org.thymeleaf.templatemode.TemplateMode;
 
 /**
  * 视图层配置
+ * @author 11456
  * Created by 11456 on 2017/4/9.
  */
 @EnableWebMvc
@@ -56,7 +57,6 @@ public class WebConfig extends WebMvcConfigurerAdapter  implements ApplicationCo
         registry.addResourceHandler(PATTERN_RESOURCE_JS)
                 .addResourceLocations(LOCATION_RESOURCE_JS);
     }
-
 
     /**
      * 视图解析器：将视图进行解析

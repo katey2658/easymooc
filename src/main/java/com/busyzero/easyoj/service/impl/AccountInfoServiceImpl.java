@@ -13,7 +13,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 
 /**
- * 用户个人信息相关
+ *
  * @author katey2658
  * Created by 11456 on 2017/6/23.
  */

@@ -6,8 +6,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 用来记录考卷状况
- * @author 11456
+ * <Description>用来记录考卷状况</Description>
+ * @author katey2658
+ * @date 2018/3/5
  */
 @Alias("quizRecordItem")
 public class QuizRecordItem implements Serializable {
@@ -65,13 +66,16 @@ public class QuizRecordItem implements Serializable {
     private String synthesisInputAttachment;
 
     /**题型分数*/
-    private Short score;
+    private Integer score;
 
     /**得分*/
-    private Short scoreRecord;
+    private Integer scoreRecord;
 
     /**题型反馈*/
     private String feedback;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -215,19 +219,19 @@ public class QuizRecordItem implements Serializable {
         this.synthesisInputAttachment = synthesisInputAttachment;
     }
 
-    public Short getScore() {
+    public Integer getScore() {
         return score;
     }
 
-    public void setScore(Short score) {
+    public void setScore(Integer score) {
         this.score = score;
     }
 
-    public Short getScoreRecord() {
+    public Integer getScoreRecord() {
         return scoreRecord;
     }
 
-    public void setScoreRecord(Short scoreRecord) {
+    public void setScoreRecord(Integer scoreRecord) {
         this.scoreRecord = scoreRecord;
     }
 
@@ -255,6 +259,14 @@ public class QuizRecordItem implements Serializable {
         this.gmtModified = gmtModified;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "QuizRecordItem{" +
@@ -278,6 +290,7 @@ public class QuizRecordItem implements Serializable {
                 ", score=" + score +
                 ", scoreRecord=" + scoreRecord +
                 ", feedback='" + feedback + '\'' +
+                ", delFlag=" + delFlag +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 '}';

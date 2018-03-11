@@ -8,8 +8,9 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 课程信息表
- * Created by 11456 on 2017/6/22.
+ * <Description>课程信息表</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("courseInfo")
 public class CourseInfo implements Serializable {
@@ -19,7 +20,7 @@ public class CourseInfo implements Serializable {
     private Integer courseId;
 
     /**所属学科编号*/
-    private Short subjectId;
+    private Integer subjectId;
 
     /**课程名*/
     private String courseName;
@@ -93,6 +94,9 @@ public class CourseInfo implements Serializable {
     /** 教学方信息*/
     private AccountInfo teacher;
 
+    /** 删除标志 0. 正常 1 已删除*/
+    private Integer delFlag;
+
     /**课程列表加回答*/
     private List<CourseQuestion> courseQuestionList;
 
@@ -110,11 +114,11 @@ public class CourseInfo implements Serializable {
         this.courseId = courseId;
     }
 
-    public Short getSubjectId() {
+    public Integer getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(Short subjectId) {
+    public void setSubjectId(Integer subjectId) {
         this.subjectId = subjectId;
     }
 
@@ -338,6 +342,14 @@ public class CourseInfo implements Serializable {
         this.weekTaskList = weekTaskList;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "CourseInfo{" +
@@ -367,6 +379,7 @@ public class CourseInfo implements Serializable {
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 ", teacher=" + teacher +
+                ", delFlag=" + delFlag +
                 ", courseQuestionList=" + courseQuestionList +
                 ", courseCommentList=" + courseCommentList +
                 ", weekTaskList=" + weekTaskList +

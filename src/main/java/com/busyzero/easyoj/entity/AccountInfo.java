@@ -7,8 +7,9 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 用户账户信息表
- * Created by 11456 on 2017/6/22.
+ * <Description>用户账户信息表</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("accountInfo")
 public class AccountInfo implements Serializable {
@@ -17,16 +18,16 @@ public class AccountInfo implements Serializable {
     /**账户编号*/
     private Integer accountId;
 
-    /**用户账号:可以修改*/
+    /**用户账号:随机生成，可以修改*/
     private String accountNo;
 
     /**用户手机号*/
-    private String mobile;
+    private String mobileNo;
 
     /**邮箱地址*/
     private String emailAddress;
 
-    /** 账户类型 1:学生  2：教师 */
+    /** 账户类型 1:学生  2：教师 3.陌生用户*/
     private String accountType;
 
     /**密码：MD5加密*/
@@ -54,9 +55,9 @@ public class AccountInfo implements Serializable {
     private String accountPhoto;
 
     /**账户状态： 0：正常  1.等待激活  2.注销  3.冻结 */
-    private Short accountState;
+    private Integer accountState;
 
-    /**会员等级*/
+    /**会员等级：*/
     private Integer accountLevel;
 
     /**地址*/
@@ -67,6 +68,9 @@ public class AccountInfo implements Serializable {
 
     /**最后一次修改时间*/
     private Instant gmtModified;
+
+    /** 用户附加信息 */
+    private AccountInfoEx accountInfoEx;
 
     /**用户权限*/
     private List<String> authorities;
@@ -87,12 +91,12 @@ public class AccountInfo implements Serializable {
         this.accountNo = accountNo;
     }
 
-    public String getMobile() {
-        return mobile;
+    public String getMobileNo() {
+        return mobileNo;
     }
 
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
+    public void setMobileNo(String mobileNo) {
+        this.mobileNo = mobileNo;
     }
 
     public String getEmailAddress() {
@@ -175,11 +179,11 @@ public class AccountInfo implements Serializable {
         this.accountPhoto = accountPhoto;
     }
 
-    public Short getAccountState() {
+    public Integer getAccountState() {
         return accountState;
     }
 
-    public void setAccountState(Short accountState) {
+    public void setAccountState(Integer accountState) {
         this.accountState = accountState;
     }
 
@@ -223,12 +227,20 @@ public class AccountInfo implements Serializable {
         this.authorities = authorities;
     }
 
+    public AccountInfoEx getAccountInfoEx() {
+        return accountInfoEx;
+    }
+
+    public void setAccountInfoEx(AccountInfoEx accountInfoEx) {
+        this.accountInfoEx = accountInfoEx;
+    }
+
     @Override
     public String toString() {
         return "AccountInfo{" +
                 "accountId=" + accountId +
                 ", accountNo='" + accountNo + '\'' +
-                ", mobile='" + mobile + '\'' +
+                ", mobileNo='" + mobileNo + '\'' +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", accountType='" + accountType + '\'' +
                 ", password='" + password + '\'' +
@@ -244,6 +256,7 @@ public class AccountInfo implements Serializable {
                 ", address=" + address +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
+                ", accountInfoEx=" + accountInfoEx +
                 ", authorities=" + authorities +
                 '}';
     }

@@ -6,8 +6,9 @@ import java.io.Serializable;
 import java.time.Instant;
 
 /**
- * 课程问题的回答
- * Created by 11456 on 2017/6/22.
+ * <Description>课程问题的回答</Description>
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("courseQuestion")
 public class CourseQuestion implements Serializable {
@@ -24,6 +25,9 @@ public class CourseQuestion implements Serializable {
 
     /**问题解答*/
     private String reply;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -79,6 +83,14 @@ public class CourseQuestion implements Serializable {
         this.gmtModified = gmtModified;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "CourseQuestion{" +
@@ -86,6 +98,7 @@ public class CourseQuestion implements Serializable {
                 ", courseId=" + courseId +
                 ", questionContent='" + questionContent + '\'' +
                 ", reply='" + reply + '\'' +
+                ", delFlag=" + delFlag +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 '}';

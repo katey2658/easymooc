@@ -2,14 +2,17 @@ package com.busyzero.easyoj.entity;
 
 import org.apache.ibatis.type.Alias;
 
+import java.io.Serializable;
 import java.time.Instant;
 
 /**
  * 教学内容项
- * Created by 11456 on 2017/6/22.
+ * @author katey2658
+ * @date 2017/6/22.
  */
 @Alias("taskItem")
-public class TaskItem {
+public class TaskItem implements Serializable{
+    private static final long serialVersionUID = -7817823816786278L;
     /**任务项分项目编号*/
     private Integer taskItemId;
 

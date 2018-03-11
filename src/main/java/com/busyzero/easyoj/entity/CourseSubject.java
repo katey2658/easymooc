@@ -7,7 +7,8 @@ import java.time.Instant;
 import java.util.List;
 
 /**
- * 学科实体类
+ * <Description>学科实体类</Description>
+ * @author katey2658
  * Created by 11456 on 2017/7/2.
  */
 @Alias("courseSubject")
@@ -15,7 +16,7 @@ public class CourseSubject implements Serializable {
     private static final long serialVersionUID = 78878676127816780L;
 
     /**学科编号*/
-    private Short subjectId;
+    private Integer subjectId;
 
     /**学科名字*/
     private String subjectName;
@@ -32,14 +33,17 @@ public class CourseSubject implements Serializable {
     /**上一次修改时间*/
     private Instant gmtModified;
 
+    /** 删除标志 */
+    private Integer delFlag;
+
     /**课程列表:首先显示在六条以内*/
     private List<CourseInfo> courseList;
 
-    public Short getSubjectId() {
+    public Integer getSubjectId() {
         return subjectId;
     }
 
-    public void setSubjectId(Short subjectId) {
+    public void setSubjectId(Integer subjectId) {
         this.subjectId = subjectId;
     }
 
@@ -91,6 +95,14 @@ public class CourseSubject implements Serializable {
         this.subjectDesc = subjectDesc;
     }
 
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
+    }
+
     @Override
     public String toString() {
         return "CourseSubject{" +
@@ -100,6 +112,7 @@ public class CourseSubject implements Serializable {
                 ", subjectDesc='" + subjectDesc + '\'' +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
+                ", delFlag=" + delFlag +
                 ", courseList=" + courseList +
                 '}';
     }

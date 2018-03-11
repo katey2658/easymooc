@@ -7,8 +7,9 @@ import java.time.Duration;
 import java.time.Instant;
 
 /**
- * 测试任务
- * @author 11456
+ * <Description>测试任务</Description>
+ * @author katey2658
+ * @date 2018/3/5
  */
 @Alias("quizTask")
 public class QuizTask implements Serializable {
@@ -30,13 +31,13 @@ public class QuizTask implements Serializable {
     private Integer teacherId;
 
     /**测试类型:1.单元测试  2.阶段性测试  3.综合测试  4.问卷测试：非课程知识点  */
-    private Short quizType;
+    private Integer quizType;
 
     /**单元号*/
-    private Short unitNumber;
+    private Integer unitNumber;
 
     /**阶段号，一般来说,大于等于该阶段的题都符合*/
-    private Short stageNumber;
+    private Integer stageNumber;
 
     /**问卷编号*/
     private String questionnaireCode;
@@ -54,112 +55,115 @@ public class QuizTask implements Serializable {
     private Duration duration;
 
     /**测试状态:1.审核中  2.正常  3. 还没有开始  4.废弃  5.冻结  6.过期 */
-    private Short quizState;
+    private Integer quizState;
 
     /**满分成绩：默认100*/
-    private Short fullScore;
+    private Integer fullScore;
 
     /**是否有单选:默认false*/
     private boolean single;
 
     /**单选题分值权重:默认5*/
-    private Short singleWeight;
+    private Integer singleWeight;
 
     /**单选题数目:默认20*/
-    private Short singleNumber;
+    private Integer singleNumber;
 
     /**单选题中简单题型权重：5*/
-    private Short singleEasyWeight;
+    private Integer singleEasyWeight;
 
     /**单选题中中等题型权重：3*/
-    private Short singleMiddleWeight;
+    private Integer singleMiddleWeight;
 
     /**单选题中困难题型权重：2*/
-    private Short singleHarWeight;
+    private Integer singleHarWeight;
 
     /**是否有多选题*/
     private Boolean multiple;
 
     /**多选题权重*/
-    private Short multipleWeight;
+    private Integer multipleWeight;
 
     /**多选题题目数量*/
-    private Short multipleNumber;
+    private Integer multipleNumber;
 
     /**多选简单题型数量*/
-    private Short multipleEasyWeight;
+    private Integer multipleEasyWeight;
 
     /**多选中等题型权重*/
-    private Short multipleMiddleWeight;
+    private Integer multipleMiddleWeight;
 
     /**多选困难提醒权重*/
-    private Short multipleHardWeight;
+    private Integer multipleHardWeight;
 
     /**是否有填空题*/
     private Boolean complete;
 
     /**填空题权重*/
-    private Short completeWeight;
+    private Integer completeWeight;
 
     /**填空题数量*/
-    private Short completeNumber;
+    private Integer completeNumber;
 
     /**填空题简单题型权重*/
-    private Short completeEasyWeight;
+    private Integer completeEasyWeight;
 
     /**填空题中等题型权重*/
-    private Short completeMiddleWeight;
+    private Integer completeMiddleWeight;
 
     /**填空题困难题型权重*/
-    private Short completeHardWeight;
+    private Integer completeHardWeight;
 
     /**是否有简述题*/
     private Boolean resume;
 
     /**简述题分值权重*/
-    private Short resumeWeight;
+    private Integer resumeWeight;
 
     /**简述题数量*/
-    private Short resumeNumber;
+    private Integer resumeNumber;
 
     /**简述简单提醒权重*/
-    private Short resumeEasyWeight;
+    private Integer resumeEasyWeight;
 
     /**简述中等题型权重*/
-    private Short resumeMiddleWeight;
+    private Integer resumeMiddleWeight;
 
     /**简述苦难题型权重*/
-    private Short resumeHardWeight;
+    private Integer resumeHardWeight;
 
     /**是否有综合题*/
     private Boolean synthesis;
 
     /**综合体分值权重*/
-    private Short synthesisWeight;
+    private Integer synthesisWeight;
 
     /**综合题数量*/
-    private Short synthesisNumber;
+    private Integer synthesisNumber;
 
     /**综合题目简单题型权重*/
-    private Short synthesisEasyWeight;
+    private Integer synthesisEasyWeight;
 
     /**综合题中等题型权重*/
-    private Short synthesisMiddleWeight;
+    private Integer synthesisMiddleWeight;
 
     /**综合题困难题型权重*/
-    private Short synthesisHardWeight;
+    private Integer synthesisHardWeight;
 
     /**是否有附加题*/
     private Boolean extra;
 
     /**附加题分值*/
-    private Short extraScore;
+    private Integer extraScore;
 
     /**额外考题项编号*/
     private Long  extraItemId;
 
     /**知识点:多个，用逗号进行分割*/
     private String points;
+
+    /** 删除标志 */
+    private Integer delFlag;
 
     /**创建时间*/
     private Instant gmtCreate;
@@ -191,19 +195,19 @@ public class QuizTask implements Serializable {
         this.quizTitle = quizTitle;
     }
 
-    public Short getUnitNumber() {
+    public Integer getUnitNumber() {
         return unitNumber;
     }
 
-    public void setUnitNumber(Short unitNumber) {
+    public void setUnitNumber(Integer unitNumber) {
         this.unitNumber = unitNumber;
     }
 
-    public Short getStageNumber() {
+    public Integer getStageNumber() {
         return stageNumber;
     }
 
-    public void setStageNumber(Short stageNumber) {
+    public void setStageNumber(Integer stageNumber) {
         this.stageNumber = stageNumber;
     }
 
@@ -231,11 +235,11 @@ public class QuizTask implements Serializable {
         this.teacherId = teacherId;
     }
 
-    public Short getQuizType() {
+    public Integer getQuizType() {
         return quizType;
     }
 
-    public void setQuizType(Short quizType) {
+    public void setQuizType(Integer quizType) {
         this.quizType = quizType;
     }
 
@@ -271,19 +275,19 @@ public class QuizTask implements Serializable {
         this.duration = duration;
     }
 
-    public Short getQuizState() {
+    public Integer getQuizState() {
         return quizState;
     }
 
-    public void setQuizState(Short quizState) {
+    public void setQuizState(Integer quizState) {
         this.quizState = quizState;
     }
 
-    public Short getFullScore() {
+    public Integer getFullScore() {
         return fullScore;
     }
 
-    public void setFullScore(Short fullScore) {
+    public void setFullScore(Integer fullScore) {
         this.fullScore = fullScore;
     }
 
@@ -295,43 +299,43 @@ public class QuizTask implements Serializable {
         this.single = single;
     }
 
-    public Short getSingleWeight() {
+    public Integer getSingleWeight() {
         return singleWeight;
     }
 
-    public void setSingleWeight(Short singleWeight) {
+    public void setSingleWeight(Integer singleWeight) {
         this.singleWeight = singleWeight;
     }
 
-    public Short getSingleNumber() {
+    public Integer getSingleNumber() {
         return singleNumber;
     }
 
-    public void setSingleNumber(Short singleNumber) {
+    public void setSingleNumber(Integer singleNumber) {
         this.singleNumber = singleNumber;
     }
 
-    public Short getSingleEasyWeight() {
+    public Integer getSingleEasyWeight() {
         return singleEasyWeight;
     }
 
-    public void setSingleEasyWeight(Short singleEasyWeight) {
+    public void setSingleEasyWeight(Integer singleEasyWeight) {
         this.singleEasyWeight = singleEasyWeight;
     }
 
-    public Short getSingleMiddleWeight() {
+    public Integer getSingleMiddleWeight() {
         return singleMiddleWeight;
     }
 
-    public void setSingleMiddleWeight(Short singleMiddleWeight) {
+    public void setSingleMiddleWeight(Integer singleMiddleWeight) {
         this.singleMiddleWeight = singleMiddleWeight;
     }
 
-    public Short getSingleHarWeight() {
+    public Integer getSingleHarWeight() {
         return singleHarWeight;
     }
 
-    public void setSingleHarWeight(Short singleHarWeight) {
+    public void setSingleHarWeight(Integer singleHarWeight) {
         this.singleHarWeight = singleHarWeight;
     }
 
@@ -343,43 +347,43 @@ public class QuizTask implements Serializable {
         this.multiple = multiple;
     }
 
-    public Short getMultipleWeight() {
+    public Integer getMultipleWeight() {
         return multipleWeight;
     }
 
-    public void setMultipleWeight(Short multipleWeight) {
+    public void setMultipleWeight(Integer multipleWeight) {
         this.multipleWeight = multipleWeight;
     }
 
-    public Short getMultipleNumber() {
+    public Integer getMultipleNumber() {
         return multipleNumber;
     }
 
-    public void setMultipleNumber(Short multipleNumber) {
+    public void setMultipleNumber(Integer multipleNumber) {
         this.multipleNumber = multipleNumber;
     }
 
-    public Short getMultipleEasyWeight() {
+    public Integer getMultipleEasyWeight() {
         return multipleEasyWeight;
     }
 
-    public void setMultipleEasyWeight(Short multipleEasyWeight) {
+    public void setMultipleEasyWeight(Integer multipleEasyWeight) {
         this.multipleEasyWeight = multipleEasyWeight;
     }
 
-    public Short getMultipleMiddleWeight() {
+    public Integer getMultipleMiddleWeight() {
         return multipleMiddleWeight;
     }
 
-    public void setMultipleMiddleWeight(Short multipleMiddleWeight) {
+    public void setMultipleMiddleWeight(Integer multipleMiddleWeight) {
         this.multipleMiddleWeight = multipleMiddleWeight;
     }
 
-    public Short getMultipleHardWeight() {
+    public Integer getMultipleHardWeight() {
         return multipleHardWeight;
     }
 
-    public void setMultipleHardWeight(Short multipleHardWeight) {
+    public void setMultipleHardWeight(Integer multipleHardWeight) {
         this.multipleHardWeight = multipleHardWeight;
     }
 
@@ -391,43 +395,43 @@ public class QuizTask implements Serializable {
         this.complete = complete;
     }
 
-    public Short getCompleteWeight() {
+    public Integer getCompleteWeight() {
         return completeWeight;
     }
 
-    public void setCompleteWeight(Short completeWeight) {
+    public void setCompleteWeight(Integer completeWeight) {
         this.completeWeight = completeWeight;
     }
 
-    public Short getCompleteNumber() {
+    public Integer getCompleteNumber() {
         return completeNumber;
     }
 
-    public void setCompleteNumber(Short completeNumber) {
+    public void setCompleteNumber(Integer completeNumber) {
         this.completeNumber = completeNumber;
     }
 
-    public Short getCompleteEasyWeight() {
+    public Integer getCompleteEasyWeight() {
         return completeEasyWeight;
     }
 
-    public void setCompleteEasyWeight(Short completeEasyWeight) {
+    public void setCompleteEasyWeight(Integer completeEasyWeight) {
         this.completeEasyWeight = completeEasyWeight;
     }
 
-    public Short getCompleteMiddleWeight() {
+    public Integer getCompleteMiddleWeight() {
         return completeMiddleWeight;
     }
 
-    public void setCompleteMiddleWeight(Short completeMiddleWeight) {
+    public void setCompleteMiddleWeight(Integer completeMiddleWeight) {
         this.completeMiddleWeight = completeMiddleWeight;
     }
 
-    public Short getCompleteHardWeight() {
+    public Integer getCompleteHardWeight() {
         return completeHardWeight;
     }
 
-    public void setCompleteHardWeight(Short completeHardWeight) {
+    public void setCompleteHardWeight(Integer completeHardWeight) {
         this.completeHardWeight = completeHardWeight;
     }
 
@@ -439,43 +443,43 @@ public class QuizTask implements Serializable {
         this.resume = resume;
     }
 
-    public Short getResumeWeight() {
+    public Integer getResumeWeight() {
         return resumeWeight;
     }
 
-    public void setResumeWeight(Short resumeWeight) {
+    public void setResumeWeight(Integer resumeWeight) {
         this.resumeWeight = resumeWeight;
     }
 
-    public Short getResumeNumber() {
+    public Integer getResumeNumber() {
         return resumeNumber;
     }
 
-    public void setResumeNumber(Short resumeNumber) {
+    public void setResumeNumber(Integer resumeNumber) {
         this.resumeNumber = resumeNumber;
     }
 
-    public Short getResumeEasyWeight() {
+    public Integer getResumeEasyWeight() {
         return resumeEasyWeight;
     }
 
-    public void setResumeEasyWeight(Short resumeEasyWeight) {
+    public void setResumeEasyWeight(Integer resumeEasyWeight) {
         this.resumeEasyWeight = resumeEasyWeight;
     }
 
-    public Short getResumeMiddleWeight() {
+    public Integer getResumeMiddleWeight() {
         return resumeMiddleWeight;
     }
 
-    public void setResumeMiddleWeight(Short resumeMiddleWeight) {
+    public void setResumeMiddleWeight(Integer resumeMiddleWeight) {
         this.resumeMiddleWeight = resumeMiddleWeight;
     }
 
-    public Short getResumeHardWeight() {
+    public Integer getResumeHardWeight() {
         return resumeHardWeight;
     }
 
-    public void setResumeHardWeight(Short resumeHardWeight) {
+    public void setResumeHardWeight(Integer resumeHardWeight) {
         this.resumeHardWeight = resumeHardWeight;
     }
 
@@ -487,43 +491,43 @@ public class QuizTask implements Serializable {
         this.synthesis = synthesis;
     }
 
-    public Short getSynthesisWeight() {
+    public Integer getSynthesisWeight() {
         return synthesisWeight;
     }
 
-    public void setSynthesisWeight(Short synthesisWeight) {
+    public void setSynthesisWeight(Integer synthesisWeight) {
         this.synthesisWeight = synthesisWeight;
     }
 
-    public Short getSynthesisNumber() {
+    public Integer getSynthesisNumber() {
         return synthesisNumber;
     }
 
-    public void setSynthesisNumber(Short synthesisNumber) {
+    public void setSynthesisNumber(Integer synthesisNumber) {
         this.synthesisNumber = synthesisNumber;
     }
 
-    public Short getSynthesisEasyWeight() {
+    public Integer getSynthesisEasyWeight() {
         return synthesisEasyWeight;
     }
 
-    public void setSynthesisEasyWeight(Short synthesisEasyWeight) {
+    public void setSynthesisEasyWeight(Integer synthesisEasyWeight) {
         this.synthesisEasyWeight = synthesisEasyWeight;
     }
 
-    public Short getSynthesisMiddleWeight() {
+    public Integer getSynthesisMiddleWeight() {
         return synthesisMiddleWeight;
     }
 
-    public void setSynthesisMiddleWeight(Short synthesisMiddleWeight) {
+    public void setSynthesisMiddleWeight(Integer synthesisMiddleWeight) {
         this.synthesisMiddleWeight = synthesisMiddleWeight;
     }
 
-    public Short getSynthesisHardWeight() {
+    public Integer getSynthesisHardWeight() {
         return synthesisHardWeight;
     }
 
-    public void setSynthesisHardWeight(Short synthesisHardWeight) {
+    public void setSynthesisHardWeight(Integer synthesisHardWeight) {
         this.synthesisHardWeight = synthesisHardWeight;
     }
 
@@ -535,11 +539,11 @@ public class QuizTask implements Serializable {
         this.extra = extra;
     }
 
-    public Short getExtraScore() {
+    public Integer getExtraScore() {
         return extraScore;
     }
 
-    public void setExtraScore(Short extraScore) {
+    public void setExtraScore(Integer extraScore) {
         this.extraScore = extraScore;
     }
 
@@ -573,6 +577,14 @@ public class QuizTask implements Serializable {
 
     public void setGmtModified(Instant gmtModified) {
         this.gmtModified = gmtModified;
+    }
+
+    public Integer getDelFlag() {
+        return delFlag;
+    }
+
+    public void setDelFlag(Integer delFlag) {
+        this.delFlag = delFlag;
     }
 
     @Override
@@ -627,6 +639,7 @@ public class QuizTask implements Serializable {
                 ", extraScore=" + extraScore +
                 ", extraItemId=" + extraItemId +
                 ", points='" + points + '\'' +
+                ", delFlag=" + delFlag +
                 ", gmtCreate=" + gmtCreate +
                 ", gmtModified=" + gmtModified +
                 '}';
