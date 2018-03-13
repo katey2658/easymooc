@@ -2,7 +2,7 @@ package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.commons.exception.BusinessException;
 import com.busyzero.easyoj.commons.exception.ExceptionCodeEnum;
-import com.busyzero.easyoj.commons.result.Result;
+import com.busyzero.easyoj.commons.result.ResultVO;
 import com.busyzero.easyoj.commons.tool.MD5EncryptionUtil;
 import com.busyzero.easyoj.commons.tool.ResultCheckUtil;
 import com.busyzero.easyoj.entity.AccountInfo;
@@ -46,8 +46,8 @@ public class VerificationServiceImpl implements VerificationService {
     private EmailService emailService;
 
     @Override
-    public Result<Boolean> sendEmailBindVerification(String accountNo, String emailAddress) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> sendEmailBindVerification(String accountNo, String emailAddress) {
+        ResultVO<Boolean> result = new ResultVO<>();
         String checkStr = accountNo+","+emailAddress;
         String urlLink = null;
         try {
@@ -64,7 +64,7 @@ public class VerificationServiceImpl implements VerificationService {
     }
 
     @Override
-    public Result<Boolean> sendMobileBindVerification(String mobile) {
+    public ResultVO<Boolean> sendMobileBindVerification(String mobile) {
         // TODO 暂时不提供实现，之后会来实现
         return null;
     }
@@ -75,8 +75,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> sendEmailVerification(String emailAddress) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> sendEmailVerification(String emailAddress) {
+        ResultVO<Boolean> result = new ResultVO<>();
         String verificationCode = VerificationCodeUtil.getVerificationCode(6);
         logger.info("the request veriification  code is {}", verificationCode);
 
@@ -105,7 +105,7 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> sendMobileVerification(String mobile) {
+    public ResultVO<Boolean> sendMobileVerification(String mobile) {
         // TODO 暂时不提供实现，之后来进行实现
         return null;
     }
@@ -116,8 +116,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<BufferedImage> getVerificationImage(Integer accountId) {
-        Result<BufferedImage> result = new Result<>();
+    public ResultVO<BufferedImage> getVerificationImage(Integer accountId) {
+        ResultVO<BufferedImage> result = new ResultVO<>();
         //调用工具类获取对应验证码
         String checkCode = VerificationCodeUtil.getVerificationCode();
         logger.info("the request veriification  code is {}", checkCode);
@@ -159,8 +159,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> checkEmailbindVerification(String accountNo, String emailAddress, String secretKey) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> checkEmailbindVerification(String accountNo, String emailAddress, String secretKey) {
+        ResultVO<Boolean> result = new ResultVO<>();
         //检查参数是否正确
         boolean validFlag = false;
         String checkStr = accountNo+","+emailAddress;
@@ -172,7 +172,7 @@ public class VerificationServiceImpl implements VerificationService {
         if (validFlag){
             logger.info("the parameters is changed accountNo:{},emailAddress:{},secretKey:{}",accountNo,emailAddress,secretKey);
             //参数校验失败
-            result.fail(new BusinessException(ExceptionCodeEnum.ACCPOUNTINFO_PARAMETER_ERROR));
+            result.fail(new BusinessException(ExceptionCodeEnum.ACCOUNT_INFO_PARAMETER_ERROR));
             return result;
         }
 
@@ -182,13 +182,13 @@ public class VerificationServiceImpl implements VerificationService {
         if (ResultCheckUtil.isNull(accountInfo)) {
             logger.info("the accountInfo is not found by accountNo：{}", accountNo);
             //找不到对应的用户
-            result.fail(new BusinessException(ExceptionCodeEnum.ACCOUNTINFO_NOT_FOUND));
+            result.fail(new BusinessException(ExceptionCodeEnum.ACCOUNT_INFO_NOT_FOUND));
             return result;
         }
         if (!ResultCheckUtil.isEqual(emailAddress, accountInfo.getEmailAddress())) {
             // 邮箱和注册中的邮箱不符合
             logger.info("the emailAddress:{} is not equals to accountInfo ：{}", emailAddress, accountInfo.getEmailAddress());
-            result.fail(new BusinessException(ExceptionCodeEnum.ACCOUNTINFO_EMAIL_NOT_EQUAL));
+            result.fail(new BusinessException(ExceptionCodeEnum.ACCOUNT_INFO_EMAIL_NOT_EQUAL));
             return result;
         }
         //修改状态，进行更新
@@ -204,8 +204,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> checkEmailVerificationCode(String emailAddress, String verificationCode) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> checkEmailVerificationCode(String emailAddress, String verificationCode) {
+        ResultVO<Boolean> result = new ResultVO<>();
         AccountVerification verification = verificationRepository.findByEmailAddress(emailAddress);
         if (ResultCheckUtil.isNull(verification)) {
             logger.info("the verification is not found by emailAddress：{}", emailAddress);
@@ -224,8 +224,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> checkMobileVerificationCode(String mobile, String verificationCode) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> checkMobileVerificationCode(String mobile, String verificationCode) {
+        ResultVO<Boolean> result = new ResultVO<>();
         AccountVerification verification = verificationRepository.findByMobile(mobile);
         if (ResultCheckUtil.isNull(verification)) {
             logger.info("the verification is not found by mobile：{}", mobile);
@@ -245,8 +245,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> checkVerificationImageCode(Integer accountId, String verificationCode) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> checkVerificationImageCode(Integer accountId, String verificationCode) {
+        ResultVO<Boolean> result = new ResultVO<>();
         AccountVerification verification = verificationRepository.findByAccountId(accountId);
         if (ResultCheckUtil.isNull(verification)) {
             logger.info("the verification is not found by accountId：{}", accountId);
@@ -265,8 +265,8 @@ public class VerificationServiceImpl implements VerificationService {
      * @return
      */
     @Override
-    public Result<Boolean> checkVerificationImageCodeIgnoreCase(Integer accountId, String verificationCode) {
-        Result<Boolean> result = new Result<>();
+    public ResultVO<Boolean> checkVerificationImageCodeIgnoreCase(Integer accountId, String verificationCode) {
+        ResultVO<Boolean> result = new ResultVO<>();
         AccountVerification verification = verificationRepository.findByAccountId(accountId);
         if (ResultCheckUtil.isNull(verification)) {
             logger.info("the verification is not found by accountId：{}", accountId);
@@ -290,9 +290,9 @@ public class VerificationServiceImpl implements VerificationService {
      * @param verificationCode 用户输入的验证码
      * @return
      */
-    private Result<Boolean> checkVerificationCode(AccountVerification verification,
-                                                  Result<Boolean> result,
-                                                  String verificationCode) {
+    private ResultVO<Boolean> checkVerificationCode(AccountVerification verification,
+                                                    ResultVO<Boolean> result,
+                                                    String verificationCode) {
         if (verification.getInvalidTime().toEpochMilli() > Instant.now().toEpochMilli()) {
             //时间超时
             logger.info("the verification is overtime");

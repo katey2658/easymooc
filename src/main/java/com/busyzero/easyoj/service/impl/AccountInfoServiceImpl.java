@@ -1,11 +1,13 @@
 package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.config.security.AuthServiceImpl;
+import com.busyzero.easyoj.dto.AccountAuthDTO;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.enums.AccountOperateEnum;
 import com.busyzero.easyoj.repository.AccountInfoRepository;
 import com.busyzero.easyoj.service.AccountInfoService;
+import com.busyzero.easyoj.vo.AccountLoginRequestVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,12 +39,22 @@ public class AccountInfoServiceImpl implements AccountInfoService {
     private RedisTemplate redisTemplate;
 
     /**
+     * <h4>登录认证</h4>
+     * @param loginRequestVO 登录消息体
+     * @return 认证信息和方法体
+     */
+    @Override
+    public AccountAuthDTO accountSignIn(AccountLoginRequestVO loginRequestVO) {
+        //TODO
+        return null;
+    }
+    /**
      * 账户登录
      * @param emailAddress 输入的邮箱地址
      * @param password 输入的密码
      * @return
      */
-    @Override
+    @Deprecated
     public AccountOperateResult accountSignIn(String emailAddress, String password) {
         //如果为空就应该返回登录失败
         if (emailAddress==null||password==null||emailAddress.isEmpty()||password.isEmpty()){

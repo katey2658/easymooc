@@ -1,9 +1,12 @@
 package com.busyzero.easyoj.controller;
 
+import com.busyzero.easyoj.commons.result.ResultVO;
+import com.busyzero.easyoj.dto.AccountAuthDTO;
 import com.busyzero.easyoj.entity.AccountInfo;
 import com.busyzero.easyoj.dto.AccountOperateResult;
 import com.busyzero.easyoj.service.AccountInfoService;
 import com.busyzero.easyoj.service.EmailService;
+import com.busyzero.easyoj.vo.AccountLoginRequestVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +19,8 @@ import static org.springframework.web.bind.annotation.RequestMethod.POST;
 
 /**
  * 账户控制器
- * Created by 11456 on 2017/6/30.
+ * @author katey2658
+ * @date 2017/6/30.
  */
 @Controller
 @RequestMapping("/account")
@@ -41,16 +45,17 @@ public class AccountInfoController {
 
     /**
      * 账号登录请求提交
-     * 在请求提交的时候需要有邮箱地址和密码
-     * @param emailAddress
-     * @param password
+     * 在请求提交的时候需要登录相关信息
+     * @param loginRequestVO
      * @return
      */
     @ResponseBody
     @RequestMapping(value = "/sign-in",method = POST)
-    public AccountOperateResult accountSignIn(String emailAddress,String password){
-        AccountOperateResult result=accountInfoService.accountSignIn(emailAddress,password);
-        return result;
+    public ResultVO accountSignIn(AccountLoginRequestVO loginRequestVO){
+        ResultVO<AccountAuthDTO> resultVO = new ResultVO<>();
+        AccountAuthDTO authDTO = accountInfoService.accountSignIn(loginRequestVO);
+        resultVO.setResultObj(authDTO);
+        return resultVO;
     }
 
     /**

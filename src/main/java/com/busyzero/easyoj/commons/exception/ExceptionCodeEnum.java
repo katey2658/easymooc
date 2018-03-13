@@ -10,9 +10,9 @@ public enum ExceptionCodeEnum {
     VERIFICATION_ERROR_INPUT_MAX(8103,"验证码错误达到最大次数"),
     VERIFICATION_ERROR_OVERTIME(8104,"验证码已经失效"),
 
-    ACCOUNTINFO_NOT_FOUND(8201,"账户信息不存在"),
-    ACCOUNTINFO_EMAIL_NOT_EQUAL(8202,"账户信息中注册邮箱不符合"),
-    ACCPOUNTINFO_PARAMETER_ERROR(8203,"参数校验失败或不合法"),
+    ACCOUNT_INFO_NOT_FOUND(8201,"账户信息不存在"),
+    ACCOUNT_INFO_EMAIL_NOT_EQUAL(8202,"账户信息中注册邮箱不符合"),
+    ACCOUNT_INFO_PARAMETER_ERROR(8203,"参数校验失败或不合法"),
 
     MAIL_SEND_ERROR(8301,"邮件发送失败")
     ;

@@ -1,6 +1,8 @@
 package com.busyzero.easyoj.service;
 
+import com.busyzero.easyoj.dto.AccountAuthDTO;
 import com.busyzero.easyoj.dto.AccountOperateResult;
+import com.busyzero.easyoj.vo.AccountLoginRequestVO;
 
 /**
  * 账户个人信息接口
@@ -8,13 +10,13 @@ import com.busyzero.easyoj.dto.AccountOperateResult;
  * Created by 11456 on 2017/6/23.
  */
 public interface AccountInfoService {
+
     /**
-     * 通过邮箱进行
-     * @param emailAddress 输入的邮箱地址
-     * @param password 输入的密码
-     * @return 登录结果
+     * <h4>登录认证</h4>
+     * @param loginRequestVO 登录消息体
+     * @return 认证信息和方法体
      */
-    AccountOperateResult accountSignIn(String emailAddress, String password);
+    AccountAuthDTO accountSignIn(AccountLoginRequestVO loginRequestVO);
 
     /**
      * 账户注册

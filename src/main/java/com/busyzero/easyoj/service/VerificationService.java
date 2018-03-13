@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.commons.result.Result;
+import com.busyzero.easyoj.commons.result.ResultVO;
 
 import java.awt.image.BufferedImage;
 
@@ -18,28 +18,28 @@ public interface VerificationService {
      * @param emailAddress 邮箱地址
      * @return
      */
-    Result<Boolean> sendEmailBindVerification(String accountNo,String emailAddress);
+    ResultVO<Boolean> sendEmailBindVerification(String accountNo, String emailAddress);
 
     /**
      * 向用户手机号发送6位验证码用来绑定
      * @param mobile
      * @return
      */
-    Result<Boolean> sendMobileBindVerification(String mobile);
+    ResultVO<Boolean> sendMobileBindVerification(String mobile);
 
     /**
      * 向用户邮箱发送六位数字验证码
      * @param emailAddress
      * @return
      */
-    Result<Boolean> sendEmailVerification(String emailAddress);
+    ResultVO<Boolean> sendEmailVerification(String emailAddress);
 
     /**
      * 向用户手机发送六位数字验证码
      * @param mobile
      * @return
      */
-    Result<Boolean> sendMobileVerification(String mobile);
+    ResultVO<Boolean> sendMobileVerification(String mobile);
 
     /**
      * 获取图片验证码：
@@ -47,7 +47,7 @@ public interface VerificationService {
      * @param accountId
      * @return
      */
-    Result<BufferedImage> getVerificationImage(Integer accountId);
+    ResultVO<BufferedImage> getVerificationImage(Integer accountId);
 
     /**
      * 验证邮箱绑定：
@@ -57,7 +57,7 @@ public interface VerificationService {
      * @param secretKey 加密字符串，采用base64进行编码，防止有人恶意修改
      * @return
      */
-    Result<Boolean> checkEmailbindVerification(String accountNo,String emailAddress,String secretKey);
+    ResultVO<Boolean> checkEmailbindVerification(String accountNo, String emailAddress, String secretKey);
 
     /**
      * 邮箱校验校验验证码 验证6位数字验证码
@@ -65,7 +65,7 @@ public interface VerificationService {
      * @param verificationCode 验证码
      * @return
      */
-    Result<Boolean> checkEmailVerificationCode(String emailAddress,String verificationCode);
+    ResultVO<Boolean> checkEmailVerificationCode(String emailAddress, String verificationCode);
 
     /**
      * 手机校验校验验证码 验证6位数字验证码
@@ -73,7 +73,7 @@ public interface VerificationService {
      * @param verificationCode 验证码
      * @return
      */
-    Result<Boolean> checkMobileVerificationCode(String mobile,String verificationCode);
+    ResultVO<Boolean> checkMobileVerificationCode(String mobile, String verificationCode);
 
     /**
      * 图像验证码 校验：
@@ -84,13 +84,13 @@ public interface VerificationService {
      * @param verificationCode
      * @return
      */
-    Result<Boolean> checkVerificationImageCode(Integer accountId,String verificationCode);
+    ResultVO<Boolean> checkVerificationImageCode(Integer accountId, String verificationCode);
 
     /** 验证码 忽略大小写
      * @param accountId        用户账号
      * @param verificationCode 验证码
      * @return
      */
-    Result<Boolean> checkVerificationImageCodeIgnoreCase(Integer accountId, String verificationCode);
+    ResultVO<Boolean> checkVerificationImageCodeIgnoreCase(Integer accountId, String verificationCode);
 
 }

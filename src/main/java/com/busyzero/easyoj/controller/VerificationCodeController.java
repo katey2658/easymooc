@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.controller;
 
-import com.busyzero.easyoj.commons.result.Result;
+import com.busyzero.easyoj.commons.result.ResultVO;
 import com.busyzero.easyoj.service.VerificationService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,7 +41,7 @@ public class VerificationCodeController {
     @RequestMapping(value = "/imgCode",method = RequestMethod.GET)
     public void requestImageCode(HttpServletRequest request,
                                  HttpServletResponse response){
-        Result<BufferedImage> result=verificationCodeService.getVerificationImage(4);
+        ResultVO<BufferedImage> result=verificationCodeService.getVerificationImage(4);
         /*
         //放弃这个方案，因为会采用集群方案，session 不一定在那一个机器上，所以还是暂时先存入数据库中
         HttpSession session=request.getSession();
@@ -65,10 +65,10 @@ public class VerificationCodeController {
      */
     @ResponseBody
     @RequestMapping(value = "/imageCode",method = RequestMethod.POST)
-    public Result<Boolean> requestImageCodeCheck(HttpServletRequest request,
-                                                        String imageCode){
+    public ResultVO<Boolean> requestImageCodeCheck(HttpServletRequest request,
+                                                   String imageCode){
         String verificationCode = (String) request.getSession().getAttribute(KEY_VERFICATION_CODE);
-        Result<Boolean> result = verificationCodeService.checkVerificationImageCode(1111,verificationCode);
+        ResultVO<Boolean> result = verificationCodeService.checkVerificationImageCode(1111,verificationCode);
         return result;
     }
 }

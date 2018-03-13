@@ -105,5 +105,6 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy:1.5.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: net.bytebuddy:byte-buddy-agent:1.5.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.objenesis:objenesis:2.4" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:2.0.0.Final" level="project" />
   </component>
 </module>

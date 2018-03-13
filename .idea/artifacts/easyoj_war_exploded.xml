@@ -61,6 +61,7 @@
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy:1.5.5" />
           <element id="library" level="project" name="Maven: net.bytebuddy:byte-buddy-agent:1.5.5" />
           <element id="library" level="project" name="Maven: org.objenesis:objenesis:2.4" />
+          <element id="library" level="project" name="Maven: javax.validation:validation-api:2.0.0.Final" />
         </element>
       </element>
       <element id="directory" name="META-INF">

@@ -1,6 +1,6 @@
 package com.busyzero.easyoj.service;
 
-import com.busyzero.easyoj.commons.result.Result;
+import com.busyzero.easyoj.commons.result.ResultVO;
 import org.thymeleaf.context.Context;
 
 
@@ -18,7 +18,7 @@ public interface EmailService {
      * @param context
      * @return
      */
-    Result<Boolean> sendEmailBindVerification(Result<Boolean> result, String emailAddress, Context context);
+    ResultVO<Boolean> sendEmailBindVerification(ResultVO<Boolean> result, String emailAddress, Context context);
 
     /**
      * 发送邮箱解绑邮件
@@ -27,7 +27,7 @@ public interface EmailService {
      * @param context
      * @return
      */
-    Result<Boolean> sendEmailUnbundVerification(Result<Boolean> result,String emailAddress,Context context);
+    ResultVO<Boolean> sendEmailUnbundVerification(ResultVO<Boolean> result, String emailAddress, Context context);
 
     /**
      * 发送数字验证码
@@ -36,7 +36,7 @@ public interface EmailService {
      * @param context
      * @return
      */
-    Result<Boolean> sendNumberVerification(Result<Boolean> result,String emailAddress,String number,Context context);
+    ResultVO<Boolean> sendNumberVerification(ResultVO<Boolean> result, String emailAddress, String number, Context context);
 
     /**
      * 发送推广邮件
@@ -44,7 +44,7 @@ public interface EmailService {
      * @param emailAddress
      * @return
      */
-    Result<Boolean> sendDirectMail(Result<Boolean> result,String emailAddress);
+    ResultVO<Boolean> sendDirectMail(ResultVO<Boolean> result, String emailAddress);
 
     /**
      * 发送课程消息模板
@@ -52,5 +52,5 @@ public interface EmailService {
      * @param emailAddress
      * @return
      */
-    Result<Boolean> sendCourseInfoMail(Result<Boolean> result,String emailAddress);
+    ResultVO<Boolean> sendCourseInfoMail(ResultVO<Boolean> result, String emailAddress);
 }

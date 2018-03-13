@@ -2,7 +2,7 @@ package com.busyzero.easyoj.service.impl;
 
 import com.busyzero.easyoj.commons.exception.BusinessException;
 import com.busyzero.easyoj.commons.exception.ExceptionCodeEnum;
-import com.busyzero.easyoj.commons.result.Result;
+import com.busyzero.easyoj.commons.result.ResultVO;
 import com.busyzero.easyoj.config.common.ConfigConstantsPool;
 import com.busyzero.easyoj.service.EmailService;
 import org.slf4j.Logger;
@@ -45,12 +45,12 @@ public class EmailServiceImpl implements EmailService {
      * @param mailTo 发送邮件目的地
      * @return
      */
-    private Result<Boolean> sendMailMessage(Result<Boolean> result,
-                                            String subject,
-                                            String mailFrom,
-                                            String mailTo,
-                                            String htmlTemplete,
-                                            final Context ctx){
+    private ResultVO<Boolean> sendMailMessage(ResultVO<Boolean> result,
+                                              String subject,
+                                              String mailFrom,
+                                              String mailTo,
+                                              String htmlTemplete,
+                                              final Context ctx){
         final MimeMessage mimeMessage=this.mailSender.createMimeMessage();
         final MimeMessageHelper helper;
         try {
@@ -77,7 +77,7 @@ public class EmailServiceImpl implements EmailService {
      * @return
      */
     @Override
-    public Result<Boolean> sendEmailBindVerification(Result<Boolean> result, String emailAddress, Context context) {
+    public ResultVO<Boolean> sendEmailBindVerification(ResultVO<Boolean> result, String emailAddress, Context context) {
         String subject = "注册邮箱验证";
         String mailFrom = "easyOJ开发团队";
         String htmlTemplate = "mail/signUpAuhMail.html";
@@ -86,7 +86,7 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public Result<Boolean> sendEmailUnbundVerification(Result<Boolean> result,String emailAddress, Context context) {
+    public ResultVO<Boolean> sendEmailUnbundVerification(ResultVO<Boolean> result, String emailAddress, Context context) {
         String subject = "解绑邮箱验证";
         String mailFrom = "easyOJ开发团队";
         String htmlTemplate = "mail/signUpAuhMail.html";
@@ -95,7 +95,7 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public Result<Boolean> sendNumberVerification(Result<Boolean> result,String emailAddress, String number, Context context) {
+    public ResultVO<Boolean> sendNumberVerification(ResultVO<Boolean> result, String emailAddress, String number, Context context) {
         String subject = "验证码";
         String mailFrom = "easyOJ开发团队";
         String htmlTemplate = "mail/signUpAuhMail.html";
@@ -104,12 +104,12 @@ public class EmailServiceImpl implements EmailService {
     }
 
     @Override
-    public Result<Boolean> sendDirectMail(Result<Boolean> result,String emailAddress) {
+    public ResultVO<Boolean> sendDirectMail(ResultVO<Boolean> result, String emailAddress) {
         return null;
     }
 
     @Override
-    public Result<Boolean> sendCourseInfoMail(Result<Boolean> result,String emailAddress) {
+    public ResultVO<Boolean> sendCourseInfoMail(ResultVO<Boolean> result, String emailAddress) {
         return null;
     }
 
